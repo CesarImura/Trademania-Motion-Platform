@@ -93,6 +93,24 @@ function grain() {
   return grainTile;
 }
 
+let grainTileL: HTMLCanvasElement | null = null;
+/** 512px tile of seeded monochrome noise (bigger than `grain()` so full-frame grain never shows a repeat). */
+function grainLarge() {
+  if (grainTileL) return grainTileL;
+  grainTileL = document.createElement("canvas");
+  grainTileL.width = grainTileL.height = 512;
+  const g = grainTileL.getContext("2d")!;
+  const img = g.createImageData(512, 512);
+  for (let i = 0; i < 512 * 512; i++) {
+    // Sum of two hashes: a softer, film-like (triangular) distribution.
+    const v = Math.round(((hash3(i % 512, Math.floor(i / 512), 31) + hash3(i % 512, Math.floor(i / 512), 97)) / 2) * 255);
+    img.data[i * 4] = img.data[i * 4 + 1] = img.data[i * 4 + 2] = v;
+    img.data[i * 4 + 3] = 255;
+  }
+  g.putImageData(img, 0, 0);
+  return grainTileL;
+}
+
 function blob(ctx: CanvasRenderingContext2D, x: number, y: number, r: number, rgb: string, a: number) {
   const g = ctx.createRadialGradient(x, y, 0, x, y, r);
   g.addColorStop(0, `rgba(${rgb},${a})`);
@@ -254,6 +272,73 @@ export const GENERATORS: Record<string, Generator> = {
         }
       }
       ctx.globalAlpha = base;
+    },
+  },
+
+  /**
+   * Trademania "Brain" green tunnel (Figma BRN-01/02 "Tunnel"): nested rounded rects, each
+   * `ratio`× the one outside it, lightest outside → ink at the center, each with an inner
+   * shadow. Rings are spaced geometrically: ring i sits at scale ratio^(i − travel), so
+   * `travel` (in rings) is a perspective fly-in. `colors: ring` keeps each ring's Figma
+   * color (the dark center grows as you fly in, like scaling the Figma frame); `depth`
+   * colors by depth instead, for an endless, self-similar tunnel.
+   */
+  greenTunnel: {
+    label: "Green tunnel",
+    params: [
+      p("travel", "Travel (rings)", 0, { step: 0.01 }),
+      p("cx", "Center X", 960, { step: 1 }),
+      p("cy", "Center Y", 540, { step: 1 }),
+      p("outerW", "Outer ring width", 2600, { step: 1, min: 1 }),
+      p("aspect", "Aspect (h / w)", 0.5625, { step: 0.001, min: 0.05 }),
+      p("ratio", "Ring ratio", 0.86, { step: 0.001, min: 0.5, max: 0.98 }),
+      p("radius", "Corner radius (× width)", 0.012, { step: 0.001, min: 0 }),
+      { key: "palette", label: "Colors (outside → center)", kind: "string", default: "#E9F2DF, #DCEFC9, #CFEBB3, #BEE4A1, #ADDB8F, #95CC7F, #7ABB70, #62A665, #4B915C, #397C53, #2D694A, #225740, #1C4838, #15382F, #102926, #0A1A1D", group: "Content" },
+      c("shadowColor", "Inner shadow", "rgba(10,26,29,0.22)"),
+      p("shadowY", "Shadow offset (× width)", 0.00692, { step: 0.0005, min: 0 }),
+      p("shadowBlur", "Shadow blur σ (× width)", 0.01154, { step: 0.0005, min: 0 }),
+      { key: "colors", label: "Colors follow", kind: "enum", default: "ring", options: ["ring", "depth"], group: "Content" },
+    ],
+    draw(ctx, w, h, t, get) {
+      const travel = get.num("travel"), cx = get.num("cx"), cy = get.num("cy");
+      const W0 = Math.max(1, get.num("outerW")), asp = get.num("aspect"), ratio = clamp(get.num("ratio"), 0.5, 0.98);
+      const pal = get.str("palette").split(",").map((s) => s.trim()).filter(Boolean).map(parseColorRGB);
+      if (!pal.length) return;
+      const colorAt = (u: number) => {
+        const k = Math.max(0, Math.min(pal.length - 1, u)), i = Math.floor(k), f = k - i, a = pal[i], b = pal[Math.min(pal.length - 1, i + 1)];
+        return `rgb(${[0, 1, 2].map((n) => Math.round(a[n] + (b[n] - a[n]) * f)).join(",")})`;
+      };
+      const m = ctx.getTransform(), dev = Math.hypot(m.a, m.b); // shadows are in device px
+      const rr = get.num("radius"), sy = get.num("shadowY"), sb = get.num("shadowBlur"), sc = get.str("shadowColor");
+      // Outermost ring that still covers the whole layer box; everything outside it is its color.
+      const byRing = get.str("colors") !== "depth";
+      const covers = (s: number) => (W0 * s) / 2 >= Math.max(cx, w - cx) && (W0 * asp * s) / 2 >= Math.max(cy, h - cy);
+      let i0 = Math.floor(travel);
+      while (i0 > travel - 60 && !covers(Math.pow(ratio, i0 - travel))) i0--;
+      if (byRing) i0 = Math.max(-1, Math.min(pal.length - 1, i0)); // outside the tunnel = the outer ring's color
+      ctx.fillStyle = byRing ? colorAt(Math.max(0, i0)) : colorAt(i0 - travel);
+      ctx.fillRect(0, 0, w, h);
+      for (let i = i0 + 1; ; i++) {
+        const s = Math.pow(ratio, i - travel), rw = W0 * s, rh = rw * asp;
+        if (rw < 1.5 || (byRing && i >= pal.length)) break;
+        const x = cx - rw / 2, y = cy - rh / 2, path = new Path2D();
+        path.roundRect(x, y, rw, rh, rr * rw);
+        ctx.fillStyle = colorAt(byRing ? i : i - travel);
+        ctx.fill(path);
+        if (sb > 0 || sy > 0) { // inner shadow: shadow of a frame around the ring, clipped to it
+          ctx.save();
+          ctx.clip(path);
+          ctx.shadowColor = sc;
+          ctx.shadowBlur = 2 * sb * rw * dev;
+          ctx.shadowOffsetY = sy * rw * dev;
+          const frame = new Path2D();
+          frame.rect(x - rw, y - rh, rw * 3, rh * 3);
+          frame.roundRect(x, y, rw, rh, rr * rw);
+          ctx.fillStyle = "#000";
+          ctx.fill(frame, "evenodd");
+          ctx.restore();
+        }
+      }
     },
   },
 
@@ -499,6 +584,76 @@ export const GENERATORS: Record<string, Generator> = {
       ctx.globalAlpha = base;
       ctx.globalCompositeOperation = get.str("glyphBlend") as GlobalCompositeOperation;
       ctx.drawImage(glyphBuffer, 0, 0, gw, gh, 0, 0, w, h);
+      ctx.restore();
+    },
+  },
+
+  /**
+   * Textured gradient + film grain. Up to three soft colour blobs (radial gradients,
+   * drifting slowly) over an optional base, then grain that re-rolls `grainRate` times a
+   * second. Use it full-frame at the bottom as a textured background, and/or on top
+   * with blobs off (strength 0) as a grain overlay.
+   */
+  grainGradient: {
+    label: "Grain gradient",
+    params: [
+      c("baseColor", "Base", "rgba(0,0,0,0)"),
+      ...[1, 2, 3].flatMap((k) => [
+        p(`b${k}x`, `Blob ${k} X`, [480, 1500, 960][k - 1], { step: 1 }),
+        p(`b${k}y`, `Blob ${k} Y`, [260, 820, 1150][k - 1], { step: 1 }),
+        p(`b${k}r`, `Blob ${k} radius`, 900, { step: 1, min: 1 }),
+        p(`b${k}sy`, `Blob ${k} squash Y`, 0.7, { min: 0.05 }),
+        c(`b${k}Color`, `Blob ${k} color`, ["#D9F9B9", "#c5b9ee", "#9fdcc6"][k - 1]),
+        p(`b${k}a`, `Blob ${k} strength`, 0, { min: 0, max: 1 }),
+      ]),
+      p("drift", "Drift (px)", 60, { step: 1, min: 0 }),
+      p("driftSpeed", "Drift speed", 1, { min: 0 }),
+      p("grain", "Grain", 0.08, { min: 0, max: 1 }),
+      p("grainSize", "Grain size", 1, { min: 0.25 }),
+      p("grainRate", "Grain rate (fps)", 24, { step: 1, min: 0 }),
+      { key: "grainBlend", label: "Grain blend", kind: "enum", default: "multiply", options: ["multiply", "overlay", "soft-light", "screen", "source-over"], group: "Content" },
+    ],
+    draw(ctx, w, h, t, get) {
+      if (w <= 0 || h <= 0) return;
+      const n = get.num;
+      const base = ctx.globalAlpha;
+      ctx.save();
+      ctx.fillStyle = get.str("baseColor") || "rgba(0,0,0,0)"; // transparent fill is a no-op
+      ctx.fillRect(0, 0, w, h);
+      const drift = n("drift"), tt = t * n("driftSpeed");
+      for (let k = 1; k <= 3; k++) {
+        const a = clamp(n(`b${k}a`));
+        if (a <= 0) continue;
+        const r = Math.max(1, n(`b${k}r`)), sy = Math.max(0.05, n(`b${k}sy`));
+        const x = n(`b${k}x`) + drift * Math.sin(tt * 0.37 + k * 2.1);
+        const y = n(`b${k}y`) + drift * Math.cos(tt * 0.29 + k * 1.7);
+        const rgb = parseColorRGB(get.str(`b${k}Color`)).join(",");
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.scale(1, sy);
+        // Three stops: a smooth (roughly gaussian) falloff instead of a hard cone.
+        const g = ctx.createRadialGradient(0, 0, 0, 0, 0, r);
+        g.addColorStop(0, `rgba(${rgb},${a})`);
+        g.addColorStop(0.45, `rgba(${rgb},${a * 0.55})`);
+        g.addColorStop(1, `rgba(${rgb},0)`);
+        ctx.fillStyle = g;
+        ctx.globalAlpha = base;
+        ctx.fillRect(-r, -r, r * 2, r * 2);
+        ctx.restore();
+      }
+      const amt = clamp(n("grain"));
+      if (amt > 0) {
+        const tick = Math.floor(t * Math.max(0, n("grainRate")));
+        const pat = ctx.createPattern(grainLarge(), "repeat")!;
+        const sz = Math.max(0.25, n("grainSize"));
+        // Re-roll: jump the tile to a new seeded offset (and flip) every tick.
+        const fx = hash3(tick, 3, 11) < 0.5 ? -1 : 1, fy = hash3(tick, 5, 13) < 0.5 ? -1 : 1;
+        pat.setTransform(new DOMMatrix().translate(hash3(tick, 1, 7) * 512, hash3(tick, 2, 9) * 512).scale(sz * fx, sz * fy));
+        ctx.globalAlpha = base * amt;
+        ctx.globalCompositeOperation = get.str("grainBlend") as GlobalCompositeOperation;
+        ctx.fillStyle = pat;
+        ctx.fillRect(0, 0, w, h);
+      }
       ctx.restore();
     },
   },
@@ -1992,8 +2147,11 @@ GENERATORS.orderLadder = {
     const cy = get.num("centerY"), rh = Math.max(10, get.num("rowHeight")), scroll = get.num("scroll");
     const shutter = Math.max(0, get.num("shutter"));
     const scroll0 = shutter > 0 ? get.at("scroll", t - shutter) : scroll;
+    // The layer's own y travel during the shutter (e.g. the whole list rising into
+    // frame) blurs too: earlier samples sit `lift` px lower in layer space.
+    const lift = shutter > 0 ? get.at("y", t - shutter) - get.at("y", t) : 0;
     // One pass per ~5 px travelled during the shutter, each at 1/N strength.
-    const passes = Math.max(1, Math.min(28, Math.ceil((Math.abs(scroll - scroll0) * rh) / 5)));
+    const passes = Math.max(1, Math.min(28, Math.ceil((Math.abs(scroll - scroll0) * rh + Math.abs(lift)) / 5)));
     const side = get.str("side"), fade = Math.max(0.05, get.num("gapFade"));
     const fs = get.num("fontSize"), rowAlpha = get.num("rowAlpha");
     const cols = [get.num("col1"), get.num("col2"), get.num("col3")];
@@ -2033,10 +2191,12 @@ GENERATORS.orderLadder = {
     const nMin = Math.floor(lo - cy / rh) - 1, nMax = Math.ceil(hi + (h - cy) / rh) + 1;
     const prev = ctx.globalAlpha;
     for (let pass = 0; pass < passes; pass++) {
-      const sc = passes === 1 ? scroll : scroll0 + ((scroll - scroll0) * (pass + 0.5)) / passes;
+      const u = passes === 1 ? 1 : 1 - (pass + 0.5) / passes; // 1 = now, 0 = shutter open
+      const sc = passes === 1 ? scroll : scroll0 + (scroll - scroll0) * u;
+      const dy = lift * (1 - u);
       for (let n = nMin; n <= nMax; n++) {
         if (n === 0) continue;
-        const y = cy + (n - sc) * rh;
+        const y = cy + (n - sc) * rh + dy;
         const above = y < cy;
         if ((side === "asks" && !above) || (side === "bids" && above)) continue;
         const d = Math.abs(y - cy) / rh;

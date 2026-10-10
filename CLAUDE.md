@@ -18,6 +18,10 @@ exports MP4. Run with `npm run dev` → http://localhost:3210.
 3. Keep the JSON valid and 2-space indented. Times are seconds; snap them to the
    shot's frame grid (multiples of `1/fps`) when practical.
 4. Images go in `shots/<id>/assets/` and are referenced as `"src": "logo.png"`.
+   Reference videos the user shares go in `shots/refs/assets/` (served at
+   `/api/assets/refs/<file>`; a folder with no versions never shows in the
+   gallery). To study one, `fetch` it into a blob URL first — the assets route has
+   no Range support, so a plain `<video src>` can't seek.
 5. Exports land in `exports/<id>/` (written by the app — don't write there).
 
 ## Scene format (`src/lib/types.ts`, defaults in `src/lib/props.ts`)
@@ -112,6 +116,10 @@ shimmers), `gradientRepeat` (yes = tile; shift then loops seamlessly).
   animatable `counter` prop with `counterDecimals` (e.g. "Thinking for {counter}s").
   CSS line boxes port as `lineHeight = cssLineHeight / fontSize`, `anchorY: 0`.
 - **image**: `src width height radius` (set one of width/height to keep aspect)
+- **video**: `src width height radius cropX cropY cropW cropH` (crop in source px)
+  `videoFps decodeWidth offset rate loop`. Decoded once into cropped frames on load
+  (HEVC works in Chrome on macOS), so preview == export; local time starts at the
+  layer's `start`. Put videos in `shots/<id>/assets/`.
 - **path**: `d` (SVG path data, in layer space) `fill stroke strokeWidth
   lineCap trimStart trimEnd` (0–1, for draw-on effects). Its box is the path's
   bounding box, so anchor 0.5/0.5 is the path's center. `pathOrigin: "zero"` uses
@@ -138,7 +146,12 @@ shimmers), `gradientRepeat` (yes = tile; shift then loops seamlessly).
   (curl into a circle at `ringX/ringY/ringR`) — see `scripts/ses-03-v003-helix.mjs`),
   `pixelSchedule` (per-cell open/color/clear times measured from a reference, outputs
   `mask` / `overlay` / `paper` — see `scripts/lib/reference-transition.mjs`), `replayChart`
-  (Replay card candles + dashed guides: `progress` pops candles in left→right). When a shot needs something
+  (Replay card candles + dashed guides: `progress` pops candles in left→right), `grainGradient`
+  (textured gradient + film grain: up to 3 drifting soft blobs `bNx bNy bNr bNsy bNColor bNa` over
+  `baseColor`, then grain `grain grainSize grainRate grainBlend` — full-frame at the bottom as a
+  background, and/or on top with blobs off as a grain overlay; see `v3-logo-reveal`), `greenTunnel` (Figma BRN "Brain" tunnel: 16 nested rounded rings ×`ratio` 0.86 with inner
+  shadows; `travel` (in rings) flies in — `colors: ring` keeps Figma's ring colors so the dark center
+  grows, `depth` is an endless self-similar loop; pair with `asciiRings` overlay, see `trd-01b-type-first`). When a shot needs something
   keyframes can't express (noise, particles, dithering), add a generator there —
   pure function of `t` + params — rather than faking it with hundreds of keys.
   Generators are rendered into an offscreen buffer when blurred or faded, so
@@ -146,6 +159,21 @@ shimmers), `gradientRepeat` (yes = tile; shift then loops seamlessly).
   looks wrong).
 - **null**: invisible; use as a parent to move groups together. Its origin is
   its `x, y`, so children are positioned relative to it.
+
+### Physical pushing (cards that touch, shove, never overlap)
+Use `scripts/lib/card-physics.mjs` (see `scripts/trd-01-sync-trades-v006.mjs`):
+`simulate()` = oriented boxes with SAT contacts, soft tilt, `grow(t)` +
+`kinematicUntil`/`path(t)` for things that spawn and push (e.g. a card growing out of
+the center), kinematic `obstacles` (e.g. a headline block that shoves cards away).
+Bake with `smooth()` (σ≈2 frames; kills jitter) → `separate()` (re-separates pairs
+the smoothing nudged together) → `decimate()`. Always verify every frame with the
+cards' rotated outlines: 0 overlap frames, contact frames > 0, clearance from text.
+Things that pop into an occupied space must clear it first (push, then pop ~0.15s later).
+
+### Camera moves
+Parent everything to a root `camera` null and bake its `x/y/scale` per frame from a
+focus point + zoom (pos = C − z·(F − C); zoom eased in log space) — see
+`scripts/trd-01-sync-trades-v011.mjs`. Children use frame coords minus the center.
 
 ### Motion tips
 - Prefer a few well-eased keyframes over many linear ones.

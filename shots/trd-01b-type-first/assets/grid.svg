@@ -1,0 +1,27 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Grid" opacity="0.1">
+<g id="Columns">
+<line id="Column line 1" x1="80.5" x2="80.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 2" x1="240.5" x2="240.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 3" x1="400.5" x2="400.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 4" x1="560.5" x2="560.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 5" x1="720.5" x2="720.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 6" x1="880.5" x2="880.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 7" x1="1040.5" x2="1040.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 8" x1="1200.5" x2="1200.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 9" x1="1360.5" x2="1360.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 10" x1="1520.5" x2="1520.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 11" x1="1680.5" x2="1680.5" y2="1080" stroke="#0A1A1D"/>
+<line id="Column line 12" x1="1840.5" x2="1840.5" y2="1080" stroke="#0A1A1D"/>
+</g>
+<g id="Rows">
+<line id="Row line 1" x1="1920" y1="77.6429" x2="4.37112e-08" y2="77.6428" stroke="#0A1A1D"/>
+<line id="Row line 2" x1="1920" y1="231.929" x2="4.37112e-08" y2="231.928" stroke="#0A1A1D"/>
+<line id="Row line 3" x1="1920" y1="386.214" x2="4.37112e-08" y2="386.214" stroke="#0A1A1D"/>
+<line id="Row line 4" x1="1920" y1="540.5" x2="4.37112e-08" y2="540.5" stroke="#0A1A1D"/>
+<line id="Row line 5" x1="1920" y1="694.786" x2="4.37112e-08" y2="694.786" stroke="#0A1A1D"/>
+<line id="Row line 6" x1="1920" y1="849.072" x2="4.37112e-08" y2="849.071" stroke="#0A1A1D"/>
+<line id="Row line 7" x1="1920" y1="1003.36" x2="4.37112e-08" y2="1003.36" stroke="#0A1A1D"/>
+</g>
+</g>
+</svg>

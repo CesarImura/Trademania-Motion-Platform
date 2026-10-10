@@ -49,6 +49,9 @@ const EFFECTS: PropDef[] = [
   n("shadowBlur", "Shadow blur", 0, "Effects", { min: 0 }),
   n("shadowX", "Shadow X", 0, "Effects"),
   n("shadowY", "Shadow Y", 0, "Effects"),
+  // Shutter in frames (0 = off, 0.5 = 180°): the layer is drawn as the average of
+  // sub-frame samples over [t − shutter/fps, t], so fast moves smear like a camera.
+  n("motionBlur", "Motion blur (shutter, frames)", 0, "Effects", { step: 0.05, min: 0 }),
   {
     key: "blend", label: "Blend mode", kind: "enum", default: "normal", group: "Effects",
     options: ["normal", "overlay", "screen", "multiply", "soft-light", "lighten", "darken", "color-dodge", "lighter"],

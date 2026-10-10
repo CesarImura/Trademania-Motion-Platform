@@ -1,0 +1,138 @@
+{
+  "name": "TRD-02 · Pixel transition (key fill, blue)",
+  "note": "Key pass: type, items and grid removed; trimmed to the transition (1.8s) on chroma blue #0047BB. Tint/dot stages are opaque here — pair with the trd-02-trading-analysing-matte shot as a luma matte for their real transparency.",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "duration": 1.8,
+  "background": "#0047BB",
+  "layers": [
+    {
+      "id": "dots",
+      "name": "Cells · dots",
+      "type": "generator",
+      "end": 1.75,
+      "props": {
+        "generator": "pixelStages",
+        "output": "dots",
+        "x": 966,
+        "y": 540,
+        "width": 2080,
+        "height": 1234.29,
+        "cols": 13,
+        "rows": 8,
+        "dotColor": "#0a1a1d"
+      },
+      "keyframes": {
+        "progress": [
+          {
+            "t": 0.0667,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.7667,
+            "v": 1
+          }
+        ],
+        "clear": [
+          {
+            "t": 1.2334,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.7334,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "backdrop",
+      "name": "Backdrop (Figma 95 BG)",
+      "type": "generator",
+      "matte": "cells",
+      "end": 1.75,
+      "props": {
+        "generator": "tmBackdrop",
+        "x": 960,
+        "y": 540,
+        "width": 1920,
+        "height": 1080,
+        "baseColor": "#d9f9b9",
+        "darkColor": "#0a1a1d",
+        "blobBlur": 280,
+        "b1x": 1028,
+        "b1y": -410,
+        "b1rx": 1711,
+        "b1ry": 852,
+        "b1a": 1,
+        "b2x": 980,
+        "b2y": 1707,
+        "b2rx": 1364,
+        "b2ry": 742,
+        "b2a": 1,
+        "b2Color": "#F5FFEB",
+        "noise": 0.15,
+        "ringX": 960,
+        "ringY": 540,
+        "tilt": 0.35
+      },
+      "keyframes": {
+        "ringShift": [
+          {
+            "t": 0.0667,
+            "v": -0.03,
+            "ease": "linear"
+          },
+          {
+            "t": 1.7334,
+            "v": 0.06
+          }
+        ]
+      }
+    },
+    {
+      "id": "cells",
+      "name": "Cells · mask (matte)",
+      "type": "generator",
+      "end": 1.75,
+      "props": {
+        "generator": "pixelStages",
+        "output": "mask",
+        "x": 966,
+        "y": 540,
+        "width": 2080,
+        "height": 1234.29,
+        "cols": 13,
+        "rows": 8,
+        "tint": 1
+      },
+      "keyframes": {
+        "progress": [
+          {
+            "t": 0.0667,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.7667,
+            "v": 1
+          }
+        ],
+        "clear": [
+          {
+            "t": 1.2334,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.7334,
+            "v": 1
+          }
+        ]
+      }
+    }
+  ]
+}

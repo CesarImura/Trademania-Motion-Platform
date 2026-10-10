@@ -566,6 +566,7 @@ export const GENERATORS: Record<string, Generator> = {
       p("rows", "Rows", 8, { step: 1, min: 1 }),
       p("stage", "Stage length", 0.3, { min: 0.01, max: 0.9 }),
       p("tint", "Tint stage alpha", 0.45, { min: 0, max: 1 }),
+      c("maskColor", "Mask color", "#000000"),
       p("dotPitch", "Dots per cell", 9, { step: 1, min: 1 }),
       p("dotSize", "Dot size", 4.6, { min: 0.5 }),
       c("dotColor", "Dot color", "rgba(10,26,29,0.5)"),
@@ -597,7 +598,10 @@ export const GENERATORS: Record<string, Generator> = {
       const tint = clamp(get.num("tint"));
       const pitch = Math.max(1, Math.round(get.num("dotPitch"))), r = get.num("dotSize") / 2;
       const base = ctx.globalAlpha;
-      ctx.fillStyle = dots ? get.str("dotColor") : "#000";
+      ctx.fillStyle = get.str(dots ? "dotColor" : "maskColor");
+      // Mask cells go into one path per level and fill once: the union has no seams
+      // between neighbours and overlaps never double the tint alpha.
+      const full = new Path2D(), tinted = new Path2D();
       for (let j = 0; j < rows; j++) {
         for (let i = 0; i < cols; i++) {
           const jit = hash3(i, j, seed);
@@ -606,9 +610,7 @@ export const GENERATORS: Record<string, Generator> = {
           if (lv <= 0) continue;
           const x0 = i * cw, y0 = j * ch;
           if (!dots) {
-            if (lv < 2) continue;
-            ctx.globalAlpha = base * (lv === 3 ? 1 : tint);
-            ctx.fillRect(x0 - 0.5, y0 - 0.5, cw + 1, ch + 1);
+            if (lv >= 2) (lv === 3 ? full : tinted).rect(x0 - 0.5, y0 - 0.5, cw + 1, ch + 1);
             continue;
           }
           if (lv === 3 || on === 3) continue; // full, or tinting on the way out: no dots
@@ -624,10 +626,193 @@ export const GENERATORS: Record<string, Generator> = {
           ctx.fill();
         }
       }
+      if (!dots) {
+        ctx.fill(full, "nonzero");
+        ctx.globalAlpha = base * tint;
+        ctx.fill(tinted, "nonzero");
+      }
       ctx.globalAlpha = base;
     },
   },
+
+  /**
+   * Measured pixel transition: each cell opens, turns full color and clears at its own
+   * time (comp seconds), given as text grids — rows on lines, cells separated by spaces,
+   * "-" = never. `mask` is opaque over open cells (matte a backdrop with it). `overlay`
+   * paints the field's light end — paper + halftone dots — over open cells that aren't
+   * full color yet, feathered across neighbours so light→color reads as a gradient.
+   */
+  pixelSchedule: {
+    label: "Pixel schedule",
+    params: [
+      { key: "open", label: "Open times", kind: "text", default: "", group: "Content" },
+      { key: "color", label: "Full-color times", kind: "text", default: "", group: "Content" },
+      { key: "clear", label: "Clear times", kind: "text", default: "", group: "Content" },
+      { key: "output", label: "Output", kind: "enum", default: "mask", options: ["mask", "overlay", "paper"], group: "Content" },
+      p("cellW", "Cell width", 91.37, { min: 1 }),
+      p("cellH", "Cell height", 182.74, { min: 1 }),
+      p("timeOffset", "Time offset (s)", 0, { step: 1 / 60 }),
+      c("maskColor", "Mask color", "#000000"),
+      c("paper", "Paper color", "#F4F9EE"),
+      c("dotColor", "Dot color", "rgba(10,26,29,0.45)"),
+      p("dotPitch", "Dot pitch", 18.27, { min: 2 }),
+      p("dotSize", "Dot size", 4.6, { min: 0.5 }),
+      p("feather", "Light→color feather", 140, { step: 1, min: 0 }),
+      c("gridColor", "Grid lines (paper)", "rgba(0,0,0,0)"),
+      p("gridEvery", "Grid every N cells", 2, { step: 1, min: 1 }),
+      p("gridPhase", "Grid column phase", 1, { step: 1, min: 0 }),
+    ],
+    draw(ctx, w, h, t, get) {
+      const open = schedGrid(get.str("open")), color = schedGrid(get.str("color")), clear = schedGrid(get.str("clear"));
+      const rows = open.length, cols = rows ? Math.max(...open.map((r) => r.length)) : 0;
+      if (!rows || !cols) return;
+      const cw = Math.max(1, get.num("cellW")), chh = Math.max(1, get.num("cellH"));
+      const tt = t - get.num("timeOffset");
+      const at = (g: number[][], r: number, c: number) => g[Math.min(g.length - 1, Math.max(0, r))]?.[c] ?? NaN;
+      const isOpen = (r: number, c: number) => {
+        const o = at(open, r, c), cl = at(clear, r, c);
+        return o === o && tt >= o && !(cl === cl && tt >= cl);
+      };
+      // Only the cells on screen (the layer is wide and slides with the camera).
+      const m = ctx.getTransform(), inv = m.inverse(), cv = ctx.canvas;
+      const corners = [[0, 0], [cv.width, 0], [0, cv.height], [cv.width, cv.height]].map(([x, y]) => inv.transformPoint({ x, y }));
+      const bx0 = Math.max(0, Math.min(...corners.map((p) => p.x))), bx1 = Math.min(w, Math.max(...corners.map((p) => p.x)));
+      const by0 = Math.max(0, Math.min(...corners.map((p) => p.y))), by1 = Math.min(h, Math.max(...corners.map((p) => p.y)));
+      if (bx1 <= bx0 || by1 <= by0) return;
+      const c0 = Math.max(0, Math.floor(bx0 / cw)), c1 = Math.min(cols, Math.ceil(bx1 / cw));
+      const r0 = Math.max(0, Math.floor(by0 / chh)), r1 = Math.min(rows, Math.ceil(by1 / chh));
+      const out = get.str("output");
+      const pitch = Math.max(2, get.num("dotPitch")), rad = get.num("dotSize") / 2;
+      // World-anchored halftone lattice, so dots line up across cells.
+      const dotsIn = (g: CanvasRenderingContext2D, cells: [number, number][]) => {
+        g.fillStyle = get.str("dotColor");
+        g.beginPath();
+        for (const [r, c] of cells) {
+          const x0 = c * cw, y0 = r * chh;
+          for (let y = (Math.floor(y0 / pitch) + 0.5) * pitch; y < y0 + chh; y += pitch) {
+            if (y < y0) continue;
+            for (let x = (Math.floor(x0 / pitch) + 0.5) * pitch; x < x0 + cw; x += pitch) {
+              if (x < x0) continue;
+              g.moveTo(x + rad, y);
+              g.arc(x, y, rad, 0, Math.PI * 2);
+            }
+          }
+        }
+        g.fill();
+      };
+      if (out === "paper") {
+        // Inverse: an opaque light page. Open cells show dots (the light end), and pop off
+        // (transparent) once they reach their color time. Cells with no color time keep
+        // their dots; cells that never open stay plain paper.
+        const paperPath = new Path2D(), dotted: [number, number][] = [];
+        for (let r = r0; r < r1; r++)
+          for (let c = c0; c < c1; c++) {
+            const o = at(open, r, c), col = at(color, r, c);
+            const opened = o === o && tt >= o;
+            if (opened && col === col && tt >= col) continue;
+            paperPath.rect(c * cw - 0.5, r * chh - 0.5, cw + 1, chh + 1);
+            if (opened) dotted.push([r, c]);
+          }
+        ctx.fillStyle = get.str("paper");
+        ctx.fill(paperPath);
+        const gc = get.str("gridColor"), every = Math.max(1, Math.round(get.num("gridEvery"))), ph = Math.round(get.num("gridPhase"));
+        if (gc && !/rgba\([^)]*,\s*0\)$/.test(gc.replace(/\s/g, ""))) {
+          ctx.save();
+          ctx.clip(paperPath);
+          ctx.strokeStyle = gc;
+          ctx.lineWidth = 1 / Math.min(4, Math.max(0.1, Math.hypot(m.a, m.b)));
+          ctx.beginPath();
+          for (let c = c0; c <= c1; c++)
+            if ((((c - ph) % every) + every) % every === 0) (ctx.moveTo(c * cw, r0 * chh), ctx.lineTo(c * cw, r1 * chh));
+          for (let r = r0; r <= r1; r++) (ctx.moveTo(c0 * cw, r * chh), ctx.lineTo(c1 * cw, r * chh));
+          ctx.stroke();
+          ctx.restore();
+        }
+        dotsIn(ctx, dotted);
+        return;
+      }
+      const openPath = new Path2D();
+      let any = false;
+      for (let r = r0; r < r1; r++)
+        for (let c = c0; c < c1; c++)
+          if (isOpen(r, c)) (openPath.rect(c * cw - 0.5, r * chh - 0.5, cw + 1, chh + 1), (any = true));
+      if (!any) return;
+      const base = ctx.globalAlpha;
+      if (out !== "overlay") {
+        ctx.fillStyle = get.str("maskColor");
+        ctx.fill(openPath);
+        return;
+      }
+      // Overlay: paper + dots on open cells, then keep it only where cells are still light.
+      const s = Math.min(4, Math.max(0.1, Math.hypot(m.a, m.b)));
+      const dw = Math.ceil((bx1 - bx0) * s), dh = Math.ceil((by1 - by0) * s);
+      schedBuf ??= document.createElement("canvas");
+      if (schedBuf.width < dw || schedBuf.height < dh) {
+        schedBuf.width = Math.max(schedBuf.width, dw);
+        schedBuf.height = Math.max(schedBuf.height, dh);
+      }
+      const g = schedBuf.getContext("2d")!;
+      g.setTransform(1, 0, 0, 1, 0, 0);
+      g.globalCompositeOperation = "source-over";
+      g.filter = "none";
+      g.clearRect(0, 0, dw, dh);
+      g.setTransform(s, 0, 0, s, -bx0 * s, -by0 * s);
+      g.fillStyle = get.str("paper");
+      g.fill(openPath);
+      const openCells: [number, number][] = [];
+      for (let r = r0; r < r1; r++) for (let c = c0; c < c1; c++) if (isOpen(r, c)) openCells.push([r, c]);
+      dotsIn(g, openCells);
+      // Lightness per cell: cells that will turn color count as color unless they're open
+      // and still waiting; light-zone cells (never color) stay light. Padded by 2 cells
+      // (edge-replicated) so the feather doesn't fade at the borders.
+      const pad = 2, lc0 = c0 - pad, lr0 = r0 - pad, lw = c1 - c0 + pad * 2, lh = r1 - r0 + pad * 2;
+      schedLevel ??= document.createElement("canvas");
+      schedLevel.width = lw;
+      schedLevel.height = lh;
+      const lx = schedLevel.getContext("2d")!;
+      const img = lx.createImageData(lw, lh);
+      for (let j = 0; j < lh; j++)
+        for (let i = 0; i < lw; i++) {
+          const r = Math.min(rows - 1, Math.max(0, lr0 + j)), c = Math.min(cols - 1, Math.max(0, lc0 + i));
+          const col = at(color, r, c), o = at(open, r, c);
+          const light = col !== col ? 1 : o === o && tt >= o && tt < col ? 1 : 0;
+          img.data[(j * lw + i) * 4 + 3] = light * 255;
+        }
+      lx.putImageData(img, 0, 0);
+      // Feather at low resolution, then stretch over the cells as an alpha mask.
+      const f = Math.max(0, get.num("feather")), q = 8;
+      const sw = Math.max(1, Math.ceil((lw * cw * s) / q)), sh = Math.max(1, Math.ceil((lh * chh * s) / q));
+      schedSoft ??= document.createElement("canvas");
+      schedSoft.width = sw;
+      schedSoft.height = sh;
+      const sx = schedSoft.getContext("2d")!;
+      sx.imageSmoothingEnabled = true;
+      sx.filter = f > 0 ? `blur(${(f * s) / q}px)` : "none";
+      sx.drawImage(schedLevel, 0, 0, sw, sh);
+      g.globalCompositeOperation = "destination-in";
+      g.imageSmoothingEnabled = true;
+      g.drawImage(schedSoft, 0, 0, sw, sh, lc0 * cw, lr0 * chh, lw * cw, lh * chh);
+      g.globalCompositeOperation = "source-over";
+      ctx.save();
+      ctx.globalAlpha = base;
+      ctx.drawImage(schedBuf, 0, 0, dw, dh, bx0, by0, dw / s, dh / s);
+      ctx.restore();
+    },
+  },
 };
+
+// Text grid of times: rows on lines, cells separated by whitespace, "-" = never (NaN).
+const schedCache = new Map<string, number[][]>();
+function schedGrid(src: string): number[][] {
+  let g = schedCache.get(src);
+  if (!g) {
+    g = src.trim() ? src.trim().split(/\n|\//).map((row) => row.trim().split(/\s+/).map((v) => (v === "-" ? NaN : Number(v)))) : [];
+    if (schedCache.size > 32) schedCache.clear();
+    schedCache.set(src, g);
+  }
+  return g;
+}
+let schedBuf: HTMLCanvasElement | null = null, schedLevel: HTMLCanvasElement | null = null, schedSoft: HTMLCanvasElement | null = null;
 
 // ---------- Trademania "Live / Replay data" card charts ----------
 
@@ -694,52 +879,430 @@ GENERATORS.liveLines = {
     p("wave", "Flow amplitude (× box h)", 0.02, { step: 0.001, min: 0 }),
     p("shimmer", "Highlight drift", 0.06, { step: 0.005, min: 0 }),
     c("fade", "Edge color", "#020203"),
+    // Shoot → helix → merge → ring (all off at 0, so the plain chart is unchanged).
+    p("shoot", "Shoot head (0→1.15)", 0, { step: 0.01, min: 0 }),
+    p("pullSoft", "Pull softness", 0.12, { min: 0.01, max: 1 }),
+    p("axisY", "Helix axis Y (box px)", 360, { step: 1 }),
+    p("radius", "Helix radius", 90, { step: 1, min: 0 }),
+    p("turns", "Helix turns across", 0, { step: 0.01 }),
+    p("spin", "Helix spin (cycles)", 0, { step: 0.01 }),
+    p("chirp", "Twist density → right (1 = even)", 1, { step: 0.05, min: 0.2 }),
+    p("squeeze", "Radius squeeze at right (0–1)", 0, { min: 0, max: 1 }),
+    p("mergeSweep", "Merge starts at right (0–1)", 0, { min: 0, max: 1 }),
+    p("merge", "Merge", 0, { min: 0, max: 1 }),
+    c("mergeColor", "Merged color", "#D9F9B9"),
+    p("recolor", "Recolor → merged (−1 = follow merge)", -1, { min: -1, max: 1 }),
+    p("ring", "Curl into ring", 0, { min: 0, max: 1 }),
+    p("ringX", "Ring center X (box px)", 870, { step: 1 }),
+    p("ringY", "Ring center Y (box px)", 384, { step: 1 }),
+    p("ringR", "Ring radius", 161, { step: 1, min: 1 }),
+    p("ringWidth", "Ring line width", 10, { step: 0.5, min: 0 }),
+    // Braid (Gemini-style funnel): strands fan out flat at both edges and weave into a
+    // tight cable through the middle. Each color splits into `strands` fine lines.
+    p("braid", "Braid", 0, { min: 0, max: 1 }),
+    p("strands", "Strands per color", 1, { step: 1, min: 1, max: 6 }),
+    p("braidTurns", "Braid twists across", 9, { step: 0.1 }),
+    p("braidRadius", "Braid radius (px)", 18, { step: 0.5, min: 0 }),
+    p("braidWidth", "Tight zone half-width (u)", 0.15, { min: 0, max: 0.5 }),
+    p("braidRamp", "Funnel length (u)", 0.22, { min: 0.01, max: 0.5 }),
+    p("spread", "Edge fan spread (px)", 240, { step: 1, min: 0 }),
+    p("headDots", "Halftone band at head (u)", 0.1, { min: 0, max: 0.5 }),
+    p("dotPitch", "Dot pitch", 9, { step: 0.5, min: 2 }),
+    p("trail", "Cell trail", 1, { min: 0, max: 1 }),
+    p("trailLen", "Trail length (u)", 0.45, { min: 0, max: 1 }),
+    p("cell", "Trail cell size", 45.7, { step: 0.1, min: 4 }),
+    p("cellOX", "Cell grid offset X", 0, { step: 0.1 }),
+    p("cellOY", "Cell grid offset Y", 0, { step: 0.1 }),
   ],
   draw(ctx, w, h, t, get) {
     if (w <= 0 || h <= 0) return;
     const n = get.num;
-    const morph = clamp(n("morph")), lw = Math.max(0, n("lineWidth")), phase = n("phase");
+    const morph = clamp(n("morph")), phase = n("phase");
     const wave = n("wave") * h, shimmer = n("shimmer"), fade = get.str("fade");
+    const head = n("shoot"), soft = Math.max(0.01, n("pullSoft"));
+    const merge = clamp(n("merge")), ring = clamp(n("ring"));
+    const turns = n("turns"), spin = n("spin"), axis = n("axisY");
+    const chirp = Math.max(0.2, n("chirp")), squeeze = clamp(n("squeeze")), sweep = clamp(n("mergeSweep"));
+    // Radius along the line: narrows toward the right, and (with a sweep) merges right → left.
+    const radiusAt = (u: number) => {
+      const m = sweep > 0 ? clamp(merge * (1 + sweep) - (1 - u) * sweep) : merge;
+      return n("radius") * (1 - squeeze * Math.pow(u, 1.5)) * (1 - m);
+    };
+    const rx = n("ringX"), ry = n("ringY"), rr = Math.max(1, n("ringR"));
+    const lw = Math.max(0, n("lineWidth") + (n("ringWidth") - n("lineWidth")) * ring);
     const m = ctx.getTransform();
     const s = Math.max(0.05, Math.hypot(m.a, m.b)); // filter blur is in device pixels
     const lerp = (a: number, b: number) => a + (b - a) * morph;
+    const sstep = (x: number) => (x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x));
+    const mergeRGB = parseColorRGB(get.str("mergeColor"));
+    const N = LINE_SAMPLES * 2;
     const lines = [
       { ...LIVE_LINES.red, drawn: clamp(n("draw")), k: 0 },
       { ...LIVE_LINES.green, drawn: clamp((n("draw") - n("drawLag")) / Math.max(1e-6, 1 - n("drawLag"))), k: 1 },
     ];
-    ctx.save();
-    ctx.lineCap = "butt";
-    ctx.lineJoin = "round";
-    for (const L of lines) {
-      if (L.drawn <= 0) continue;
+    // Path of a strand: chart shape → (pulled taut behind the head) helix → ring.
+    const braid = clamp(n("braid"));
+    const S = braid > 0 ? Math.max(1, Math.round(n("strands"))) : 1;
+    const bTurns = n("braidTurns"), bR = n("braidRadius"), bW = n("braidWidth"), bRamp = Math.max(0.01, n("braidRamp"));
+    const spread = n("spread");
+    const strand = (L: (typeof lines)[number], j = 0) => {
       const x0 = lerp(L.small.x0, L.big.x0) * w, x1 = lerp(L.small.x1, L.big.x1) * w;
-      const last = Math.max(1, Math.round(LINE_SAMPLES * L.drawn));
-      ctx.beginPath();
-      for (let i = 0; i <= last; i++) {
-        const u = i / LINE_SAMPLES;
-        // Travelling wave, pinned near the ends so the line stays anchored.
+      const X: number[] = [], Y: number[] = [], Z: number[] = [];
+      for (let i = 0; i <= N; i++) {
+        const u = i / N, f = u * LINE_SAMPLES, j = Math.min(LINE_SAMPLES - 1, Math.floor(f)), a = f - j;
+        const ys = (g: number[]) => g[j] + (g[j + 1] - g[j]) * a;
         const env = Math.sin(Math.PI * u);
-        const dy = wave * env * Math.sin(2 * Math.PI * (u * 1.3 - phase) + L.k * 1.7);
-        const y = lerp(L.small.ys[i], L.big.ys[i]) * h + dy;
-        const x = x0 + (x1 - x0) * u;
-        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        let x = x0 + (x1 - x0) * u;
+        let y = lerp(ys(L.small.ys), ys(L.big.ys)) * h + wave * env * Math.sin(2 * Math.PI * (u * 1.3 - phase) + L.k * 1.7);
+        let z = 0;
+        const pull = head > 0 ? sstep((head - u) / soft + 0.5) : 0;
+        if (pull > 0) {
+          // Chirp > 1 packs the turns toward the right: it winds tighter as it goes.
+          const th = 2 * Math.PI * (turns * Math.pow(u, chirp) + spin) + L.k * Math.PI + Math.PI / 2;
+          const R = radiusAt(u);
+          y += (axis + R * Math.sin(th) - y) * pull;
+          z = Math.cos(th) * pull * (R > 1 ? 1 : R);
+        }
+        if (braid > 0) {
+          // Fan slot: green strands above the axis, red below, evenly spaced.
+          const slot = ((j + 0.5) / S) * (L.k === 1 ? -1 : 1);
+          const yFan = axis + spread * slot;
+          // Colors alternate around the cable so the weave reads red/green/red…
+          const th = 2 * Math.PI * (bTurns * u + spin) + (2 * Math.PI * (2 * j + L.k)) / (2 * S);
+          const funnel = 1 - sstep((Math.abs(u - 0.5) - bW) / bRamp);
+          let yt = yFan + (axis + bR * Math.sin(th) - yFan) * funnel;
+          yt = axis + (yt - axis) * (1 - merge);
+          y += (yt - y) * braid;
+          z = Math.cos(th) * funnel * braid * (1 - merge);
+        }
+        if (ring > 0) {
+          // The head end curls in first; the tail follows.
+          const e = sstep(ring * 1.6 - (1 - u) * 0.6);
+          const ang = -Math.PI / 2 - 2 * Math.PI * (1 - u);
+          x += (rx + rr * Math.cos(ang) - x) * e;
+          y += (ry + rr * Math.sin(ang) - y) * e;
+          z *= 1 - e;
+        }
+        X.push(x); Y.push(y); Z.push(z);
       }
-      const mid = 0.49 + shimmer * Math.sin(2 * Math.PI * phase + L.k * 2.1);
-      const g = ctx.createLinearGradient(x0, 0, x0 + (x1 - x0) * 1.014, 0);
-      g.addColorStop(0, fade);
-      g.addColorStop(clamp(mid, 0.05, 0.95), L.color);
-      g.addColorStop(1, fade);
-      ctx.strokeStyle = g;
-      ctx.lineWidth = lw;
-      // Figma stack, bottom → top: core, wide glow, tight glow.
-      for (const blur of [0, L.wide, 0.316]) {
-        ctx.filter = blur ? `blur(${(blur * lw * s).toFixed(2)}px)` : "none";
-        ctx.stroke();
+      return { x0, x1, X, Y, Z };
+    };
+    const tint = n("recolor") < 0 ? merge : clamp(n("recolor"));
+    const color = (L: (typeof lines)[number]) => {
+      if (tint <= 0) return L.color;
+      const c0 = parseColorRGB(L.color);
+      const c = c0.map((v, i) => Math.round(v + (mergeRGB[i] - v) * tint));
+      return `rgb(${c[0]},${c[1]},${c[2]})`;
+    };
+    const paths = lines.flatMap((L) => Array.from({ length: S }, (_, j) => ({ L, P: L.drawn > 0 ? strand(L, j) : null })));
+    const dotBand = n("headDots"), shootOn = head > 0 && head < 1 + soft;
+
+    // ---- cell trail behind the heads (dots → line color → off), timed by when the head passed ----
+    const trail = clamp(n("trail"));
+    if (shootOn && trail > 0) {
+      const cs = Math.max(4, n("cell")), ox = n("cellOX"), oy = n("cellOY"), tl = n("trailLen");
+      const passed = (u: number) => {
+        let lo = t - 3, hi = t;
+        for (let it = 0; it < 14; it++) {
+          const mid = (lo + hi) / 2;
+          if (get.at("shoot", mid) >= u) hi = mid;
+          else lo = mid;
+        }
+        return hi;
+      };
+      ctx.save();
+      for (const { L, P } of paths) {
+        if (!P) continue;
+        const cells = new Map<string, [number, number, number]>();
+        for (let i = 0; i <= N; i++) {
+          const u = i / N;
+          if (u > head || u < head - tl) continue;
+          const ci = Math.floor((P.X[i] - ox) / cs), cj = Math.floor((P.Y[i] - oy) / cs);
+          for (const dj of [0, hash3(ci, cj, L.k + 7) < 0.45 ? (hash3(cj, ci, 3) < 0.5 ? -1 : 1) : 0]) {
+            const key = `${ci},${cj + dj}`;
+            if (!cells.has(key)) cells.set(key, [ci, cj + dj, u]);
+          }
+        }
+        const rgb = parseColorRGB(L.color);
+        for (const [ci, cj, u] of cells.values()) {
+          const age = t - passed(u) - hash3(ci, cj, 11) * 0.06;
+          if (age < 0) continue;
+          const x = ox + ci * cs, y = oy + cj * cs;
+          const stage = age < 0.05 ? 1 : age < 0.16 ? 2 : age < 0.26 ? 1 : 0;
+          if (!stage) continue;
+          if (stage === 2) {
+            ctx.globalAlpha = 0.28 * trail;
+            ctx.fillStyle = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
+            ctx.fillRect(x, y, cs, cs);
+          }
+          ctx.globalAlpha = (stage === 2 ? 0.9 : 0.7) * trail;
+          ctx.fillStyle = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
+          const pitch = cs / 5, rad = pitch * 0.22;
+          ctx.beginPath();
+          for (let b = 0; b < 5; b++)
+            for (let a = 0; a < 5; a++) {
+              const px = x + (a + 0.5) * pitch, py = y + (b + 0.5) * pitch;
+              ctx.moveTo(px + rad, py);
+              ctx.arc(px, py, rad, 0, Math.PI * 2);
+            }
+          ctx.fill();
+        }
+      }
+      ctx.restore();
+    }
+
+    // ---- strands: back halves first, then front (depth from the helix) ----
+    ctx.save();
+    const twisted = paths.some(({ P }) => P && P.Z.some((z) => z < 0));
+    ctx.lineCap = twisted ? "round" : "butt";
+    ctx.lineJoin = "round";
+    const inBand = (u: number) => shootOn && dotBand > 0 && u > head - dotBand && u < head + dotBand * 0.3;
+    for (const front of [false, true]) {
+      for (const { L, P } of paths) {
+        if (!P) continue;
+        const last = Math.max(1, Math.round(N * L.drawn));
+        const path = new Path2D();
+        let open = false, any = false;
+        for (let i = 0; i <= last; i++) {
+          const u = i / N;
+          const isFront = P.Z[i] >= 0;
+          if (isFront !== front || inBand(u)) {
+            open = false;
+            continue;
+          }
+          if (!open) {
+            // Start each run at the previous sample so runs join without gaps.
+            const k = Math.max(0, i - 1);
+            path.moveTo(P.X[k], P.Y[k]);
+            open = true;
+          }
+          path.lineTo(P.X[i], P.Y[i]);
+          any = true;
+        }
+        if (!any) continue;
+        const col = color(L);
+        const mid = 0.49 + shimmer * Math.sin(2 * Math.PI * phase + L.k * 2.1);
+        const g = ctx.createLinearGradient(P.x0, 0, P.x0 + (P.x1 - P.x0) * 1.014, 0);
+        // Closing into a ring, the faded ends fill in.
+        const edge = ring > 0 ? col : fade;
+        g.addColorStop(0, edge);
+        g.addColorStop(clamp(mid, 0.05, 0.95), col);
+        g.addColorStop(1, edge);
+        ctx.strokeStyle = ring > 0.999 ? col : g;
+        // Depth reads from occlusion at the crossings (back runs are drawn first); the
+        // front/back switch happens at the wave peaks, so any width/alpha step there
+        // would show as a seam.
+        const width = lw;
+        ctx.lineWidth = width;
+        // Figma stack, bottom → top: core, wide glow, tight glow.
+        for (const blur of [0, L.wide, 0.316]) {
+          ctx.filter = blur ? `blur(${(blur * width * s).toFixed(2)}px)` : "none";
+          ctx.stroke(path);
+        }
+      }
+    }
+    ctx.filter = "none";
+    // ---- halftone dots where the head is (the line breaks into dots, then re-forms) ----
+    if (shootOn && dotBand > 0) {
+      const pitch = Math.max(2, n("dotPitch"));
+      for (const { L, P } of paths) {
+        if (!P) continue;
+        ctx.globalAlpha = 0.95;
+        ctx.fillStyle = color(L);
+        ctx.beginPath();
+        let acc = 0;
+        for (let i = 1; i <= N; i++) {
+          const u = i / N;
+          const seg = Math.hypot(P.X[i] - P.X[i - 1], P.Y[i] - P.Y[i - 1]);
+          acc += seg;
+          if (!inBand(u) || acc < pitch) continue;
+          acc = 0;
+          const dx = (P.X[i] - P.X[i - 1]) / (seg || 1), dy = (P.Y[i] - P.Y[i - 1]) / (seg || 1);
+          // Denser at the solid side, sparse toward the head.
+          const dens = clamp((head - u) / dotBand + 0.35);
+          const rows = Math.max(1, Math.round((lw * 1.3) / pitch));
+          for (let r = 0; r < rows; r++) {
+            const off = (r - (rows - 1) / 2) * pitch;
+            if (hash3(i, r, L.k + 21) > dens) continue;
+            const px = P.X[i] - dy * off, py = P.Y[i] + dx * off, rad = pitch * 0.3;
+            ctx.moveTo(px + rad, py);
+            ctx.arc(px, py, rad, 0, Math.PI * 2);
+          }
+        }
+        ctx.fill();
       }
     }
     ctx.restore();
   },
 };
+
+/**
+ * Live lines intertwining (Gemini-style): each color splits into fine crisp strands that
+ * fan out flat at both edges and twist into a 3D cable in the middle. Strands are real
+ * helices (y = r·sinθ, depth z = r·cosθ), drawn back-to-front in short segments: farther
+ * parts are dimmer and thinner, and every segment first cuts a background-coloured gap,
+ * so crossings read as over/under. Then merge → one line → curl into a ring.
+ */
+GENERATORS.liveBraid = {
+  label: "Live lines braid",
+  params: [
+    p("morph", "Small → big chart shape", 1, { min: 0, max: 1 }),
+    p("phase", "Chart flow phase", 0, { step: 0.01 }),
+    p("wave", "Chart flow amplitude (× box h)", 0.02, { step: 0.001, min: 0 }),
+    p("form", "Chart → braid", 0, { min: 0, max: 1 }),
+    p("strands", "Strands per color", 2, { step: 1, min: 1, max: 4 }),
+    p("lineWidth", "Line width", 4, { step: 0.1, min: 0 }),
+    p("axisY", "Cable axis Y (box px)", 356, { step: 1 }),
+    p("spread", "Edge fan spacing (px)", 60, { step: 1 }),
+    p("radius", "Cable radius (px)", 34, { step: 0.5, min: 0 }),
+    p("turns", "Twists across the cable", 3.5, { step: 0.1 }),
+    p("core", "Tight zone half-width (u)", 0.16, { min: 0, max: 0.5 }),
+    p("ramp", "Funnel length (u)", 0.2, { min: 0.01, max: 0.5 }),
+    p("spin", "Spin (turns)", 0, { step: 0.01 }),
+    p("depthDim", "Back dimming", 0.6, { min: 0, max: 1 }),
+    p("gap", "Crossing gap (× width)", 1.4, { step: 0.05, min: 0 }),
+    p("glow", "Glow (px)", 10, { step: 0.5, min: 0 }),
+    p("glowAlpha", "Glow strength", 0.75, { min: 0, max: 2 }),
+    p("edgeFade", "Fade at the ends (u)", 0.08, { min: 0, max: 0.5 }),
+    c("bg", "Background (gaps)", "#020203"),
+    c("red", "Red", "#FF6479"),
+    c("green", "Green", "#D9F9B9"),
+    p("merge", "Merge into one line", 0, { min: 0, max: 1 }),
+    p("recolor", "Recolor → merged", 0, { min: 0, max: 1 }),
+    c("mergeColor", "Merged color", "#D9F9B9"),
+    p("ring", "Curl into ring", 0, { min: 0, max: 1 }),
+    p("ringX", "Ring center X (box px)", 870, { step: 1 }),
+    p("ringY", "Ring center Y (box px)", 384, { step: 1 }),
+    p("ringR", "Ring radius", 161, { step: 1, min: 1 }),
+    p("ringWidth", "Ring line width", 10, { step: 0.5, min: 0 }),
+    p("ringKeep", "Keep the braid on the ring", 0, { min: 0, max: 1 }),
+  ],
+  draw(ctx, w, h, t, get) {
+    if (w <= 0 || h <= 0) return;
+    const n = get.num;
+    const ringKeep = clamp(n("ringKeep"));
+    const morph = clamp(n("morph")), phase = n("phase"), wave = n("wave") * h;
+    const form = clamp(n("form")), merge = clamp(n("merge")), ring = clamp(n("ring")), recolor = clamp(n("recolor"));
+    const S = Math.max(1, Math.round(n("strands")));
+    const axis = n("axisY"), spread = n("spread") * (1 - merge), R = n("radius") * (1 - merge);
+    const turns = n("turns"), core = n("core"), ramp = Math.max(0.01, n("ramp")), spin = n("spin");
+    const lw = Math.max(0, n("lineWidth") + (n("ringWidth") - n("lineWidth")) * ring);
+    const rx = n("ringX"), ry = n("ringY"), rr = Math.max(1, n("ringR"));
+    const sstep = (x: number) => (x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x));
+    const lerpM = (a: number, b: number) => a + (b - a) * morph;
+    const N = 360;
+    // Funnel weight (1 in the tight middle) and its running integral, so the twist only
+    // accumulates inside the cable: strands enter straight and start turning as they pinch.
+    const fw: number[] = [], W: number[] = [0];
+    for (let i = 0; i <= N; i++) fw.push(1 - sstep((Math.abs(i / N - 0.5) - core) / ramp));
+    for (let i = 1; i <= N; i++) W.push(W[i - 1] + (fw[i] + fw[i - 1]) / 2 / N);
+    const Wt = Math.max(1e-6, W[N]);
+    const mix = (a: string, b: string, k: number) => {
+      const A = parseColorRGB(a), B = parseColorRGB(b);
+      return A.map((v, i) => v + (B[i] - v) * k);
+    };
+    const bgRGB = parseColorRGB(get.str("bg"));
+    type Seg = { x0: number; y0: number; x1: number; y1: number; z: number; rgb: number[]; a: number; k: number };
+    const segs: Seg[] = [];
+    const fadeU = n("edgeFade");
+    const strands = [
+      { k: 0, line: LIVE_LINES.red, col: mix(get.str("red"), get.str("mergeColor"), recolor) },
+      { k: 1, line: LIVE_LINES.green, col: mix(get.str("green"), get.str("mergeColor"), recolor) },
+    ];
+    for (const st of strands) {
+      const L = st.line;
+      const x0 = lerpM(L.small.x0, L.big.x0) * w, x1 = lerpM(L.small.x1, L.big.x1) * w;
+      for (let j = 0; j < S; j++) {
+        // Fan slots, top → bottom: green strands above the axis, red below.
+        const slot = st.k === 1 ? -(j + 0.5) : j + 0.5;
+        // Colours alternate around the cable.
+        const phi = (2 * Math.PI * (2 * j + st.k)) / (2 * S);
+        let px = 0, py = 0, pz = 0;
+        for (let i = 0; i <= N; i++) {
+          const u = i / N, f = u * LINE_SAMPLES, q = Math.min(LINE_SAMPLES - 1, Math.floor(f)), a = f - q;
+          const ys = (g: number[]) => g[q] + (g[q + 1] - g[q]) * a;
+          let x = x0 + (x1 - x0) * u;
+          const env = Math.sin(Math.PI * u);
+          const yc = lerpM(ys(L.small.ys), ys(L.big.ys)) * h + wave * env * Math.sin(2 * Math.PI * (u * 1.3 - phase) + st.k * 1.7);
+          const th = 2 * Math.PI * (turns * (W[i] / Wt) + spin) + phi;
+          const yFan = axis + spread * slot;
+          const yt = yFan + (axis + R * Math.sin(th) - yFan) * fw[i];
+          let y = yc + (yt - yc) * form;
+          let z = R * Math.cos(th) * fw[i] * form;
+          if (ring > 0) {
+            const e = sstep(ring * 1.6 - (1 - u) * 0.6);
+            const ang = -Math.PI / 2 - 2 * Math.PI * (1 - u);
+            // The cable's centre line bends onto the circle; with ringKeep the strands keep
+            // their offset from it (along the radius) and their depth, so it stays braided.
+            const off = (y - axis) * ringKeep;
+            x += (rx + (rr + off) * Math.cos(ang) - x) * e;
+            y += (ry + (rr + off) * Math.sin(ang) - y) * e;
+            z *= 1 - e * (1 - ringKeep);
+          }
+          if (i > 0) {
+            const fa = fadeU > 0 ? sstep(u / fadeU) * sstep((1 - u) / fadeU) : 1;
+            segs.push({ x0: px, y0: py, x1: x, y1: y, z: (z + pz) / 2, rgb: st.col, a: fa + (1 - fa) * ring, k: st.k });
+          }
+          px = x; py = y; pz = z;
+        }
+      }
+    }
+    segs.sort((A, B) => A.z - B.z);
+    // Draw into a buffer (sharp), then composite a blurred copy (glow) + the sharp lines.
+    const m = ctx.getTransform(), s = Math.min(4, Math.max(0.1, Math.hypot(m.a, m.b)));
+    const bw = Math.min(8192, Math.ceil(w * s)), bh = Math.min(8192, Math.ceil(h * s));
+    braidBuf ??= document.createElement("canvas");
+    if (braidBuf.width < bw || braidBuf.height < bh) {
+      braidBuf.width = Math.max(braidBuf.width, bw);
+      braidBuf.height = Math.max(braidBuf.height, bh);
+    }
+    const g = braidBuf.getContext("2d")!;
+    g.setTransform(1, 0, 0, 1, 0, 0);
+    g.clearRect(0, 0, bw, bh);
+    g.setTransform(s, 0, 0, s, 0, 0);
+    const dim = n("depthDim"), gapW = n("gap");
+    const zMax = Math.max(1, n("radius") * form);
+    for (const sg of segs) {
+      const zn = clamp((sg.z / zMax + 1) / 2); // 0 back … 1 front
+      const width = lw * (0.75 + 0.4 * zn);
+      if (gapW > 0 && zn > 0.05 && R > 0.5) {
+        // Background-coloured cut under the segment: hides whatever passes behind it.
+        g.lineCap = "butt";
+        g.strokeStyle = `rgb(${bgRGB[0]},${bgRGB[1]},${bgRGB[2]})`;
+        g.globalAlpha = sg.a;
+        g.lineWidth = width * (1 + gapW);
+        g.beginPath();
+        g.moveTo(sg.x0, sg.y0);
+        g.lineTo(sg.x1, sg.y1);
+        g.stroke();
+      }
+      const k = dim * (1 - zn);
+      const c = sg.rgb.map((v, i) => Math.round(v + (bgRGB[i] - v) * k));
+      g.lineCap = "round";
+      g.strokeStyle = `rgb(${c[0]},${c[1]},${c[2]})`;
+      g.globalAlpha = sg.a;
+      g.lineWidth = width;
+      g.beginPath();
+      g.moveTo(sg.x0, sg.y0);
+      g.lineTo(sg.x1, sg.y1);
+      g.stroke();
+    }
+    ctx.save();
+    const base = ctx.globalAlpha, glow = n("glow");
+    if (glow > 0) {
+      ctx.globalCompositeOperation = "lighter";
+      ctx.globalAlpha = base * clamp(n("glowAlpha"), 0, 2);
+      ctx.filter = `blur(${(glow * s).toFixed(2)}px)`;
+      ctx.drawImage(braidBuf, 0, 0, bw, bh, 0, 0, bw / s, bh / s);
+      ctx.filter = "none";
+      ctx.globalCompositeOperation = "source-over";
+    }
+    ctx.globalAlpha = base;
+    ctx.drawImage(braidBuf, 0, 0, bw, bh, 0, 0, bw / s, bh / s);
+    ctx.restore();
+  },
+};
+let braidBuf: HTMLCanvasElement | null = null;
 
 // Replay card candles (chart box 744×352.83), center offsets from Figma; bodies span 23–77 %.
 const CANDLES: [number, number, number, boolean][] = [

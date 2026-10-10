@@ -1,0 +1,6826 @@
+{
+  "name": "BRN-07→08 · Prompt → Answer",
+  "note": "Grab hand drags the Indicator + Chart cards in and drops them; % counts in impact beats (punch, flash, chromatic split, glyph shockwaves, camera slam on 64); chart runs in from the left edge with 9 extra history candles",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "duration": 9.5667,
+  "background": "#020203",
+  "layers": [
+    {
+      "id": "cam",
+      "name": "Camera (shake)",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 5.5,
+            "v": 4,
+            "ease": "linear"
+          },
+          {
+            "t": 5.5333,
+            "v": -2.67,
+            "ease": "linear"
+          },
+          {
+            "t": 5.5667,
+            "v": 1.33,
+            "ease": "linear"
+          },
+          {
+            "t": 5.6,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 5.6333,
+            "v": 4,
+            "ease": "linear"
+          },
+          {
+            "t": 5.6667,
+            "v": -2.67,
+            "ease": "linear"
+          },
+          {
+            "t": 5.7,
+            "v": 1.33,
+            "ease": "linear"
+          },
+          {
+            "t": 5.7333,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 5.7667,
+            "v": 4,
+            "ease": "linear"
+          },
+          {
+            "t": 5.8,
+            "v": -2.67,
+            "ease": "linear"
+          },
+          {
+            "t": 5.8333,
+            "v": 1.33,
+            "ease": "linear"
+          },
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 5.9,
+            "v": 4,
+            "ease": "linear"
+          },
+          {
+            "t": 5.9333,
+            "v": -2.67,
+            "ease": "linear"
+          },
+          {
+            "t": 5.9667,
+            "v": 1.33,
+            "ease": "linear"
+          },
+          {
+            "t": 6,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 6.0667,
+            "v": 16,
+            "ease": "linear"
+          },
+          {
+            "t": 6.1,
+            "v": -13.71,
+            "ease": "linear"
+          },
+          {
+            "t": 6.1333,
+            "v": 11.43,
+            "ease": "linear"
+          },
+          {
+            "t": 6.1667,
+            "v": -9.14,
+            "ease": "linear"
+          },
+          {
+            "t": 6.2,
+            "v": 6.86,
+            "ease": "linear"
+          },
+          {
+            "t": 6.2333,
+            "v": -4.57,
+            "ease": "linear"
+          },
+          {
+            "t": 6.2667,
+            "v": 2.29,
+            "ease": "linear"
+          },
+          {
+            "t": 6.3,
+            "v": 0,
+            "ease": "linear"
+          }
+        ],
+        "y": [
+          {
+            "t": 5.5,
+            "v": -2.8,
+            "ease": "linear"
+          },
+          {
+            "t": 5.5333,
+            "v": 1.87,
+            "ease": "linear"
+          },
+          {
+            "t": 5.5667,
+            "v": -0.93,
+            "ease": "linear"
+          },
+          {
+            "t": 5.6,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 5.6333,
+            "v": -2.8,
+            "ease": "linear"
+          },
+          {
+            "t": 5.6667,
+            "v": 1.87,
+            "ease": "linear"
+          },
+          {
+            "t": 5.7,
+            "v": -0.93,
+            "ease": "linear"
+          },
+          {
+            "t": 5.7333,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 5.7667,
+            "v": -2.8,
+            "ease": "linear"
+          },
+          {
+            "t": 5.8,
+            "v": 1.87,
+            "ease": "linear"
+          },
+          {
+            "t": 5.8333,
+            "v": -0.93,
+            "ease": "linear"
+          },
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 5.9,
+            "v": -2.8,
+            "ease": "linear"
+          },
+          {
+            "t": 5.9333,
+            "v": 1.87,
+            "ease": "linear"
+          },
+          {
+            "t": 5.9667,
+            "v": -0.93,
+            "ease": "linear"
+          },
+          {
+            "t": 6,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 6.0667,
+            "v": -11.2,
+            "ease": "linear"
+          },
+          {
+            "t": 6.1,
+            "v": 9.6,
+            "ease": "linear"
+          },
+          {
+            "t": 6.1333,
+            "v": -8,
+            "ease": "linear"
+          },
+          {
+            "t": 6.1667,
+            "v": 6.4,
+            "ease": "linear"
+          },
+          {
+            "t": 6.2,
+            "v": -4.8,
+            "ease": "linear"
+          },
+          {
+            "t": 6.2333,
+            "v": 3.2,
+            "ease": "linear"
+          },
+          {
+            "t": 6.2667,
+            "v": -1.6,
+            "ease": "linear"
+          },
+          {
+            "t": 6.3,
+            "v": 0,
+            "ease": "linear"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hand-grab",
+      "name": "Hand · grab (drag cards)",
+      "type": "image",
+      "label": "#e6d3a3",
+      "start": 0.0667,
+      "end": 2.35,
+      "props": {
+        "src": "hand-grab.png",
+        "anchorX": 0.235,
+        "anchorY": 0.47,
+        "width": 170,
+        "shadowColor": "rgba(0,0,0,0.4)",
+        "shadowBlur": 30,
+        "shadowY": 18
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.0667,
+            "v": 2158,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 0.8333,
+            "v": 602,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.9333,
+            "v": 608,
+            "ease": "figmaSlowIn"
+          },
+          {
+            "t": 1.2,
+            "v": 2140
+          },
+          {
+            "t": 1.2333,
+            "v": 2175,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.9667,
+            "v": 845,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.0667,
+            "v": 851,
+            "ease": "figmaSlowIn"
+          },
+          {
+            "t": 2.3333,
+            "v": 2140
+          }
+        ],
+        "y": [
+          {
+            "t": 0.0667,
+            "v": 576.5,
+            "ease": "sineOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 404.5,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.8333,
+            "v": 426.5,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.9333,
+            "v": 400.5,
+            "ease": "figmaSlowIn"
+          },
+          {
+            "t": 1.2,
+            "v": 206.5
+          },
+          {
+            "t": 1.2333,
+            "v": 576.5,
+            "ease": "sineOut"
+          },
+          {
+            "t": 1.8,
+            "v": 404.5,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.9667,
+            "v": 426.5,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.0667,
+            "v": 400.5,
+            "ease": "figmaSlowIn"
+          },
+          {
+            "t": 2.3333,
+            "v": 206.5
+          }
+        ],
+        "rotation": [
+          {
+            "t": 0.0667,
+            "v": 8,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 0.8333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 1.2,
+            "v": -10
+          },
+          {
+            "t": 1.2333,
+            "v": 8,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.9667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.3333,
+            "v": -10
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.0667,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 0.7333,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.8333,
+            "v": 0.93,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.9667,
+            "v": 1.04
+          },
+          {
+            "t": 1.2333,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 1.8667,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.9667,
+            "v": 0.93,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.1,
+            "v": 1.04
+          }
+        ],
+        "shadowY": [
+          {
+            "t": 0.7333,
+            "v": 18,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.8333,
+            "v": 6,
+            "ease": "easeOut"
+          },
+          {
+            "t": 1,
+            "v": 18
+          },
+          {
+            "t": 1.8667,
+            "v": 18,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.9667,
+            "v": 6,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.1333,
+            "v": 18
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "hand",
+      "name": "Hand cursor",
+      "type": "image",
+      "label": "#e6d3a3",
+      "start": 4.1,
+      "end": 5.7333,
+      "props": {
+        "src": "hand-cursor.png",
+        "width": 160,
+        "anchorX": 0.32,
+        "anchorY": 0.16,
+        "shadowColor": "rgba(0,0,0,0.35)",
+        "shadowBlur": 24,
+        "shadowY": 12
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.1,
+            "v": 1703.93,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 1483.93
+          },
+          {
+            "t": 5,
+            "v": 1483.93,
+            "ease": "figmaSlowIn"
+          },
+          {
+            "t": 5.6333,
+            "v": 1643.93
+          }
+        ],
+        "y": [
+          {
+            "t": 4.1,
+            "v": 866.6,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 566.6
+          },
+          {
+            "t": 5,
+            "v": 566.6,
+            "ease": "figmaSlowIn"
+          },
+          {
+            "t": 5.6333,
+            "v": 826.6
+          }
+        ],
+        "rotation": [
+          {
+            "t": 4.1,
+            "v": 12,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.8,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 4.1,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.2667,
+            "v": 1
+          },
+          {
+            "t": 5.3667,
+            "v": 1,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.6333,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.7667,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 4.8333,
+            "v": 0.86,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 5.2333,
+            "v": 0.92
+          }
+        ],
+        "shadowY": [
+          {
+            "t": 4.7667,
+            "v": 12,
+            "ease": "quadIn"
+          },
+          {
+            "t": 4.8333,
+            "v": 4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1667,
+            "v": 8
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "prompt",
+      "name": "Prompt row (group)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "end": 5.5667,
+      "props": {
+        "x": 427.5,
+        "y": 540
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.0667,
+            "v": 540,
+            "ease": "figmaSlowIn"
+          },
+          {
+            "t": 5.5667,
+            "v": 480
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.0667,
+            "v": 1,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.5,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.0667,
+            "v": 0,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.5,
+            "v": 12
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "send",
+      "name": "Send",
+      "type": "image",
+      "parent": "prompt",
+      "end": 5.5667,
+      "props": {
+        "src": "send.svg",
+        "width": 72,
+        "height": 72,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.3833,
+            "v": 88,
+            "ease": "hold"
+          },
+          {
+            "t": 2.4,
+            "v": 139.74,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.45,
+            "v": 167.06,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.5,
+            "v": 195.1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.55,
+            "v": 207.67,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.6833,
+            "v": 220.98,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.7333,
+            "v": 248.88,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.7833,
+            "v": 268.9,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.8333,
+            "v": 281.47,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.95,
+            "v": 328.7,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9833,
+            "v": 358.58,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.0167,
+            "v": 371.35,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.05,
+            "v": 403.05,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.0833,
+            "v": 415.62,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.2,
+            "v": 447.98,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.2333,
+            "v": 479.27,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.2833,
+            "v": 510.98,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.3333,
+            "v": 541,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.3833,
+            "v": 553.57,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.4333,
+            "v": 566.87,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.4833,
+            "v": 598.57,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.5333,
+            "v": 611.14,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.6667,
+            "v": 643.43,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.7167,
+            "v": 655.77,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.75,
+            "v": 685.78,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.7833,
+            "v": 713.68,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.8167,
+            "v": 743.69,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.85,
+            "v": 763.9,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.8833,
+            "v": 776.47,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4,
+            "v": 811.23,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.0333,
+            "v": 825.1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.0833,
+            "v": 844.71,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.1333,
+            "v": 875.57,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.1833,
+            "v": 905.56,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.2333,
+            "v": 924.55,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.2833,
+            "v": 937.08,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.3333,
+            "v": 967.75,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.3833,
+            "v": 998.58,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.4333,
+            "v": 1027.73,
+            "ease": "easeOut"
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.4,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.5667,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.4,
+            "v": 0.5,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 2.9,
+            "v": 1
+          },
+          {
+            "t": 4.7833,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 4.8333,
+            "v": 0.88,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 5.3333,
+            "v": 1
+          }
+        ],
+        "shadowColor": [
+          {
+            "t": 4.8167,
+            "v": "rgba(210,255,164,0)",
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8667,
+            "v": "rgba(210,255,164,0.9)",
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.3333,
+            "v": "rgba(210,255,164,0)"
+          }
+        ],
+        "shadowBlur": [
+          {
+            "t": 4.8333,
+            "v": 36
+          }
+        ]
+      }
+    },
+    {
+      "id": "caret",
+      "name": "Caret",
+      "type": "rect",
+      "parent": "prompt",
+      "end": 5.5667,
+      "props": {
+        "anchorX": 0,
+        "y": 0,
+        "width": 4,
+        "height": 56,
+        "fill": "#d2ffa4"
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.3833,
+            "v": 24,
+            "ease": "hold"
+          },
+          {
+            "t": 2.4,
+            "v": 75.74,
+            "ease": "hold"
+          },
+          {
+            "t": 2.45,
+            "v": 103.06,
+            "ease": "hold"
+          },
+          {
+            "t": 2.5,
+            "v": 131.1,
+            "ease": "hold"
+          },
+          {
+            "t": 2.55,
+            "v": 143.67,
+            "ease": "hold"
+          },
+          {
+            "t": 2.6833,
+            "v": 156.98,
+            "ease": "hold"
+          },
+          {
+            "t": 2.7333,
+            "v": 184.88,
+            "ease": "hold"
+          },
+          {
+            "t": 2.7833,
+            "v": 204.9,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8333,
+            "v": 217.47,
+            "ease": "hold"
+          },
+          {
+            "t": 2.95,
+            "v": 264.7,
+            "ease": "hold"
+          },
+          {
+            "t": 2.9833,
+            "v": 294.58,
+            "ease": "hold"
+          },
+          {
+            "t": 3.0167,
+            "v": 307.35,
+            "ease": "hold"
+          },
+          {
+            "t": 3.05,
+            "v": 339.05,
+            "ease": "hold"
+          },
+          {
+            "t": 3.0833,
+            "v": 351.62,
+            "ease": "hold"
+          },
+          {
+            "t": 3.2,
+            "v": 383.98,
+            "ease": "hold"
+          },
+          {
+            "t": 3.2333,
+            "v": 415.27,
+            "ease": "hold"
+          },
+          {
+            "t": 3.2833,
+            "v": 446.98,
+            "ease": "hold"
+          },
+          {
+            "t": 3.3333,
+            "v": 477,
+            "ease": "hold"
+          },
+          {
+            "t": 3.3833,
+            "v": 489.57,
+            "ease": "hold"
+          },
+          {
+            "t": 3.4333,
+            "v": 502.87,
+            "ease": "hold"
+          },
+          {
+            "t": 3.4833,
+            "v": 534.57,
+            "ease": "hold"
+          },
+          {
+            "t": 3.5333,
+            "v": 547.14,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6667,
+            "v": 579.43,
+            "ease": "hold"
+          },
+          {
+            "t": 3.7167,
+            "v": 591.77,
+            "ease": "hold"
+          },
+          {
+            "t": 3.75,
+            "v": 621.78,
+            "ease": "hold"
+          },
+          {
+            "t": 3.7833,
+            "v": 649.68,
+            "ease": "hold"
+          },
+          {
+            "t": 3.8167,
+            "v": 679.69,
+            "ease": "hold"
+          },
+          {
+            "t": 3.85,
+            "v": 699.9,
+            "ease": "hold"
+          },
+          {
+            "t": 3.8833,
+            "v": 712.47,
+            "ease": "hold"
+          },
+          {
+            "t": 4,
+            "v": 747.23,
+            "ease": "hold"
+          },
+          {
+            "t": 4.0333,
+            "v": 761.1,
+            "ease": "hold"
+          },
+          {
+            "t": 4.0833,
+            "v": 780.71,
+            "ease": "hold"
+          },
+          {
+            "t": 4.1333,
+            "v": 811.57,
+            "ease": "hold"
+          },
+          {
+            "t": 4.1833,
+            "v": 841.56,
+            "ease": "hold"
+          },
+          {
+            "t": 4.2333,
+            "v": 860.55,
+            "ease": "hold"
+          },
+          {
+            "t": 4.2833,
+            "v": 873.08,
+            "ease": "hold"
+          },
+          {
+            "t": 4.3333,
+            "v": 903.75,
+            "ease": "hold"
+          },
+          {
+            "t": 4.3833,
+            "v": 934.58,
+            "ease": "hold"
+          },
+          {
+            "t": 4.4333,
+            "v": 963.73,
+            "ease": "hold"
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 2.1,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 2.3667,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 2.5667,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 4.7,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9333,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8333,
+            "v": 0,
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "prompt-text",
+      "name": "Prompt text",
+      "type": "text",
+      "parent": "prompt",
+      "end": 5.5667,
+      "keyframes": {
+        "reveal": [
+          {
+            "t": 2.3833,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 2.4,
+            "v": 0.0263,
+            "ease": "hold"
+          },
+          {
+            "t": 2.45,
+            "v": 0.0526,
+            "ease": "hold"
+          },
+          {
+            "t": 2.5,
+            "v": 0.0789,
+            "ease": "hold"
+          },
+          {
+            "t": 2.55,
+            "v": 0.1053,
+            "ease": "hold"
+          },
+          {
+            "t": 2.6833,
+            "v": 0.1316,
+            "ease": "hold"
+          },
+          {
+            "t": 2.7333,
+            "v": 0.1579,
+            "ease": "hold"
+          },
+          {
+            "t": 2.7833,
+            "v": 0.1842,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8333,
+            "v": 0.2105,
+            "ease": "hold"
+          },
+          {
+            "t": 2.95,
+            "v": 0.2368,
+            "ease": "hold"
+          },
+          {
+            "t": 2.9833,
+            "v": 0.2632,
+            "ease": "hold"
+          },
+          {
+            "t": 3.0167,
+            "v": 0.2895,
+            "ease": "hold"
+          },
+          {
+            "t": 3.05,
+            "v": 0.3158,
+            "ease": "hold"
+          },
+          {
+            "t": 3.0833,
+            "v": 0.3421,
+            "ease": "hold"
+          },
+          {
+            "t": 3.2,
+            "v": 0.3684,
+            "ease": "hold"
+          },
+          {
+            "t": 3.2333,
+            "v": 0.3947,
+            "ease": "hold"
+          },
+          {
+            "t": 3.2833,
+            "v": 0.4211,
+            "ease": "hold"
+          },
+          {
+            "t": 3.3333,
+            "v": 0.4474,
+            "ease": "hold"
+          },
+          {
+            "t": 3.3833,
+            "v": 0.4737,
+            "ease": "hold"
+          },
+          {
+            "t": 3.4333,
+            "v": 0.5,
+            "ease": "hold"
+          },
+          {
+            "t": 3.4833,
+            "v": 0.5263,
+            "ease": "hold"
+          },
+          {
+            "t": 3.5333,
+            "v": 0.5526,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6667,
+            "v": 0.5789,
+            "ease": "hold"
+          },
+          {
+            "t": 3.7167,
+            "v": 0.6053,
+            "ease": "hold"
+          },
+          {
+            "t": 3.75,
+            "v": 0.6316,
+            "ease": "hold"
+          },
+          {
+            "t": 3.7833,
+            "v": 0.6579,
+            "ease": "hold"
+          },
+          {
+            "t": 3.8167,
+            "v": 0.6842,
+            "ease": "hold"
+          },
+          {
+            "t": 3.85,
+            "v": 0.7105,
+            "ease": "hold"
+          },
+          {
+            "t": 3.8833,
+            "v": 0.7368,
+            "ease": "hold"
+          },
+          {
+            "t": 4,
+            "v": 0.7632,
+            "ease": "hold"
+          },
+          {
+            "t": 4.0333,
+            "v": 0.7895,
+            "ease": "hold"
+          },
+          {
+            "t": 4.0833,
+            "v": 0.8158,
+            "ease": "hold"
+          },
+          {
+            "t": 4.1333,
+            "v": 0.8421,
+            "ease": "hold"
+          },
+          {
+            "t": 4.1833,
+            "v": 0.8684,
+            "ease": "hold"
+          },
+          {
+            "t": 4.2333,
+            "v": 0.8947,
+            "ease": "hold"
+          },
+          {
+            "t": 4.2833,
+            "v": 0.9211,
+            "ease": "hold"
+          },
+          {
+            "t": 4.3333,
+            "v": 0.9474,
+            "ease": "hold"
+          },
+          {
+            "t": 4.3833,
+            "v": 0.9737,
+            "ease": "hold"
+          },
+          {
+            "t": 4.4333,
+            "v": 1,
+            "ease": "hold"
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Was ist mein Edge in dieser Situation?",
+        "fontWeight": 500,
+        "fontSize": 54,
+        "letterSpacing": -0.54,
+        "lineHeight": 1.2962962962962963,
+        "fill": "#ffffff",
+        "x": 0,
+        "y": -35
+      }
+    },
+    {
+      "id": "chip-anchor",
+      "name": "Chip · Anchor (group)",
+      "type": "null",
+      "label": "#9fdcc6",
+      "start": 0.0667,
+      "end": 5.5667,
+      "props": {
+        "x": 527,
+        "y": 420.5
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.0667,
+            "v": 2083,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 0.8333,
+            "v": 527
+          }
+        ],
+        "y": [
+          {
+            "t": 0.0667,
+            "v": 570.5,
+            "ease": "sineOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 398.5,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.8333,
+            "v": 420.5
+          },
+          {
+            "t": 5,
+            "v": 420.5,
+            "ease": "figmaSlowIn"
+          },
+          {
+            "t": 5.5,
+            "v": 360.5
+          }
+        ],
+        "rotation": [
+          {
+            "t": 0.0667,
+            "v": 9,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 0.7,
+            "v": 2,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.8333,
+            "v": 0,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 1.3333,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.0667,
+            "v": 1.07,
+            "ease": "hold"
+          },
+          {
+            "t": 0.7,
+            "v": 1.07,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.8333,
+            "v": 0.97,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 1.3333,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5,
+            "v": 1,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.4333,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 5,
+            "v": 0,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.4333,
+            "v": 12
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "chip-anchor-value",
+      "name": "Anchor",
+      "type": "text",
+      "parent": "chip-anchor",
+      "end": 5.5667,
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Anchor",
+        "fontWeight": 500,
+        "fontSize": 30,
+        "letterSpacing": -0.3,
+        "lineHeight": 1.3,
+        "fill": "#ffffff",
+        "x": -22,
+        "y": -9.5
+      }
+    },
+    {
+      "id": "chip-anchor-label",
+      "name": "INDIKATOR",
+      "type": "text",
+      "parent": "chip-anchor",
+      "end": 5.5667,
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "INDIKATOR",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "letterSpacing": 1.12,
+        "lineHeight": 1.2857142857142858,
+        "fill": "rgba(255,255,255,0.45)",
+        "x": -22,
+        "y": -29.5
+      }
+    },
+    {
+      "id": "chip-anchor-icon",
+      "name": "Icon",
+      "type": "image",
+      "parent": "chip-anchor",
+      "end": 5.5667,
+      "props": {
+        "src": "icon-indicator.svg",
+        "width": 48,
+        "height": 48,
+        "x": -62,
+        "y": 0
+      }
+    },
+    {
+      "id": "chip-anchor-bg",
+      "name": "Chip surface",
+      "type": "rect",
+      "parent": "chip-anchor",
+      "end": 5.5667,
+      "props": {
+        "width": 206,
+        "height": 89,
+        "radius": 8,
+        "fill": "rgba(255,255,255,0.06)",
+        "stroke": "rgba(255,255,255,0.12)",
+        "strokeWidth": 1,
+        "backdropBlur": 14.75
+      }
+    },
+    {
+      "id": "chip-anchor-lift",
+      "name": "Lift shadow",
+      "type": "rect",
+      "parent": "chip-anchor",
+      "end": 1.0333,
+      "props": {
+        "width": 182,
+        "height": 64,
+        "radius": 32,
+        "fill": "rgba(0,0,0,0.6)",
+        "blur": 22
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0.7,
+            "v": 30,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.8333,
+            "v": 8
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.7,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "chip-btc",
+      "name": "Chip · BTCUSD (group)",
+      "type": "null",
+      "label": "#9fdcc6",
+      "start": 1.2333,
+      "end": 5.5667,
+      "props": {
+        "x": 761.5,
+        "y": 420.5
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.2333,
+            "v": 2091.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.9667,
+            "v": 761.5
+          }
+        ],
+        "y": [
+          {
+            "t": 1.2333,
+            "v": 570.5,
+            "ease": "sineOut"
+          },
+          {
+            "t": 1.8,
+            "v": 398.5,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.9667,
+            "v": 420.5
+          },
+          {
+            "t": 5.0333,
+            "v": 420.5,
+            "ease": "figmaSlowIn"
+          },
+          {
+            "t": 5.5333,
+            "v": 360.5
+          }
+        ],
+        "rotation": [
+          {
+            "t": 1.2333,
+            "v": 9,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.8333,
+            "v": 2,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.9667,
+            "v": 0,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 2.4667,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 1.2333,
+            "v": 1.07,
+            "ease": "hold"
+          },
+          {
+            "t": 1.8333,
+            "v": 1.07,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.9667,
+            "v": 0.97,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 2.4667,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.0333,
+            "v": 1,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.4667,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.0333,
+            "v": 0,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.4667,
+            "v": 12
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "chip-btc-value",
+      "name": "BTCUSD",
+      "type": "text",
+      "parent": "chip-btc",
+      "end": 5.5667,
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "BTCUSD",
+        "fontWeight": 500,
+        "fontSize": 30,
+        "letterSpacing": -0.3,
+        "lineHeight": 1.3,
+        "fill": "#ffffff",
+        "x": -30.5,
+        "y": -9.5
+      }
+    },
+    {
+      "id": "chip-btc-label",
+      "name": "CHART",
+      "type": "text",
+      "parent": "chip-btc",
+      "end": 5.5667,
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "CHART",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "letterSpacing": 1.12,
+        "lineHeight": 1.2857142857142858,
+        "fill": "rgba(255,255,255,0.45)",
+        "x": -30.5,
+        "y": -29.5
+      }
+    },
+    {
+      "id": "chip-btc-icon",
+      "name": "Icon",
+      "type": "image",
+      "parent": "chip-btc",
+      "end": 5.5667,
+      "props": {
+        "src": "icon-chart.svg",
+        "width": 48,
+        "height": 48,
+        "x": -70.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "chip-btc-bg",
+      "name": "Chip surface",
+      "type": "rect",
+      "parent": "chip-btc",
+      "end": 5.5667,
+      "props": {
+        "width": 223,
+        "height": 89,
+        "radius": 8,
+        "fill": "rgba(255,255,255,0.06)",
+        "stroke": "rgba(255,255,255,0.12)",
+        "strokeWidth": 1,
+        "backdropBlur": 14.75
+      }
+    },
+    {
+      "id": "chip-btc-lift",
+      "name": "Lift shadow",
+      "type": "rect",
+      "parent": "chip-btc",
+      "end": 2.1667,
+      "props": {
+        "width": 199,
+        "height": 64,
+        "radius": 32,
+        "fill": "rgba(0,0,0,0.6)",
+        "blur": 22
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.8333,
+            "v": 30,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.9667,
+            "v": 8
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.8333,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 2.1333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tag",
+      "name": "Price tag 85.870 (group)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "start": 7.5667,
+      "props": {
+        "x": 1440,
+        "y": 717
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 7.5667,
+            "v": 1480,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 8.2333,
+            "v": 1440
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.5667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.8333,
+            "v": 1
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "tag-text",
+      "name": "85.870",
+      "type": "text",
+      "parent": "tag",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "85.870",
+        "fontWeight": 600,
+        "fontSize": 24,
+        "letterSpacing": -0.12,
+        "lineHeight": 1.3,
+        "fill": "#070909",
+        "x": -40.5,
+        "y": -15.5
+      }
+    },
+    {
+      "id": "tag-bg",
+      "name": "Tag surface",
+      "type": "path",
+      "parent": "tag",
+      "props": {
+        "d": "M0 0H104L112 8V40H0V0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0
+      }
+    },
+    {
+      "id": "sweep-sub",
+      "name": "Gesweept und zurückerobert",
+      "type": "text",
+      "parent": "cam",
+      "start": 7.65,
+      "keyframes": {
+        "x": [
+          {
+            "t": 7.65,
+            "v": 1052,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 8.25,
+            "v": 1064
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.65,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.95,
+            "v": 1
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Gesweept und zurückerobert",
+        "fontWeight": 400,
+        "fontSize": 24,
+        "letterSpacing": -0.12,
+        "lineHeight": 1.3,
+        "fill": "rgba(244,249,238,0.6)",
+        "y": 785
+      }
+    },
+    {
+      "id": "sweep-label",
+      "name": "LIQUIDITY SWEEP",
+      "type": "text",
+      "parent": "cam",
+      "start": 7.5833,
+      "keyframes": {
+        "x": [
+          {
+            "t": 7.5833,
+            "v": 1052,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 8.1833,
+            "v": 1064
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.5833,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.8833,
+            "v": 1
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "LIQUIDITY SWEEP",
+        "fontWeight": 500,
+        "fontSize": 16,
+        "letterSpacing": 1.92,
+        "lineHeight": 1.3,
+        "fill": "#d2ffa4",
+        "y": 760
+      }
+    },
+    {
+      "id": "sweep-marker",
+      "name": "Sweep marker",
+      "type": "rect",
+      "start": 7.5167,
+      "props": {
+        "x": 1040,
+        "y": 800.1,
+        "width": 8,
+        "height": 8,
+        "fill": "#d2ffa4",
+        "shadowColor": "rgba(210,255,164,0.8)",
+        "shadowBlur": 12
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 7.5167,
+            "v": 0,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 8.0167,
+            "v": 1
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "crosshair",
+      "name": "Crosshair",
+      "type": "path",
+      "start": 7.2833,
+      "props": {
+        "d": "M0.5 0V3.97M0.5 9.92V13.89M0.5 19.84V23.81M0.5 29.76V33.73M0.5 39.68V43.65M0.5 49.6V53.57M0.5 59.52V63.49M0.5 69.44V73.41M0.5 79.36V83.33M0.5 89.28V93.25M0.5 99.2V103.17M0.5 109.12V113.09M0.5 119.04V123.01M0.5 128.96V132.93M0.5 138.88V142.85M0.5 148.8V152.77M0.5 158.72V162.69M0.5 168.64V172.61M0.5 178.56V182.53M0.5 188.48V192.45M0.5 198.4V202.37M0.5 208.32V212.29M0.5 218.24V222.21M0.5 228.16V232.13M0.5 238.08V242.05M0.5 248V248",
+        "pathOrigin": "zero",
+        "x": 1039.5,
+        "y": 576,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "rgba(244,249,238,0.3)",
+        "strokeWidth": 1
+      },
+      "keyframes": {
+        "trimEnd": [
+          {
+            "t": 7.2833,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.8833,
+            "v": 1
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "chart",
+      "name": "Chart (group)",
+      "type": "null",
+      "label": "#9fdcc6",
+      "start": 6.2,
+      "props": {
+        "x": 424,
+        "y": 600
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "candle-0",
+      "name": "Candle 1",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.3,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V8.16H18C19.1046 8.16 20 9.06 20 10.16V22.48C20 23.58 19.1046 24.48 18 24.48H12V32C12 33.1 11.1046 34 10 34C8.8954 34 8 33.1 8 32V24.48H2C0.8954 24.48 0 23.58 0 22.48V10.16C0 9.06 0.8954 8.16 2 8.16H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -387.04
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.3,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.7,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.3,
+            "v": 128,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.7,
+            "v": 118
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.3,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.4333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-0-glow",
+      "name": "Candle glow 1",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.3,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V8.16H18C19.1046 8.16 20 9.06 20 10.16V22.48C20 23.58 19.1046 24.48 18 24.48H12V32C12 33.1 11.1046 34 10 34C8.8954 34 8 33.1 8 32V24.48H2C0.8954 24.48 0 23.58 0 22.48V10.16C0 9.06 0.8954 8.16 2 8.16H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -387.04,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.3,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.7,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.3,
+            "v": 128,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.7,
+            "v": 118
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.3667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.5333,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 6.9667,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-1",
+      "name": "Candle 2",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.35,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V7.92H18C19.1046 7.92 20 8.82 20 9.92V32.32C20 33.42 19.1046 34.32 18 34.32H12V42C12 43.1 11.1046 44 10 44C8.8954 44 8 43.1 8 42V34.32H2C0.8954 34.32 0 33.42 0 32.32V9.92C0 8.82 0.8954 7.92 2 7.92H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -341.48
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.35,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.75,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.35,
+            "v": 114,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.75,
+            "v": 104
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.35,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.4833,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-1-glow",
+      "name": "Candle glow 2",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.35,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V7.92H18C19.1046 7.92 20 8.82 20 9.92V32.32C20 33.42 19.1046 34.32 18 34.32H12V42C12 43.1 11.1046 44 10 44C8.8954 44 8 43.1 8 42V34.32H2C0.8954 34.32 0 33.42 0 32.32V9.92C0 8.82 0.8954 7.92 2 7.92H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -341.48,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.35,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.75,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.35,
+            "v": 114,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.75,
+            "v": 104
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.4167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.5833,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.0167,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-2",
+      "name": "Candle 3",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.3833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V9H18C19.1046 9 20 9.9 20 11V19C20 20.1 19.1046 21 18 21H12V28C12 29.1 11.1046 30 10 30C8.8954 30 8 29.1 8 28V21H2C0.8954 21 0 20.1 0 19V11C0 9.9 0.8954 9 2 9H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -295.92
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.3833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.7833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.3833,
+            "v": 119,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.7833,
+            "v": 109
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.3833,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.5167,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-2-glow",
+      "name": "Candle glow 3",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.3833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V9H18C19.1046 9 20 9.9 20 11V19C20 20.1 19.1046 21 18 21H12V28C12 29.1 11.1046 30 10 30C8.8954 30 8 29.1 8 28V21H2C0.8954 21 0 20.1 0 19V11C0 9.9 0.8954 9 2 9H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -295.92,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.3833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.7833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.3833,
+            "v": 119,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.7833,
+            "v": 109
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.45,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.6167,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.05,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-3",
+      "name": "Candle 4",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.4333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V9.2H18C19.1046 9.2 20 10.1 20 11.2V32.04C20 33.14 19.1046 34.04 18 34.04H12V44C12 45.1 11.1046 46 10 46C8.8954 46 8 45.1 8 44V34.04H2C0.8954 34.04 0 33.14 0 32.04V11.2C0 10.1 0.8954 9.2 2 9.2H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -250.36
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.4333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.8333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.4333,
+            "v": 98,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.8333,
+            "v": 88
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.4333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.5667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-3-glow",
+      "name": "Candle glow 4",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.4333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V9.2H18C19.1046 9.2 20 10.1 20 11.2V32.04C20 33.14 19.1046 34.04 18 34.04H12V44C12 45.1 11.1046 46 10 46C8.8954 46 8 45.1 8 44V34.04H2C0.8954 34.04 0 33.14 0 32.04V11.2C0 10.1 0.8954 9.2 2 9.2H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -250.36,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.4333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.8333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.4333,
+            "v": 98,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.8333,
+            "v": 88
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.5,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.6667,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.1,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-4",
+      "name": "Candle 5",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.4667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V9.88H18C19.1046 9.88 20 10.78 20 11.88V24.6C20 25.7 19.1046 26.6 18 26.6H12V36C12 37.1 11.1046 38 10 38C8.8954 38 8 37.1 8 36V26.6H2C0.8954 26.6 0 25.7 0 24.6V11.88C0 10.78 0.8954 9.88 2 9.88H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -204.8
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.4667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.8667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.4667,
+            "v": 89,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.8667,
+            "v": 79
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.4667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.6,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-4-glow",
+      "name": "Candle glow 5",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.4667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V9.88H18C19.1046 9.88 20 10.78 20 11.88V24.6C20 25.7 19.1046 26.6 18 26.6H12V36C12 37.1 11.1046 38 10 38C8.8954 38 8 37.1 8 36V26.6H2C0.8954 26.6 0 25.7 0 24.6V11.88C0 10.78 0.8954 9.88 2 9.88H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -204.8,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.4667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.8667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.4667,
+            "v": 89,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.8667,
+            "v": 79
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.5333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.7,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.1333,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-5",
+      "name": "Candle 6",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.5167,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V7.84H18C19.1046 7.84 20 8.74 20 9.84V19.28C20 20.38 19.1046 21.28 18 21.28H12V26C12 27.1 11.1046 28 10 28C8.8954 28 8 27.1 8 26V21.28H2C0.8954 21.28 0 20.38 0 19.28V9.84C0 8.74 0.8954 7.84 2 7.84H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -159.24
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.5167,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.9167,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.5167,
+            "v": 96,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.9167,
+            "v": 86
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.5167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.65,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-5-glow",
+      "name": "Candle glow 6",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.5167,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V7.84H18C19.1046 7.84 20 8.74 20 9.84V19.28C20 20.38 19.1046 21.28 18 21.28H12V26C12 27.1 11.1046 28 10 28C8.8954 28 8 27.1 8 26V21.28H2C0.8954 21.28 0 20.38 0 19.28V9.84C0 8.74 0.8954 7.84 2 7.84H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -159.24,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.5167,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.9167,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.5167,
+            "v": 96,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.9167,
+            "v": 86
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.5833,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.75,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.1833,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-6",
+      "name": "Candle 7",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.55,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V6.72H18C19.1046 6.72 20 7.62 20 8.72V27.4C20 28.5 19.1046 29.4 18 29.4H12V40C12 41.1 11.1046 42 10 42C8.8954 42 8 41.1 8 40V29.4H2C0.8954 29.4 0 28.5 0 27.4V8.72C0 7.62 0.8954 6.72 2 6.72H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -113.68
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.55,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.95,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.55,
+            "v": 74,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.95,
+            "v": 64
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.55,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.6833,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-6-glow",
+      "name": "Candle glow 7",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.55,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V6.72H18C19.1046 6.72 20 7.62 20 8.72V27.4C20 28.5 19.1046 29.4 18 29.4H12V40C12 41.1 11.1046 42 10 42C8.8954 42 8 41.1 8 40V29.4H2C0.8954 29.4 0 28.5 0 27.4V8.72C0 7.62 0.8954 6.72 2 6.72H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -113.68,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.55,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.95,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.55,
+            "v": 74,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.95,
+            "v": 64
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.6167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.7833,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.2167,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-7",
+      "name": "Candle 8",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.6,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V7.92H18C19.1046 7.92 20 8.82 20 9.92V24.64C20 25.74 19.1046 26.64 18 26.64H12V34C12 35.1 11.1046 36 10 36C8.8954 36 8 35.1 8 34V26.64H2C0.8954 26.64 0 25.74 0 24.64V9.92C0 8.82 0.8954 7.92 2 7.92H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -68.12
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.6,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.6,
+            "v": 62,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7,
+            "v": 52
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.6,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.7333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-7-glow",
+      "name": "Candle glow 8",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.6,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V7.92H18C19.1046 7.92 20 8.82 20 9.92V24.64C20 25.74 19.1046 26.64 18 26.64H12V34C12 35.1 11.1046 36 10 36C8.8954 36 8 35.1 8 34V26.64H2C0.8954 26.64 0 25.74 0 24.64V9.92C0 8.82 0.8954 7.92 2 7.92H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -68.12,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.6,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.6,
+            "v": 62,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7,
+            "v": 52
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.6667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.8333,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.2667,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-8",
+      "name": "Candle 9",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.6333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V8H18C19.1046 8 20 8.9 20 10V25.2C20 26.3 19.1046 27.2 18 27.2H12V38C12 39.1 11.1046 40 10 40C8.8954 40 8 39.1 8 38V27.2H2C0.8954 27.2 0 26.3 0 25.2V10C0 8.9 0.8954 8 2 8H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -22.56
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.6333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.0333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.6333,
+            "v": 51,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.0333,
+            "v": 41
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.6333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.7667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-8-glow",
+      "name": "Candle glow 9",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.6333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.8954 12 2V8H18C19.1046 8 20 8.9 20 10V25.2C20 26.3 19.1046 27.2 18 27.2H12V38C12 39.1 11.1046 40 10 40C8.8954 40 8 39.1 8 38V27.2H2C0.8954 27.2 0 26.3 0 25.2V10C0 8.9 0.8954 8 2 8H8V2C8 0.8954 8.8954 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": -22.56,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.6333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.0333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.6333,
+            "v": 51,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.0333,
+            "v": 41
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.7,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.8667,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.3,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-9",
+      "name": "Candle 10",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.6833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V5.95312H18C19.1046 5.95313 20 6.84856 20 7.95312V25.3818C19.9999 26.4863 19.1045 27.3818 18 27.3818H12V37.2861C11.9998 38.3905 11.1044 39.2861 10 39.2861C8.89557 39.2861 8.00023 38.3905 8 37.2861V27.3818H2C0.895477 27.3818 7.52638e-05 26.4863 0 25.3818V7.95312C0 6.84856 0.895431 5.95312 2 5.95312H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 23
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.6833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.0833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.6833,
+            "v": 42.73,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.0833,
+            "v": 32.73
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.6833,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.8167,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-9-glow",
+      "name": "Candle glow 10",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.6833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V5.95312H18C19.1046 5.95313 20 6.84856 20 7.95312V25.3818C19.9999 26.4863 19.1045 27.3818 18 27.3818H12V37.2861C11.9998 38.3905 11.1044 39.2861 10 39.2861C8.89557 39.2861 8.00023 38.3905 8 37.2861V27.3818H2C0.895477 27.3818 7.52638e-05 26.4863 0 25.3818V7.95312C0 6.84856 0.895431 5.95312 2 5.95312H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 23,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.6833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.0833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.6833,
+            "v": 42.73,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.0833,
+            "v": 32.73
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.75,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.9167,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.35,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-10",
+      "name": "Candle 11",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.7167,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.8555H18C19.1046 11.8555 20 12.7509 20 13.8555V24.1416C19.9998 25.246 19.1044 26.1416 18 26.1416H12V34.0596C11.9998 35.164 11.1044 36.0596 10 36.0596C8.89556 36.0596 8.00022 35.164 8 34.0596V26.1416H2C0.89557 26.1416 0.000226223 25.246 0 24.1416V13.8555C7.99626e-07 12.7509 0.895431 11.8555 2 11.8555H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 68
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.7167,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.1167,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.7167,
+            "v": 42.37,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.1167,
+            "v": 32.37
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.7167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.85,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-10-glow",
+      "name": "Candle glow 11",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.7167,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.8555H18C19.1046 11.8555 20 12.7509 20 13.8555V24.1416C19.9998 25.246 19.1044 26.1416 18 26.1416H12V34.0596C11.9998 35.164 11.1044 36.0596 10 36.0596C8.89556 36.0596 8.00022 35.164 8 34.0596V26.1416H2C0.89557 26.1416 0.000226223 25.246 0 24.1416V13.8555C7.99626e-07 12.7509 0.895431 11.8555 2 11.8555H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 68,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.7167,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.1167,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.7167,
+            "v": 42.37,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.1167,
+            "v": 32.37
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.7833,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.95,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.3833,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-11",
+      "name": "Candle 12",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.7667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V7.47266H18C19.1046 7.47266 20 8.36809 20 9.47266V36.4248C20 37.5294 19.1046 38.4248 18 38.4248H12V43.0459C11.9999 44.1504 11.1045 45.0459 10 45.0459C8.89546 45.0459 8.00006 44.1504 8 43.0459V38.4248H2C0.895431 38.4248 0 37.5294 0 36.4248V9.47266C0 8.36809 0.895431 7.47266 2 7.47266H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 114
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.7667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.1667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.7667,
+            "v": 51.24,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.1667,
+            "v": 41.24
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.7667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.9,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-11-glow",
+      "name": "Candle glow 12",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.7667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V7.47266H18C19.1046 7.47266 20 8.36809 20 9.47266V36.4248C20 37.5294 19.1046 38.4248 18 38.4248H12V43.0459C11.9999 44.1504 11.1045 45.0459 10 45.0459C8.89546 45.0459 8.00006 44.1504 8 43.0459V38.4248H2C0.895431 38.4248 0 37.5294 0 36.4248V9.47266C0 8.36809 0.895431 7.47266 2 7.47266H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 114,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.7667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.1667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.7667,
+            "v": 51.24,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.1667,
+            "v": 41.24
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.8333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.4333,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-12",
+      "name": "Candle 13",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.8,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.4648H18C19.1046 11.4648 20 12.3603 20 13.4648V26.1318C19.9998 27.2363 19.1045 28.1318 18 28.1318H12V36.9375C12 38.0421 11.1046 38.9375 10 38.9375C8.89543 38.9375 8 38.0421 8 36.9375V28.1318H2C0.895539 28.1318 0.000176249 27.2363 0 26.1318V13.4648C0 12.3603 0.895431 11.4648 2 11.4648H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 160
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.8,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.8,
+            "v": 75.15,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2,
+            "v": 65.15
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.8,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.9333,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-12-glow",
+      "name": "Candle glow 13",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.8,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.4648H18C19.1046 11.4648 20 12.3603 20 13.4648V26.1318C19.9998 27.2363 19.1045 28.1318 18 28.1318H12V36.9375C12 38.0421 11.1046 38.9375 10 38.9375C8.89543 38.9375 8 38.0421 8 36.9375V28.1318H2C0.895539 28.1318 0.000176249 27.2363 0 26.1318V13.4648C0 12.3603 0.895431 11.4648 2 11.4648H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 160,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.8,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.8,
+            "v": 75.15,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2,
+            "v": 65.15
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.8667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.0333,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.4667,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-13",
+      "name": "Candle 14",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.85,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V8.89453H18C19.1046 8.89453 20 9.78996 20 10.8945V18.7988C20 19.9034 19.1046 20.7988 18 20.7988H12V30.5537C11.9998 31.6581 11.1044 32.5537 10 32.5537C8.89556 32.5537 8.00021 31.6581 8 30.5537V20.7988H2C0.895431 20.7988 0 19.9034 0 18.7988V10.8945C6.89524e-07 9.78996 0.895431 8.89453 2 8.89453H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 205
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.85,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.25,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.85,
+            "v": 79.28,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.25,
+            "v": 69.28
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.85,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.9833,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-13-glow",
+      "name": "Candle glow 14",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.85,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V8.89453H18C19.1046 8.89453 20 9.78996 20 10.8945V18.7988C20 19.9034 19.1046 20.7988 18 20.7988H12V30.5537C11.9998 31.6581 11.1044 32.5537 10 32.5537C8.89556 32.5537 8.00021 31.6581 8 30.5537V20.7988H2C0.895431 20.7988 0 19.9034 0 18.7988V10.8945C6.89524e-07 9.78996 0.895431 8.89453 2 8.89453H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 205,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.85,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.25,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.85,
+            "v": 79.28,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.25,
+            "v": 69.28
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.9167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.0833,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.5167,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-14",
+      "name": "Candle 15",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.8833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V10.707H18C19.1046 10.707 20 11.6025 20 12.707V34.8975C20 36.002 19.1046 36.8975 18 36.8975H12V43.7246C12 44.8292 11.1046 45.7246 10 45.7246C8.89543 45.7246 8 44.8292 8 43.7246V36.8975H2C0.895431 36.8975 0 36.002 0 34.8975V12.707C0 11.6025 0.895431 10.707 2 10.707H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 251
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.8833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.8833,
+            "v": 84.06,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2833,
+            "v": 74.06
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.8833,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.0167,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-14-glow",
+      "name": "Candle glow 15",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.8833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V10.707H18C19.1046 10.707 20 11.6025 20 12.707V34.8975C20 36.002 19.1046 36.8975 18 36.8975H12V43.7246C12 44.8292 11.1046 45.7246 10 45.7246C8.89543 45.7246 8 44.8292 8 43.7246V36.8975H2C0.895431 36.8975 0 36.002 0 34.8975V12.707C0 11.6025 0.895431 10.707 2 10.707H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 251,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.8833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.8833,
+            "v": 84.06,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2833,
+            "v": 74.06
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.95,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.1167,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.55,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-15",
+      "name": "Candle 16",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.9333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V10.1172H18C19.1046 10.1172 20 11.0126 20 12.1172V24.7842C19.9998 25.8886 19.1045 26.7842 18 26.7842H12V32.7061C12 33.8106 11.1046 34.7061 10 34.7061C8.89543 34.7061 8 33.8106 8 32.7061V26.7842H2C0.895539 26.7842 0.000176249 25.8886 0 24.7842V12.1172C0 11.0126 0.895431 10.1172 2 10.1172H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 296
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.9333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.3333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.9333,
+            "v": 105.34,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.3333,
+            "v": 95.34
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.9333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.0667,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-15-glow",
+      "name": "Candle glow 16",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.9333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V10.1172H18C19.1046 10.1172 20 11.0126 20 12.1172V24.7842C19.9998 25.8886 19.1045 26.7842 18 26.7842H12V32.7061C12 33.8106 11.1046 34.7061 10 34.7061C8.89543 34.7061 8 33.8106 8 32.7061V26.7842H2C0.895539 26.7842 0.000176249 25.8886 0 24.7842V12.1172C0 11.0126 0.895431 10.1172 2 10.1172H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 296,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.9333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.3333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.9333,
+            "v": 105.34,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.3333,
+            "v": 95.34
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.1667,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.6,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-16",
+      "name": "Candle 17",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.9667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.63281H18C19.1046 9.63281 20 10.5282 20 11.6328V21.9189C19.9998 23.0233 19.1044 23.9189 18 23.9189H12V33.3711C11.9998 34.4755 11.1044 35.3711 10 35.3711C8.89558 35.3711 8.00024 34.4755 8 33.3711V23.9189H2C0.89557 23.9189 0.000226223 23.0233 0 21.9189V11.6328C7.99626e-07 10.5282 0.895431 9.63281 2 9.63281H8V2C8 0.895432 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 342
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.9667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.3667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.9667,
+            "v": 108.53,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.3667,
+            "v": 98.53
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.9667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.1,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-16-glow",
+      "name": "Candle glow 17",
+      "type": "path",
+      "parent": "chart",
+      "start": 6.9667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.63281H18C19.1046 9.63281 20 10.5282 20 11.6328V21.9189C19.9998 23.0233 19.1044 23.9189 18 23.9189H12V33.3711C11.9998 34.4755 11.1044 35.3711 10 35.3711C8.89558 35.3711 8.00024 34.4755 8 33.3711V23.9189H2C0.89557 23.9189 0.000226223 23.0233 0 21.9189V11.6328C7.99626e-07 10.5282 0.895431 9.63281 2 9.63281H8V2C8 0.895432 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 342,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 6.9667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.3667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 6.9667,
+            "v": 108.53,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.3667,
+            "v": 98.53
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.0333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.2,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.6333,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-17",
+      "name": "Candle 18",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.0167,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.0664H18C19.1046 11.0664 20 11.9618 20 13.0664V32.876C20 33.9805 19.1046 34.876 18 34.876H12V44.1895C11.9999 45.294 11.1045 46.1895 10 46.1895C8.89548 46.1895 8.00008 45.2939 8 44.1895V34.876H2C0.895446 34.876 2.47576e-05 33.9805 0 32.876V13.0664C6.89524e-07 11.9618 0.895431 11.0664 2 11.0664H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 388
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.0167,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.4167,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.0167,
+            "v": 112.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.4167,
+            "v": 102.5
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.0167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.15,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-17-glow",
+      "name": "Candle glow 18",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.0167,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.0664H18C19.1046 11.0664 20 11.9618 20 13.0664V32.876C20 33.9805 19.1046 34.876 18 34.876H12V44.1895C11.9999 45.294 11.1045 46.1895 10 46.1895C8.89548 46.1895 8.00008 45.2939 8 44.1895V34.876H2C0.895446 34.876 2.47576e-05 33.9805 0 32.876V13.0664C6.89524e-07 11.9618 0.895431 11.0664 2 11.0664H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 388,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.0167,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.4167,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.0167,
+            "v": 112.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.4167,
+            "v": 102.5
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.0833,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.25,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.6833,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-18",
+      "name": "Candle 19",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.05,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V8.31641H18C19.1046 8.31641 20 9.21184 20 10.3164V18.2207C20 19.3253 19.1046 20.2207 18 20.2207H12V25.8145C11.9998 26.9188 11.1044 27.8145 10 27.8145C8.89557 27.8145 8.00023 26.9188 8 25.8145V20.2207H2C0.895431 20.2207 0 19.3253 0 18.2207V10.3164C6.89524e-07 9.21184 0.895431 8.31641 2 8.31641H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 433
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.05,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.45,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.05,
+            "v": 117.97,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.45,
+            "v": 107.97
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.05,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.1833,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-18-glow",
+      "name": "Candle glow 19",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.05,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V8.31641H18C19.1046 8.31641 20 9.21184 20 10.3164V18.2207C20 19.3253 19.1046 20.2207 18 20.2207H12V25.8145C11.9998 26.9188 11.1044 27.8145 10 27.8145C8.89557 27.8145 8.00023 26.9188 8 25.8145V20.2207H2C0.895431 20.2207 0 19.3253 0 18.2207V10.3164C6.89524e-07 9.21184 0.895431 8.31641 2 8.31641H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 433,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.05,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.45,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.05,
+            "v": 117.97,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.45,
+            "v": 107.97
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.1167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.2833,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.7167,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-19",
+      "name": "Candle 20",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.1,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.6758H18C19.1046 11.6758 20 12.5712 20 13.6758V33.4854C20 34.5899 19.1046 35.4854 18 35.4854H12V42.6084C12 43.713 11.1046 44.6084 10 44.6084C8.89543 44.6084 8 43.713 8 42.6084V35.4854H2C0.895446 35.4854 2.47576e-05 34.5899 0 33.4854V13.6758C6.89524e-07 12.5712 0.895431 11.6758 2 11.6758H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 479
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.1,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.1,
+            "v": 123.01,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5,
+            "v": 113.01
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.1,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.2333,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-19-glow",
+      "name": "Candle glow 20",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.1,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.6758H18C19.1046 11.6758 20 12.5712 20 13.6758V33.4854C20 34.5899 19.1046 35.4854 18 35.4854H12V42.6084C12 43.713 11.1046 44.6084 10 44.6084C8.89543 44.6084 8 43.713 8 42.6084V35.4854H2C0.895446 35.4854 2.47576e-05 34.5899 0 33.4854V13.6758C6.89524e-07 12.5712 0.895431 11.6758 2 11.6758H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 479,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.1,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.1,
+            "v": 123.01,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5,
+            "v": 113.01
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.1667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.3333,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.7667,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-20",
+      "name": "Candle 21",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.1333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V6.83984H18C19.1046 6.83984 20 7.73527 20 8.83984V19.126C19.9998 20.2304 19.1044 21.126 18 21.126H12V30.9463C12 32.0509 11.1046 32.9463 10 32.9463C8.89543 32.9463 8 32.0509 8 30.9463V21.126H2C0.89557 21.126 0.000226223 20.2304 0 19.126V8.83984C7.99626e-07 7.73527 0.895431 6.83984 2 6.83984H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 524
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.1333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.1333,
+            "v": 131.54000000000002,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5333,
+            "v": 121.54
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.1333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.2667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-20-glow",
+      "name": "Candle glow 21",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.1333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V6.83984H18C19.1046 6.83984 20 7.73527 20 8.83984V19.126C19.9998 20.2304 19.1044 21.126 18 21.126H12V30.9463C12 32.0509 11.1046 32.9463 10 32.9463C8.89543 32.9463 8 32.0509 8 30.9463V21.126H2C0.89557 21.126 0.000226223 20.2304 0 19.126V8.83984C7.99626e-07 7.73527 0.895431 6.83984 2 6.83984H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 524,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.1333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.1333,
+            "v": 131.54000000000002,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5333,
+            "v": 121.54
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.2,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.3667,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.8,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-21",
+      "name": "Candle 22",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.1833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.9062H18C19.1046 11.9062 20 12.8017 20 13.9062V28.9541C19.9999 30.0586 19.1045 30.9541 18 30.9541H12V39.5527C12 40.6573 11.1046 41.5527 10 41.5527C8.89543 41.5527 8 40.6573 8 39.5527V30.9541H2C0.895508 30.9541 0.000125781 30.0586 0 28.9541V13.9062C7.99626e-07 12.8017 0.895431 11.9062 2 11.9062H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 570
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.1833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.1833,
+            "v": 130.78,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5833,
+            "v": 120.78
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.1833,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.3167,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-21-glow",
+      "name": "Candle glow 22",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.1833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V11.9062H18C19.1046 11.9062 20 12.8017 20 13.9062V28.9541C19.9999 30.0586 19.1045 30.9541 18 30.9541H12V39.5527C12 40.6573 11.1046 41.5527 10 41.5527C8.89543 41.5527 8 40.6573 8 39.5527V30.9541H2C0.895508 30.9541 0.000125781 30.0586 0 28.9541V13.9062C7.99626e-07 12.8017 0.895431 11.9062 2 11.9062H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 570,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.1833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.1833,
+            "v": 130.78,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.5833,
+            "v": 120.78
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.25,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.4167,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.85,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-22",
+      "name": "Candle · sweep",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.2167,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V7.14453H18C19.1046 7.14453 20 8.03996 20 9.14453V43.2402C19.9997 44.3446 19.1044 45.2402 18 45.2402H12V102.762C12 103.866 11.1046 104.762 10 104.762C8.89543 104.762 8 103.866 8 102.762V45.2402H2C0.895586 45.2402 0.000251508 44.3446 0 43.2402V9.14453C1.86039e-07 8.03996 0.895431 7.14453 2 7.14453H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#D2FFA4",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 616
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.2167,
+            "v": 0.15,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7167,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.2167,
+            "v": 91.7108,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7167,
+            "v": 135.71
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.2167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.35,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-22-glow",
+      "name": "Candle glow · sweep",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.2167,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V7.14453H18C19.1046 7.14453 20 8.03996 20 9.14453V43.2402C19.9997 44.3446 19.1044 45.2402 18 45.2402H12V102.762C12 103.866 11.1046 104.762 10 104.762C8.89543 104.762 8 103.866 8 102.762V45.2402H2C0.895586 45.2402 0.000251508 44.3446 0 43.2402V9.14453C1.86039e-07 8.03996 0.895431 7.14453 2 7.14453H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#D2FFA4",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 616,
+        "blur": 20
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.2167,
+            "v": 0.15,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7167,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.2167,
+            "v": 91.7108,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7167,
+            "v": 135.71
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.3167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.6167,
+            "v": 1,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 7.7833,
+            "v": 1,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 8.3833,
+            "v": 0.75,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 9.05,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-23",
+      "name": "Candle 24",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.2667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V4.76172H18C19.1046 4.76172 20 5.65715 20 6.76172V21.8096C19.9999 22.914 19.1045 23.8096 18 23.8096H12V32.5234C12 33.628 11.1046 34.5234 10 34.5234C8.89543 34.5234 8 33.628 8 32.5234V23.8096H2C0.895508 23.8096 0.000125781 22.914 0 21.8096V6.76172C7.99626e-07 5.65715 0.895431 4.76172 2 4.76172H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 661
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.2667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.6667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.2667,
+            "v": 93.93,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.6667,
+            "v": 83.93
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.2667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.4,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-23-glow",
+      "name": "Candle glow 24",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.2667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V4.76172H18C19.1046 4.76172 20 5.65715 20 6.76172V21.8096C19.9999 22.914 19.1045 23.8096 18 23.8096H12V32.5234C12 33.628 11.1046 34.5234 10 34.5234C8.89543 34.5234 8 33.628 8 32.5234V23.8096H2C0.895508 23.8096 0.000125781 22.914 0 21.8096V6.76172C7.99626e-07 5.65715 0.895431 4.76172 2 4.76172H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 661,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.2667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.6667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.2667,
+            "v": 93.93,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.6667,
+            "v": 83.93
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.3333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.5,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.9333,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-24",
+      "name": "Candle 25",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.3,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.90234H18C19.1046 9.90234 20 10.7978 20 11.9023V17.4258C20 18.5304 19.1046 19.4258 18 19.4258H12V23.7783C11.9998 24.8828 11.1045 25.7783 10 25.7783C8.89553 25.7783 8.00016 24.8828 8 23.7783V19.4258H2C0.895431 19.4258 0 18.5303 0 17.4258V11.9023C7.99626e-07 10.7978 0.895431 9.90234 2 9.90234H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 707
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.3,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.3,
+            "v": 84.42,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7,
+            "v": 74.42
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.3,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.4333,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-24-glow",
+      "name": "Candle glow 25",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.3,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.90234H18C19.1046 9.90234 20 10.7978 20 11.9023V17.4258C20 18.5304 19.1046 19.4258 18 19.4258H12V23.7783C11.9998 24.8828 11.1045 25.7783 10 25.7783C8.89553 25.7783 8.00016 24.8828 8 23.7783V19.4258H2C0.895431 19.4258 0 18.5303 0 17.4258V11.9023C7.99626e-07 10.7978 0.895431 9.90234 2 9.90234H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 707,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.3,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.3,
+            "v": 84.42,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7,
+            "v": 74.42
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.3667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.5333,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.9667,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-25",
+      "name": "Candle 26",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.35,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.95312H18C19.1046 9.95312 20 10.8486 20 11.9531V36.5244C20 37.629 19.1046 38.5244 18 38.5244H12V46.3838C12 47.4883 11.1045 48.3838 10 48.3838C8.89545 48.3838 8.00004 47.4883 8 46.3838V38.5244H2C0.895431 38.5244 0 37.629 0 36.5244V11.9531C7.99626e-07 10.8486 0.895431 9.95312 2 9.95312H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 752
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.35,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.75,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.35,
+            "v": 76.62,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.75,
+            "v": 66.62
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.35,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.4833,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-25-glow",
+      "name": "Candle glow 26",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.35,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.95312H18C19.1046 9.95312 20 10.8486 20 11.9531V36.5244C20 37.629 19.1046 38.5244 18 38.5244H12V46.3838C12 47.4883 11.1045 48.3838 10 48.3838C8.89545 48.3838 8.00004 47.4883 8 46.3838V38.5244H2C0.895431 38.5244 0 37.629 0 36.5244V11.9531C7.99626e-07 10.8486 0.895431 9.95312 2 9.95312H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 752,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.35,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.75,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.35,
+            "v": 76.62,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.75,
+            "v": 66.62
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.4167,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.5833,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 8.0167,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-26",
+      "name": "Candle 27",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.3833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V4.86328H18C19.1046 4.86328 20 5.75871 20 6.86328V19.5303C19.9998 20.6347 19.1045 21.5303 18 21.5303H12V28.6113C12 29.7159 11.1046 30.6113 10 30.6113C8.89543 30.6113 8 29.7159 8 28.6113V21.5303H2C0.895539 21.5303 0.000176249 20.6347 0 19.5303V6.86328C0 5.75871 0.895431 4.86328 2 4.86328H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 798
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.3833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.3833,
+            "v": 56.16,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7833,
+            "v": 46.16
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.3833,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.5167,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-26-glow",
+      "name": "Candle glow 27",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.3833,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V4.86328H18C19.1046 4.86328 20 5.75871 20 6.86328V19.5303C19.9998 20.6347 19.1045 21.5303 18 21.5303H12V28.6113C12 29.7159 11.1046 30.6113 10 30.6113C8.89543 30.6113 8 29.7159 8 28.6113V21.5303H2C0.895539 21.5303 0.000176249 20.6347 0 19.5303V6.86328C0 5.75871 0.895431 4.86328 2 4.86328H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 798,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.3833,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7833,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.3833,
+            "v": 56.16,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.7833,
+            "v": 46.16
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.45,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.6167,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 8.05,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-27",
+      "name": "Candle 28",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.4333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.84766H18C19.1046 9.84766 20 10.7431 20 11.8477V17.3711C20 18.4757 19.1046 19.3711 18 19.3711H12V24.9229C12 26.0274 11.1046 26.9229 10 26.9229C8.89543 26.9229 8 26.0274 8 24.9229V19.3711H2C0.895431 19.3711 0 18.4757 0 17.3711V11.8477C7.99626e-07 10.7431 0.895431 9.84766 2 9.84766H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 844
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.4333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.8333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.4333,
+            "v": 49.33,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.8333,
+            "v": 39.33
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.4333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.5667,
+            "v": 0.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-27-glow",
+      "name": "Candle glow 28",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.4333,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.84766H18C19.1046 9.84766 20 10.7431 20 11.8477V17.3711C20 18.4757 19.1046 19.3711 18 19.3711H12V24.9229C12 26.0274 11.1046 26.9229 10 26.9229C8.89543 26.9229 8 26.0274 8 24.9229V19.3711H2C0.895431 19.3711 0 18.4757 0 17.3711V11.8477C7.99626e-07 10.7431 0.895431 9.84766 2 9.84766H8V2C8 0.895431 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 844,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.4333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.8333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.4333,
+            "v": 49.33,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.8333,
+            "v": 39.33
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.5,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.6667,
+            "v": 0.48999999999999994,
+            "ease": "sineOut"
+          },
+          {
+            "t": 8.1,
+            "v": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-28",
+      "name": "Candle 29",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.4667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.99609H18C19.1046 9.99609 20 10.8915 20 11.9961V34.1865C20 35.2911 19.1046 36.1865 18 36.1865H12V44.7637C12 45.8682 11.1045 46.7637 10 46.7637C8.89546 46.7637 8.00004 45.8682 8 44.7637V36.1865H2C0.895431 36.1865 0 35.2911 0 34.1865V11.9961C0 10.8915 0.895431 9.99609 2 9.99609H8V2C8 0.895432 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 889
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.4667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.8667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.4667,
+            "v": 42.43,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.8667,
+            "v": 32.43
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.4667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.6,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "candle-28-glow",
+      "name": "Candle glow 29",
+      "type": "path",
+      "parent": "chart",
+      "start": 7.4667,
+      "props": {
+        "d": "M10 0C11.1046 0 12 0.895431 12 2V9.99609H18C19.1046 9.99609 20 10.8915 20 11.9961V34.1865C20 35.2911 19.1046 36.1865 18 36.1865H12V44.7637C12 45.8682 11.1045 46.7637 10 46.7637C8.89546 46.7637 8.00004 45.8682 8 44.7637V36.1865H2C0.895431 36.1865 0 35.2911 0 34.1865V11.9961C0 10.8915 0.895431 9.99609 2 9.99609H8V2C8 0.895432 8.89543 0 10 0Z",
+        "fill": "#F4F9EE",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 889,
+        "blur": 14
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 7.4667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.8667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 7.4667,
+            "v": 42.43,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.8667,
+            "v": 32.43
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.5333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.7,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 8.1333,
+            "v": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "support-line",
+      "name": "Support 85,870",
+      "type": "path",
+      "start": 6.2,
+      "props": {
+        "d": "M0 0.5H4M16 0.5H24M32 0.5H40M48 0.5H56M64 0.5H72M80 0.5H88M96 0.5H104M112 0.5H120M128 0.5H136M144 0.5H152M160 0.5H168M176 0.5H184M192 0.5H200M208 0.5H216M224 0.5H232M240 0.5H248M256 0.5H264M272 0.5H280M288 0.5H296M304 0.5H312M320 0.5H328M336 0.5H344M352 0.5H360M368 0.5H376M384 0.5H392M400 0.5H408M416 0.5H424M432 0.5H440M448 0.5H456M464 0.5H472M480 0.5H488M496 0.5H504M512 0.5H520M528 0.5H536M544 0.5H552M560 0.5H568M576 0.5H584M592 0.5H600M608 0.5H616M624 0.5H632M640 0.5H648M656 0.5H664M672 0.5H680M688 0.5H696M704 0.5H712M720 0.5H728M736 0.5H744M752 0.5H760M768 0.5H776M784 0.5H792M800 0.5H808M816 0.5H824M832 0.5H840M848 0.5H856M864 0.5H872M880 0.5H888M896 0.5H904M912 0.5H920M928 0.5H936M944 0.5H952M960 0.5H968M976 0.5H984M992 0.5H1000M1008 0.5H1016M1024 0.5H1032M1040 0.5H1048M1056 0.5H1064M1072 0.5H1080M1088 0.5H1096M1104 0.5H1112M1120 0.5H1128M1136 0.5H1144M1152 0.5H1160M1168 0.5H1176M1184 0.5H1192M1200 0.5H1208M1216 0.5H1224M1232 0.5H1240M1248 0.5H1256M1264 0.5H1272M1280 0.5H1288M1296 0.5H1304M1312 0.5H1320M1328 0.5H1336M1344 0.5H1352M1360 0.5H1368M1376 0.5H1384M1392 0.5H1400M1408 0.5H1416M1424 0.5H1432M1440 0.5H1448M1456 0.5H1464M1472 0.5H1480M1488 0.5H1496M1504 0.5H1512M1520 0.5H1528M1536 0.5H1544M1552 0.5H1560M1568 0.5H1576M1584 0.5H1592M1600 0.5H1608M1616 0.5H1624M1632 0.5H1640M1648 0.5H1656M1664 0.5H1672M1680 0.5H1688M1696 0.5H1704M1712 0.5H1720M1728 0.5H1736M1744 0.5H1752M1760 0.5H1768M1776 0.5H1784M1792 0.5H1800M1808 0.5H1816M1824 0.5H1832M1840 0.5H1848M1856 0.5H1864M1872 0.5H1880M1888 0.5H1896M1904 0.5H1912",
+        "pathOrigin": "zero",
+        "x": 0,
+        "y": 716,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "rgba(244,249,238,0.5)",
+        "strokeWidth": 1
+      },
+      "keyframes": {
+        "trimEnd": [
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2,
+            "v": 1
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "support-zone",
+      "name": "Support zone",
+      "type": "rect",
+      "start": 6.2,
+      "props": {
+        "x": 960,
+        "y": 715.5,
+        "width": 1920,
+        "height": 31,
+        "fill": "#ffffff",
+        "fillType": "linear",
+        "gradientAngle": 90,
+        "gradientStops": "rgba(244,249,238,0.02) 0, rgba(244,249,238,0.14) 0.5, rgba(244,249,238,0.02) 1"
+      },
+      "keyframes": {
+        "scaleX": [
+          {
+            "t": 6.2,
+            "v": 0.2,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.7,
+            "v": 1
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "band-glow",
+      "name": "Band glow",
+      "type": "ellipse",
+      "start": 6.2,
+      "props": {
+        "x": 960,
+        "y": 715.5,
+        "width": 1700,
+        "height": 72,
+        "fill": "rgba(210,255,164,0.22)",
+        "blur": 24
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 7.0333,
+            "v": 1
+          },
+          {
+            "t": 7.55,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 7.7167,
+            "v": 1
+          },
+          {
+            "t": 9.5667,
+            "v": 0.85
+          }
+        ],
+        "scaleX": [
+          {
+            "t": 6.2,
+            "v": 0.4,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7.2,
+            "v": 1
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "big",
+      "name": "Stat · 64 % bei 1,8R (group)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "start": 5.4667,
+      "props": {
+        "x": 949.13,
+        "y": 396.67
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.4667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 5.4667,
+            "v": 426.67,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.6667,
+            "v": 396.67
+          }
+        ],
+        "scale": [
+          {
+            "t": 5.4667,
+            "v": 0.9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5,
+            "v": 1.07,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.6167,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 1.07,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.75,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 1.07,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.8833,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 1.07,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.0167,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1.16,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 6.7333,
+            "v": 1
+          }
+        ],
+        "scaleY": [
+          {
+            "t": 5.4667,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.5,
+            "v": 1.05,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5667,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 1.05,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 1.05,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.8333,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 1.05,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9667,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1.08,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.1667,
+            "v": 1,
+            "ease": "hold"
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.4667,
+            "v": 10,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5,
+            "v": 5,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5667,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 5,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 5,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.8333,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 5,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9667,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "hold"
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "big-flash",
+      "name": "Flash (white)",
+      "type": "null",
+      "parent": "big",
+      "props": {
+        "opacity": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.5,
+            "v": 0.75,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.6,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 0.75,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7333,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 0.75,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 0.75,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.3,
+            "v": 0,
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "big-64-flash",
+      "name": "64 (counter)",
+      "type": "text",
+      "parent": "big-flash",
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.5,
+            "v": 10,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 24,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 41,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 58,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 64,
+            "ease": "hold"
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "right",
+        "anchorX": 1,
+        "anchorY": 0,
+        "text": "{counter}",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": -310.76,
+        "y": -88,
+        "fill": "#ffffff",
+        "counter": 10,
+        "counterDecimals": 0
+      }
+    },
+    {
+      "id": "big-mid-flash",
+      "name": " % bei ",
+      "type": "text",
+      "parent": "big-flash",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": " % bei ",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": -310.76,
+        "y": -88,
+        "fill": "#ffffff"
+      }
+    },
+    {
+      "id": "big-r-flash",
+      "name": "1,8R (counter)",
+      "type": "text",
+      "parent": "big-flash",
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.5,
+            "v": 0.4,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 0.9,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 1.3,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 1.6,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1.8,
+            "ease": "hold"
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "{counter}R",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": 189.92,
+        "y": -88,
+        "fill": "#ffffff",
+        "counter": 0.4,
+        "counterDecimals": 1,
+        "counterSeparator": ","
+      }
+    },
+    {
+      "id": "big-main",
+      "name": "Stat (gradient)",
+      "type": "null",
+      "parent": "big",
+      "props": {}
+    },
+    {
+      "id": "big-64",
+      "name": "64 (counter)",
+      "type": "text",
+      "parent": "big-main",
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.5,
+            "v": 10,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 24,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 41,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 58,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 64,
+            "ease": "hold"
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "right",
+        "anchorX": 1,
+        "anchorY": 0,
+        "text": "{counter}",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": -310.76,
+        "y": -88,
+        "fill": "#f4f9ee",
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "#f4f9ee 0.1, #d2ffa4 1",
+        "counter": 10,
+        "counterDecimals": 0
+      }
+    },
+    {
+      "id": "big-mid",
+      "name": " % bei ",
+      "type": "text",
+      "parent": "big-main",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": " % bei ",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": -310.76,
+        "y": -88,
+        "fill": "#f4f9ee",
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "#f4f9ee 0.1, #d2ffa4 1"
+      }
+    },
+    {
+      "id": "big-r",
+      "name": "1,8R (counter)",
+      "type": "text",
+      "parent": "big-main",
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.5,
+            "v": 0.4,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 0.9,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 1.3,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 1.6,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1.8,
+            "ease": "hold"
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "{counter}R",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": 189.92,
+        "y": -88,
+        "fill": "#f4f9ee",
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "#f4f9ee 0.1, #d2ffa4 1",
+        "counter": 0.4,
+        "counterDecimals": 1,
+        "counterSeparator": ","
+      }
+    },
+    {
+      "id": "big-ghost-r",
+      "name": "Ghost · red",
+      "type": "null",
+      "parent": "big",
+      "props": {
+        "opacity": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.5,
+            "v": 0.9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5833,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 0.9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7167,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 0.9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.85,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 0.9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9833,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.2167,
+            "v": 0,
+            "ease": "hold"
+          }
+        ],
+        "x": [
+          {
+            "t": 5.5,
+            "v": -14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5833,
+            "v": -2,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": -14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7167,
+            "v": -2,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": -14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.85,
+            "v": -2,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": -14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9833,
+            "v": -2,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": -26,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.2167,
+            "v": -2,
+            "ease": "hold"
+          }
+        ],
+        "y": [
+          {
+            "t": 5.5,
+            "v": 3,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5833,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 3,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7167,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 3,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.85,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 3,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9833,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 6,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.2167,
+            "v": 0,
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "big-64-big-ghost-r",
+      "name": "64 (counter)",
+      "type": "text",
+      "parent": "big-ghost-r",
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.5,
+            "v": 10,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 24,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 41,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 58,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 64,
+            "ease": "hold"
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "right",
+        "anchorX": 1,
+        "anchorY": 0,
+        "text": "{counter}",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": -310.76,
+        "y": -88,
+        "fill": "#ff2f6d",
+        "blend": "screen",
+        "counter": 10,
+        "counterDecimals": 0
+      }
+    },
+    {
+      "id": "big-mid-big-ghost-r",
+      "name": " % bei ",
+      "type": "text",
+      "parent": "big-ghost-r",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": " % bei ",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": -310.76,
+        "y": -88,
+        "fill": "#ff2f6d",
+        "blend": "screen"
+      }
+    },
+    {
+      "id": "big-r-big-ghost-r",
+      "name": "1,8R (counter)",
+      "type": "text",
+      "parent": "big-ghost-r",
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.5,
+            "v": 0.4,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 0.9,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 1.3,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 1.6,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1.8,
+            "ease": "hold"
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "{counter}R",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": 189.92,
+        "y": -88,
+        "fill": "#ff2f6d",
+        "blend": "screen",
+        "counter": 0.4,
+        "counterDecimals": 1,
+        "counterSeparator": ","
+      }
+    },
+    {
+      "id": "big-ghost-c",
+      "name": "Ghost · cyan",
+      "type": "null",
+      "parent": "big",
+      "props": {
+        "opacity": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.5,
+            "v": 0.9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5833,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 0.9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7167,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 0.9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.85,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 0.9,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9833,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.2167,
+            "v": 0,
+            "ease": "hold"
+          }
+        ],
+        "x": [
+          {
+            "t": 5.5,
+            "v": 14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5833,
+            "v": 2,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7167,
+            "v": 2,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.85,
+            "v": 2,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9833,
+            "v": 2,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 26,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.2167,
+            "v": 2,
+            "ease": "hold"
+          }
+        ],
+        "y": [
+          {
+            "t": 5.5,
+            "v": -3,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5833,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": -3,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7167,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": -3,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.85,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": -3,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9833,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": -6,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.2167,
+            "v": 0,
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "big-64-big-ghost-c",
+      "name": "64 (counter)",
+      "type": "text",
+      "parent": "big-ghost-c",
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.5,
+            "v": 10,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 24,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 41,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 58,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 64,
+            "ease": "hold"
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "right",
+        "anchorX": 1,
+        "anchorY": 0,
+        "text": "{counter}",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": -310.76,
+        "y": -88,
+        "fill": "#2fd8ff",
+        "blend": "screen",
+        "counter": 10,
+        "counterDecimals": 0
+      }
+    },
+    {
+      "id": "big-mid-big-ghost-c",
+      "name": " % bei ",
+      "type": "text",
+      "parent": "big-ghost-c",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": " % bei ",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": -310.76,
+        "y": -88,
+        "fill": "#2fd8ff",
+        "blend": "screen"
+      }
+    },
+    {
+      "id": "big-r-big-ghost-c",
+      "name": "1,8R (counter)",
+      "type": "text",
+      "parent": "big-ghost-c",
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.5,
+            "v": 0.4,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 0.9,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 1.3,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 1.6,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1.8,
+            "ease": "hold"
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "{counter}R",
+        "fontWeight": 600,
+        "fontSize": 176,
+        "letterSpacing": -3.52,
+        "lineHeight": 1,
+        "x": 189.92,
+        "y": -88,
+        "fill": "#2fd8ff",
+        "blend": "screen",
+        "counter": 0.4,
+        "counterDecimals": 1,
+        "counterSeparator": ","
+      }
+    },
+    {
+      "id": "sub",
+      "name": "über 42 Trades",
+      "type": "text",
+      "parent": "cam",
+      "start": 5.6,
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.6,
+            "v": 516.6700000000001,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.2,
+            "v": 492.67
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.6,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.9333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.6,
+            "v": 8,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6,
+            "v": 0
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "über 42 Trades",
+        "fontWeight": 400,
+        "fontSize": 32,
+        "letterSpacing": -0.16,
+        "lineHeight": 1.3,
+        "fill": "rgba(244,249,238,0.5)",
+        "x": 424
+      }
+    },
+    {
+      "id": "line1",
+      "name": "Deine Longs nach einem 1h-Liquidity-Sweep gewinnen",
+      "type": "text",
+      "parent": "cam",
+      "start": 5.4,
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.4,
+            "v": 272.66999999999996,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6,
+            "v": 248.67
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.4,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.7333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.4,
+            "v": 8,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.8,
+            "v": 0
+          }
+        ]
+      },
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Deine Longs nach einem 1h-Liquidity-Sweep gewinnen",
+        "fontWeight": 400,
+        "fontSize": 40,
+        "letterSpacing": -0.2,
+        "lineHeight": 1.3,
+        "fill": "rgba(244,249,238,0.72)",
+        "x": 424
+      }
+    },
+    {
+      "id": "speaker",
+      "name": "Speaker (group)",
+      "type": "null",
+      "label": "#9fdcc6",
+      "start": 5.3333,
+      "props": {
+        "x": 424
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.3333,
+            "v": 184,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.9333,
+            "v": 160
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.3333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.6667,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.3333,
+            "v": 8,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.7333,
+            "v": 0
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "speaker-name",
+      "name": "Trademania AI",
+      "type": "text",
+      "parent": "speaker",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Trademania AI",
+        "fontWeight": 400,
+        "fontSize": 24,
+        "letterSpacing": -0.12,
+        "lineHeight": 1.3,
+        "fill": "rgba(244,249,238,0.6)",
+        "x": 44,
+        "y": 0.83
+      }
+    },
+    {
+      "id": "brain",
+      "name": "Brain symbol",
+      "type": "image",
+      "parent": "speaker",
+      "props": {
+        "src": "brain.svg",
+        "width": 32,
+        "height": 32.67,
+        "x": 16,
+        "y": 16.33
+      }
+    },
+    {
+      "id": "hero-glow",
+      "name": "Hero glow",
+      "type": "ellipse",
+      "start": 5.5,
+      "props": {
+        "x": 893,
+        "y": 405.47,
+        "width": 844.2,
+        "height": 123.2,
+        "fill": "rgba(210,255,164,0.12)",
+        "blur": 48
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.5,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6.3333,
+            "v": 1
+          }
+        ],
+        "scaleX": [
+          {
+            "t": 5.5,
+            "v": 0.6,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.5,
+            "v": 1
+          }
+        ]
+      },
+      "parent": "cam"
+    },
+    {
+      "id": "bg",
+      "name": "Backdrop",
+      "type": "generator",
+      "label": "#c5b9ee",
+      "props": {
+        "generator": "tmBackdrop",
+        "x": 960.18,
+        "y": 540,
+        "width": 1932.35,
+        "height": 1080,
+        "baseColor": "#bbe392",
+        "darkColor": "#0F0F12",
+        "blobBlur": 308.11,
+        "b1x": 1034.33,
+        "b1rx": 1710.57,
+        "b1ry": 851.99,
+        "b1a": 1,
+        "b2a": 0,
+        "ringX": 943.5,
+        "ringY": 541
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.5,
+            "v": 1
+          }
+        ],
+        "glyphReveal": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 1.2,
+            "v": 1
+          }
+        ],
+        "b1y": [
+          {
+            "t": 0,
+            "v": 831,
+            "ease": "sineOut"
+          },
+          {
+            "t": 4.8333,
+            "v": 811,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.1667,
+            "v": 181,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 9.5667,
+            "v": 171
+          }
+        ],
+        "ringX": [
+          {
+            "t": 5.1667,
+            "v": 943.5,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 5.4667,
+            "v": 955.13
+          }
+        ],
+        "ringY": [
+          {
+            "t": 5.1667,
+            "v": 541,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 5.4667,
+            "v": 396.67
+          }
+        ],
+        "ringShift": [
+          {
+            "t": 0,
+            "v": -0.02,
+            "ease": "linear"
+          },
+          {
+            "t": 4.8167,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5,
+            "v": 0.06,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.6333,
+            "v": 0.1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7667,
+            "v": 0.13,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9,
+            "v": 0.17,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.0667,
+            "v": 0.2,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.7333,
+            "v": 0.26,
+            "ease": "sineOut"
+          },
+          {
+            "t": 9.5667,
+            "v": 0.31
+          }
+        ],
+        "scramble": [
+          {
+            "t": 4.8167,
+            "v": 0.04,
+            "ease": "linear"
+          },
+          {
+            "t": 4.8667,
+            "v": 0.45,
+            "ease": "sineOut"
+          },
+          {
+            "t": 5.3333,
+            "v": 0.05,
+            "ease": "hold"
+          },
+          {
+            "t": 5.5,
+            "v": 0.32,
+            "ease": "sineOut"
+          },
+          {
+            "t": 5.6167,
+            "v": 0.05,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 0.32,
+            "ease": "sineOut"
+          },
+          {
+            "t": 5.75,
+            "v": 0.05,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 0.32,
+            "ease": "sineOut"
+          },
+          {
+            "t": 5.8833,
+            "v": 0.05,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 0.32,
+            "ease": "sineOut"
+          },
+          {
+            "t": 6.0167,
+            "v": 0.05,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 0.6,
+            "ease": "sineOut"
+          },
+          {
+            "t": 6.4667,
+            "v": 0.05,
+            "ease": "hold"
+          }
+        ],
+        "glyphAlpha": [
+          {
+            "t": 4.8167,
+            "v": 1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 4.9,
+            "v": 1.5,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 5.3333,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.5,
+            "v": 1.35,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.6333,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.6333,
+            "v": 1.35,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.7667,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.7667,
+            "v": 1.35,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.9,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.9,
+            "v": 1.35,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.0333,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 6.0667,
+            "v": 1.8,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.5667,
+            "v": 1,
+            "ease": "hold"
+          }
+        ]
+      }
+    }
+  ]
+}

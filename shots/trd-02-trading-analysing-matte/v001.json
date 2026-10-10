@@ -1,0 +1,94 @@
+{
+  "name": "TRD-02 · Pixel transition (key matte)",
+  "note": "Alpha matte for the trd-02-trading-analysing key fill (v002): white = opaque, gray = tint stage, half-white dots. Same frames and duration.",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "duration": 1.8,
+  "background": "#000000",
+  "layers": [
+    {
+      "id": "dots",
+      "name": "Matte · dots",
+      "type": "generator",
+      "end": 1.75,
+      "props": {
+        "generator": "pixelStages",
+        "output": "dots",
+        "x": 966,
+        "y": 540,
+        "width": 2080,
+        "height": 1234.29,
+        "cols": 13,
+        "rows": 8,
+        "dotColor": "rgba(255,255,255,0.5)"
+      },
+      "keyframes": {
+        "progress": [
+          {
+            "t": 0.0667,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.7667,
+            "v": 1
+          }
+        ],
+        "clear": [
+          {
+            "t": 1.2334,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.7334,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cells",
+      "name": "Matte · cells",
+      "type": "generator",
+      "end": 1.75,
+      "props": {
+        "generator": "pixelStages",
+        "output": "mask",
+        "x": 966,
+        "y": 540,
+        "width": 2080,
+        "height": 1234.29,
+        "cols": 13,
+        "rows": 8,
+        "tint": 0.45,
+        "maskColor": "#ffffff"
+      },
+      "keyframes": {
+        "progress": [
+          {
+            "t": 0.0667,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 0.7667,
+            "v": 1
+          }
+        ],
+        "clear": [
+          {
+            "t": 1.2334,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 1.7334,
+            "v": 1
+          }
+        ]
+      }
+    }
+  ]
+}

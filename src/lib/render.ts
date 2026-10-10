@@ -624,6 +624,40 @@ function drawEntry(target: CanvasRenderingContext2D, shot: Shot, layer: Layer, t
   target.restore();
 }
 
+/**
+ * Motion blur: the average of N sub-frame samples over [t − shutter/fps, t]. Samples are
+ * summed premultiplied ("lighter" at 1/N each), which is an exact average — a plain
+ * source-over stack would weight the last samples more. Skipped when the layer is still.
+ */
+function drawMotionBlurred(
+  ctx: CanvasRenderingContext2D, shot: Shot, layer: Layer, t: number, base: DOMMatrix, scale: number, shotId: string, shutter: number,
+) {
+  const span = shutter / Math.max(1, shot.fps);
+  const m0 = worldMatrix(shot, layer, t, shotId), m1 = worldMatrix(shot, layer, Math.max(0, t - span), shotId);
+  const moved = Math.hypot(m0.e - m1.e, m0.f - m1.f) * scale + Math.abs(m0.a - m1.a) * 200 + Math.abs(m0.b - m1.b) * 200;
+  if (moved < 0.5) return drawEntry(ctx, shot, layer, t, base, scale, shotId);
+  const n = Math.min(16, Math.max(3, Math.ceil(moved / 2)));
+  const w = ctx.canvas.width, h = ctx.canvas.height;
+  const acc = poolCanvas("mblurAcc", w, h), smp = poolCanvas("mblurSmp", w, h);
+  const ax = acc.getContext("2d")!, sx = smp.getContext("2d")!;
+  ax.setTransform(1, 0, 0, 1, 0, 0);
+  ax.clearRect(0, 0, w, h);
+  ax.globalCompositeOperation = "lighter";
+  ax.globalAlpha = 1 / n;
+  for (let i = 0; i < n; i++) {
+    sx.setTransform(1, 0, 0, 1, 0, 0);
+    sx.clearRect(0, 0, w, h);
+    drawEntry(sx, shot, layer, t - (span * i) / (n - 1), base, scale, shotId);
+    ax.drawImage(smp, 0, 0);
+  }
+  ax.globalCompositeOperation = "source-over";
+  ax.globalAlpha = 1;
+  ctx.save();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.drawImage(acc, 0, 0);
+  ctx.restore();
+}
+
 /** Composite a group buffer with a depth-of-field blur ramping down the frame (or up, when end < start). */
 function compositeRamp(ctx: CanvasRenderingContext2D, src: HTMLCanvasElement, scale: number, start: number, end: number, max: number, alpha = 1) {
   const W = src.width, H = src.height;
@@ -777,7 +811,9 @@ export function renderFrame(ctx: CanvasRenderingContext2D, shot: Shot, t: number
     if (!drawable(layer)) continue;
     const group = groupOf(layer);
     if (!group) {
-      drawEntry(ctx, shot, layer, t, base, scale, shotId);
+      const shutter = num(layer, "motionBlur", t);
+      if (shutter > 0.01) drawMotionBlurred(ctx, shot, layer, t, base, scale, shotId, shutter);
+      else drawEntry(ctx, shot, layer, t, base, scale, shotId);
       continue;
     }
     if (doneGroups.has(group.id)) continue;

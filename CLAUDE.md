@@ -71,6 +71,8 @@ unparented layers), `anchorX, anchorY` (0–1 within the layer's box; default 0.
 screen, multiply, soft-light, lighten, darken, color-dodge, lighter). Rect and
 ellipse also take `backdropBlur` (frosted glass: blurs what's drawn beneath,
 clipped to the shape — CSS `backdrop-filter: blur()` ports 1:1).
+`motionBlur` (shutter in frames, e.g. 0.6) averages sub-frame samples of a moving
+layer — use it on cursors and fast whips (unparented/non-grouped layers).
 
 ### Gradient fill (rect, ellipse, text, path)
 `fillType` (solid/linear/radial), `gradientStops` (`"rgba(...) 0, #fff 0.5, ..."`,
@@ -130,7 +132,12 @@ shimmers), `gradientRepeat` (yes = tile; shift then loops seamlessly).
   (reference-style staged cells: dots → tinted → full as `progress` 0→1, full → tint →
   off as `clear` 0→1; `output: mask` mattes a `tmBackdrop`, `output: dots` draws the
   halftone — use both with the same keys, see `trd-02-trading-analysing`), `liveLines` (Trademania Live card's glowing red/green lines from the
-  Figma paths: `morph` small→big card shape, `draw`, `phase`/`wave` flow), `replayChart`
+  Figma paths: `morph` small→big card shape, `draw`, `phase`/`wave` flow; then
+  `shoot` (head 0→1.15, pulls them taut with a pixel-cell trail + halftone head),
+  `radius turns spin` (3D helix around `axisY`), `merge` (→ `mergeColor`), `ring`
+  (curl into a circle at `ringX/ringY/ringR`) — see `scripts/ses-03-v003-helix.mjs`),
+  `pixelSchedule` (per-cell open/color/clear times measured from a reference, outputs
+  `mask` / `overlay` / `paper` — see `scripts/lib/reference-transition.mjs`), `replayChart`
   (Replay card candles + dashed guides: `progress` pops candles in left→right). When a shot needs something
   keyframes can't express (noise, particles, dithering), add a generator there —
   pure function of `t` + params — rather than faking it with hundreds of keys.

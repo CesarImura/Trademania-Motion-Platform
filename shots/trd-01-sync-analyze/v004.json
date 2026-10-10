@@ -1,0 +1,2025 @@
+{
+  "name": "TRD-01 · Sync and analyze",
+  "note": "No stutter: cards pop in with a spring and shove their neighbours aside (they spring back); the headline grows out of the middle, nearest words first, pushing the cards outward into their TRD-05 spots. Grid 10%, cards 40%.",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 6,
+  "background": "#f4f9ee",
+  "layers": [
+    {
+      "id": "cards",
+      "name": "Depth · near (cards)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 1064,
+        "y": 484,
+        "isolate": "yes",
+        "opacity": 0.4
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 4.2667,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.6667,
+            "v": 6.2
+          }
+        ],
+        "blur": [
+          {
+            "t": 4.5333,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.6667,
+            "v": 12
+          }
+        ]
+      }
+    },
+    {
+      "id": "card-btc",
+      "name": "Card · BTCUSDT",
+      "type": "null",
+      "parent": "cards",
+      "label": "#D9F9B9",
+      "props": {
+        "x": -324,
+        "y": -176.71,
+        "rotation": -5,
+        "scale": 1
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.7333,
+            "v": -324,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": -366.83,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": -324
+          }
+        ],
+        "y": [
+          {
+            "t": 2.7333,
+            "v": -176.71,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": -284.36,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": -229
+          }
+        ],
+        "rotation": [
+          {
+            "t": 0.2,
+            "v": -12.5,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 0.6667,
+            "v": -5
+          },
+          {
+            "t": 2.7333,
+            "v": -5,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": -6.84,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": -5
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.2,
+            "v": 0.55,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 0.6667,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.2,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.3333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "card-btc-push",
+      "name": "Push",
+      "type": "null",
+      "parent": "card-btc",
+      "label": "#e6d3a3",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.8667,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 1.0333,
+            "v": -24.02,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 1.4667,
+            "v": 0
+          },
+          {
+            "t": 1.5333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 1.7,
+            "v": 5.1,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.3,
+            "v": -10.78,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.7333,
+            "v": 0
+          }
+        ],
+        "y": [
+          {
+            "t": 0.8667,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 1.0333,
+            "v": -0.99,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 1.4667,
+            "v": 0
+          },
+          {
+            "t": 1.5333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 1.7,
+            "v": -23.13,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.3,
+            "v": -11.08,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.7333,
+            "v": 0
+          }
+        ],
+        "rotation": [
+          {
+            "t": 0.8667,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 1.0333,
+            "v": -2.5,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 1.4667,
+            "v": 0
+          },
+          {
+            "t": 1.5333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 1.7,
+            "v": 0.54,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.3,
+            "v": -1.74,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.7333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "card-btc-pnl",
+      "name": "PnL %",
+      "type": "text",
+      "parent": "card-btc-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 33.173,
+        "letterSpacing": -0.33,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#16b26b",
+        "text": "+2.41%",
+        "align": "right",
+        "anchorX": 1,
+        "x": 265.38,
+        "y": -37.56
+      }
+    },
+    {
+      "id": "card-btc-usd",
+      "name": "PnL",
+      "type": "text",
+      "parent": "card-btc-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 21.635,
+        "letterSpacing": -0.22,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "+$1,240.50",
+        "align": "right",
+        "anchorX": 1,
+        "x": 265.38,
+        "y": 9.61
+      }
+    },
+    {
+      "id": "card-btc-pair",
+      "name": "Pair",
+      "type": "text",
+      "parent": "card-btc-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 33.173,
+        "letterSpacing": -0.33,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "BTCUSDT",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": -51.83
+      }
+    },
+    {
+      "id": "card-btc-meta",
+      "name": "Meta",
+      "type": "text",
+      "parent": "card-btc-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 21.635,
+        "letterSpacing": -0.22,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "Long · 10× · Bitunix",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": -4.66
+      }
+    },
+    {
+      "id": "card-btc-date",
+      "name": "Date",
+      "type": "text",
+      "parent": "card-btc-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 18.75,
+        "letterSpacing": -0.19,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "Oct 8, 14:32",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": 27.61
+      }
+    },
+    {
+      "id": "card-btc-letter",
+      "name": "Coin letter",
+      "type": "text",
+      "parent": "card-btc-push",
+      "props": {
+        "text": "B",
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 31.731,
+        "letterSpacing": -0.317,
+        "lineHeight": 1,
+        "align": "center",
+        "fill": "#ffffff",
+        "x": -239.42,
+        "y": 0
+      }
+    },
+    {
+      "id": "card-btc-coin",
+      "name": "Coin",
+      "type": "ellipse",
+      "parent": "card-btc-push",
+      "props": {
+        "width": 63.462,
+        "height": 63.462,
+        "fill": "#f7931a",
+        "x": -239.42,
+        "y": 0
+      }
+    },
+    {
+      "id": "card-btc-bg",
+      "name": "Card",
+      "type": "rect",
+      "parent": "card-btc-push",
+      "props": {
+        "width": 600,
+        "height": 164.23,
+        "radius": 5.769,
+        "fill": "#ffffff",
+        "stroke": "#0a1a1d",
+        "strokeWidth": 1.442
+      }
+    },
+    {
+      "id": "card-eth",
+      "name": "Card · ETHUSDT",
+      "type": "null",
+      "parent": "cards",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 224.59,
+        "y": -154,
+        "rotation": 3,
+        "scale": 1
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.7333,
+            "v": 224.59,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": 274.5,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": 216
+          }
+        ],
+        "y": [
+          {
+            "t": 2.7333,
+            "v": -154,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": -192.45,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": -154
+          }
+        ],
+        "rotation": [
+          {
+            "t": 0.8667,
+            "v": 7.5,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 1.3333,
+            "v": 3
+          },
+          {
+            "t": 2.7333,
+            "v": 3,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": 5.51,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": 3
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.8667,
+            "v": 0.55,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 1.3333,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.8667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 1,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "card-eth-push",
+      "name": "Push",
+      "type": "null",
+      "parent": "card-eth",
+      "label": "#e6d3a3",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.5333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 1.7,
+            "v": 9.46,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.3,
+            "v": 1.43,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.7333,
+            "v": 0
+          }
+        ],
+        "y": [
+          {
+            "t": 1.5333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 1.7,
+            "v": -7.38,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.3,
+            "v": -25.59,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.7333,
+            "v": 0
+          }
+        ],
+        "rotation": [
+          {
+            "t": 1.5333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 1.7,
+            "v": 1.97,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.3,
+            "v": 0.14,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.7333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "card-eth-pnl",
+      "name": "PnL %",
+      "type": "text",
+      "parent": "card-eth-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 33.173,
+        "letterSpacing": -0.33,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#e5484d",
+        "text": "−0.82%",
+        "align": "right",
+        "anchorX": 1,
+        "x": 265.38,
+        "y": -37.56
+      }
+    },
+    {
+      "id": "card-eth-usd",
+      "name": "PnL",
+      "type": "text",
+      "parent": "card-eth-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 21.635,
+        "letterSpacing": -0.22,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "−$312.40",
+        "align": "right",
+        "anchorX": 1,
+        "x": 265.38,
+        "y": 9.61
+      }
+    },
+    {
+      "id": "card-eth-pair",
+      "name": "Pair",
+      "type": "text",
+      "parent": "card-eth-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 33.173,
+        "letterSpacing": -0.33,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "ETHUSDT",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": -51.83
+      }
+    },
+    {
+      "id": "card-eth-meta",
+      "name": "Meta",
+      "type": "text",
+      "parent": "card-eth-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 21.635,
+        "letterSpacing": -0.22,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "Short · 5× · Blofin",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": -4.66
+      }
+    },
+    {
+      "id": "card-eth-date",
+      "name": "Date",
+      "type": "text",
+      "parent": "card-eth-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 18.75,
+        "letterSpacing": -0.19,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "Oct 8, 11:05",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": 27.61
+      }
+    },
+    {
+      "id": "card-eth-letter",
+      "name": "Coin letter",
+      "type": "text",
+      "parent": "card-eth-push",
+      "props": {
+        "text": "E",
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 31.731,
+        "letterSpacing": -0.317,
+        "lineHeight": 1,
+        "align": "center",
+        "fill": "#ffffff",
+        "x": -239.42,
+        "y": 0
+      }
+    },
+    {
+      "id": "card-eth-coin",
+      "name": "Coin",
+      "type": "ellipse",
+      "parent": "card-eth-push",
+      "props": {
+        "width": 63.462,
+        "height": 63.462,
+        "fill": "#627eea",
+        "x": -239.42,
+        "y": 0
+      }
+    },
+    {
+      "id": "card-eth-bg",
+      "name": "Card",
+      "type": "rect",
+      "parent": "card-eth-push",
+      "props": {
+        "width": 600,
+        "height": 164.23,
+        "radius": 5.769,
+        "fill": "#ffffff",
+        "stroke": "#0a1a1d",
+        "strokeWidth": 1.442
+      }
+    },
+    {
+      "id": "card-sol",
+      "name": "Card · SOLUSDT",
+      "type": "null",
+      "parent": "cards",
+      "label": "#D9F9B9",
+      "props": {
+        "x": -444,
+        "y": 367.39,
+        "rotation": -4,
+        "scale": 0.75
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.7333,
+            "v": -444,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": -498.07,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": -444
+          }
+        ],
+        "y": [
+          {
+            "t": 2.7333,
+            "v": 367.39,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": 380.46,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": 336
+          }
+        ],
+        "rotation": [
+          {
+            "t": 1.5333,
+            "v": -10,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 2,
+            "v": -4
+          },
+          {
+            "t": 2.7333,
+            "v": -4,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": -6.32,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": -4
+          }
+        ],
+        "scale": [
+          {
+            "t": 1.5333,
+            "v": 0.41,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 2,
+            "v": 0.75
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.5333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 1.6667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "card-sol-push",
+      "name": "Push",
+      "type": "null",
+      "parent": "card-sol",
+      "label": "#e6d3a3",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.3,
+            "v": -20.07,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.7333,
+            "v": 0
+          }
+        ],
+        "y": [
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.3,
+            "v": 0.3,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.7333,
+            "v": 0
+          }
+        ],
+        "rotation": [
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.3,
+            "v": -2.5,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 2.7333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "card-sol-pnl",
+      "name": "PnL %",
+      "type": "text",
+      "parent": "card-sol-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 33.173,
+        "letterSpacing": -0.33,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#16b26b",
+        "text": "+5.12%",
+        "align": "right",
+        "anchorX": 1,
+        "x": 265.38,
+        "y": -37.56
+      }
+    },
+    {
+      "id": "card-sol-usd",
+      "name": "PnL",
+      "type": "text",
+      "parent": "card-sol-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 21.635,
+        "letterSpacing": -0.22,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "+$860.00",
+        "align": "right",
+        "anchorX": 1,
+        "x": 265.38,
+        "y": 9.61
+      }
+    },
+    {
+      "id": "card-sol-pair",
+      "name": "Pair",
+      "type": "text",
+      "parent": "card-sol-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 33.173,
+        "letterSpacing": -0.33,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "SOLUSDT",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": -51.83
+      }
+    },
+    {
+      "id": "card-sol-meta",
+      "name": "Meta",
+      "type": "text",
+      "parent": "card-sol-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 21.635,
+        "letterSpacing": -0.22,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "Long · 20× · Kraken",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": -4.66
+      }
+    },
+    {
+      "id": "card-sol-date",
+      "name": "Date",
+      "type": "text",
+      "parent": "card-sol-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 18.75,
+        "letterSpacing": -0.19,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "Oct 7, 22:48",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": 27.61
+      }
+    },
+    {
+      "id": "card-sol-letter",
+      "name": "Coin letter",
+      "type": "text",
+      "parent": "card-sol-push",
+      "props": {
+        "text": "S",
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 31.731,
+        "letterSpacing": -0.317,
+        "lineHeight": 1,
+        "align": "center",
+        "fill": "#ffffff",
+        "x": -239.42,
+        "y": 0
+      }
+    },
+    {
+      "id": "card-sol-coin",
+      "name": "Coin",
+      "type": "ellipse",
+      "parent": "card-sol-push",
+      "props": {
+        "width": 63.462,
+        "height": 63.462,
+        "fill": "#9945ff",
+        "x": -239.42,
+        "y": 0
+      }
+    },
+    {
+      "id": "card-sol-bg",
+      "name": "Card",
+      "type": "rect",
+      "parent": "card-sol-push",
+      "props": {
+        "width": 600,
+        "height": 164.23,
+        "radius": 5.769,
+        "fill": "#ffffff",
+        "stroke": "#0a1a1d",
+        "strokeWidth": 1.442
+      }
+    },
+    {
+      "id": "card-xrp",
+      "name": "Card · XRPUSDT",
+      "type": "null",
+      "parent": "cards",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 196,
+        "y": 357.85,
+        "rotation": -4,
+        "scale": 1
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.7333,
+            "v": 196,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": 248.86,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": 196
+          }
+        ],
+        "y": [
+          {
+            "t": 2.7333,
+            "v": 357.85,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": 361.89,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": 316
+          }
+        ],
+        "rotation": [
+          {
+            "t": 2.1333,
+            "v": -10,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 2.6,
+            "v": -4
+          },
+          {
+            "t": 2.7333,
+            "v": -4,
+            "ease": "figmaQuick"
+          },
+          {
+            "t": 2.9667,
+            "v": -1.73,
+            "ease": "figmaGentle"
+          },
+          {
+            "t": 3.6,
+            "v": -4
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.1333,
+            "v": 0.55,
+            "ease": "figmaBouncy"
+          },
+          {
+            "t": 2.6,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.1333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.2667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "card-xrp-push",
+      "name": "Push",
+      "type": "null",
+      "parent": "card-xrp",
+      "label": "#e6d3a3",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {}
+    },
+    {
+      "id": "card-xrp-pnl",
+      "name": "PnL %",
+      "type": "text",
+      "parent": "card-xrp-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 33.173,
+        "letterSpacing": -0.33,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#16b26b",
+        "text": "+1.07%",
+        "align": "right",
+        "anchorX": 1,
+        "x": 265.38,
+        "y": -37.56
+      }
+    },
+    {
+      "id": "card-xrp-usd",
+      "name": "PnL",
+      "type": "text",
+      "parent": "card-xrp-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 21.635,
+        "letterSpacing": -0.22,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "+$95.30",
+        "align": "right",
+        "anchorX": 1,
+        "x": 265.38,
+        "y": 9.61
+      }
+    },
+    {
+      "id": "card-xrp-pair",
+      "name": "Pair",
+      "type": "text",
+      "parent": "card-xrp-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 33.173,
+        "letterSpacing": -0.33,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "XRPUSDT",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": -51.83
+      }
+    },
+    {
+      "id": "card-xrp-meta",
+      "name": "Meta",
+      "type": "text",
+      "parent": "card-xrp-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 21.635,
+        "letterSpacing": -0.22,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "Long · 3× · Bitunix",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": -4.66
+      }
+    },
+    {
+      "id": "card-xrp-date",
+      "name": "Date",
+      "type": "text",
+      "parent": "card-xrp-push",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 18.75,
+        "letterSpacing": -0.19,
+        "lineHeight": 1.2915,
+        "anchorY": 0,
+        "fill": "#0a1a1d",
+        "text": "Oct 7, 09:16",
+        "align": "left",
+        "anchorX": 0,
+        "x": -187.5,
+        "y": 27.61
+      }
+    },
+    {
+      "id": "card-xrp-letter",
+      "name": "Coin letter",
+      "type": "text",
+      "parent": "card-xrp-push",
+      "props": {
+        "text": "X",
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 31.731,
+        "letterSpacing": -0.317,
+        "lineHeight": 1,
+        "align": "center",
+        "fill": "#ffffff",
+        "x": -239.42,
+        "y": 0
+      }
+    },
+    {
+      "id": "card-xrp-coin",
+      "name": "Coin",
+      "type": "ellipse",
+      "parent": "card-xrp-push",
+      "props": {
+        "width": 63.462,
+        "height": 63.462,
+        "fill": "#23292f",
+        "x": -239.42,
+        "y": 0
+      }
+    },
+    {
+      "id": "card-xrp-bg",
+      "name": "Card",
+      "type": "rect",
+      "parent": "card-xrp-push",
+      "props": {
+        "width": 600,
+        "height": 164.23,
+        "radius": 5.769,
+        "fill": "#ffffff",
+        "stroke": "#0a1a1d",
+        "strokeWidth": 1.442
+      }
+    },
+    {
+      "id": "headline",
+      "name": "Depth · mid (headline)",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 1064,
+        "y": 484
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 4.2667,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.6667,
+            "v": 5.425
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-sync",
+      "name": "Word · Sync",
+      "type": "text",
+      "parent": "headline",
+      "props": {
+        "text": "Sync",
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "center",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fill": "#0a1a1d",
+        "x": -418,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.7667,
+            "v": -197.85,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.3,
+            "v": -418
+          }
+        ],
+        "y": [
+          {
+            "t": 2.7667,
+            "v": 39.2,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.3,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.7667,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.3,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.7667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-and",
+      "name": "Word · and",
+      "type": "text",
+      "parent": "headline",
+      "props": {
+        "text": "and",
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "center",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fill": "#0a1a1d",
+        "x": -175,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.7333,
+            "v": -124.95,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2667,
+            "v": -175
+          }
+        ],
+        "y": [
+          {
+            "t": 2.7333,
+            "v": 39.2,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2667,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.7333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2667,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.7333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-analyze",
+      "name": "Word · Analyze",
+      "type": "text",
+      "parent": "headline",
+      "props": {
+        "text": "Analyze",
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "center",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fill": "#0a1a1d",
+        "x": 275.5,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.8,
+            "v": 10.2,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.3333,
+            "v": 275.5
+          }
+        ],
+        "y": [
+          {
+            "t": 2.8,
+            "v": 39.2,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.3333,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.8,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.3333,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.8,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-trades",
+      "name": "Word · your trades",
+      "type": "text",
+      "parent": "headline",
+      "props": {
+        "text": "your trades",
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "center",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fill": "#0a1a1d",
+        "x": -103.5,
+        "y": 112
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.7333,
+            "v": -103.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2667,
+            "v": -103.5
+          }
+        ],
+        "y": [
+          {
+            "t": 2.7333,
+            "v": 72.8,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2667,
+            "v": 112
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.7333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2667,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.7333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "icon-sync",
+      "name": "Icon · Sync",
+      "type": "null",
+      "parent": "headline",
+      "label": "#c5b9ee",
+      "props": {
+        "x": -622,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.8,
+            "v": -259.05,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.3333,
+            "v": -622
+          }
+        ],
+        "y": [
+          {
+            "t": 2.8,
+            "v": 39.2,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.3333,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.8,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.3333,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.8,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sync-glyph-spin",
+      "name": "Sync glyph spin",
+      "type": "null",
+      "parent": "icon-sync",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "rotation": [
+          {
+            "t": 3.0667,
+            "v": -180,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.0667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "sync-glyph",
+      "name": "Sync glyph",
+      "type": "path",
+      "parent": "sync-glyph-spin",
+      "props": {
+        "d": "M30 46C34 34 46 26 58 28C66 29 72 33 76 39M63 39H76V26M74 58C70 70 58 78 46 76C38 75 32 71 28 65M41 65H28V78",
+        "pathOrigin": "zero",
+        "x": -52,
+        "y": -52,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "#0a1a1d",
+        "strokeWidth": 7,
+        "lineCap": "butt"
+      }
+    },
+    {
+      "id": "sync-tile",
+      "name": "Sync tile",
+      "type": "rect",
+      "parent": "icon-sync",
+      "props": {
+        "width": 104,
+        "height": 104,
+        "radius": 8,
+        "fill": "#e2ead9"
+      }
+    },
+    {
+      "id": "icon-analyze",
+      "name": "Icon · Analyze",
+      "type": "null",
+      "parent": "headline",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.7333,
+            "v": -72.45,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2667,
+            "v": 0
+          }
+        ],
+        "y": [
+          {
+            "t": 2.7333,
+            "v": 39.2,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2667,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.7333,
+            "v": 0.3,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2667,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.7333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "bar-1",
+      "name": "Bar 1",
+      "type": "rect",
+      "parent": "icon-analyze",
+      "props": {
+        "x": -24,
+        "y": 23,
+        "anchorY": 1,
+        "width": 7,
+        "height": 18,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 3,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.4667,
+            "v": 18
+          }
+        ]
+      }
+    },
+    {
+      "id": "bar-2",
+      "name": "Bar 2",
+      "type": "rect",
+      "parent": "icon-analyze",
+      "props": {
+        "x": -8,
+        "y": 23,
+        "anchorY": 1,
+        "width": 7,
+        "height": 30,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 3.0667,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.5333,
+            "v": 30
+          }
+        ]
+      }
+    },
+    {
+      "id": "bar-3",
+      "name": "Bar 3",
+      "type": "rect",
+      "parent": "icon-analyze",
+      "props": {
+        "x": 8,
+        "y": 23,
+        "anchorY": 1,
+        "width": 7,
+        "height": 22,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 3.1333,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 22
+          }
+        ]
+      }
+    },
+    {
+      "id": "bar-4",
+      "name": "Bar 4",
+      "type": "rect",
+      "parent": "icon-analyze",
+      "props": {
+        "x": 24,
+        "y": 23,
+        "anchorY": 1,
+        "width": 7,
+        "height": 46,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 3.2,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6667,
+            "v": 46
+          }
+        ]
+      }
+    },
+    {
+      "id": "analyze-tile",
+      "name": "Analyze tile",
+      "type": "rect",
+      "parent": "icon-analyze",
+      "props": {
+        "width": 104,
+        "height": 104,
+        "radius": 8,
+        "fill": "#e2ead9"
+      }
+    },
+    {
+      "id": "grid-depth",
+      "name": "Depth · far (grid)",
+      "type": "null",
+      "label": "#9fdcc6",
+      "props": {
+        "x": 1064,
+        "y": 484
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 4.2667,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.6667,
+            "v": 2.329
+          }
+        ]
+      }
+    },
+    {
+      "id": "grid",
+      "name": "Grid",
+      "type": "path",
+      "parent": "grid-depth",
+      "props": {
+        "d": "M80.5 0V1080M240.5 0V1080M400.5 0V1080M560.5 0V1080M720.5 0V1080M880.5 0V1080M1040.5 0V1080M1200.5 0V1080M1360.5 0V1080M1520.5 0V1080M1680.5 0V1080M1840.5 0V1080M0 77.6429H1920M0 231.929H1920M0 386.214H1920M0 540.5H1920M0 694.786H1920M0 849.072H1920M0 1003.36H1920",
+        "pathOrigin": "zero",
+        "x": -1058,
+        "y": -484,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "#0a1a1d",
+        "strokeWidth": 1,
+        "opacity": 0.1
+      },
+      "keyframes": {
+        "strokeWidth": [
+          {
+            "t": 4.2667,
+            "v": 1,
+            "ease": "linear"
+          },
+          {
+            "t": 4.3333,
+            "v": 0.928,
+            "ease": "linear"
+          },
+          {
+            "t": 4.4,
+            "v": 0.808,
+            "ease": "linear"
+          },
+          {
+            "t": 4.4667,
+            "v": 0.7063,
+            "ease": "linear"
+          },
+          {
+            "t": 4.5333,
+            "v": 0.6315,
+            "ease": "linear"
+          },
+          {
+            "t": 4.6,
+            "v": 0.578,
+            "ease": "linear"
+          },
+          {
+            "t": 4.6667,
+            "v": 0.5397,
+            "ease": "linear"
+          },
+          {
+            "t": 4.7333,
+            "v": 0.5119,
+            "ease": "linear"
+          },
+          {
+            "t": 4.8,
+            "v": 0.4915,
+            "ease": "linear"
+          },
+          {
+            "t": 4.8667,
+            "v": 0.4763,
+            "ease": "linear"
+          },
+          {
+            "t": 4.9333,
+            "v": 0.4649,
+            "ease": "linear"
+          },
+          {
+            "t": 5,
+            "v": 0.4562,
+            "ease": "linear"
+          },
+          {
+            "t": 5.0667,
+            "v": 0.4496,
+            "ease": "linear"
+          },
+          {
+            "t": 5.1333,
+            "v": 0.4446,
+            "ease": "linear"
+          },
+          {
+            "t": 5.2,
+            "v": 0.4407,
+            "ease": "linear"
+          },
+          {
+            "t": 5.2667,
+            "v": 0.4376,
+            "ease": "linear"
+          },
+          {
+            "t": 5.3333,
+            "v": 0.4353,
+            "ease": "linear"
+          },
+          {
+            "t": 5.4,
+            "v": 0.4335,
+            "ease": "linear"
+          },
+          {
+            "t": 5.4667,
+            "v": 0.432,
+            "ease": "linear"
+          },
+          {
+            "t": 5.5333,
+            "v": 0.4309,
+            "ease": "linear"
+          },
+          {
+            "t": 5.6,
+            "v": 0.43,
+            "ease": "linear"
+          },
+          {
+            "t": 5.6667,
+            "v": 0.4294,
+            "ease": "linear"
+          }
+        ]
+      }
+    }
+  ]
+}

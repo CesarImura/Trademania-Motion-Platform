@@ -1,0 +1,27 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Grid">
+<g id="Columns">
+<path id="Column line 1" d="M80.5 0L80.5 1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 2" d="M240.5 0L240.5 1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 3" d="M400.5 0L400.5 1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 4" d="M560.5 0L560.5 1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 5" d="M720.5 0L720.5 1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 6" d="M880.5 0L880.5 1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 7" d="M1040.5 0V1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 8" d="M1200.5 0V1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 9" d="M1360.5 0V1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 10" d="M1520.5 0V1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 11" d="M1680.5 0V1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Column line 12" d="M1840.5 0V1080" stroke="#0A1A1D" stroke-opacity="0.08"/>
+</g>
+<g id="Rows">
+<path id="Row line 1" d="M1920 77.6429L4.37112e-08 77.6428" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Row line 2" d="M1920 231.929L4.37112e-08 231.928" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Row line 3" d="M1920 386.214L4.37112e-08 386.214" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Row line 4" d="M1920 540.5L4.37112e-08 540.5" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Row line 5" d="M1920 694.786L4.37112e-08 694.786" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Row line 6" d="M1920 849.072L4.37112e-08 849.071" stroke="#0A1A1D" stroke-opacity="0.08"/>
+<path id="Row line 7" d="M1920 1003.36L4.37112e-08 1003.36" stroke="#0A1A1D" stroke-opacity="0.08"/>
+</g>
+</g>
+</svg>

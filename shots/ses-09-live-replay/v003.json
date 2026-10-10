@@ -1,0 +1,1913 @@
+{
+  "name": "SES-09→OBK-01 · Live, replay → Orderbuch roulette",
+  "note": "Snappier: 0.6s swooshes with blur, zoom-out shows the whole canvas, live chart ticks + clock runs, hand cursor hits play and the replay runs (progress, Kerzen counter, candles)",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 14,
+  "background": "#F4F9EE",
+  "layers": [
+    {
+      "id": "icon-volume",
+      "name": "Icon · volume",
+      "type": "image",
+      "label": "#c5b9ee",
+      "start": 10.4667,
+      "props": {
+        "src": "icon-volume.png",
+        "width": 88,
+        "x": 1606,
+        "y": 174
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 10.4667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 10.6333,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 10.4667,
+            "v": 0.6,
+            "ease": "backOut"
+          },
+          {
+            "t": 10.8667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "heatmap-thumb",
+      "name": "Heatmap thumb",
+      "type": "image",
+      "label": "#c5b9ee",
+      "start": 12.0667,
+      "props": {
+        "src": "heatmap-thumb.png",
+        "width": 140,
+        "x": 1074,
+        "y": 528
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 12.0667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 12.2,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 12.0667,
+            "v": 0.4,
+            "ease": "backOut"
+          },
+          {
+            "t": 12.4667,
+            "v": 1
+          }
+        ],
+        "rotation": [
+          {
+            "t": 12.0667,
+            "v": -8,
+            "ease": "backOut"
+          },
+          {
+            "t": 12.4667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "brace-open",
+      "name": "Bracket {",
+      "type": "text",
+      "label": "#c5b9ee",
+      "start": 10.2,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "{",
+        "y": 472
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 10.2,
+            "v": 981,
+            "ease": "expoOut"
+          },
+          {
+            "t": 10.6,
+            "v": 941
+          }
+        ],
+        "opacity": [
+          {
+            "t": 10.2,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 10.4,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "brace-close",
+      "name": "Bracket }",
+      "type": "text",
+      "label": "#c5b9ee",
+      "start": 10.2,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "}",
+        "y": 472
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 10.2,
+            "v": 1579,
+            "ease": "expoOut"
+          },
+          {
+            "t": 10.6,
+            "v": 1619
+          }
+        ],
+        "opacity": [
+          {
+            "t": 10.2,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 10.4,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "reel-0",
+      "name": "Reel · Heatmap",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Heatmap",
+        "x": 0,
+        "y": -1458
+      }
+    },
+    {
+      "id": "reel-1",
+      "name": "Reel · Footprint",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Footprint",
+        "x": 0,
+        "y": -1282
+      }
+    },
+    {
+      "id": "reel-2",
+      "name": "Reel · Volumen",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Volumen",
+        "x": 0,
+        "y": -1134
+      }
+    },
+    {
+      "id": "reel-3",
+      "name": "Reel · Heatmap",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Heatmap",
+        "x": 0,
+        "y": -972
+      }
+    },
+    {
+      "id": "reel-4",
+      "name": "Reel · Footprint",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Footprint",
+        "x": 0,
+        "y": -796
+      }
+    },
+    {
+      "id": "reel-5",
+      "name": "Reel · Volumen",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Volumen",
+        "x": 0,
+        "y": -648
+      }
+    },
+    {
+      "id": "reel-6",
+      "name": "Reel · Heatmap",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Heatmap",
+        "x": 0,
+        "y": -486
+      }
+    },
+    {
+      "id": "reel-7",
+      "name": "Reel · Footprint",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Footprint",
+        "x": 0,
+        "y": -310
+      }
+    },
+    {
+      "id": "reel-8",
+      "name": "Reel · Volumen",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Volumen",
+        "x": 0,
+        "y": -162
+      }
+    },
+    {
+      "id": "word-heatmap",
+      "name": "Word · Heatmap (lands)",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Heatmap",
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 12.0667,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 12.4667,
+            "v": 48
+          }
+        ]
+      }
+    },
+    {
+      "id": "reel-10",
+      "name": "Reel · Footprint",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Footprint",
+        "x": 0,
+        "y": 176
+      }
+    },
+    {
+      "id": "reel-11",
+      "name": "Reel · Volumen",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Volumen",
+        "x": 0,
+        "y": 324
+      }
+    },
+    {
+      "id": "reel-12",
+      "name": "Reel · Heatmap",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "reel",
+      "matte": "reel-mask",
+      "start": 10.3333,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Heatmap",
+        "x": 0,
+        "y": 486
+      }
+    },
+    {
+      "id": "reel",
+      "name": "Reel (spin)",
+      "type": "null",
+      "label": "#9fdcc6",
+      "start": 10.3333,
+      "props": {
+        "x": 1117
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 10.3333,
+            "v": 1444,
+            "ease": [
+              0.45,
+              0,
+              0.12,
+              1
+            ]
+          },
+          {
+            "t": 12.0667,
+            "v": 458,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 12.3333,
+            "v": 472
+          }
+        ],
+        "opacity": [
+          {
+            "t": 10.3333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 10.5,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 10.3333,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 10.8,
+            "v": 5,
+            "ease": "quadOut"
+          },
+          {
+            "t": 11.8,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "reel-mask",
+      "name": "Reel mask (100 / 30 / 12 %)",
+      "type": "rect",
+      "label": "#9fdcc6",
+      "props": {
+        "x": 1000,
+        "y": 300,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 760,
+        "height": 680,
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "rgba(0,0,0,0) 0.1471, rgba(0,0,0,1) 0.2382, rgba(0,0,0,1) 0.4294, rgba(0,0,0,0.3) 0.5, rgba(0,0,0,0.3) 0.6853, rgba(0,0,0,0.12) 0.7235, rgba(0,0,0,0.12) 0.8971, rgba(0,0,0,0) 0.9706"
+      }
+    },
+    {
+      "id": "lead",
+      "name": "Lead · Orderbuch",
+      "type": "text",
+      "label": "#D9F9B9",
+      "start": 8.4,
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Orderbuch",
+        "y": 484
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 8.4,
+            "v": 1330,
+            "ease": "expoOut"
+          },
+          {
+            "t": 9,
+            "v": 1250,
+            "ease": "linear"
+          },
+          {
+            "t": 9.8667,
+            "v": 1238,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 10.6,
+            "v": 347
+          }
+        ],
+        "opacity": [
+          {
+            "t": 8.4,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 8.7,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 8.4,
+            "v": 10,
+            "ease": "easeOut"
+          },
+          {
+            "t": 8.8,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "ledger-img",
+      "name": "Ledger book",
+      "type": "image",
+      "label": "#e6d3a3",
+      "parent": "ledger",
+      "props": {
+        "src": "ledger-book.png",
+        "width": 288,
+        "x": 16,
+        "y": 10.5,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "ledger-tile",
+      "name": "Ledger tile",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "ledger",
+      "props": {
+        "width": 320,
+        "height": 309,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#e2ead9"
+      }
+    },
+    {
+      "id": "ledger",
+      "name": "Ledger (group)",
+      "type": "null",
+      "label": "#e6d3a3",
+      "start": 8.6,
+      "props": {
+        "x": 246
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 8.6,
+            "v": 1090,
+            "ease": "expoOut"
+          },
+          {
+            "t": 9.2,
+            "v": 849
+          }
+        ],
+        "opacity": [
+          {
+            "t": 8.6,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 8.7667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cursor",
+      "name": "Hand cursor",
+      "type": "image",
+      "label": "#e6d3a3",
+      "parent": "stage",
+      "start": 4.1333,
+      "end": 5.9667,
+      "props": {
+        "src": "hand-cursor.png",
+        "width": 132,
+        "anchorX": 0.33,
+        "anchorY": 0.13,
+        "shadowColor": "rgba(10,26,29,0.22)",
+        "shadowBlur": 18
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.1333,
+            "v": 1438.59,
+            "ease": "expoOut"
+          },
+          {
+            "t": 4.8,
+            "v": 1178.59,
+            "ease": "linear"
+          },
+          {
+            "t": 5.2,
+            "v": 1178.59,
+            "ease": "quadIn"
+          },
+          {
+            "t": 5.9,
+            "v": 1490.59
+          }
+        ],
+        "y": [
+          {
+            "t": 4.1333,
+            "v": 1070.87,
+            "ease": "expoOut"
+          },
+          {
+            "t": 4.8,
+            "v": 880.87,
+            "ease": "linear"
+          },
+          {
+            "t": 5.2,
+            "v": 880.87,
+            "ease": "quadIn"
+          },
+          {
+            "t": 5.9,
+            "v": 1122.87
+          }
+        ],
+        "rotation": [
+          {
+            "t": 4.1333,
+            "v": 14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 4.9333,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 5.9,
+            "v": 10
+          }
+        ],
+        "opacity": [
+          {
+            "t": 4.1333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.3,
+            "v": 1
+          },
+          {
+            "t": 5.5667,
+            "v": 1,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.9,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.8333,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 4.9333,
+            "v": 0.86,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1,
+            "v": 1
+          }
+        ],
+        "shadowY": [
+          {
+            "t": 4.8333,
+            "v": 10,
+            "ease": "quadIn"
+          },
+          {
+            "t": 4.9333,
+            "v": 3,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1,
+            "v": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "play-flash",
+      "name": "Play button · pressed",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1160.59,
+        "y": 862.87,
+        "width": 36.15,
+        "height": 36.15,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "rgba(255,185,71,0.35)",
+        "radius": 3.6
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9333,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.4,
+            "v": 0.25
+          }
+        ]
+      }
+    },
+    {
+      "id": "kerzen",
+      "name": "Kerzen counter",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "stage",
+      "props": {
+        "text": "{counter} / 380 Kerzen",
+        "counterDecimals": 0,
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 16.267,
+        "lineHeight": 1.29,
+        "align": "left",
+        "fill": "rgba(255,255,255,0.6)",
+        "x": 1690.69,
+        "y": 870.37,
+        "anchorX": 0,
+        "anchorY": 0
+      },
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.0667,
+            "v": 95,
+            "ease": [
+              0.3,
+              0,
+              0.7,
+              1
+            ]
+          },
+          {
+            "t": 7.9333,
+            "v": 268
+          }
+        ]
+      }
+    },
+    {
+      "id": "kerzen-cover",
+      "name": "Kerzen counter · cover",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1688.69,
+        "y": 869.37,
+        "width": 140,
+        "height": 24,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#0b0c0d"
+      }
+    },
+    {
+      "id": "playhead",
+      "name": "Progress · playhead",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1216.96,
+        "y": 875.47,
+        "width": 10.06,
+        "height": 10.845,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#ffb947"
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 5.0667,
+            "v": 1279.185,
+            "ease": [
+              0.3,
+              0,
+              0.7,
+              1
+            ]
+          },
+          {
+            "t": 7.9333,
+            "v": 1392.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "played",
+      "name": "Progress · played",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1221.99,
+        "y": 879.085,
+        "width": 0,
+        "height": 3.615,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#ffb947"
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 5.0667,
+            "v": 62.225,
+            "ease": [
+              0.3,
+              0,
+              0.7,
+              1
+            ]
+          },
+          {
+            "t": 7.9333,
+            "v": 175.54
+          }
+        ]
+      }
+    },
+    {
+      "id": "track",
+      "name": "Progress · track",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1221.99,
+        "y": 879.085,
+        "width": 248.9,
+        "height": 3.615,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "rgba(255,255,255,0.12)"
+      }
+    },
+    {
+      "id": "progress-cover",
+      "name": "Progress · cover",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1218.99,
+        "y": 874.47,
+        "width": 256.9,
+        "height": 12.845,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#0b0c0d"
+      }
+    },
+    {
+      "id": "mini-kerzen",
+      "name": "Mini player · Kerzen",
+      "type": "text",
+      "label": "#9fdcc6",
+      "parent": "stage",
+      "props": {
+        "text": "{counter} / 380 Kerzen",
+        "counterDecimals": 0,
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 5,
+        "lineHeight": 1.2,
+        "align": "left",
+        "fill": "rgba(255,255,255,0.55)",
+        "x": 1767.6,
+        "y": 708,
+        "anchorX": 0,
+        "anchorY": 0.5
+      },
+      "keyframes": {
+        "counter": [
+          {
+            "t": 5.0667,
+            "v": 95,
+            "ease": [
+              0.3,
+              0,
+              0.7,
+              1
+            ]
+          },
+          {
+            "t": 7.9333,
+            "v": 268
+          }
+        ]
+      }
+    },
+    {
+      "id": "mini-kerzen-cover",
+      "name": "Mini player · Kerzen cover",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1766.1,
+        "y": 703.5,
+        "width": 46,
+        "height": 9,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#0e0f12"
+      }
+    },
+    {
+      "id": "mini-played",
+      "name": "Mini player · played",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1255.6,
+        "y": 707,
+        "width": 0,
+        "height": 1.44,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#ffac48"
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 5.0667,
+            "v": 102.3,
+            "ease": [
+              0.3,
+              0,
+              0.7,
+              1
+            ]
+          },
+          {
+            "t": 7.9333,
+            "v": 288.5936842105263
+          }
+        ]
+      }
+    },
+    {
+      "id": "mini-track",
+      "name": "Mini player · track",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1255.6,
+        "y": 707,
+        "width": 409.2,
+        "height": 1.44,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#27272a"
+      }
+    },
+    {
+      "id": "mini-cover",
+      "name": "Mini player · cover",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1253.6,
+        "y": 706,
+        "width": 413.2,
+        "height": 3.44,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#0e0f12"
+      }
+    },
+    {
+      "id": "replay-chart",
+      "name": "Replay chart",
+      "type": "generator",
+      "label": "#9fdcc6",
+      "parent": "stage",
+      "props": {
+        "generator": "productChart",
+        "x": 1235.6,
+        "y": 524.6,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 580,
+        "height": 159.6,
+        "reveal": 0.25,
+        "playhead": 1,
+        "seed": 11
+      },
+      "keyframes": {
+        "reveal": [
+          {
+            "t": 5.0667,
+            "v": 0.25,
+            "ease": [
+              0.3,
+              0,
+              0.7,
+              1
+            ]
+          },
+          {
+            "t": 7.9333,
+            "v": 0.7052631578947368
+          }
+        ]
+      }
+    },
+    {
+      "id": "replay-chart-tooltip-cover",
+      "name": "Replay chart · tooltip cover",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 1478.6,
+        "y": 684.6,
+        "width": 49,
+        "height": 10,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#0F0F12"
+      }
+    },
+    {
+      "id": "clock",
+      "name": "Live clock",
+      "type": "text",
+      "label": "#ff6479",
+      "parent": "stage",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 23.497,
+        "letterSpacing": -0.235,
+        "lineHeight": 1.319,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "x": 655.8,
+        "y": 88,
+        "anchorX": 0,
+        "anchorY": 0
+      },
+      "keyframes": {
+        "text": [
+          {
+            "t": 0,
+            "v": "14:36:08"
+          },
+          {
+            "t": 1,
+            "v": "14:36:09"
+          },
+          {
+            "t": 2,
+            "v": "14:36:10"
+          },
+          {
+            "t": 3,
+            "v": "14:36:11"
+          },
+          {
+            "t": 4,
+            "v": "14:36:12"
+          },
+          {
+            "t": 5,
+            "v": "14:36:13"
+          },
+          {
+            "t": 6,
+            "v": "14:36:14"
+          },
+          {
+            "t": 7,
+            "v": "14:36:15"
+          },
+          {
+            "t": 8,
+            "v": "14:36:16"
+          },
+          {
+            "t": 9,
+            "v": "14:36:17"
+          },
+          {
+            "t": 10,
+            "v": "14:36:18"
+          },
+          {
+            "t": 11,
+            "v": "14:36:19"
+          },
+          {
+            "t": 12,
+            "v": "14:36:20"
+          },
+          {
+            "t": 13,
+            "v": "14:36:21"
+          },
+          {
+            "t": 14,
+            "v": "14:36:22"
+          }
+        ]
+      }
+    },
+    {
+      "id": "clock-cover",
+      "name": "Live clock · cover",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 653.8,
+        "y": 87,
+        "width": 100,
+        "height": 33,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#F4F9EE"
+      }
+    },
+    {
+      "id": "live-pixel",
+      "name": "Live pixel (blink)",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 785.3,
+        "y": 96.6,
+        "width": 13.77,
+        "height": 13.77,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#ff6479"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 0.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 1,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 1.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 2,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 2.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 3,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 3.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 4,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 4.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 5.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 6,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 6.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 7,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 7.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 8,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 8.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 9,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 9.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 10,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 10.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 11,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 11.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 12,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 12.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 13,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 13.5,
+            "v": 0.2,
+            "ease": "hold"
+          },
+          {
+            "t": 14,
+            "v": 1,
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "live-pixel-cover",
+      "name": "Live pixel · cover",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 784.8,
+        "y": 96.1,
+        "width": 14.77,
+        "height": 14.77,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#000000"
+      }
+    },
+    {
+      "id": "live-chart",
+      "name": "Live chart",
+      "type": "generator",
+      "label": "#9fdcc6",
+      "parent": "stage",
+      "props": {
+        "generator": "productChart",
+        "x": 288.6,
+        "y": 224.6,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 580,
+        "height": 159.6,
+        "rate": 1.4,
+        "seed": 7
+      }
+    },
+    {
+      "id": "live-chart-tooltip-cover",
+      "name": "Live chart · tooltip cover",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "x": 531.6,
+        "y": 384.6,
+        "width": 49,
+        "height": 10,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#0F0F12"
+      }
+    },
+    {
+      "id": "vhs-img",
+      "name": "VHS tape",
+      "type": "image",
+      "label": "#e6d3a3",
+      "parent": "vhs",
+      "props": {
+        "src": "vhs-tape.png",
+        "width": 244,
+        "x": 23.2,
+        "y": 2.77,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "vhs-tile",
+      "name": "VHS tile",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "vhs",
+      "props": {
+        "width": 289.2,
+        "height": 278.35,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "#e2ead9"
+      }
+    },
+    {
+      "id": "vhs",
+      "name": "VHS (group)",
+      "type": "null",
+      "label": "#e6d3a3",
+      "parent": "stage",
+      "props": {
+        "x": 1471.8,
+        "y": -23.77
+      }
+    },
+    {
+      "id": "timeline",
+      "name": "Timeline · Jetzt → −3T",
+      "type": "image",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "src": "timeline.png",
+        "width": 488.4,
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 468.66,
+        "y": 731
+      }
+    },
+    {
+      "id": "live",
+      "name": "Session · Live",
+      "type": "image",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "src": "live.png",
+        "width": 909.2,
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 31,
+        "y": 79
+      }
+    },
+    {
+      "id": "replay",
+      "name": "Session · Replay",
+      "type": "image",
+      "label": "#D9F9B9",
+      "parent": "stage",
+      "props": {
+        "src": "replay.png",
+        "width": 922,
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 971.6,
+        "y": 379
+      }
+    },
+    {
+      "id": "stopwatch",
+      "name": "Stopwatch",
+      "type": "image",
+      "label": "#e6d3a3",
+      "parent": "stage",
+      "props": {
+        "src": "stopwatch.png",
+        "width": 144.8,
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 253,
+        "y": 856
+      }
+    },
+    {
+      "id": "stage",
+      "name": "Pan (focus)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "parent": "camera",
+      "props": {},
+      "keyframes": {
+        "x": [
+          {
+            "t": 0,
+            "v": -490,
+            "ease": "linear"
+          },
+          {
+            "t": 1.8,
+            "v": -482,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 2.4,
+            "v": -935,
+            "ease": "linear"
+          },
+          {
+            "t": 3.6,
+            "v": -960,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 4.2,
+            "v": -1432,
+            "ease": "linear"
+          },
+          {
+            "t": 8.1333,
+            "v": -1420,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 8.7333,
+            "v": -2150,
+            "ease": "linear"
+          },
+          {
+            "t": 9.8667,
+            "v": -2200,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 10.4667,
+            "v": -3150
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": -370,
+            "ease": "linear"
+          },
+          {
+            "t": 1.8,
+            "v": -366,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 2.4,
+            "v": -486,
+            "ease": "linear"
+          },
+          {
+            "t": 3.6,
+            "v": -492,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 4.2,
+            "v": -700,
+            "ease": "linear"
+          },
+          {
+            "t": 8.1333,
+            "v": -694,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 8.7333,
+            "v": -690,
+            "ease": "linear"
+          },
+          {
+            "t": 9.8667,
+            "v": -690,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 10.4667,
+            "v": -690
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.8,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 2.0667,
+            "v": 5,
+            "ease": "quadOut"
+          },
+          {
+            "t": 2.4,
+            "v": 0
+          },
+          {
+            "t": 3.6,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.8667,
+            "v": 5,
+            "ease": "quadOut"
+          },
+          {
+            "t": 4.2,
+            "v": 0
+          },
+          {
+            "t": 8.1333,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 8.4,
+            "v": 5,
+            "ease": "quadOut"
+          },
+          {
+            "t": 8.7333,
+            "v": 0
+          },
+          {
+            "t": 9.8667,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 10.1333,
+            "v": 5,
+            "ease": "quadOut"
+          },
+          {
+            "t": 10.4667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "camera",
+      "name": "Camera (zoom)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 960,
+        "y": 540
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.76,
+            "ease": "linear"
+          },
+          {
+            "t": 1.8,
+            "v": 1.7,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 2.4,
+            "v": 0.97,
+            "ease": "linear"
+          },
+          {
+            "t": 3.6,
+            "v": 1,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 4.2,
+            "v": 1.5,
+            "ease": "linear"
+          },
+          {
+            "t": 8.1333,
+            "v": 1.58,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 8.7333,
+            "v": 1.6,
+            "ease": "linear"
+          },
+          {
+            "t": 9.8667,
+            "v": 1.6,
+            "ease": [
+              0.75,
+              0,
+              0.15,
+              1
+            ]
+          },
+          {
+            "t": 10.4667,
+            "v": 1.6
+          }
+        ]
+      }
+    },
+    {
+      "id": "grid",
+      "name": "Grid",
+      "type": "path",
+      "label": "#F4F9EE",
+      "locked": true,
+      "props": {
+        "d": "M80.5 0V1080M240.5 0V1080M400.5 0V1080M560.5 0V1080M720.5 0V1080M880.5 0V1080M1040.5 0V1080M1200.5 0V1080M1360.5 0V1080M1520.5 0V1080M1680.5 0V1080M1840.5 0V1080M0 77.6429H1920M0 231.929H1920M0 386.214H1920M0 540.5H1920M0 694.786H1920M0 849.071H1920M0 1003.357H1920",
+        "x": 6,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "rgba(10,26,29,0.08)",
+        "strokeWidth": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,2767 @@
+{
+  "name": "Trademania V3 · Thinking → Ready",
+  "note": "Imported from Claude chat artifact (7HUufEMKQsxYRhHsPf8sY8)",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "duration": 3,
+  "background": "#0F0F12",
+  "layers": [
+    {
+      "id": "layout",
+      "name": "Layout origin (G)",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {},
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.44,
+            "v": 549.6,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 615.1
+          }
+        ],
+        "y": [
+          {
+            "t": 2.44,
+            "v": 142,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 179
+          }
+        ]
+      }
+    },
+    {
+      "id": "camera",
+      "name": "Camera scroll",
+      "type": "null",
+      "parent": "layout",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.5,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 2.2,
+            "v": -260
+          },
+          {
+            "t": 2.44,
+            "v": -260,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "orb-move",
+      "name": "Orb move",
+      "type": "null",
+      "parent": "layout",
+      "label": "#D9F9B9",
+      "props": {},
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.86,
+            "v": 410.4,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.3,
+            "v": 44.7
+          }
+        ],
+        "y": [
+          {
+            "t": 0.8,
+            "v": 322,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.2237,
+            "v": 44.7
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 0.86,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.34,
+            "v": 1
+          },
+          {
+            "t": 0.8,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.3,
+            "v": 0.2693
+          },
+          {
+            "t": 2.7,
+            "v": 0.2693,
+            "ease": "sineOut"
+          },
+          {
+            "t": 2.85,
+            "v": 0.2855,
+            "ease": "sineIn"
+          },
+          {
+            "t": 3,
+            "v": 0.2693
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.34,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0,
+            "v": 14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.34,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "orb-breath",
+      "name": "Orb breath",
+      "type": "null",
+      "parent": "orb-move",
+      "label": "#D9F9B9",
+      "props": {},
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 0.3,
+            "v": 1.018,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 0.9,
+            "v": 0.9826,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 1.3,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "header",
+      "name": "Header",
+      "type": "null",
+      "parent": "layout",
+      "label": "#e6d3a3",
+      "props": {
+        "y": 6.7
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.16,
+            "v": 92.2,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.5,
+            "v": 116.2
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.16,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.5,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.16,
+            "v": 10,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.5,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "ring",
+      "name": "Ready ring",
+      "type": "ellipse",
+      "parent": "orb-breath",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 322,
+        "height": 322,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "rgba(217,249,185,0.9)",
+        "strokeWidth": 10
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 2.7,
+            "v": 0.7
+          },
+          {
+            "t": 3,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.7,
+            "v": 1
+          },
+          {
+            "t": 3,
+            "v": 1.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "logo",
+      "name": "Logo mark",
+      "type": "path",
+      "parent": "orb-breath",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 0,
+        "y": -0.5,
+        "strokeWidth": 0,
+        "fill": "#F6FFEE",
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "#F4FFEA 0, #ffffff 0.9074",
+        "gradientScale": 1.09,
+        "d": "M62.7039 50.998C62.7039 50.998 62.7144 51.0033 62.7197 50.998C63.1819 51.0302 63.6441 51.0572 64.1063 51.0733C64.3221 51.0841 64.5369 51.0895 64.758 51.0949C65.1096 51.1057 65.4676 51.1111 65.8245 51.1111H66.1709C66.5278 51.1111 66.8857 51.1057 67.2374 51.0949C67.4585 51.0895 67.6732 51.0841 67.8891 51.0733C68.3512 51.0571 68.8135 51.0302 69.2756 50.998C69.2809 51.0033 69.2862 51.0033 69.2915 50.998C95.3527 49.2676 115.965 27.0948 115.965 0H94.9474C94.9474 1.6012 94.8211 3.17646 94.5799 4.71301C92.7512 16.3529 84.2813 25.7412 73.2741 28.6647H73.2688C73.2688 28.6647 73.2583 28.67 73.253 28.67C70.9357 29.2881 68.5027 29.6155 65.997 29.6155C63.4912 29.6155 61.0582 29.2881 58.7409 28.67C58.7356 28.67 58.7304 28.6647 58.7251 28.6647H58.7198C47.7126 25.7412 39.2417 16.3529 37.414 4.71301C37.1718 3.17646 37.0465 1.60111 37.0465 0H16.0291C16.0291 27.0948 36.6425 49.2676 62.7039 50.998Z M125.006 48.208C124.56 48.208 124.108 48.2134 123.671 48.2349H123.576C96.6749 49.0468 75.111 71.6062 75.111 99.3136V113.505H56.8889V99.3136C56.8889 71.6062 35.3251 49.0468 8.42354 48.2349H8.32876C7.89289 48.2133 7.44017 48.208 6.99375 48.208H0V69.7036H6.91488C9.51011 69.7036 12.0221 70.0525 14.4235 70.7136C25.3581 73.7178 33.7596 83.1223 35.5199 94.7396C35.7568 96.2276 35.8715 97.7599 35.8715 99.3127V121.614L48.9602 135H83.0398L96.1284 121.614V99.3127C96.1284 97.7599 96.2442 96.2277 96.4801 94.7397C98.2404 83.1214 106.642 73.7168 117.576 70.7137C119.978 70.0525 122.489 69.7037 125.085 69.7037H132V48.2081L125.006 48.208Z"
+      }
+    },
+    {
+      "id": "orb",
+      "name": "Dither orb",
+      "type": "generator",
+      "parent": "orb-breath",
+      "label": "#D9F9B9",
+      "props": {
+        "generator": "ditherOrb",
+        "x": 0,
+        "y": 0,
+        "width": 332,
+        "height": 332
+      },
+      "keyframes": {
+        "energy": [
+          {
+            "t": 0.8,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.3,
+            "v": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "halo",
+      "name": "Orb halo",
+      "type": "ellipse",
+      "parent": "orb-breath",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 632,
+        "height": 632,
+        "fillType": "radial",
+        "gradientStops": "rgba(140,195,112,0.42) 0, rgba(110,160,90,0.16) 0.38, rgba(15,15,18,0) 0.66"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0.78,
+            "ease": "sineOut"
+          },
+          {
+            "t": 0.3,
+            "v": 1,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 0.9,
+            "v": 0.5501,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 1.5,
+            "v": 0.45,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.1,
+            "v": 0.252,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.7,
+            "v": 0.45,
+            "ease": "sineOut"
+          },
+          {
+            "t": 2.85,
+            "v": 0.921,
+            "ease": "sineIn"
+          },
+          {
+            "t": 3,
+            "v": 0.351
+          }
+        ]
+      }
+    },
+    {
+      "id": "header-ready",
+      "name": "“Your session is ready”",
+      "type": "text",
+      "parent": "header",
+      "label": "#e6d3a3",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "text": "Your session is ready",
+        "fontWeight": 500,
+        "fontSize": 58.12,
+        "letterSpacing": -0.5812,
+        "lineHeight": 1.3076393668272541,
+        "fill": "rgba(244,249,238,0.86)"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 2.574,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.84,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 2.574,
+            "v": 8,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.84,
+            "v": 0
+          }
+        ],
+        "y": [
+          {
+            "t": 2.574,
+            "v": 10,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.84,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "header-thinking",
+      "name": "“Trademania V3 is thinking” (shimmer)",
+      "type": "text",
+      "parent": "header",
+      "label": "#e6d3a3",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "text": "Trademania V3 is thinking",
+        "fontWeight": 500,
+        "fontSize": 58.12,
+        "letterSpacing": -0.5812,
+        "lineHeight": 1.3076393668272541,
+        "fill": "rgba(244,249,238,0.82)",
+        "fillType": "linear",
+        "gradientAngle": 90,
+        "gradientScale": 2,
+        "gradientRepeat": "yes",
+        "gradientStops": "rgba(244,249,238,0.82) 0, rgba(244,249,238,0.82) 0.32, rgba(120,132,114,0.62) 0.5, rgba(244,249,238,0.82) 0.68, rgba(244,249,238,0.82) 1"
+      },
+      "keyframes": {
+        "gradientShift": [
+          {
+            "t": 1.16,
+            "v": -0.3667
+          },
+          {
+            "t": 2.7,
+            "v": 1.3444
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.46,
+            "v": 1,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 2.631,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 2.46,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 2.631,
+            "v": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "step1",
+      "name": "Step 1 · Live Data",
+      "type": "null",
+      "parent": "camera",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 89.4
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.3,
+            "v": 206,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.64,
+            "v": 190
+          },
+          {
+            "t": 2.44,
+            "v": 190,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 190
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.3,
+            "v": 0.2178,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.7881,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.64,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.3,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.64,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step1-title",
+      "name": "Live Data",
+      "type": "text",
+      "parent": "step1",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "text": "Live Data",
+        "fontWeight": 500,
+        "fontSize": 49.18,
+        "letterSpacing": -0.4918,
+        "lineHeight": 1.3013420089467262,
+        "fill": "#F4F9EE"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step1-tag",
+      "name": "Tag · UTC +3",
+      "type": "rect",
+      "parent": "step1",
+      "props": {
+        "x": 230.84,
+        "y": 5,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 166.66,
+        "height": 54,
+        "radius": 4.5,
+        "fill": "rgba(255,255,255,0.08)"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step1-tag-text",
+      "name": "Tag text · UTC +3",
+      "type": "text",
+      "parent": "step1",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 244.84,
+        "y": 5,
+        "text": "UTC +3",
+        "fontWeight": 400,
+        "fontSize": 42.47,
+        "letterSpacing": -0.4247,
+        "lineHeight": 1.2714857546503415,
+        "fill": "rgba(255,255,255,0.56)"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step1-desc",
+      "name": "Step 1 description",
+      "type": "text",
+      "parent": "camera",
+      "label": "#D9F9B9",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 89.4,
+        "text": "Loading live market data and aligning session timestamps to UTC +3.",
+        "fontWeight": 400,
+        "fontSize": 30.74,
+        "letterSpacing": -0.1537,
+        "lineHeight": 1.4,
+        "fill": "#999F96",
+        "maxWidth": 716.8
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.36,
+            "v": 286.76,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.7,
+            "v": 270.76
+          },
+          {
+            "t": 2.44,
+            "v": 270.76,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 270.76
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.7,
+            "v": 1
+          },
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.36,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.7,
+            "v": 0
+          },
+          {
+            "t": 2.42,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 6
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step1-dot",
+      "name": "Step 1 dot",
+      "type": "ellipse",
+      "parent": "camera",
+      "label": "#9fdcc6",
+      "props": {
+        "x": 0,
+        "width": 12.6,
+        "height": 12.6,
+        "shadowBlur": 22
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 2.44,
+            "v": 215.7,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 215.7
+          }
+        ],
+        "fill": [
+          {
+            "t": 1.3,
+            "v": "rgba(63,63,63,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.48,
+            "v": "rgba(213,244,182,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.64,
+            "v": "rgba(131,140,126,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.82,
+            "v": "rgba(128,136,124,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.48,
+            "v": "rgba(128,136,124,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.672,
+            "v": "rgba(244,249,238,1)"
+          }
+        ],
+        "shadowColor": [
+          {
+            "t": 1.3,
+            "v": "rgba(217,249,185,0)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.48,
+            "v": "rgba(217,249,185,0.536)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.64,
+            "v": "rgba(217,249,185,0.0211)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.82,
+            "v": "rgba(217,249,185,0)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.48,
+            "v": "rgba(217,249,185,0)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.672,
+            "v": "rgba(217,249,185,0)"
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.3,
+            "v": 0.3889,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.8529
+          },
+          {
+            "t": 1.64,
+            "v": 1
+          },
+          {
+            "t": 2.48,
+            "v": 1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.672,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.48,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 2.4992,
+            "v": 1.45,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.672,
+            "v": 1
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step2",
+      "name": "Step 2 · BTCUSDT",
+      "type": "null",
+      "parent": "camera",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 89.4
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.48,
+            "v": 451,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.82,
+            "v": 435
+          },
+          {
+            "t": 2.44,
+            "v": 435,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 294
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.48,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.82,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.48,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.82,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step2-coin",
+      "name": "BTC coin",
+      "type": "ellipse",
+      "parent": "step2",
+      "props": {
+        "x": 0,
+        "y": 5.175,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 53.65,
+        "height": 53.65,
+        "fill": "#F7931A"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step2-coin-b",
+      "name": "BTC ₿",
+      "type": "path",
+      "parent": "step2",
+      "props": {
+        "x": 13.587,
+        "y": 15.168,
+        "anchorX": 0,
+        "anchorY": 0,
+        "scale": 0.9935,
+        "fill": "#ffffff",
+        "strokeWidth": 0,
+        "d": "M38.8798 23.5069C39.4063 19.9922 36.7286 18.1024 33.0701 16.8414L34.2572 12.0792L31.3599 11.3582L30.2029 15.9946C29.4417 15.8035 28.6604 15.6257 27.8807 15.448L29.046 10.7813L26.1487 10.0586L24.9616 14.8192C24.3312 14.675 23.7108 14.5341 23.1105 14.3832L23.1139 14.3681L19.1166 13.3704L18.3454 16.4658C18.3454 16.4658 20.4966 16.9588 20.4513 16.989C21.625 17.2825 21.8362 18.0588 21.801 18.6759L20.4496 24.1005C20.5301 24.1206 20.6341 24.1508 20.7514 24.1961L20.4446 24.1206L18.5499 31.7201C18.4057 32.0756 18.0419 32.6105 17.2203 32.4076C17.2505 32.4495 15.1144 31.8828 15.1144 31.8828L13.6758 35.1996L17.4483 36.1403C18.1492 36.3164 18.8366 36.5008 19.5123 36.6735L18.3135 41.4894L21.2092 42.2105L22.3963 37.4482C23.1877 37.6612 23.9556 37.8591 24.7067 38.0469L23.523 42.789L26.4203 43.51L27.6192 38.7042C32.562 39.6399 36.2776 39.2626 37.8419 34.7921C39.1028 31.1936 37.7799 29.116 35.1794 27.7628C37.074 27.3268 38.4992 26.0809 38.8798 23.5069ZM32.2569 32.7933C31.3632 36.3935 25.302 34.4467 23.3369 33.9587L24.9297 27.5783C26.8948 28.0696 33.1942 29.0405 32.2569 32.7933ZM33.1539 23.4549C32.3374 26.7298 27.2939 25.0647 25.6591 24.6572L27.1011 18.8721C28.7358 19.2796 34.0057 20.0392 33.1539 23.4549Z"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step2-title",
+      "name": "BTCUSDT",
+      "type": "text",
+      "parent": "step2",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 76,
+        "y": 0,
+        "text": "BTCUSDT",
+        "fontWeight": 500,
+        "fontSize": 49.18,
+        "letterSpacing": -0.4918,
+        "lineHeight": 1.3013420089467262,
+        "fill": "#F4F9EE"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step2-tag",
+      "name": "Tag · Perp · Binance",
+      "type": "rect",
+      "parent": "step2",
+      "props": {
+        "x": 315.13,
+        "y": 5,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 298.7,
+        "height": 54,
+        "radius": 4.5,
+        "fill": "rgba(255,255,255,0.08)"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step2-tag-text",
+      "name": "Tag text · Perp · Binance",
+      "type": "text",
+      "parent": "step2",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 329.13,
+        "y": 5,
+        "text": "Perp · Binance",
+        "fontWeight": 400,
+        "fontSize": 42.47,
+        "letterSpacing": -0.4247,
+        "lineHeight": 1.2714857546503415,
+        "fill": "rgba(255,255,255,0.56)"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step2-desc",
+      "name": "Step 2 description",
+      "type": "text",
+      "parent": "camera",
+      "label": "#D9F9B9",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 89.4,
+        "text": "Preparing the market context for Bitcoin’s BTCUSDT perpetual contract on Binance.",
+        "fontWeight": 400,
+        "fontSize": 30.74,
+        "letterSpacing": -0.1537,
+        "lineHeight": 1.4,
+        "fill": "#999F96",
+        "maxWidth": 716.8
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.54,
+            "v": 531.76,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.88,
+            "v": 515.76
+          },
+          {
+            "t": 2.44,
+            "v": 515.76,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 374.76
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.54,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.88,
+            "v": 1
+          },
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.54,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.88,
+            "v": 0
+          },
+          {
+            "t": 2.42,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 6
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step2-dot",
+      "name": "Step 2 dot",
+      "type": "ellipse",
+      "parent": "camera",
+      "label": "#9fdcc6",
+      "props": {
+        "x": 0,
+        "width": 12.6,
+        "height": 12.6,
+        "shadowBlur": 22
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 2.44,
+            "v": 460.7,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 319.7
+          }
+        ],
+        "fill": [
+          {
+            "t": 1.48,
+            "v": "rgba(63,63,63,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.66,
+            "v": "rgba(213,244,182,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.82,
+            "v": "rgba(131,140,126,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2,
+            "v": "rgba(128,136,124,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.5312,
+            "v": "rgba(128,136,124,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.7232,
+            "v": "rgba(244,249,238,1)"
+          }
+        ],
+        "shadowColor": [
+          {
+            "t": 1.48,
+            "v": "rgba(217,249,185,0)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.66,
+            "v": "rgba(217,249,185,0.536)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.82,
+            "v": "rgba(217,249,185,0.0211)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2,
+            "v": "rgba(217,249,185,0)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.5312,
+            "v": "rgba(217,249,185,0)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.7232,
+            "v": "rgba(217,249,185,0)"
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.5
+          },
+          {
+            "t": 1.48,
+            "v": 0.5,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.82,
+            "v": 1
+          },
+          {
+            "t": 2.5312,
+            "v": 1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.7232,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.5312,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 2.5504,
+            "v": 1.45,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.7232,
+            "v": 1
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step3",
+      "name": "Step 3 · Loading",
+      "type": "null",
+      "parent": "camera",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 89.4
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.66,
+            "v": 696,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2,
+            "v": 680
+          },
+          {
+            "t": 2.44,
+            "v": 680,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 398
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.66,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.66,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step3-title",
+      "name": "Loading",
+      "type": "text",
+      "parent": "step3",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "text": "Loading",
+        "fontWeight": 500,
+        "fontSize": 49.18,
+        "letterSpacing": -0.4918,
+        "lineHeight": 1.3013420089467262,
+        "fill": "#F4F9EE"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 2.5,
+            "v": 1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.74,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 2.5,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.74,
+            "v": 6
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step3-title-alt",
+      "name": "Analysis data",
+      "type": "text",
+      "parent": "step3",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "text": "Analysis data",
+        "fontWeight": 500,
+        "fontSize": 49.18,
+        "letterSpacing": -0.4918,
+        "lineHeight": 1.3013420089467262,
+        "fill": "#F4F9EE"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 2.5,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.74,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 2.5,
+            "v": 6,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.74,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step3-desc",
+      "name": "Step 3 description",
+      "type": "text",
+      "parent": "camera",
+      "label": "#D9F9B9",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 89.4,
+        "text": "Loading the data sources needed to prepare the market analysis.",
+        "fontWeight": 400,
+        "fontSize": 30.74,
+        "letterSpacing": -0.1537,
+        "lineHeight": 1.4,
+        "fill": "#999F96",
+        "maxWidth": 716.8
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.72,
+            "v": 776.76,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.06,
+            "v": 760.76
+          },
+          {
+            "t": 2.44,
+            "v": 760.76,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 478.76
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.72,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.06,
+            "v": 1
+          },
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.72,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.06,
+            "v": 0
+          },
+          {
+            "t": 2.42,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 6
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "step3-dot",
+      "name": "Step 3 dot",
+      "type": "ellipse",
+      "parent": "camera",
+      "label": "#9fdcc6",
+      "props": {
+        "x": 0,
+        "width": 12.6,
+        "height": 12.6,
+        "shadowBlur": 22
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 2.44,
+            "v": 710.2,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 428.2
+          }
+        ],
+        "fill": [
+          {
+            "t": 1.66,
+            "v": "rgba(63,63,63,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2,
+            "v": "rgba(217,249,185,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.08,
+            "v": "rgba(217,249,185,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.42,
+            "v": "rgba(128,136,124,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.5824,
+            "v": "rgba(128,136,124,1)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.7744,
+            "v": "rgba(244,249,238,1)"
+          }
+        ],
+        "shadowColor": [
+          {
+            "t": 1.66,
+            "v": "rgba(217,249,185,0)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2,
+            "v": "rgba(217,249,185,0.55)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.08,
+            "v": "rgba(217,249,185,0.55)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.42,
+            "v": "rgba(217,249,185,0)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.5824,
+            "v": "rgba(217,249,185,0)",
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.7744,
+            "v": "rgba(217,249,185,0)"
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.5
+          },
+          {
+            "t": 1.66,
+            "v": 0.5,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2,
+            "v": 1
+          },
+          {
+            "t": 2.5824,
+            "v": 1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.7744,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.5824,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 2.6016,
+            "v": 1.45,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.7744,
+            "v": 1
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub1",
+      "name": "Sub 1 · Indicators",
+      "type": "null",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "props": {
+        "x": 111.75
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.84,
+            "v": 914.2,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.18,
+            "v": 898.2
+          },
+          {
+            "t": 2.44,
+            "v": 898.2,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 513.4
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28
+          },
+          {
+            "t": 1.84,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.18,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.84,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.18,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub1-title",
+      "name": "Indicators",
+      "type": "text",
+      "parent": "sub1",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "text": "Indicators",
+        "fontWeight": 500,
+        "fontSize": 33.53,
+        "letterSpacing": -0.3353,
+        "lineHeight": 1.31225767968983,
+        "fill": "rgba(244,249,238,0.56)"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub1-dots",
+      "name": "Indicators “...”",
+      "type": "text",
+      "parent": "sub1",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 152.43,
+        "y": 0,
+        "text": "...",
+        "fontWeight": 500,
+        "fontSize": 33.53,
+        "letterSpacing": -0.3353,
+        "lineHeight": 1.31225767968983,
+        "fill": "rgba(244,249,238,0.56)"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub1-desc",
+      "name": "Sub 1 description",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 111.75,
+        "text": "Preparing technical indicator data for the current market context.",
+        "fontWeight": 400,
+        "fontSize": 25.15,
+        "letterSpacing": -0.1258,
+        "lineHeight": 1.4,
+        "fill": "#999F96"
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.9,
+            "v": 960.2,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.24,
+            "v": 944.2
+          },
+          {
+            "t": 2.44,
+            "v": 944.2,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 559.4
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28
+          },
+          {
+            "t": 1.9,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.24,
+            "v": 1
+          },
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.9,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.24,
+            "v": 0
+          },
+          {
+            "t": 2.42,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 6
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub2",
+      "name": "Sub 2 · Economic Data",
+      "type": "null",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "props": {
+        "x": 111.75
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.96,
+            "v": 1014.2,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.3,
+            "v": 998.2
+          },
+          {
+            "t": 2.44,
+            "v": 998.2,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 592.8
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28
+          },
+          {
+            "t": 1.96,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.3,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.96,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.3,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub2-title",
+      "name": "Economic Data",
+      "type": "text",
+      "parent": "sub2",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "text": "Economic Data",
+        "fontWeight": 500,
+        "fontSize": 33.53,
+        "letterSpacing": -0.3353,
+        "lineHeight": 1.31225767968983,
+        "fill": "rgba(244,249,238,0.56)"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub2-dots",
+      "name": "Economic Data “...”",
+      "type": "text",
+      "parent": "sub2",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 230.41,
+        "y": 0,
+        "text": "...",
+        "fontWeight": 500,
+        "fontSize": 33.53,
+        "letterSpacing": -0.3353,
+        "lineHeight": 1.31225767968983,
+        "fill": "rgba(244,249,238,0.56)"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub2-desc",
+      "name": "Sub 2 description",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 111.75,
+        "text": "Loading economic information to provide broader market context.",
+        "fontWeight": 400,
+        "fontSize": 25.15,
+        "letterSpacing": -0.1258,
+        "lineHeight": 1.4,
+        "fill": "#999F96"
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 2.02,
+            "v": 1060.2,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.36,
+            "v": 1044.2
+          },
+          {
+            "t": 2.44,
+            "v": 1044.2,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 638.8
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28
+          },
+          {
+            "t": 2.02,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.36,
+            "v": 1
+          },
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 2.02,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.36,
+            "v": 0
+          },
+          {
+            "t": 2.42,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 6
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub3",
+      "name": "Sub 3 · Orderflow",
+      "type": "null",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "props": {
+        "x": 111.75
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 2.08,
+            "v": 1114.2,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.42,
+            "v": 1098.2
+          },
+          {
+            "t": 2.44,
+            "v": 1098.2,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.86,
+            "v": 672.2
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28
+          },
+          {
+            "t": 2.08,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.42,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 2.08,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.42,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub3-title",
+      "name": "Orderflow",
+      "type": "text",
+      "parent": "sub3",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "text": "Orderflow",
+        "fontWeight": 500,
+        "fontSize": 33.53,
+        "letterSpacing": -0.3353,
+        "lineHeight": 1.31225767968983,
+        "fill": "rgba(244,249,238,0.56)"
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub3-dots",
+      "name": "Orderflow “...”",
+      "type": "text",
+      "parent": "sub3",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 153.53,
+        "y": 0,
+        "text": "...",
+        "fontWeight": 500,
+        "fontSize": 33.53,
+        "letterSpacing": -0.3353,
+        "lineHeight": 1.31225767968983,
+        "fill": "rgba(244,249,238,0.56)"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.6,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "sub3-desc",
+      "name": "Sub 3 description",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "props": {
+        "fontFamily": "Geist",
+        "align": "left",
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 111.75,
+        "text": "Preparing orderflow data to review trading activity.",
+        "fontWeight": 400,
+        "fontSize": 25.15,
+        "letterSpacing": -0.1258,
+        "lineHeight": 1.4,
+        "fill": "#999F96"
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 2.14,
+            "v": 1160.2,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.44,
+            "v": 1144.2353,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.48,
+            "v": 1142.728
+          },
+          {
+            "t": 2.86,
+            "v": 718.2
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 0.28
+          },
+          {
+            "t": 2.14,
+            "v": 0.28,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.42,
+            "v": 0.9976,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.48,
+            "v": 0.8519
+          },
+          {
+            "t": 2.6,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 2.14,
+            "v": 12,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.42,
+            "v": 0.0398,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.48,
+            "v": 0.8889
+          },
+          {
+            "t": 2.6,
+            "v": 6
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "line1",
+      "name": "Connector 1",
+      "type": "rect",
+      "parent": "camera",
+      "label": "#9fdcc6",
+      "props": {
+        "x": -1.6,
+        "y": 242,
+        "anchorY": 0,
+        "width": 3.2,
+        "height": 193,
+        "fill": "rgba(255,255,255,0.24)"
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 1.34,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 1.48,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 1
+          },
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 2.62,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "line2",
+      "name": "Connector 2",
+      "type": "rect",
+      "parent": "camera",
+      "label": "#9fdcc6",
+      "props": {
+        "x": -1.6,
+        "y": 487,
+        "anchorY": 0,
+        "width": 3.2,
+        "height": 193,
+        "fill": "rgba(255,255,255,0.24)"
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 1.52,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 1.66,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 1
+          },
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 2.62,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "line3",
+      "name": "Connector 3",
+      "type": "rect",
+      "parent": "camera",
+      "label": "#9fdcc6",
+      "props": {
+        "x": -1.6,
+        "y": 744,
+        "anchorY": 0,
+        "width": 3.2,
+        "height": 391,
+        "fill": "rgba(255,255,255,0.24)"
+      },
+      "keyframes": {
+        "scaleY": [
+          {
+            "t": 1.7,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.14,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.18,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1.36,
+            "v": 1
+          },
+          {
+            "t": 2.42,
+            "v": 1,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 2.62,
+            "v": 0
+          }
+        ]
+      },
+      "matte": "list-mask"
+    },
+    {
+      "id": "timer",
+      "name": "Timer",
+      "type": "text",
+      "label": "#F4F9EE",
+      "props": {
+        "x": 960,
+        "anchorY": 0,
+        "text": "Thinking for {counter}s",
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 40,
+        "letterSpacing": -0.4,
+        "lineHeight": 1.3,
+        "fill": "rgba(244,249,238,0.45)",
+        "counterDecimals": 1
+      },
+      "keyframes": {
+        "counter": [
+          {
+            "t": 0.1,
+            "v": 0
+          },
+          {
+            "t": 0.7923,
+            "v": 1.8
+          }
+        ],
+        "y": [
+          {
+            "t": 0.1,
+            "v": 805,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.46,
+            "v": 789
+          },
+          {
+            "t": 0.78,
+            "v": 789,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1,
+            "v": 775
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.1,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.46,
+            "v": 1
+          },
+          {
+            "t": 0.78,
+            "v": 1,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 0.1,
+            "v": 8.4,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.46,
+            "v": 0
+          },
+          {
+            "t": 0.78,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1,
+            "v": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "title",
+      "name": "Title · is thinking...",
+      "type": "text",
+      "label": "#F4F9EE",
+      "props": {
+        "x": 960,
+        "anchorY": 0,
+        "text": "Trademania V3 is thinking...",
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 70.76,
+        "letterSpacing": -0.7076,
+        "lineHeight": 1.3284341435839457,
+        "fill": "#F4F9EE"
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0.1,
+            "v": 691,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.46,
+            "v": 675
+          },
+          {
+            "t": 0.78,
+            "v": 675,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1,
+            "v": 661
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.1,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.46,
+            "v": 1
+          },
+          {
+            "t": 0.78,
+            "v": 1,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 0.1,
+            "v": 8.4,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.46,
+            "v": 0
+          },
+          {
+            "t": 0.78,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 1,
+            "v": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "dither",
+      "name": "Dither field",
+      "type": "generator",
+      "label": "#9fdcc6",
+      "props": {
+        "generator": "ditherField",
+        "x": 960,
+        "y": 540,
+        "width": 1920,
+        "height": 1080,
+        "glyphColor": "#D9F9B9"
+      },
+      "keyframes": {
+        "gridMix": [
+          {
+            "t": 0.84,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.34,
+            "v": 1
+          }
+        ],
+        "orbMix": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.34,
+            "v": 1
+          },
+          {
+            "t": 0.84,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.34,
+            "v": 0
+          }
+        ],
+        "boost": [
+          {
+            "t": 2.7,
+            "v": 0,
+            "ease": "sineOut"
+          },
+          {
+            "t": 2.85,
+            "v": 1,
+            "ease": "sineIn"
+          },
+          {
+            "t": 3,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "glow1",
+      "name": "Orb glow",
+      "type": "ellipse",
+      "parent": "layout",
+      "label": "#9fdcc6",
+      "props": {
+        "width": 900,
+        "height": 900,
+        "fillType": "radial",
+        "gradientStops": "rgba(110,160,92,0.30) 0, rgba(70,110,60,0.12) 0.35, rgba(15,15,18,0) 0.68"
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.86,
+            "v": 410.4,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.3,
+            "v": 44.7
+          }
+        ],
+        "y": [
+          {
+            "t": 0.8,
+            "v": 322,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.2237,
+            "v": 44.7
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 0.34,
+            "v": 1
+          },
+          {
+            "t": 0.84,
+            "v": 1,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.34,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "glow2",
+      "name": "Top glow",
+      "type": "ellipse",
+      "label": "#9fdcc6",
+      "props": {
+        "x": 960,
+        "y": -70,
+        "width": 2400,
+        "height": 1100,
+        "fillType": "radial",
+        "gradientStops": "rgba(217,249,185,0.20) 0, rgba(150,200,120,0.08) 0.40, rgba(14,21,19,0) 0.70"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0.84,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.34,
+            "v": 1
+          },
+          {
+            "t": 2.7,
+            "v": 1,
+            "ease": "sineOut"
+          },
+          {
+            "t": 2.85,
+            "v": 1.35,
+            "ease": "sineIn"
+          },
+          {
+            "t": 3,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "base",
+      "name": "Base gradient",
+      "type": "rect",
+      "label": "#9fdcc6",
+      "props": {
+        "x": 960,
+        "y": 540,
+        "width": 1920,
+        "height": 1080,
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "#111915 0, #0e1311 0.45, #0F0F12 1"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0.84,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 1.34,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "list-mask",
+      "name": "List mask (matte)",
+      "type": "rect",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 960,
+        "y": 540,
+        "width": 1920,
+        "height": 1080,
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "rgba(0,0,0,0) 0, rgba(0,0,0,0) 0.2185, #000000 0.2815, #000000 0.9352, rgba(0,0,0,0) 1"
+      }
+    }
+  ]
+}

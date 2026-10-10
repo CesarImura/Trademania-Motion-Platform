@@ -1,0 +1,1668 @@
+{
+  "name": "V3 logo reveal",
+  "note": "3.0 instead of V3 throughout: giant 3 → cut to the 0 → 3.0 in the pill → small 3.0 badge → Trademania [3.0] → Trademania 3.0 (same reference timing).",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 8,
+  "background": "#F4F9EE",
+  "layers": [
+    {
+      "id": "haze",
+      "name": "Haze (V reveal)",
+      "type": "rect",
+      "label": "#c5b9ee",
+      "end": 0.9667,
+      "props": {
+        "x": 960,
+        "y": 0,
+        "anchorY": 0,
+        "width": 2400,
+        "height": 1500,
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "rgba(244,249,238,0) 0, rgba(244,249,238,0.95) 0.32, rgba(244,249,238,1) 1"
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0,
+            "v": 160,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 0.5333,
+            "v": 1000
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.2,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "camera",
+      "name": "Camera",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 960,
+        "y": 540
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0,
+            "v": 960,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 917,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 4.2333,
+            "v": 960
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 0.966,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 4.2333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "ink30-3",
+      "name": "3.0 · \"3\" ink",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.2,
+      "props": {
+        "text": "3",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 194.96,
+        "y": 6.4,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.2,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "g30-3",
+      "name": "3.0 · \"3\" (matte)",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.0333,
+      "props": {
+        "text": "3",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 194.96,
+        "y": 6.4,
+        "fill": "#000"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.0333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.0333,
+            "v": 12,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tex30-3",
+      "name": "3.0 · \"3\" fill",
+      "type": "image",
+      "parent": "camera",
+      "matte": "g30-3",
+      "label": "#e6d3a3",
+      "start": 5.0333,
+      "end": 5.5667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 231.19,
+        "y": 6.4,
+        "width": 123.16,
+        "height": 78
+      }
+    },
+    {
+      "id": "ink30-dot",
+      "name": "3.0 · \".\" ink",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.4,
+      "props": {
+        "text": ".",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 229.51,
+        "y": 6.4,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.4,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 5.7333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "g30-dot",
+      "name": "3.0 · \".\" (matte)",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.1,
+      "props": {
+        "text": ".",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 229.51,
+        "y": 6.4,
+        "fill": "#000"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.1,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.1,
+            "v": 12,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tex30-dot",
+      "name": "3.0 · \".\" fill",
+      "type": "image",
+      "parent": "camera",
+      "matte": "g30-dot",
+      "label": "#e6d3a3",
+      "start": 5.1,
+      "end": 5.7667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 231.19,
+        "y": 6.4,
+        "width": 123.16,
+        "height": 78
+      }
+    },
+    {
+      "id": "ink30-0",
+      "name": "3.0 · \"0\" ink",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.6667,
+      "props": {
+        "text": "0",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 265.75,
+        "y": 6.4,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.6667,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 6.1333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "g30-0",
+      "name": "3.0 · \"0\" (matte)",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.1667,
+      "props": {
+        "text": "0",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 265.75,
+        "y": 6.4,
+        "fill": "#000"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.1667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.1667,
+            "v": 12,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.3,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tex30-0",
+      "name": "3.0 · \"0\" fill",
+      "type": "image",
+      "parent": "camera",
+      "matte": "g30-0",
+      "label": "#e6d3a3",
+      "start": 5.1667,
+      "end": 6.1667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 231.19,
+        "y": 6.4,
+        "width": 123.16,
+        "height": 78
+      }
+    },
+    {
+      "id": "w-0",
+      "name": "Word · T",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "T",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": -257.02,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8333,
+            "v": -269.41
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8333,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-1",
+      "name": "Word · r",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "r",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": -222.66,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": -231.19
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-2",
+      "name": "Word · a",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "a",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": -189.9,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9,
+            "v": -194.49
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-3",
+      "name": "Word · d",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "d",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": -147,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9,
+            "v": -148.31
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-4",
+      "name": "Word · e",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "e",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": -102.54,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9333,
+            "v": -100.77
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9333,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-5",
+      "name": "Word · m",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "m",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": -47.23,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9667,
+            "v": -42.86
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9667,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-6",
+      "name": "Word · a",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "a",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": 7.68,
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": 14.51
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-7",
+      "name": "Word · n",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "n",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": 51.28,
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": 61
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-8",
+      "name": "Word · i",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "i",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": 83.07,
+            "ease": "hold"
+          },
+          {
+            "t": 5.0333,
+            "v": 95.55
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 5.0333,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-9",
+      "name": "Word · a",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "a",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": 113.45,
+            "ease": "hold"
+          },
+          {
+            "t": 5.0667,
+            "v": 129.06
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 5.0667,
+            "v": 700
+          }
+        ]
+      }
+    },
+    {
+      "id": "badge",
+      "name": "Badge (fade in F)",
+      "type": "null",
+      "parent": "camera",
+      "label": "#D9F9B9",
+      "props": {},
+      "keyframes": {
+        "blur": [
+          {
+            "t": 4.7667,
+            "v": 0,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.0667,
+            "v": 22
+          }
+        ],
+        "opacity": [
+          {
+            "t": 4.7667,
+            "v": 1,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.0667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "label",
+      "name": "3.0 (label)",
+      "type": "null",
+      "parent": "badge",
+      "label": "#9fdcc6",
+      "props": {},
+      "keyframes": {
+        "x": [
+          {
+            "t": 0,
+            "v": 357.96,
+            "ease": "linear"
+          },
+          {
+            "t": 0.4,
+            "v": 401.09,
+            "ease": "linear"
+          },
+          {
+            "t": 0.6667,
+            "v": 428.03,
+            "ease": "linear"
+          },
+          {
+            "t": 0.9333,
+            "v": 479.29,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": -823.43,
+            "ease": "linear"
+          },
+          {
+            "t": 1.4667,
+            "v": -834.27,
+            "ease": "linear"
+          },
+          {
+            "t": 1.9333,
+            "v": -684.58,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 6.6,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 7.45,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 8.06,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 3.72,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 2.5,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 171.16,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 221.69
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": 15,
+            "ease": "linear"
+          },
+          {
+            "t": 0.4,
+            "v": -23,
+            "ease": "linear"
+          },
+          {
+            "t": 0.6667,
+            "v": -48,
+            "ease": "linear"
+          },
+          {
+            "t": 0.9333,
+            "v": -87,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": -113.97,
+            "ease": "linear"
+          },
+          {
+            "t": 1.4667,
+            "v": -57.96,
+            "ease": "linear"
+          },
+          {
+            "t": 1.9333,
+            "v": -31.48,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 52.83,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 34.1,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 30.59,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 20.58,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 8.56,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 3.07,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 3.24
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 4.45,
+            "ease": "linear"
+          },
+          {
+            "t": 0.4,
+            "v": 4.93,
+            "ease": "linear"
+          },
+          {
+            "t": 0.6667,
+            "v": 5.33,
+            "ease": "linear"
+          },
+          {
+            "t": 0.9333,
+            "v": 5.87,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": 5.46,
+            "ease": "linear"
+          },
+          {
+            "t": 1.4667,
+            "v": 5.28,
+            "ease": "linear"
+          },
+          {
+            "t": 1.9333,
+            "v": 4.09,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 1.06,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 0.8,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 0.61,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 0.4,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0.16,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 0.11,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 0.11
+          }
+        ]
+      }
+    },
+    {
+      "id": "glyphs",
+      "name": "3.0 · focus",
+      "type": "null",
+      "parent": "label",
+      "label": "#9fdcc6",
+      "props": {},
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0.45,
+            "ease": "linear"
+          },
+          {
+            "t": 0.4,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0,
+            "v": 60,
+            "ease": "linear"
+          },
+          {
+            "t": 0.4,
+            "v": 48,
+            "ease": "linear"
+          },
+          {
+            "t": 0.9333,
+            "v": 30,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": 46,
+            "ease": "linear"
+          },
+          {
+            "t": 1.9333,
+            "v": 38,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 6,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 3,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 1,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "g-3",
+      "name": "3 · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "text": "3",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": -155.6,
+        "y": 0
+      }
+    },
+    {
+      "id": "tex-3",
+      "name": "3 · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-3",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": -155.6,
+        "y": 0,
+        "width": 220.5,
+        "height": 350
+      }
+    },
+    {
+      "id": "g-dot",
+      "name": ". · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "text": ".",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": -7.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "tex-dot",
+      "name": ". · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-dot",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": -7.5,
+        "y": 0,
+        "width": 75.6,
+        "height": 350
+      }
+    },
+    {
+      "id": "g-0",
+      "name": "0 · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "text": "0",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": 148.1,
+        "y": 0
+      }
+    },
+    {
+      "id": "tex-0",
+      "name": "0 · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-0",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 148.1,
+        "y": 0,
+        "width": 235.6,
+        "height": 350
+      }
+    },
+    {
+      "id": "ring-mask",
+      "name": "Pill · stroke (matte)",
+      "type": "rect",
+      "parent": "badge",
+      "label": "#D9F9B9",
+      "start": 1.9667,
+      "end": 5.1,
+      "props": {
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "#000"
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.9667,
+            "v": 7,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 7,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 7,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 4,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 3,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 171.5,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 222.05
+          }
+        ],
+        "y": [
+          {
+            "t": 1.9667,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": -2,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": -5,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": -3,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 4,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 0
+          }
+        ],
+        "width": [
+          {
+            "t": 1.9667,
+            "v": 2320,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 2122,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 1820,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 1398,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 151,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 100.97,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 107
+          }
+        ],
+        "height": [
+          {
+            "t": 1.9667,
+            "v": 1364,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 1126,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 907,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 751,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 88,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 59.32,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 63
+          }
+        ],
+        "radius": [
+          {
+            "t": 1.9667,
+            "v": 682,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 563,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 453.5,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 375.5,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 44,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 29.66,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 31.5
+          }
+        ],
+        "strokeWidth": [
+          {
+            "t": 1.9667,
+            "v": 36,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 34,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 33,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 32,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 8,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 6,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "ring-tex",
+      "name": "Pill · fill",
+      "type": "image",
+      "parent": "badge",
+      "matte": "ring-mask",
+      "label": "#D9F9B9",
+      "start": 1.9667,
+      "end": 5.1,
+      "props": {
+        "src": "tex-b.jpg"
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.9667,
+            "v": 7,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 7,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 7,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 4,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 3,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 171.5,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 222.05
+          }
+        ],
+        "y": [
+          {
+            "t": 1.9667,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": -2,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": -5,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": -3,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 4,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 0
+          }
+        ],
+        "width": [
+          {
+            "t": 1.9667,
+            "v": 2505.09,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 2156,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 1853,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 1430,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 171.78,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 116.88,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 123.47
+          }
+        ],
+        "height": [
+          {
+            "t": 1.9667,
+            "v": 1400,
+            "ease": "linear"
+          },
+          {
+            "t": 2.3667,
+            "v": 1204.91,
+            "ease": "linear"
+          },
+          {
+            "t": 2.7,
+            "v": 1035.57,
+            "ease": "linear"
+          },
+          {
+            "t": 2.8333,
+            "v": 799.17,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 96,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 65.32,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 69
+          }
+        ]
+      }
+    }
+  ]
+}

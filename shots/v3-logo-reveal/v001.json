@@ -1,0 +1,727 @@
+{
+  "name": "V3 logo reveal",
+  "note": "First pass: orb dissolve → giant V → pan to 3 → pull back into pill → small badge → caption + grow, V3 → 3.0 (Figma frames 105–110, reference timing).",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 8,
+  "background": "#F4F9EE",
+  "layers": [
+    {
+      "id": "caption",
+      "name": "Caption",
+      "type": "text",
+      "label": "#c5b9ee",
+      "start": 5.2667,
+      "props": {
+        "text": "Ab jetzt nur noch Trademania, hier kommt",
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 54,
+        "letterSpacing": -1.08,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "x": 960,
+        "y": 388
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.3,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.8,
+            "v": 0.4
+          }
+        ],
+        "y": [
+          {
+            "t": 5.3,
+            "v": 410,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.8,
+            "v": 388
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.3,
+            "v": 10,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.8,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "badge",
+      "name": "Badge (pan + position)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "props": {},
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.2,
+            "v": 1500,
+            "ease": "linear"
+          },
+          {
+            "t": 2,
+            "v": 1398.8,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.2,
+            "v": 331.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 960
+          }
+        ],
+        "y": [
+          {
+            "t": 1.2,
+            "v": 592
+          },
+          {
+            "t": 3.2,
+            "v": 592,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 540
+          },
+          {
+            "t": 5.6,
+            "v": 540,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 597.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "label-30",
+      "name": "3.0",
+      "type": "null",
+      "parent": "badge",
+      "label": "#e6d3a3",
+      "props": {},
+      "keyframes": {
+        "scale": [
+          {
+            "t": 5.6,
+            "v": 0.27631578947368424,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "glyphs-30",
+      "name": "3.0 · focus",
+      "type": "null",
+      "parent": "label-30",
+      "label": "#e6d3a3",
+      "props": {},
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.7,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.2,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.7,
+            "v": 14,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "g-30",
+      "name": "3.0 · glyphs (matte)",
+      "type": "text",
+      "parent": "glyphs-30",
+      "label": "#e6d3a3",
+      "start": 5.6,
+      "props": {
+        "text": "3.0",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 228,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "tex-30",
+      "name": "3.0 · fill",
+      "type": "image",
+      "parent": "label-30",
+      "matte": "g-30",
+      "label": "#e6d3a3",
+      "start": 5.6,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 358,
+        "height": 228
+      }
+    },
+    {
+      "id": "label",
+      "name": "V3",
+      "type": "null",
+      "parent": "badge",
+      "label": "#9fdcc6",
+      "props": {},
+      "keyframes": {
+        "scale": [
+          {
+            "t": 1.2,
+            "v": 6.476800000000001,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2,
+            "v": 5.782857142857143,
+            "ease": "linear"
+          },
+          {
+            "t": 3.2,
+            "v": 5.6093714285714285,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 2.697142857142857,
+            "ease": "linear"
+          },
+          {
+            "t": 4.1,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 0.18
+          },
+          {
+            "t": 5.6,
+            "v": 0.18,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 0.6514285714285715
+          }
+        ]
+      }
+    },
+    {
+      "id": "glyphs",
+      "name": "V3 · focus",
+      "type": "null",
+      "parent": "label",
+      "label": "#9fdcc6",
+      "props": {},
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 1.2,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.8,
+            "v": 1
+          },
+          {
+            "t": 5.6,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.1,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.2,
+            "v": 90,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2,
+            "v": 30,
+            "ease": "linear"
+          },
+          {
+            "t": 3.2,
+            "v": 40,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 14,
+            "ease": "linear"
+          },
+          {
+            "t": 4.1,
+            "v": 5.2,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 0
+          },
+          {
+            "t": 5.6,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.1,
+            "v": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "g-V",
+      "name": "V · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 6.1333,
+      "props": {
+        "text": "V",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": -114,
+        "y": 0
+      }
+    },
+    {
+      "id": "g-3",
+      "name": "3 · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 6.1333,
+      "props": {
+        "text": "3",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": 128,
+        "y": 0
+      }
+    },
+    {
+      "id": "tex-V",
+      "name": "V · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-V",
+      "label": "#9fdcc6",
+      "end": 6.1333,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": -114,
+        "y": 0,
+        "width": 256,
+        "height": 350
+      }
+    },
+    {
+      "id": "tex-3",
+      "name": "3 · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-3",
+      "label": "#9fdcc6",
+      "end": 6.1333,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 128,
+        "y": 0,
+        "width": 228,
+        "height": 350
+      }
+    },
+    {
+      "id": "ring-mask",
+      "name": "Pill · stroke (matte)",
+      "type": "rect",
+      "parent": "badge",
+      "label": "#D9F9B9",
+      "start": 3.2,
+      "props": {
+        "x": 0,
+        "y": 0,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "#000"
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 3.2,
+            "v": 4470,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 2124,
+            "ease": "linear"
+          },
+          {
+            "t": 4.1,
+            "v": 1489,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 132
+          },
+          {
+            "t": 5.6,
+            "v": 132,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 471
+          }
+        ],
+        "height": [
+          {
+            "t": 3.2,
+            "v": 2468,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 1179,
+            "ease": "linear"
+          },
+          {
+            "t": 4.1,
+            "v": 822,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 73
+          },
+          {
+            "t": 5.6,
+            "v": 73,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 239
+          }
+        ],
+        "radius": [
+          {
+            "t": 3.2,
+            "v": 1234,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 589.5,
+            "ease": "linear"
+          },
+          {
+            "t": 4.1,
+            "v": 411,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 36.5
+          },
+          {
+            "t": 5.6,
+            "v": 36.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 119.5
+          }
+        ],
+        "strokeWidth": [
+          {
+            "t": 3.2,
+            "v": 130,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 49,
+            "ease": "linear"
+          },
+          {
+            "t": 4.1,
+            "v": 44,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 5
+          },
+          {
+            "t": 5.6,
+            "v": 5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "ring-tex",
+      "name": "Pill · fill",
+      "type": "image",
+      "parent": "badge",
+      "matte": "ring-mask",
+      "label": "#D9F9B9",
+      "start": 3.2,
+      "props": {
+        "src": "tex-b.jpg",
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 3.2,
+            "v": 4648.7,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 2197.3,
+            "ease": "linear"
+          },
+          {
+            "t": 4.1,
+            "v": 1549.6,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 139.6
+          },
+          {
+            "t": 5.6,
+            "v": 139.6,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 479
+          }
+        ],
+        "height": [
+          {
+            "t": 3.2,
+            "v": 2598,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.6,
+            "v": 1228,
+            "ease": "linear"
+          },
+          {
+            "t": 4.1,
+            "v": 866,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.7,
+            "v": 78
+          },
+          {
+            "t": 5.6,
+            "v": 78,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.3,
+            "v": 267.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "orb-move",
+      "name": "Orb",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 900,
+        "y": 500
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 0.96,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 1.2,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2,
+            "v": 1.35
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.2,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.2,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2,
+            "v": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "orb",
+      "name": "Dither orb",
+      "type": "generator",
+      "parent": "orb-move",
+      "label": "#c5b9ee",
+      "end": 2.0333,
+      "props": {
+        "generator": "ditherOrb",
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 600,
+        "blend": "multiply",
+        "opacity": 1,
+        "lighting": "studio",
+        "light": "#ffffff",
+        "mid": "#ffffff",
+        "shade": "#fbf1f0",
+        "edge": "#ffffff",
+        "rim": "#ffffff",
+        "glyphColor": "#b23a4b",
+        "lightX": 0.62,
+        "lightY": 0.1,
+        "lightSize": 1.1,
+        "core": 0,
+        "rimX": 0.22,
+        "rimY": 0.86,
+        "rimSize": 0.6,
+        "blobs": 0,
+        "vignette": 0,
+        "grain": 0,
+        "glyphAlpha": 2.6,
+        "spin": 0.8
+      },
+      "keyframes": {
+        "scramble": [
+          {
+            "t": 0,
+            "v": 0.25,
+            "ease": "linear"
+          },
+          {
+            "t": 1.2,
+            "v": 0.4,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2,
+            "v": 1
+          }
+        ],
+        "scrambleRate": [
+          {
+            "t": 0,
+            "v": 8,
+            "ease": "linear"
+          },
+          {
+            "t": 1.2,
+            "v": 10,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2,
+            "v": 30
+          }
+        ]
+      }
+    }
+  ]
+}

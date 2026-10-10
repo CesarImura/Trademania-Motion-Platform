@@ -1,0 +1,969 @@
+{
+  "name": "VOL-01 · Folge dem Volumen",
+  "note": "Extended to 9s: band and volume drain all the way to 0 (at 8.5s) while the book keeps cruising; background glows now drift continuously, dither rings ripple.",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 9,
+  "background": "#0F0F12",
+  "layers": [
+    {
+      "id": "red-glow-shape",
+      "name": "Red glow blob",
+      "type": "path",
+      "label": "#e6d3a3",
+      "parent": "red-glow",
+      "props": {
+        "d": "M1961.04 1385.05L1469.44 872.081L1921.21 763.933L2745.41 673.835L2841.41 492.972H2408.41L1430.11 609.909L778.91 492.972L1176.87 977.251L645.41 1261.48L492.972 1508L1242.59 1345.72L1670.2 1492.03L1961.04 1385.05Z",
+        "pathOrigin": "zero",
+        "x": -1667.19,
+        "y": -1000.49,
+        "fill": "#FF6479",
+        "strokeWidth": 0,
+        "blur": 246.486
+      }
+    },
+    {
+      "id": "red-glow",
+      "name": "Red glow",
+      "type": "null",
+      "label": "#e6d3a3",
+      "parent": "red-drift",
+      "props": {
+        "x": 243.87,
+        "y": -497.08,
+        "rotation": -46.22
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.0667,
+            "v": 243.87,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7,
+            "v": 1734.37
+          }
+        ],
+        "y": [
+          {
+            "t": 3.0667,
+            "v": -497.08,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7,
+            "v": -223.86
+          }
+        ],
+        "rotation": [
+          {
+            "t": 3.0667,
+            "v": -46.22,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 7,
+            "v": 46.51
+          }
+        ]
+      }
+    },
+    {
+      "id": "red-drift",
+      "name": "Red glow drift",
+      "type": "null",
+      "label": "#e6d3a3",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 1.5333,
+            "v": 70,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 3.3333,
+            "v": -40,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 5.4,
+            "v": 90,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 6.9333,
+            "v": 20,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 8.7333,
+            "v": -60,
+            "ease": "sineInOut"
+          }
+        ],
+        "y": [
+          {
+            "t": 0.2,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.1333,
+            "v": 50,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 4.3333,
+            "v": 110,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 6.8,
+            "v": 30,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 8.7333,
+            "v": 80,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 10.9333,
+            "v": -20,
+            "ease": "sineInOut"
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.4,
+            "v": 1,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.5333,
+            "v": 1.08,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 4.9333,
+            "v": 0.95,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 7.6,
+            "v": 1.1,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 9.7333,
+            "v": 1.02,
+            "ease": "sineInOut"
+          }
+        ]
+      }
+    },
+    {
+      "id": "head-lead",
+      "name": "Folge dem",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "headline",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#F4F9EE",
+        "anchorX": 0,
+        "anchorY": 0.5,
+        "text": "Folge dem",
+        "x": -540.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "head-open",
+      "name": "{",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "headline",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#F4F9EE",
+        "anchorX": 0,
+        "anchorY": 0.5,
+        "text": "{",
+        "x": -10.5,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.4,
+            "v": -10.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.2,
+            "v": -46.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "head-word",
+      "name": "Volumen",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "headline",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#F4F9EE",
+        "anchorX": 0,
+        "anchorY": 0.5,
+        "text": "Volumen",
+        "x": 52.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "head-close",
+      "name": "}",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "headline",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 104,
+        "letterSpacing": -2.08,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#F4F9EE",
+        "anchorX": 0,
+        "anchorY": 0.5,
+        "text": "}",
+        "x": 498.5,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.4,
+            "v": 498.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.2,
+            "v": 534.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "headline",
+      "name": "Headline",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 1002,
+        "y": 540
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 1
+          },
+          {
+            "t": 1.4,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.2,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 0,
+            "v": 12,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 0
+          },
+          {
+            "t": 1.4,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.2,
+            "v": 24
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 0.985,
+            "ease": "sineOut"
+          },
+          {
+            "t": 1.4,
+            "v": 1.02,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.2,
+            "v": 1.07
+          }
+        ]
+      }
+    },
+    {
+      "id": "focus-price",
+      "name": "Best ask price",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "focus-row",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 60,
+        "lineHeight": 1.3,
+        "align": "right",
+        "fill": "#f97474",
+        "anchorX": 1,
+        "anchorY": 0.5,
+        "text": "{counter}",
+        "counter": 85974.65,
+        "counterDecimals": 2,
+        "counterGrouping": ",",
+        "x": 690,
+        "y": 540
+      },
+      "keyframes": {
+        "counter": [
+          {
+            "t": 3.2,
+            "v": 85974.65,
+            "ease": [
+              0.5,
+              0,
+              0.1,
+              0.8286
+            ]
+          },
+          {
+            "t": 4.2667,
+            "v": 85956.45,
+            "ease": "linear"
+          },
+          {
+            "t": 9,
+            "v": 85941.07
+          }
+        ]
+      }
+    },
+    {
+      "id": "focus-notional",
+      "name": "Best ask notional",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "focus-row",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 60,
+        "lineHeight": 1.3,
+        "align": "right",
+        "fill": "#F4F9EE",
+        "anchorX": 1,
+        "anchorY": 0.5,
+        "text": "≈ {counter}",
+        "counter": 859746.5,
+        "counterDecimals": 2,
+        "counterGrouping": ",",
+        "x": 1170,
+        "y": 540
+      },
+      "keyframes": {
+        "counter": [
+          {
+            "t": 2.0667,
+            "v": 0,
+            "ease": [
+              0.15,
+              0.6,
+              0.3,
+              1
+            ]
+          },
+          {
+            "t": 3,
+            "v": 859746.5
+          },
+          {
+            "t": 3.2667,
+            "v": 859746.5,
+            "ease": "sineIn"
+          },
+          {
+            "t": 3.6667,
+            "v": 816717.13,
+            "ease": "linear"
+          },
+          {
+            "t": 8.5,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "focus-size",
+      "name": "Best ask size",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "focus-row",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 60,
+        "lineHeight": 1.3,
+        "align": "right",
+        "fill": "#F4F9EE",
+        "anchorX": 1,
+        "anchorY": 0.5,
+        "text": "{counter}",
+        "counter": 10,
+        "counterDecimals": 3,
+        "x": 1650,
+        "y": 540
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 2.4,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.6,
+            "v": 1
+          }
+        ],
+        "counter": [
+          {
+            "t": 3.2667,
+            "v": 10,
+            "ease": "sineIn"
+          },
+          {
+            "t": 3.6667,
+            "v": 9.4995,
+            "ease": "linear"
+          },
+          {
+            "t": 8.5,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "focus-row",
+      "name": "Focus row",
+      "type": "null",
+      "label": "#D9F9B9",
+      "parent": "book",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 1.6,
+            "v": 0.35,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.4667,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.6,
+            "v": 14,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.4667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "depth-band",
+      "name": "Depth band",
+      "type": "rect",
+      "label": "#f97474",
+      "parent": "book",
+      "props": {
+        "x": 0,
+        "y": 478,
+        "width": 1920,
+        "height": 124,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "rgba(249,116,116,0.26)"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 1.9333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.2,
+            "v": 1
+          }
+        ],
+        "width": [
+          {
+            "t": 2.0667,
+            "v": 1920,
+            "ease": "sineIn"
+          },
+          {
+            "t": 3.2,
+            "v": 1689.94,
+            "ease": "linear"
+          },
+          {
+            "t": 8.5,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "depth-track",
+      "name": "Depth track",
+      "type": "rect",
+      "label": "#F4F9EE",
+      "parent": "book",
+      "props": {
+        "x": 0,
+        "y": 478,
+        "width": 1920,
+        "height": 124,
+        "anchorX": 0,
+        "anchorY": 0,
+        "fill": "rgba(244,249,238,0.04)"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 1.6,
+            "v": 0.35,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.4667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "asks-group",
+      "name": "Asks (ramp up)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "parent": "book",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "isolate": "yes",
+        "rampStart": 520,
+        "rampEnd": 0
+      },
+      "keyframes": {
+        "rampBlur": [
+          {
+            "t": 1.6,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.4667,
+            "v": 10.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "asks-ladder",
+      "name": "Ask rows",
+      "type": "generator",
+      "label": "#9fdcc6",
+      "parent": "asks-group",
+      "props": {
+        "generator": "orderLadder",
+        "side": "asks",
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 1920,
+        "height": 1080,
+        "centerY": 540,
+        "rowHeight": 104,
+        "col1": 690,
+        "col2": 1170,
+        "col3": 1650,
+        "rowAlpha": 0.32,
+        "basePrice": 85974.65,
+        "tick": 1.3,
+        "shutter": 0.03333333333333333
+      },
+      "keyframes": {
+        "blur": [
+          {
+            "t": 1.6,
+            "v": 14,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.4667,
+            "v": 0
+          }
+        ],
+        "scroll": [
+          {
+            "t": 0,
+            "v": -0.18,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 3.2,
+            "v": 0,
+            "ease": [
+              0.5,
+              0,
+              0.1,
+              0.8286
+            ]
+          },
+          {
+            "t": 4.2667,
+            "v": 14,
+            "ease": "linear"
+          },
+          {
+            "t": 9,
+            "v": 25.8333
+          }
+        ]
+      }
+    },
+    {
+      "id": "bids-group",
+      "name": "Bids (ramp down)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "parent": "book",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "isolate": "yes",
+        "rampStart": 560,
+        "rampEnd": 1080
+      },
+      "keyframes": {
+        "rampBlur": [
+          {
+            "t": 1.6,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.4667,
+            "v": 10.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "bids-ladder",
+      "name": "Bid rows",
+      "type": "generator",
+      "label": "#9fdcc6",
+      "parent": "bids-group",
+      "props": {
+        "generator": "orderLadder",
+        "side": "bids",
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 1920,
+        "height": 1080,
+        "centerY": 540,
+        "rowHeight": 104,
+        "col1": 690,
+        "col2": 1170,
+        "col3": 1650,
+        "rowAlpha": 0.32,
+        "basePrice": 85974.65,
+        "tick": 1.3,
+        "shutter": 0.03333333333333333
+      },
+      "keyframes": {
+        "blur": [
+          {
+            "t": 1.6,
+            "v": 14,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.4667,
+            "v": 0
+          }
+        ],
+        "scroll": [
+          {
+            "t": 0,
+            "v": -0.18,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 3.2,
+            "v": 0,
+            "ease": [
+              0.5,
+              0,
+              0.1,
+              0.8286
+            ]
+          },
+          {
+            "t": 4.2667,
+            "v": 14,
+            "ease": "linear"
+          },
+          {
+            "t": 9,
+            "v": 25.8333
+          }
+        ]
+      }
+    },
+    {
+      "id": "book",
+      "name": "Order book",
+      "type": "null",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "green-glow",
+      "name": "Green glow",
+      "type": "ellipse",
+      "label": "#9fdcc6",
+      "props": {
+        "x": 1850,
+        "y": 1070,
+        "width": 1500,
+        "height": 900,
+        "fill": "#1F5A43",
+        "opacity": 0.45,
+        "blur": 160
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.1333,
+            "v": 1850,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 1.8667,
+            "v": 1720,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 3.8667,
+            "v": 1900,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 6.1333,
+            "v": 1640,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 7.8667,
+            "v": 1800,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 9.8667,
+            "v": 1850,
+            "ease": "sineInOut"
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": 1070,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2,
+            "v": 980,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 4.2667,
+            "v": 1110,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 6.8,
+            "v": 940,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 8.8,
+            "v": 1040,
+            "ease": "sineInOut"
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.3333,
+            "v": 1,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.6667,
+            "v": 1.12,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 0.96,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 8.1333,
+            "v": 1.08,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 10.4667,
+            "v": 1,
+            "ease": "sineInOut"
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.6667,
+            "v": 0.45,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 2.8667,
+            "v": 0.55,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 5.3333,
+            "v": 0.4,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 8.0667,
+            "v": 0.52,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 10.2667,
+            "v": 0.45,
+            "ease": "sineInOut"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dither",
+      "name": "Dither",
+      "type": "generator",
+      "label": "#9fdcc6",
+      "props": {
+        "generator": "asciiRings",
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 1920,
+        "height": 1080,
+        "blend": "overlay"
+      },
+      "keyframes": {
+        "ringShift": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 9,
+            "v": 0.18
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "name": "Demo — logo reveal",
+  "note": "First pass: emblem builds, title tracks in",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 4,
+  "background": "#0d0d12",
+  "layers": [
+    {
+      "id": "subtitle",
+      "name": "Subtitle",
+      "type": "text",
+      "start": 1.4,
+      "props": { "x": 960, "y": 760, "text": "keyframes · timeline · mp4", "fontFamily": "JetBrains Mono", "fontWeight": 500, "fontSize": 34, "fill": "#a99fff", "letterSpacing": 2 },
+      "keyframes": {
+        "reveal": [{ "t": 1.5, "v": 0 }, { "t": 2.4, "v": 1 }]
+      }
+    },
+    {
+      "id": "underline",
+      "name": "Underline",
+      "type": "rect",
+      "props": { "x": 960, "y": 700, "width": 560, "height": 6, "radius": 3, "fill": "#7c6cff" },
+      "keyframes": {
+        "scaleX": [{ "t": 1.2, "v": 0, "ease": "expoInOut" }, { "t": 2.0, "v": 1 }]
+      }
+    },
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "text",
+      "props": { "x": 960, "text": "MOTION STUDIO", "fontFamily": "Inter", "fontWeight": 800, "fontSize": 132, "fill": "#ffffff" },
+      "keyframes": {
+        "opacity": [{ "t": 0.9, "v": 0, "ease": "easeOut" }, { "t": 1.4, "v": 1 }],
+        "y": [{ "t": 0.9, "v": 660, "ease": "expoOut" }, { "t": 1.8, "v": 610 }],
+        "letterSpacing": [{ "t": 0.9, "v": 48, "ease": "expoOut" }, { "t": 2.2, "v": 4 }]
+      }
+    },
+    {
+      "id": "check",
+      "name": "Check",
+      "type": "path",
+      "parent": "emblem",
+      "props": { "x": 0, "y": 4, "d": "M-44 0 L-12 32 L48 -34", "stroke": "#ffffff", "strokeWidth": 14, "lineCap": "round" },
+      "keyframes": {
+        "trimEnd": [{ "t": 0.8, "v": 0, "ease": "easeOut" }, { "t": 1.25, "v": 1 }]
+      }
+    },
+    {
+      "id": "dot",
+      "name": "Dot",
+      "type": "ellipse",
+      "parent": "emblem",
+      "props": { "x": 0, "y": 0, "width": 150, "height": 150, "fill": "#7c6cff", "shadowColor": "rgba(124,108,255,0.6)", "shadowBlur": 40 },
+      "keyframes": {
+        "scale": [{ "t": 0.35, "v": 0, "ease": "backOut" }, { "t": 0.95, "v": 1 }]
+      }
+    },
+    {
+      "id": "ring",
+      "name": "Ring",
+      "type": "ellipse",
+      "parent": "emblem",
+      "props": { "x": 0, "y": 0, "width": 230, "height": 230, "fill": "rgba(0,0,0,0)", "stroke": "#ff6cab", "strokeWidth": 10 },
+      "keyframes": {
+        "arcEnd": [{ "t": 0, "v": 0, "ease": "easeInOut" }, { "t": 1.0, "v": 1 }],
+        "rotation": [{ "t": 0, "v": -90, "ease": "easeOut" }, { "t": 4, "v": 90 }]
+      }
+    },
+    {
+      "id": "emblem",
+      "name": "Emblem (null)",
+      "type": "null",
+      "props": { "x": 960 },
+      "keyframes": {
+        "y": [{ "t": 0, "v": 420, "ease": "smooth" }, { "t": 1.1, "v": 380 }],
+        "scale": [{ "t": 1.1, "v": 1, "ease": "easeInOut" }, { "t": 4, "v": 1.06 }]
+      }
+    },
+    {
+      "id": "glow",
+      "name": "Glow",
+      "type": "ellipse",
+      "props": { "x": 960, "y": 520, "width": 1100, "height": 1100, "fill": "#7c6cff", "blur": 160 },
+      "keyframes": {
+        "opacity": [{ "t": 0, "v": 0, "ease": "easeOut" }, { "t": 1.5, "v": 0.22 }],
+        "scale": [{ "t": 0, "v": 0.5, "ease": "easeOut" }, { "t": 4, "v": 1 }]
+      }
+    }
+  ]
+}

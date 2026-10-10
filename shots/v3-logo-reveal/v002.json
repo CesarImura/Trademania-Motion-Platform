@@ -1,0 +1,903 @@
+{
+  "name": "V3 logo reveal",
+  "note": "1:1 with the reference: orb intro removed, six hard-cut shots with the reference's drifts, timing and easing (V → 3 → pill zoom-out → small badge → caption → 3.0 blurs in L→R).",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 8,
+  "background": "#F4F9EE",
+  "layers": [
+    {
+      "id": "camera",
+      "name": "Camera",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {},
+      "keyframes": {
+        "x": [
+          {
+            "t": 3.6333,
+            "v": -50,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 4.2333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "haze",
+      "name": "Haze (V reveal)",
+      "type": "rect",
+      "label": "#c5b9ee",
+      "end": 0.9667,
+      "props": {
+        "x": 960,
+        "y": 0,
+        "anchorY": 0,
+        "width": 2400,
+        "height": 1500,
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "rgba(244,249,238,0) 0, rgba(244,249,238,0.95) 0.32, rgba(244,249,238,1) 1"
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0,
+            "v": 160,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 0.5333,
+            "v": 1000
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.2,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "caption",
+      "name": "Caption",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "Ab jetzt nur noch Trademania, hier kommt",
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 54,
+        "letterSpacing": -1.08,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "opacity": 0.4,
+        "x": 960,
+        "y": 388
+      }
+    },
+    {
+      "id": "badge",
+      "name": "Badge (shot position)",
+      "type": "null",
+      "parent": "camera",
+      "label": "#D9F9B9",
+      "props": {},
+      "keyframes": {
+        "x": [
+          {
+            "t": 0,
+            "v": 1468.8,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 0.9333,
+            "v": 1398.8,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": 351.5,
+            "ease": "linear"
+          },
+          {
+            "t": 1.9333,
+            "v": 331.5,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 960,
+            "ease": "linear"
+          },
+          {
+            "t": 3.6,
+            "v": 960,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 960.5
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": 617,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 0.9333,
+            "v": 592,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": 592,
+            "ease": "linear"
+          },
+          {
+            "t": 1.9333,
+            "v": 592,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 540,
+            "ease": "linear"
+          },
+          {
+            "t": 3.6,
+            "v": 540,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 597.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "label-30",
+      "name": "3.0",
+      "type": "null",
+      "parent": "badge",
+      "label": "#e6d3a3",
+      "props": {},
+      "keyframes": {
+        "scale": [
+          {
+            "t": 4.8667,
+            "v": 0.2763157894736842,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "g30-3",
+      "name": "3.0 · \"3\" (matte)",
+      "type": "text",
+      "parent": "label-30",
+      "label": "#e6d3a3",
+      "start": 4.8667,
+      "props": {
+        "text": "3",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 228,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": -105.9,
+        "y": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 4.9333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 4.9333,
+            "v": 16,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tex30-3",
+      "name": "3.0 · \"3\" fill",
+      "type": "image",
+      "parent": "label-30",
+      "matte": "g30-3",
+      "label": "#e6d3a3",
+      "start": 4.8667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 358,
+        "height": 228
+      }
+    },
+    {
+      "id": "g30-dot",
+      "name": "3.0 · \".\" (matte)",
+      "type": "text",
+      "parent": "label-30",
+      "label": "#e6d3a3",
+      "start": 4.8667,
+      "props": {
+        "text": ".",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 228,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": -4.9,
+        "y": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5,
+            "v": 16,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tex30-dot",
+      "name": "3.0 · \".\" fill",
+      "type": "image",
+      "parent": "label-30",
+      "matte": "g30-dot",
+      "label": "#e6d3a3",
+      "start": 4.8667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 358,
+        "height": 228
+      }
+    },
+    {
+      "id": "g30-0",
+      "name": "3.0 · \"0\" (matte)",
+      "type": "text",
+      "parent": "label-30",
+      "label": "#e6d3a3",
+      "start": 4.8667,
+      "props": {
+        "text": "0",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 228,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": 101,
+        "y": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.0667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.0667,
+            "v": 16,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.3,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tex30-0",
+      "name": "3.0 · \"0\" fill",
+      "type": "image",
+      "parent": "label-30",
+      "matte": "g30-0",
+      "label": "#e6d3a3",
+      "start": 4.8667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 358,
+        "height": 228
+      }
+    },
+    {
+      "id": "label",
+      "name": "V3",
+      "type": "null",
+      "parent": "badge",
+      "label": "#9fdcc6",
+      "props": {},
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 5.320228571428571,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 0.9333,
+            "v": 5.782857142857143,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": 5.696114285714286,
+            "ease": "linear"
+          },
+          {
+            "t": 1.9333,
+            "v": 5.782857142857143,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 2.697142857142857,
+            "ease": [
+              0.95,
+              0.85,
+              0.5,
+              0.35
+            ]
+          },
+          {
+            "t": 2.8333,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0.22499999999999998,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 0.18,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 0.18,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 0.6514285714285715
+          }
+        ]
+      }
+    },
+    {
+      "id": "glyphs",
+      "name": "V3 · focus",
+      "type": "null",
+      "parent": "label",
+      "label": "#9fdcc6",
+      "props": {},
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0.45,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 0.4,
+            "v": 1
+          },
+          {
+            "t": 4.8667,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.0333,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 0,
+            "v": 70,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 0.9333,
+            "v": 30,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": 38,
+            "ease": "linear"
+          },
+          {
+            "t": 1.9333,
+            "v": 34,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 14,
+            "ease": [
+              0.95,
+              0.85,
+              0.5,
+              0.35
+            ]
+          },
+          {
+            "t": 2.8333,
+            "v": 5.2,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0
+          },
+          {
+            "t": 4.8667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.0333,
+            "v": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "g-V",
+      "name": "V · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 5.0667,
+      "props": {
+        "text": "V",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": -114,
+        "y": 0
+      }
+    },
+    {
+      "id": "g-3",
+      "name": "3 · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 5.0667,
+      "props": {
+        "text": "3",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": 128,
+        "y": 0
+      }
+    },
+    {
+      "id": "tex-V",
+      "name": "V · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-V",
+      "label": "#9fdcc6",
+      "end": 5.0667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": -114,
+        "y": 0,
+        "width": 256,
+        "height": 350
+      }
+    },
+    {
+      "id": "tex-3",
+      "name": "3 · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-3",
+      "label": "#9fdcc6",
+      "end": 5.0667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 128,
+        "y": 0,
+        "width": 228,
+        "height": 350
+      }
+    },
+    {
+      "id": "ring-mask",
+      "name": "Pill · stroke (matte)",
+      "type": "rect",
+      "parent": "badge",
+      "label": "#D9F9B9",
+      "start": 1.9667,
+      "props": {
+        "x": 0,
+        "y": 0,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "#000"
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 1.9667,
+            "v": 2124,
+            "ease": [
+              0.95,
+              0.85,
+              0.5,
+              0.35
+            ]
+          },
+          {
+            "t": 2.8333,
+            "v": 1489,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 165,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 132,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 132,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 471
+          }
+        ],
+        "height": [
+          {
+            "t": 1.9667,
+            "v": 1179,
+            "ease": [
+              0.95,
+              0.85,
+              0.5,
+              0.35
+            ]
+          },
+          {
+            "t": 2.8333,
+            "v": 822,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 91.25,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 73,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 73,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 239
+          }
+        ],
+        "radius": [
+          {
+            "t": 1.9667,
+            "v": 589.5,
+            "ease": [
+              0.95,
+              0.85,
+              0.5,
+              0.35
+            ]
+          },
+          {
+            "t": 2.8333,
+            "v": 411,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 45.63,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 36.5,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 36.5,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 119.5
+          }
+        ],
+        "strokeWidth": [
+          {
+            "t": 1.9667,
+            "v": 49,
+            "ease": [
+              0.95,
+              0.85,
+              0.5,
+              0.35
+            ]
+          },
+          {
+            "t": 2.8333,
+            "v": 44,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 6.25,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 5,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 5,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "ring-tex",
+      "name": "Pill · fill",
+      "type": "image",
+      "parent": "badge",
+      "matte": "ring-mask",
+      "label": "#D9F9B9",
+      "start": 1.9667,
+      "props": {
+        "src": "tex-b.jpg",
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 1.9667,
+            "v": 2197.3,
+            "ease": [
+              0.95,
+              0.85,
+              0.5,
+              0.35
+            ]
+          },
+          {
+            "t": 2.8333,
+            "v": 1549.6,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 174.5,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 139.6,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 139.6,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 479
+          }
+        ],
+        "height": [
+          {
+            "t": 1.9667,
+            "v": 1228,
+            "ease": [
+              0.95,
+              0.85,
+              0.5,
+              0.35
+            ]
+          },
+          {
+            "t": 2.8333,
+            "v": 866,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 97.5,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 3.6,
+            "v": 78,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 78,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 267.7
+          }
+        ]
+      }
+    }
+  ]
+}

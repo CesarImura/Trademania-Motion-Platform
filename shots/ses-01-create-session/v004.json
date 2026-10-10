@@ -1,0 +1,882 @@
+{
+  "name": "SES-01→02 · Browser opens → Create session",
+  "note": "Pixel wipe now spreads outward from the search bar (radial, light jitter) as if the input set it off",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 6.7333,
+  "background": "#0a1a1d",
+  "layers": [
+    {
+      "id": "hand",
+      "name": "Hand cursor",
+      "type": "image",
+      "label": "#e6d3a3",
+      "start": 4.6667,
+      "props": {
+        "src": "hand-cursor.png",
+        "width": 200,
+        "anchorX": 0.33,
+        "anchorY": 0.13,
+        "shadowColor": "rgba(10,26,29,0.22)",
+        "shadowBlur": 28
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.6667,
+            "v": 1568,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 1308
+          }
+        ],
+        "y": [
+          {
+            "t": 4.6667,
+            "v": 898,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 568
+          }
+        ],
+        "rotation": [
+          {
+            "t": 4.6667,
+            "v": 14,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.6667,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 4.6667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8667,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 5.6333,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 5.7333,
+            "v": 0.86,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.9,
+            "v": 0.89
+          }
+        ],
+        "shadowY": [
+          {
+            "t": 5.6333,
+            "v": 14,
+            "ease": "quadIn"
+          },
+          {
+            "t": 5.7333,
+            "v": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "btn",
+      "name": "Button (group)",
+      "type": "null",
+      "label": "#D9F9B9",
+      "start": 3.8,
+      "props": {
+        "x": 1002.5,
+        "y": 539.87
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 3.8,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 3.9,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 3.8,
+            "v": 0.94,
+            "ease": "backOut"
+          },
+          {
+            "t": 4.3333,
+            "v": 1
+          },
+          {
+            "t": 5.6667,
+            "v": 1,
+            "ease": "quadOut"
+          },
+          {
+            "t": 5.8,
+            "v": 0.965
+          }
+        ]
+      }
+    },
+    {
+      "id": "plus",
+      "name": "Plus tile (group)",
+      "type": "null",
+      "parent": "btn",
+      "label": "#D9F9B9",
+      "props": {
+        "x": -352.75,
+        "y": 0
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 3.8333,
+            "v": 0,
+            "ease": "backOut"
+          },
+          {
+            "t": 4.2333,
+            "v": 1
+          }
+        ],
+        "rotation": [
+          {
+            "t": 3.8333,
+            "v": -90,
+            "ease": "expoOut"
+          },
+          {
+            "t": 4.3,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "plus-h",
+      "name": "Plus stroke H",
+      "type": "rect",
+      "parent": "plus",
+      "props": {
+        "width": 30.37,
+        "height": 5.06,
+        "fill": "#0a1a1d"
+      }
+    },
+    {
+      "id": "plus-v",
+      "name": "Plus stroke V",
+      "type": "rect",
+      "parent": "plus",
+      "props": {
+        "width": 5.06,
+        "height": 30.37,
+        "fill": "#0a1a1d"
+      }
+    },
+    {
+      "id": "plus-tile",
+      "name": "Plus tile",
+      "type": "rect",
+      "parent": "plus",
+      "props": {
+        "width": 67.5,
+        "height": 67.5,
+        "radius": 4,
+        "fill": "#b6de9e"
+      }
+    },
+    {
+      "id": "btn-label",
+      "name": "Label",
+      "type": "text",
+      "parent": "btn",
+      "matte": "btn-shape",
+      "props": {
+        "text": "Neue Trading-Session erstellen",
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 47.248,
+        "letterSpacing": -0.945,
+        "lineHeight": 1.1,
+        "align": "left",
+        "fill": "#ffffff",
+        "anchorX": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4,
+            "v": -331.38,
+            "ease": "expoOut"
+          },
+          {
+            "t": 4.5333,
+            "v": -295.38
+          }
+        ],
+        "opacity": [
+          {
+            "t": 4,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.3333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "btn-bg",
+      "name": "Button backdrop",
+      "type": "generator",
+      "parent": "btn",
+      "matte": "btn-shape",
+      "props": {
+        "generator": "tmBackdrop",
+        "width": 820.24,
+        "height": 114.74,
+        "baseColor": "#b6de9e",
+        "blobBlur": 100,
+        "b1y": -219.8,
+        "b1rx": 412.7,
+        "b1ry": 209.5,
+        "b1a": 1,
+        "b2y": 150.9,
+        "b2ry": 209.5,
+        "b2a": 1,
+        "ringX": 409.8,
+        "ringY": 57.6,
+        "tilt": 0.1
+      },
+      "keyframes": {
+        "glyphReveal": [
+          {
+            "t": 3.8667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.5333,
+            "v": 1
+          }
+        ],
+        "ringShift": [
+          {
+            "t": 5.7,
+            "v": 0,
+            "ease": "expoOut"
+          },
+          {
+            "t": 6.7333,
+            "v": 0.12
+          }
+        ],
+        "scramble": [
+          {
+            "t": 5.7,
+            "v": 0.04,
+            "ease": "linear"
+          },
+          {
+            "t": 5.7667,
+            "v": 0.55,
+            "ease": "sineOut"
+          },
+          {
+            "t": 6.4667,
+            "v": 0.06
+          }
+        ],
+        "glyphAlpha": [
+          {
+            "t": 4.6667,
+            "v": 0.45,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 1
+          },
+          {
+            "t": 5.7,
+            "v": 1,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.8,
+            "v": 1.6,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 6.5333,
+            "v": 1.15
+          }
+        ],
+        "b2x": [
+          {
+            "t": 4.6667,
+            "v": 250,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 42.2
+          }
+        ],
+        "b2rx": [
+          {
+            "t": 4.6667,
+            "v": 600,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 412.7
+          }
+        ],
+        "b1x": [
+          {
+            "t": 4.6667,
+            "v": 640,
+            "ease": "expoOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 432
+          }
+        ]
+      }
+    },
+    {
+      "id": "btn-shape",
+      "name": "Button shape (matte)",
+      "type": "rect",
+      "parent": "btn",
+      "label": "#9fdcc6",
+      "props": {
+        "anchorX": 0,
+        "x": -410.12,
+        "y": 0,
+        "height": 114.74,
+        "radius": 8,
+        "fill": "#ffffff"
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 3.8,
+            "v": 114.74,
+            "ease": "expoOut"
+          },
+          {
+            "t": 4.4,
+            "v": 820.24
+          }
+        ]
+      }
+    },
+    {
+      "id": "wipe",
+      "name": "Pixel wipe",
+      "type": "generator",
+      "label": "#c5b9ee",
+      "start": 2.7333,
+      "props": {
+        "generator": "pixelWipe",
+        "x": 960,
+        "y": 540,
+        "width": 2080,
+        "height": 1234.29,
+        "cols": 13,
+        "rows": 8,
+        "mode": "radial",
+        "originX": 0.5,
+        "originY": 0.5,
+        "sweep": 0.8
+      },
+      "keyframes": {
+        "progress": [
+          {
+            "t": 2.7333,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 3.7333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "page",
+      "name": "SES-01 (group)",
+      "type": "null",
+      "label": "#c5b9ee",
+      "end": 3.7667,
+      "props": {
+        "x": 960,
+        "y": 540
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.06,
+            "ease": "expoOut"
+          },
+          {
+            "t": 2.4667,
+            "v": 1,
+            "ease": "easeIn"
+          },
+          {
+            "t": 3.7333,
+            "v": 1.03
+          }
+        ]
+      }
+    },
+    {
+      "id": "addr",
+      "name": "Address bar (group)",
+      "type": "null",
+      "parent": "page",
+      "label": "#D9F9B9",
+      "end": 3.7667,
+      "props": {
+        "x": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0.4,
+            "v": 46,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.1333,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.4,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.8,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.4,
+            "v": 0.95,
+            "ease": "expoOut"
+          },
+          {
+            "t": 1.1333,
+            "v": 1
+          },
+          {
+            "t": 2.4,
+            "v": 1,
+            "ease": "quadOut"
+          },
+          {
+            "t": 2.5333,
+            "v": 0.985,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.7667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "caret",
+      "name": "Caret",
+      "type": "rect",
+      "parent": "addr",
+      "end": 3.7667,
+      "props": {
+        "anchorX": 0,
+        "y": 0,
+        "width": 3,
+        "height": 60,
+        "radius": 1.5,
+        "fill": "#ffffff"
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.0667,
+            "v": -364.96999999999997,
+            "ease": "hold"
+          },
+          {
+            "t": 1.1,
+            "v": -342.18,
+            "ease": "hold"
+          },
+          {
+            "t": 1.2,
+            "v": -320.86,
+            "ease": "hold"
+          },
+          {
+            "t": 1.2667,
+            "v": -292.1,
+            "ease": "hold"
+          },
+          {
+            "t": 1.3333,
+            "v": -258.78,
+            "ease": "hold"
+          },
+          {
+            "t": 1.4333,
+            "v": -227.68,
+            "ease": "hold"
+          },
+          {
+            "t": 1.5,
+            "v": -178.07,
+            "ease": "hold"
+          },
+          {
+            "t": 1.5667,
+            "v": -147.55,
+            "ease": "hold"
+          },
+          {
+            "t": 1.6667,
+            "v": -114.93,
+            "ease": "hold"
+          },
+          {
+            "t": 1.7333,
+            "v": -102.16,
+            "ease": "hold"
+          },
+          {
+            "t": 1.8,
+            "v": -71.65,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9333,
+            "v": -59.87,
+            "ease": "hold"
+          },
+          {
+            "t": 2.0333,
+            "v": -28.77,
+            "ease": "hold"
+          },
+          {
+            "t": 2.1,
+            "v": 4.67,
+            "ease": "hold"
+          },
+          {
+            "t": 2.1667,
+            "v": 37.76,
+            "ease": "hold"
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 0.8,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 1.0667,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 1.1,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 2.4333,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 2.7,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 2.4667,
+            "v": 0,
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "url",
+      "name": "URL",
+      "type": "text",
+      "parent": "addr",
+      "end": 3.7667,
+      "props": {
+        "text": "trademania.app",
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 58.571,
+        "letterSpacing": -1.1714,
+        "lineHeight": 1.1,
+        "align": "left",
+        "fill": "#ffffff",
+        "anchorX": 0,
+        "x": -366.96999999999997,
+        "y": 0
+      },
+      "keyframes": {
+        "reveal": [
+          {
+            "t": 1.0667,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 1.1,
+            "v": 0.0714,
+            "ease": "hold"
+          },
+          {
+            "t": 1.2,
+            "v": 0.1429,
+            "ease": "hold"
+          },
+          {
+            "t": 1.2667,
+            "v": 0.2143,
+            "ease": "hold"
+          },
+          {
+            "t": 1.3333,
+            "v": 0.2857,
+            "ease": "hold"
+          },
+          {
+            "t": 1.4333,
+            "v": 0.3571,
+            "ease": "hold"
+          },
+          {
+            "t": 1.5,
+            "v": 0.4286,
+            "ease": "hold"
+          },
+          {
+            "t": 1.5667,
+            "v": 0.5,
+            "ease": "hold"
+          },
+          {
+            "t": 1.6667,
+            "v": 0.5714,
+            "ease": "hold"
+          },
+          {
+            "t": 1.7333,
+            "v": 0.6429,
+            "ease": "hold"
+          },
+          {
+            "t": 1.8,
+            "v": 0.7143,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9333,
+            "v": 0.7857,
+            "ease": "hold"
+          },
+          {
+            "t": 2.0333,
+            "v": 0.8571,
+            "ease": "hold"
+          },
+          {
+            "t": 2.1,
+            "v": 0.9286,
+            "ease": "hold"
+          },
+          {
+            "t": 2.1667,
+            "v": 1,
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "search",
+      "name": "Search icon",
+      "type": "path",
+      "parent": "addr",
+      "end": 3.7667,
+      "props": {
+        "d": "M56.1875 53.4477L41.5553 38.8155C45.0713 34.5944 46.8246 29.1802 46.4505 23.6994C46.0763 18.2185 43.6035 13.0928 39.5465 9.3887C35.4894 5.68457 30.1605 3.68715 24.6683 3.81196C19.1761 3.93676 13.9434 6.17418 10.0588 10.0588C6.17418 13.9434 3.93676 19.1761 3.81196 24.6683C3.68715 30.1605 5.68457 35.4894 9.3887 39.5465C13.0928 43.6035 18.2185 46.0763 23.6994 46.4505C29.1802 46.8246 34.5944 45.0713 38.8155 41.5553L53.4477 56.1875L56.1875 53.4477ZM7.75002 25.1875C7.75002 21.7387 8.77271 18.3673 10.6888 15.4998C12.6048 12.6322 15.3282 10.3972 18.5145 9.07737C21.7008 7.75756 25.2069 7.41224 28.5894 8.08507C31.9719 8.7579 35.079 10.4187 37.5177 12.8573C39.9564 15.296 41.6171 18.4031 42.29 21.7856C42.9628 25.1682 42.6175 28.6743 41.2977 31.8606C39.9779 35.0468 37.7429 37.7702 34.8753 39.6863C32.0077 41.6023 28.6363 42.625 25.1875 42.625C20.5644 42.6199 16.1321 40.7811 12.863 37.512C9.59395 34.243 7.75514 29.8107 7.75002 25.1875Z",
+        "stroke": "rgba(0,0,0,0)",
+        "strokeWidth": 0,
+        "x": 335.96999999999997,
+        "y": 0
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 2.4333,
+            "v": 1,
+            "ease": "quadOut"
+          },
+          {
+            "t": 2.5667,
+            "v": 1.18,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 2.8,
+            "v": 1
+          }
+        ],
+        "fill": [
+          {
+            "t": 2.4333,
+            "v": "rgba(255,255,255,0.56)",
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.5667,
+            "v": "rgba(255,255,255,1)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bar",
+      "name": "Address bar",
+      "type": "rect",
+      "parent": "addr",
+      "end": 3.7667,
+      "props": {
+        "width": 824.04,
+        "height": 126.15,
+        "radius": 16,
+        "fill": "rgba(255,255,255,0.24)",
+        "backdropBlur": 5.3
+      }
+    },
+    {
+      "id": "page-bg",
+      "name": "Page backdrop",
+      "type": "generator",
+      "parent": "page",
+      "end": 3.7667,
+      "props": {
+        "generator": "tmBackdrop",
+        "x": 0.18,
+        "width": 1932.35,
+        "height": 1080,
+        "baseColor": "#a3c890",
+        "blobBlur": 200,
+        "b1x": 1034.3,
+        "b1rx": 1711,
+        "b1ry": 852,
+        "b1a": 1,
+        "b2a": 0,
+        "ringX": 943.5,
+        "ringY": 541
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.6,
+            "v": 1
+          }
+        ],
+        "glyphReveal": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 1.2,
+            "v": 1
+          }
+        ],
+        "b1y": [
+          {
+            "t": 0,
+            "v": -40,
+            "ease": "sineOut"
+          },
+          {
+            "t": 3.7333,
+            "v": -101
+          }
+        ],
+        "ringShift": [
+          {
+            "t": 0,
+            "v": -0.03,
+            "ease": "linear"
+          },
+          {
+            "t": 3.7333,
+            "v": 0.05
+          }
+        ]
+      }
+    }
+  ]
+}

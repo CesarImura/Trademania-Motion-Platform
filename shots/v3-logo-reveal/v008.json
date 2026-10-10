@@ -1,0 +1,2173 @@
+{
+  "name": "V3 logo reveal",
+  "note": "Less floaty: every shot follows the reference's tracked motion: fast snap that settles, near-hold, then accelerate into the cut (eases fitted per shot).",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "duration": 8,
+  "background": "#F4F9EE",
+  "layers": [
+    {
+      "id": "haze",
+      "name": "Haze (V reveal)",
+      "type": "rect",
+      "label": "#c5b9ee",
+      "end": 0.9667,
+      "props": {
+        "x": 960,
+        "y": 0,
+        "anchorY": 0,
+        "width": 2400,
+        "height": 1500,
+        "fillType": "linear",
+        "gradientAngle": 180,
+        "gradientStops": "rgba(244,249,238,0) 0, rgba(244,249,238,0.95) 0.32, rgba(244,249,238,1) 1"
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0,
+            "v": 160,
+            "ease": [
+              0.33,
+              1,
+              0.68,
+              1
+            ]
+          },
+          {
+            "t": 0.5333,
+            "v": 1000
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.2,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "camera",
+      "name": "Camera",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 960,
+        "y": 540
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0,
+            "v": 960,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 923,
+            "ease": "quadOut"
+          },
+          {
+            "t": 4.3833,
+            "v": 960
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 1.02,
+            "ease": "quadOut"
+          },
+          {
+            "t": 4.3833,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "ink30-3",
+      "name": "3.0 · \"3\" ink",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.2,
+      "props": {
+        "text": "3",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 194.96,
+        "y": 6.4,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.2,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "g30-3",
+      "name": "3.0 · \"3\" (matte)",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.0333,
+      "props": {
+        "text": "3",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 194.96,
+        "y": 6.4,
+        "fill": "#000"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.0333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.0333,
+            "v": 12,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tex30-3",
+      "name": "3.0 · \"3\" fill",
+      "type": "image",
+      "parent": "camera",
+      "matte": "g30-3",
+      "label": "#e6d3a3",
+      "start": 5.0333,
+      "end": 5.5667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 231.19,
+        "y": 6.4,
+        "width": 171.16,
+        "height": 126
+      }
+    },
+    {
+      "id": "ink30-dot",
+      "name": "3.0 · \".\" ink",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.4,
+      "props": {
+        "text": ".",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 229.51,
+        "y": 6.4,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.4,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 5.7333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "g30-dot",
+      "name": "3.0 · \".\" (matte)",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.1,
+      "props": {
+        "text": ".",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 229.51,
+        "y": 6.4,
+        "fill": "#000"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.1,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.1,
+            "v": 12,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tex30-dot",
+      "name": "3.0 · \".\" fill",
+      "type": "image",
+      "parent": "camera",
+      "matte": "g30-dot",
+      "label": "#e6d3a3",
+      "start": 5.1,
+      "end": 5.7667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 231.19,
+        "y": 6.4,
+        "width": 171.16,
+        "height": 126
+      }
+    },
+    {
+      "id": "ink30-0",
+      "name": "3.0 · \"0\" ink",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.6667,
+      "props": {
+        "text": "0",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 265.75,
+        "y": 6.4,
+        "fill": "#0a1a1d"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.6667,
+            "v": 0,
+            "ease": "easeInOut"
+          },
+          {
+            "t": 6.1333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "g30-0",
+      "name": "3.0 · \"0\" (matte)",
+      "type": "text",
+      "parent": "camera",
+      "label": "#e6d3a3",
+      "start": 5.1667,
+      "props": {
+        "text": "0",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 78,
+        "lineHeight": 1,
+        "x": 265.75,
+        "y": 6.4,
+        "fill": "#000"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.1667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2667,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.1667,
+            "v": 12,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.3,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tex30-0",
+      "name": "3.0 · \"0\" fill",
+      "type": "image",
+      "parent": "camera",
+      "matte": "g30-0",
+      "label": "#e6d3a3",
+      "start": 5.1667,
+      "end": 6.1667,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 231.19,
+        "y": 6.4,
+        "width": 171.16,
+        "height": 126
+      }
+    },
+    {
+      "id": "w-0",
+      "name": "Word · T",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "T",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.75,
+            "v": -258.02,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8333,
+            "v": -269.41
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8333,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.75,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8167,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8333,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9167,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.75,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8167,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8333,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9167,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-1",
+      "name": "Word · r",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "r",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.7667,
+            "v": -223.66,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.85,
+            "v": -231.19
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.85,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.7667,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8333,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 4.85,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9333,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.7667,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8333,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 4.85,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-2",
+      "name": "Word · a",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "a",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.8,
+            "v": -190.9,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8667,
+            "v": -194.49
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.8,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.85,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.95,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.8,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.85,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 4.8667,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.95,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-3",
+      "name": "Word · d",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "d",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.8167,
+            "v": -148,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9,
+            "v": -148.31
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.8167,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8833,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9833,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.8167,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.8833,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9833,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-4",
+      "name": "Word · e",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "e",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.8333,
+            "v": -103.54,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9167,
+            "v": -100.77
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9167,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.8333,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9167,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.8333,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9167,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-5",
+      "name": "Word · m",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "m",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.85,
+            "v": -48.23,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9333,
+            "v": -42.86
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9333,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.85,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9167,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9333,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.0167,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.85,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9167,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9333,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.0167,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-6",
+      "name": "Word · a",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "a",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.8667,
+            "v": 6.68,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.95,
+            "v": 14.51
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.95,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.8667,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9333,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 4.95,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.0333,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.8667,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9333,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 4.95,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.0333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-7",
+      "name": "Word · n",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "n",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.9,
+            "v": 50.28,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9667,
+            "v": 61
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9667,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.9,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.95,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9667,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.05,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.9,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.95,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 4.9667,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.05,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-8",
+      "name": "Word · i",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "i",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.9167,
+            "v": 82.07,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5,
+            "v": 95.55
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.9167,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9833,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.0833,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.9167,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.9833,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.0833,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "w-9",
+      "name": "Word · a",
+      "type": "text",
+      "parent": "camera",
+      "label": "#c5b9ee",
+      "start": 3.6333,
+      "props": {
+        "text": "a",
+        "fontFamily": "Geist",
+        "fontSize": 78,
+        "lineHeight": 1,
+        "fill": "#0a1a1d",
+        "y": 6.4
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 4.9333,
+            "v": 112.45,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.0167,
+            "v": 129.06
+          }
+        ],
+        "fontWeight": [
+          {
+            "t": 3.6333,
+            "v": 400,
+            "ease": "hold"
+          },
+          {
+            "t": 5.0167,
+            "v": 700
+          }
+        ],
+        "y": [
+          {
+            "t": 4.9333,
+            "v": 6.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5,
+            "v": -4.6,
+            "ease": "hold"
+          },
+          {
+            "t": 5.0167,
+            "v": 9.4,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1,
+            "v": 6.4
+          }
+        ],
+        "scale": [
+          {
+            "t": 4.9333,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5,
+            "v": 0.94,
+            "ease": "hold"
+          },
+          {
+            "t": 5.0167,
+            "v": 1.04,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.1,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "badge",
+      "name": "Badge (fade in F)",
+      "type": "null",
+      "parent": "camera",
+      "label": "#D9F9B9",
+      "props": {},
+      "keyframes": {
+        "blur": [
+          {
+            "t": 4.7667,
+            "v": 0,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.0667,
+            "v": 22
+          }
+        ],
+        "opacity": [
+          {
+            "t": 4.7667,
+            "v": 1,
+            "ease": "easeIn"
+          },
+          {
+            "t": 5.0667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "label",
+      "name": "3.0 (label)",
+      "type": "null",
+      "parent": "badge",
+      "label": "#9fdcc6",
+      "props": {},
+      "keyframes": {
+        "x": [
+          {
+            "t": 0,
+            "v": 406.34,
+            "ease": "quadOut"
+          },
+          {
+            "t": 0.4333,
+            "v": 452.03,
+            "ease": "linear"
+          },
+          {
+            "t": 0.95,
+            "v": 382.15,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": -827.18,
+            "ease": "linear"
+          },
+          {
+            "t": 1.7,
+            "v": -888.97,
+            "ease": [
+              0.32,
+              0,
+              0.67,
+              0
+            ]
+          },
+          {
+            "t": 1.95,
+            "v": -681.85,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 11.21,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 6.72,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 1,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": -0.36,
+            "ease": "linear"
+          },
+          {
+            "t": 3.45,
+            "v": -0.36,
+            "ease": [
+              1,
+              0.1,
+              0.3,
+              0.7
+            ]
+          },
+          {
+            "t": 3.6167,
+            "v": 186.91,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 221.69
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": 29.62,
+            "ease": "quadOut"
+          },
+          {
+            "t": 0.4333,
+            "v": -43,
+            "ease": "linear"
+          },
+          {
+            "t": 0.95,
+            "v": -44.33,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": -108.5,
+            "ease": "linear"
+          },
+          {
+            "t": 1.7,
+            "v": -85,
+            "ease": [
+              0.32,
+              0,
+              0.67,
+              0
+            ]
+          },
+          {
+            "t": 1.95,
+            "v": -37,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 54.53,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 36.44,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 13.37,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 5.27,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 3.3,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 3.3
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 4.58,
+            "ease": "quadOut"
+          },
+          {
+            "t": 0.4333,
+            "v": 5.33,
+            "ease": "linear"
+          },
+          {
+            "t": 0.95,
+            "v": 5.38,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": 5.41,
+            "ease": "linear"
+          },
+          {
+            "t": 1.7,
+            "v": 5.45,
+            "ease": [
+              0.32,
+              0,
+              0.67,
+              0
+            ]
+          },
+          {
+            "t": 1.95,
+            "v": 4.09,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 1.06,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 0.77,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 0.39,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0.18,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 0.11,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 0.11
+          }
+        ]
+      }
+    },
+    {
+      "id": "glyphs",
+      "name": "3.0 · focus",
+      "type": "null",
+      "parent": "label",
+      "label": "#9fdcc6",
+      "props": {},
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0.45,
+            "ease": "linear"
+          },
+          {
+            "t": 0.4,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0,
+            "v": 60,
+            "ease": "quadOut"
+          },
+          {
+            "t": 0.4333,
+            "v": 40,
+            "ease": "linear"
+          },
+          {
+            "t": 0.95,
+            "v": 32,
+            "ease": "hold"
+          },
+          {
+            "t": 0.9667,
+            "v": 46,
+            "ease": "linear"
+          },
+          {
+            "t": 1.7,
+            "v": 42,
+            "ease": [
+              0.32,
+              0,
+              0.67,
+              0
+            ]
+          },
+          {
+            "t": 1.95,
+            "v": 40,
+            "ease": "hold"
+          },
+          {
+            "t": 1.9667,
+            "v": 5,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 1.5,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "g-3",
+      "name": "3 · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "text": "3",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": -155.6,
+        "y": 0
+      }
+    },
+    {
+      "id": "tex-3",
+      "name": "3 · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-3",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 671.65,
+        "height": 490
+      }
+    },
+    {
+      "id": "g-dot",
+      "name": ". · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "text": ".",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": -7.5,
+        "y": 0
+      }
+    },
+    {
+      "id": "tex-dot",
+      "name": ". · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-dot",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 671.65,
+        "height": 490
+      }
+    },
+    {
+      "id": "g-0",
+      "name": "0 · glyph (matte)",
+      "type": "text",
+      "parent": "glyphs",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "text": "0",
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 350,
+        "letterSpacing": -7,
+        "lineHeight": 1,
+        "fill": "#000",
+        "x": 148.1,
+        "y": 0
+      }
+    },
+    {
+      "id": "tex-0",
+      "name": "0 · fill",
+      "type": "image",
+      "parent": "label",
+      "matte": "g-0",
+      "label": "#9fdcc6",
+      "end": 5.1,
+      "props": {
+        "src": "tex-a.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 671.65,
+        "height": 490
+      }
+    },
+    {
+      "id": "ring-mask",
+      "name": "Pill · stroke (matte)",
+      "type": "rect",
+      "parent": "badge",
+      "label": "#D9F9B9",
+      "start": 1.9667,
+      "end": 5.1,
+      "props": {
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "#000"
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.9667,
+            "v": 7,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 7,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 4,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 3.45,
+            "v": 0,
+            "ease": [
+              1,
+              0.1,
+              0.3,
+              0.7
+            ]
+          },
+          {
+            "t": 3.6167,
+            "v": 187.28,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 222.05
+          }
+        ],
+        "y": [
+          {
+            "t": 1.9667,
+            "v": 0,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": -2,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": -3,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 0
+          }
+        ],
+        "width": [
+          {
+            "t": 1.9667,
+            "v": 2320,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 2076,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 1398,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 174.4,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 109,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 109
+          }
+        ],
+        "height": [
+          {
+            "t": 1.9667,
+            "v": 1364,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 1091,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 751,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 102.4,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 64,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 64
+          }
+        ],
+        "radius": [
+          {
+            "t": 1.9667,
+            "v": 682,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 545.5,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 375.5,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 51.2,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 32,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 32
+          }
+        ],
+        "strokeWidth": [
+          {
+            "t": 1.9667,
+            "v": 36,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 34,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 32,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 9.6,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 6,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "ring-tex",
+      "name": "Pill · fill",
+      "type": "image",
+      "parent": "badge",
+      "matte": "ring-mask",
+      "label": "#D9F9B9",
+      "start": 1.9667,
+      "end": 5.1,
+      "props": {
+        "src": "tex-b.jpg"
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.9667,
+            "v": 7,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 7,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 4,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0,
+            "ease": "linear"
+          },
+          {
+            "t": 3.45,
+            "v": 0,
+            "ease": [
+              1,
+              0.1,
+              0.3,
+              0.7
+            ]
+          },
+          {
+            "t": 3.6167,
+            "v": 187.28,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 222.05
+          }
+        ],
+        "y": [
+          {
+            "t": 1.9667,
+            "v": 0,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": -2,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": -3,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 0,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 0,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 0
+          }
+        ],
+        "width": [
+          {
+            "t": 1.9667,
+            "v": 2612.45,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 2170,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 1508.42,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 307.77,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 232.62,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 232.62
+          }
+        ],
+        "height": [
+          {
+            "t": 1.9667,
+            "v": 1460,
+            "ease": [
+              0,
+              0.2,
+              0.45,
+              0.9
+            ]
+          },
+          {
+            "t": 2.45,
+            "v": 1212.73,
+            "ease": [
+              0.25,
+              0.05,
+              0.25,
+              0
+            ]
+          },
+          {
+            "t": 2.85,
+            "v": 843,
+            "ease": "hold"
+          },
+          {
+            "t": 2.8667,
+            "v": 172,
+            "ease": [
+              0.3,
+              0.8,
+              0,
+              0.85
+            ]
+          },
+          {
+            "t": 3.3333,
+            "v": 130,
+            "ease": "hold"
+          },
+          {
+            "t": 3.6333,
+            "v": 130
+          }
+        ]
+      }
+    }
+  ]
+}

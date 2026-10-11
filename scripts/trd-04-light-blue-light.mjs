@@ -9,12 +9,15 @@
 //    islands ahead of and behind the front) instead of the reference's column order.
 //  - "Longer trail": each cell's dotted phase is ~2× the reference's (0.12–0.28s), in and out.
 //
-//   node --no-warnings scripts/trd-04-light-blue-light.mjs [seed]  →  shots/trd-04-light-blue-light/v001.json
+//   node --no-warnings scripts/trd-04-light-blue-light.mjs [seed] [id] [name]  →  shots/<id>/v001.json
+//   v1: seed 5  → trd-04-light-blue-light    "Light -> Blue -> Light v1"
+//   v2: seed 17 → trd-04b-light-blue-light-v2 "Light -> Blue -> Light v2"  (same, new organic pattern)
 import fs from "node:fs";
 import { FPS, K, HP, X0, Y0, P, cellW, cellH, comp, snap, IN, OUT, cam0, inRest } from "./lib/reference-transition.mjs";
 
-const ID = "trd-04-light-blue-light";
 const SEED = Number(process.argv[2] ?? 5);
+const ID = process.argv[3] ?? "trd-04-light-blue-light";
+const NAME = process.argv[4] ?? "Light -> Blue -> Light v1";
 const COLS = 60, ROWS = 7; // wide enough that the page still covers the frame after the outgoing move
 const HOLD_EXTRA = 0.6; // reference hold ≈ 0.62s → ≈ 1.22s
 const IN_END = comp(IN.t1), OUT0 = comp(OUT.t0) + HOLD_EXTRA, OUT1 = comp(OUT.t1) + HOLD_EXTRA;
@@ -85,7 +88,7 @@ const end = snap(Math.max(...flat(settle)) + 6 / FPS);
 
 const grid = (g) => g.map((row) => row.map((v) => (v == null ? "-" : String(+v.toFixed(4)))).join(" ")).join("\n");
 const scene = {
-  name: "Light -> Blue -> Light v1",
+  name: NAME,
   note: `Light page → chroma blue (#0047BB, key) → light page. Reference grid + camera whip (hold ~1.2s); organic clustered front instead of a line, ~2× longer dotted trail in and out (seed ${SEED}).`,
   width: 1920, height: 1080, fps: FPS, duration: end, background: "#0047BB",
   layers: [{

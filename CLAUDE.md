@@ -54,7 +54,7 @@ exports MP4. Run with `npm run dev` → http://localhost:3210.
 - A keyframe's `ease` controls the segment **leaving** that keyframe. Names:
   `linear hold easeIn easeOut easeInOut sineIn sineOut sineInOut quadIn quadOut quadInOut expoIn expoOut
   expoInOut backIn backOut backInOut elasticOut bounceOut spring smooth snappy
-  anticipate figmaGentle figmaQuick figmaBouncy figmaSlow figmaGentleIn figmaSlowIn`, or a cubic-bezier array
+  anticipate appleOut appleInOut appleExpo appleTravel appleSpring figmaGentle figmaQuick figmaBouncy figmaSlow figmaGentleIn figmaSlowIn`, or a cubic-bezier array
   `[x1, y1, x2, y2]`. The `figma*` eases are Figma's spring presets (same physics),
   time-fit to the segment; `figmaSlowIn`/`figmaGentleIn` are the same springs
   played backwards (gentle start, fastest at the end). **House style: `figmaSlow` for motion** (starts gentle,
@@ -151,7 +151,11 @@ shimmers), `gradientRepeat` (yes = tile; shift then loops seamlessly).
   `baseColor`, then grain `grain grainSize grainRate grainBlend` — full-frame at the bottom as a
   background, and/or on top with blobs off as a grain overlay; see `v3-logo-reveal`), `greenTunnel` (Figma BRN "Brain" tunnel: 16 nested rounded rings ×`ratio` 0.86 with inner
   shadows; `travel` (in rings) flies in — `colors: ring` keeps Figma's ring colors so the dark center
-  grows, `depth` is an endless self-similar loop; pair with `asciiRings` overlay, see `trd-01b-type-first`). When a shot needs something
+  grows, `depth` is an endless self-similar loop; pair with `asciiRings` overlay, see `trd-01b-type-first`), `eventChart` (rebuilt
+  plot of the Figma platform "Chart" instance, 1482×480: live candles via `progress`, calm walk then a breakout at
+  `eventAt` (`spike`, `hot` greens the price tag); `ticks` + `glow` = live ticks with the forming candle's column
+  shining green/red; `pos` draws a TradingView Long Position (`posX/posW/posEntry/posStop/posTarget/posRisk`);
+  prices map through `refPrice/refY/pxPerUsd` — see `rsk-01-size-your-trade` v009). When a shot needs something
   keyframes can't express (noise, particles, dithering), add a generator there —
   pure function of `t` + params — rather than faking it with hundreds of keys.
   Generators are rendered into an offscreen buffer when blurred or faded, so

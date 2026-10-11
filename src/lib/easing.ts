@@ -105,6 +105,15 @@ export const EASES: Record<string, EaseFn> = {
   smooth: cubicBezier(0.4, 0, 0.2, 1),
   snappy: cubicBezier(0.2, 0.9, 0.1, 1),
   anticipate: cubicBezier(0.6, -0.28, 0.3, 1.3),
+  // Apple-style: iOS sheet curve (fast attack, long smooth settle, no overshoot) and a
+  // decisive in-out for moves that travel (cursor, camera).
+  appleOut: cubicBezier(0.32, 0.72, 0, 1),
+  appleInOut: cubicBezier(0.6, 0, 0.15, 1),
+  // Premium/snappy set: expo-style out (instant attack, decisive land), a travel curve that
+  // ramps quickly and lands long, and a near-critically-damped spring for layout (~0.5% over).
+  appleExpo: cubicBezier(0.16, 1, 0.3, 1),
+  appleTravel: cubicBezier(0.38, 0, 0.1, 1),
+  appleSpring: springEase(100, 17.5),
 };
 
 export const EASE_NAMES = Object.keys(EASES);

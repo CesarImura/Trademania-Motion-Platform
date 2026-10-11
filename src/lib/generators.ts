@@ -2243,4 +2243,325 @@ GENERATORS.orderLadder = {
   },
 };
 
+// ---------- Trademania platform chart with a calendar event (RSK-02) ----------
+
+// Rebuilds the plot of the Figma "Chart" instance (box = plot + price axis + time
+// row, 1482 × 480 at 1×) so candles can form live up to an event and then break
+// out. Pre-event: a calm, mean-reverting walk around `base`; from `eventAt`: one
+// big candle (+60 % of `spike`) and a rising follow-through. `progress` = candles
+// shown (fraction = the forming candle). Prices map through `refPrice`/`refY`/
+// `pxPerUsd`, so overlays drawn at known levels (ENTRY / STOP lines) line up.
+//
+// Every candle has one intra-candle tick path (a random walk pinned to its open and
+// close — a Brownian bridge). The forming candle steps along that path; its high/low
+// are the running extremes, so wicks only ever extend, and a closed candle's wicks are
+// exactly what was traded while it formed.
+const EV_TICKS = 40;
+type EvCandle = { o: number; c: number; h: number; l: number; v: number; path?: number[] };
+const evCache = new Map<string, EvCandle[]>();
+function tickPath(i: number, seed: number, o: number, c: number, sigma: number, explosive: boolean): number[] {
+  const walk = [0];
+  for (let k = 1; k <= EV_TICKS; k++) walk.push(walk[k - 1] + (hash3(i, k, seed + 20) - 0.5) * 2 * sigma);
+  const end = walk[EV_TICKS];
+  return walk.map((wv, k) => {
+    const s = k / EV_TICKS;
+    // Explosive candles (the event) cover most of the move in the first ticks.
+    const drift = explosive ? 1 - Math.pow(1 - s, 3) : s;
+    return o + (c - o) * drift + (wv - end * s);
+  });
+}
+// Events: `eventAt` (+`spike`) and optionally `eventAt2` (+`spike2`, negative = a dump).
+// After event 1: `follow` follow-through candles (or all the rest when there's no
+// event 2), then a choppy consolidation up to event 2, then event 2 and its
+// follow-through to the end.
+function eventSeries(
+  seed: number, count: number, eventAt: number, base: number, vol: number, spike: number,
+  eventAt2 = 0, spike2 = 0, follow = 6,
+): EvCandle[] {
+  const key = [seed, count, eventAt, base, vol, spike, eventAt2, spike2, follow].join("|");
+  const hit = evCache.get(key);
+  if (hit) return hit;
+  const two = eventAt2 > eventAt;
+  const follow1 = two ? follow : count - eventAt - 1;
+  const s: EvCandle[] = [];
+  let c = base, level = base;
+  for (let i = 0; i < count; i++) {
+    const o = c;
+    let v: number, calm = 1;
+    const isEvent = i === eventAt || (two && i === eventAt2);
+    if (i < eventAt) {
+      // Calm before the event: volatility tightens over the last few candles.
+      calm = i > eventAt - 6 ? 0.45 : 1;
+      c = o + (hash3(i, seed, 1) - 0.5) * 2 * vol * calm + (base - o) * 0.12;
+      v = 0.18 + 0.32 * hash3(i, seed, 6) * calm;
+    } else if (i === eventAt) {
+      c = o + spike * 0.6;
+      v = 1;
+    } else if (i <= eventAt + follow1) {
+      // Follow-through: in the event's direction, the odd small pullback (never in the
+      // first two, so the move reads as a breakout, not a fade).
+      const step = (spike * 0.4) / Math.max(1, follow1);
+      const pullback = i > eventAt + 2 && hash3(i, seed, 7) > 0.78;
+      c = o + (pullback ? -step * 0.6 : step * (0.8 + hash3(i, seed, 8) * 0.9));
+      v = 0.45 + 0.4 * hash3(i, seed, 6);
+      level = c;
+    } else if (two && i < eventAt2) {
+      // Consolidation at the new level: small, choppy, tightening into event 2.
+      calm = i > eventAt2 - 4 ? 0.45 : 0.75;
+      c = o + (hash3(i, seed, 1) - 0.5) * 2 * vol * 0.55 * calm + (level - 30 - o) * 0.25;
+      v = 0.2 + 0.3 * hash3(i, seed, 6);
+    } else if (two && i === eventAt2) {
+      c = o + spike2 * 0.6;
+      v = 1;
+    } else {
+      const step = (spike2 * 0.4) / Math.max(1, count - eventAt2 - 1);
+      const pullback = i > eventAt2 + 2 && hash3(i, seed, 7) > 0.78;
+      c = o + (pullback ? -step * 0.6 : step * (0.8 + hash3(i, seed, 8) * 0.9));
+      v = 0.45 + 0.4 * hash3(i, seed, 6);
+    }
+    // Intra-candle noise: ~0.6 × vol of wick beyond the body, tighter in the calm.
+    const pathCalm = calm < 1 ? 0.5 : 1;
+    const path = tickPath(i, seed, o, c, vol * 0.16 * pathCalm, isEvent);
+    s.push({ o, c, h: Math.max(...path), l: Math.min(...path), v, path });
+  }
+  evCache.set(key, s);
+  return s;
+}
+
+GENERATORS.eventChart = {
+  label: "Platform chart (event breakout)",
+  fonts: [["Geist", 400], ["Geist", 500]],
+  params: [
+    p("progress", "Candles shown", 56, { step: 0.05, min: 0 }),
+    p("count", "Total candles", 75, { step: 1, min: 2 }),
+    p("eventAt", "Event candle index", 68, { step: 1, min: 1 }),
+    p("seed", "Seed", 11, { step: 1 }),
+    p("base", "Base price", 58560, { step: 1 }),
+    p("volatility", "Volatility ($/candle)", 38, { min: 0 }),
+    p("spike", "Breakout size ($)", 640, { step: 1 }),
+    p("refPrice", "Reference price", 58640, { step: 1 }),
+    p("refY", "Reference y", 203),
+    p("pxPerUsd", "Pixels per $", 0.29741, { step: 0.0001 }),
+    p("priceStep", "Grid step ($)", 200, { step: 1 }),
+    p("firstX", "First candle x", 34.9),
+    p("pitch", "Candle pitch", 16.84),
+    p("startMinute", "First time label (min)", 340, { step: 1 }),
+    p("hot", "Breakout highlight", 0, { min: 0, max: 1 }),
+    p("eventAt2", "Event 2 candle index (0 = none)", 0, { step: 1, min: 0 }),
+    p("spike2", "Event 2 move ($, − = dump)", -700, { step: 1 }),
+    p("follow", "Event 1 follow-through candles", 6, { step: 1, min: 1 }),
+    p("hot2", "Event 2 highlight", 0, { min: 0, max: 1 }),
+    // Live auto-scroll: the series slides left by this many candles (time axis too).
+    p("scroll", "Scroll (candles)", 0, { step: 0.05 }),
+    p("ticks", "Ticks per candle (0 = smooth)", 0, { step: 1, min: 0 }),
+    p("glow", "Forming-candle column glow", 0, { min: 0, max: 1 }),
+    // TradingView "Long Position" drawing (0 = off, 1 = fully drawn).
+    p("pos", "Position tool: draw", 0, { min: 0, max: 1 }),
+    p("posX", "Position tool: left x", 944),
+    p("posW", "Position tool: width", 300),
+    p("posEntry", "Position tool: entry", 58640, { step: 1 }),
+    p("posStop", "Position tool: stop", 58408, { step: 1 }),
+    p("posTarget", "Position tool: target", 59104, { step: 1 }),
+    p("posRisk", "Position tool: risk ($)", 100, { step: 1 }),
+    c("bg", "Background", "#0F0F12"),
+    c("up", "Up", "#00D16F"),
+    c("down", "Down", "#FF6479"),
+    c("ma", "Moving average", "#DCA738"),
+  ],
+  draw(ctx, w, h, t, get) {
+    const n = get.num, S = w / 1482; // designed at 1482 × 480
+    ctx.save();
+    ctx.scale(S, h / 480);
+    const count = Math.max(2, Math.round(n("count"))), eventAt = Math.round(n("eventAt"));
+    const eventAt2 = Math.round(n("eventAt2")), follow = Math.round(n("follow"));
+    const series = eventSeries(Math.round(n("seed")), count, eventAt, n("base"), n("volatility"), n("spike"), eventAt2, n("spike2"), follow);
+    const two = eventAt2 > eventAt, follow1 = two ? follow : count - eventAt - 1;
+    const refPrice = n("refPrice"), refY = n("refY"), k = n("pxPerUsd");
+    const yOf = (price: number) => refY - (price - refPrice) * k;
+    const priceAt = (y: number) => refPrice + (refY - y) / k;
+    const pitch = n("pitch"), shift = n("scroll") * pitch;
+    const x0 = n("firstX") - shift, xOf = (i: number) => x0 + i * pitch;
+    const up = get.str("up"), down = get.str("down"), hot = clamp(n("hot")), hot2 = clamp(n("hot2"));
+    const PLOT_R = 1412; // right edge of the plot (price axis column beyond)
+
+    // Visible candles; the last one forms by walking its tick path: close = the current
+    // tick, high/low = the extremes reached so far. `ticks` > 0 steps the feed (that many
+    // price updates per candle); 0 glides through the path.
+    const prog = clamp(n("progress"), 0, count);
+    const whole = Math.floor(prog), frac = prog - whole;
+    const ticks = Math.max(0, Math.round(n("ticks")));
+    const candles: EvCandle[] = series.slice(0, whole);
+    if (frac > 0 && whole < count) {
+      const kk = series[whole], path = kk.path!;
+      let pos = frac * EV_TICKS;
+      if (ticks > 0) {
+        const tf = frac * ticks, ti = Math.floor(tf);
+        pos = ((ti + 1) / ticks) * EV_TICKS;
+      }
+      const j = Math.min(EV_TICKS, Math.floor(pos)), u = Math.min(1, pos - j);
+      const cl = j >= EV_TICKS ? path[EV_TICKS] : path[j] + (path[j + 1] - path[j]) * (ticks > 0 ? 0 : u);
+      let hi = Math.max(kk.o, cl), lo = Math.min(kk.o, cl);
+      for (let q = 0; q <= j; q++) { hi = Math.max(hi, path[q]); lo = Math.min(lo, path[q]); }
+      candles.push({ o: kk.o, c: cl, h: hi, l: lo, v: kk.v * (0.15 + 0.85 * frac) });
+    }
+
+    // Background (covers the flattened chart's plot, axes and crosshair).
+    ctx.fillStyle = get.str("bg");
+    ctx.fillRect(0, 0, 1482, 480);
+
+    // Grid: dashed, as in Figma (white 5 %, 5/5 dash). Horizontal lines on round prices.
+    ctx.lineWidth = 1;
+    ctx.setLineDash([5, 5]);
+    ctx.strokeStyle = "rgba(255,255,255,0.05)";
+    const gridXs: [number, number][] = [];
+    for (let j = -1; j <= 12; j++) {
+      const x = 16 + j * 232.5 - shift;
+      if (x < 0 || x > PLOT_R) continue;
+      gridXs.push([j, x]);
+      ctx.beginPath(); ctx.moveTo(x, 10); ctx.lineTo(x, 446); ctx.stroke();
+    }
+    const step = n("priceStep");
+    const levels: number[] = [];
+    for (let pr = Math.ceil(priceAt(446) / step) * step; yOf(pr) >= 4; pr += step) levels.push(pr);
+    for (const pr of levels) {
+      ctx.beginPath(); ctx.moveTo(13, yOf(pr)); ctx.lineTo(1410, yOf(pr)); ctx.stroke();
+    }
+    ctx.setLineDash([]);
+
+    // Axis labels (Geist 12, white 40 %).
+    ctx.font = `400 12px "Geist", sans-serif`;
+    ctx.textBaseline = "middle";
+    ctx.fillStyle = "rgba(255,255,255,0.4)";
+    ctx.textAlign = "left";
+    for (const pr of levels) ctx.fillText(fmtPrice(pr), 1426, yOf(pr));
+    ctx.textAlign = "center";
+    for (const [j, x] of gridXs) {
+      const m = n("startMinute") + j * 5;
+      ctx.fillText(`${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")}`, x, 467);
+    }
+
+    // Everything that scrolls stays inside the plot.
+    ctx.save();
+    ctx.beginPath(); ctx.rect(0, 0, PLOT_R, 480); ctx.clip();
+
+    // Volume (bottom-aligned at the grid's last line).
+    candles.forEach((kk, i) => {
+      const vh = 6 + kk.v * 34, up1 = kk.c >= kk.o;
+      const boost = two && i >= eventAt2 ? 0.25 * hot2 : i >= eventAt ? 0.25 * hot : 0;
+      ctx.fillStyle = `rgba(${up1 ? "0,209,111" : "255,100,121"},${(0.1 + boost).toFixed(3)})`;
+      ctx.fillRect(xOf(i) - 5.3, 445 - vh, 10.6, vh);
+    });
+
+    // Moving average (EMA 10) up to the newest candle.
+    if (candles.length > 1) {
+      ctx.strokeStyle = get.str("ma");
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      let ema = candles[0].c;
+      candles.forEach((kk, i) => {
+        ema = i === 0 ? kk.c : ema + (kk.c - ema) * (2 / 11);
+        if (i === 0) ctx.moveTo(xOf(i), yOf(ema)); else ctx.lineTo(xOf(i), yOf(ema));
+      });
+      ctx.stroke();
+    }
+
+    // Event glows behind each move: green rising from the bottom for the breakout,
+    // red falling from the top for the dump.
+    const band = (from: number, to: number, rgb: string, a: number, fromTop: boolean) => {
+      const gx0 = xOf(from) - pitch, gx1 = xOf(to) + pitch;
+      const g = ctx.createLinearGradient(0, fromTop ? 0 : 446, 0, fromTop ? 446 : 0);
+      g.addColorStop(0, `rgba(${rgb},0)`);
+      g.addColorStop(1, `rgba(${rgb},${(0.12 * a).toFixed(3)})`);
+      ctx.fillStyle = g;
+      ctx.fillRect(gx0, 0, gx1 - gx0, 446);
+    };
+    if (hot > 0 && candles.length > eventAt) band(eventAt, Math.min(candles.length - 1, eventAt + follow1), "0,209,111", hot, false);
+    if (two && hot2 > 0 && candles.length > eventAt2) band(eventAt2, candles.length - 1, "255,100,121", hot2, true);
+
+    // Forming-candle column: a steady soft shine in the candle's tone (green up, red
+    // down) that follows the live candle.
+    const glow = clamp(n("glow"));
+    if (glow > 0 && frac > 0 && whole < count && candles.length) {
+      const last = candles[candles.length - 1], gx = xOf(candles.length - 1);
+      const rgb = last.c >= last.o ? "0,209,111" : "255,100,121";
+      const a = glow * 0.16;
+      const g = ctx.createLinearGradient(gx - pitch * 1.6, 0, gx + pitch * 1.6, 0);
+      g.addColorStop(0, `rgba(${rgb},0)`);
+      g.addColorStop(0.5, `rgba(${rgb},${a.toFixed(3)})`);
+      g.addColorStop(1, `rgba(${rgb},0)`);
+      ctx.fillStyle = g;
+      ctx.fillRect(gx - pitch * 1.6, 0, pitch * 3.2, 446);
+    }
+
+    // TradingView-style Long Position: green target zone over a red stop zone, drawn
+    // out from the entry line (left → right, then up/down), labels last.
+    const pos = clamp(n("pos"));
+    if (pos > 0) {
+      const e1 = 1 - Math.pow(1 - clamp(pos / 0.7), 3);
+      const px0 = n("posX") - shift, pw = n("posW") * e1;
+      const yE = yOf(n("posEntry")), yS = yOf(n("posStop")), yT = yOf(n("posTarget"));
+      const grow = 1 - Math.pow(1 - clamp((pos - 0.15) / 0.65), 3);
+      ctx.fillStyle = "rgba(0,209,111,0.20)";
+      ctx.fillRect(px0, yE - (yE - yT) * grow, pw, (yE - yT) * grow);
+      ctx.fillStyle = "rgba(255,100,121,0.20)";
+      ctx.fillRect(px0, yE, pw, (yS - yE) * grow);
+      ctx.strokeStyle = "rgba(255,255,255,0.75)";
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(px0, yE); ctx.lineTo(px0 + pw, yE); ctx.stroke();
+    }
+
+    // Candles.
+    candles.forEach((kk, i) => {
+      const x = xOf(i);
+      ctx.fillStyle = ctx.strokeStyle = kk.c >= kk.o ? up : down;
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(x, yOf(kk.h)); ctx.lineTo(x, yOf(kk.l)); ctx.stroke();
+      const y0 = yOf(Math.max(kk.o, kk.c)), y1 = yOf(Math.min(kk.o, kk.c));
+      ctx.fillRect(x - 4.2, y0, 8.4, Math.max(1, y1 - y0));
+    });
+
+    // Position labels (on top of the candles).
+    const lab = clamp((pos - 0.6) / 0.4);
+    if (lab > 0) {
+      const px0 = n("posX") - shift, pwF = n("posW"), cx = px0 + pwF / 2;
+      const entry = n("posEntry"), stop = n("posStop"), target = n("posTarget"), risk = n("posRisk");
+      const rr = (target - entry) / Math.max(1e-6, entry - stop);
+      const pill = (txt: string, y: number, bg: string, fg: string) => {
+        ctx.font = `500 13px "Geist", sans-serif`;
+        const tw = ctx.measureText(txt).width + 16;
+        ctx.globalAlpha = lab;
+        ctx.fillStyle = bg;
+        ctx.beginPath(); ctx.roundRect(cx - tw / 2, y - 11 + (1 - lab) * 4, tw, 22, 3); ctx.fill();
+        ctx.fillStyle = fg;
+        ctx.textAlign = "center";
+        ctx.fillText(txt, cx, y + 0.5 + (1 - lab) * 4);
+        ctx.globalAlpha = 1;
+      };
+      pill(`Target ${fmtPrice(target)}  ·  +$${fmtPrice(risk * rr)}`, yOf(target) - 15, get.str("up"), "#05140c");
+      pill(`Long  ·  Entry ${fmtPrice(entry)}  ·  R:R ${rr.toFixed(1)}`, yOf(entry), "rgba(24,24,28,0.92)", "#ffffff");
+      pill(`Stop ${fmtPrice(stop)}  ·  −$${fmtPrice(risk)}`, yOf(stop) + 15, get.str("down"), "#ffffff");
+      ctx.font = `400 12px "Geist", sans-serif`;
+    }
+    ctx.restore(); // plot clip
+
+    // Last-price line + tag (Figma: grey #555559; green as the breakout runs, red once
+    // event 2 dumps it).
+    if (candles.length) {
+      const last = candles[candles.length - 1], py = yOf(last.c);
+      const mix = (a: number[], b: number[], u: number) => a.map((v, i) => v + (b[i] - v) * u);
+      const [gr, gg, gb] = mix(mix([85, 85, 89], [0, 209, 111], hot), [255, 100, 121], two ? hot2 : 0).map(Math.round);
+      ctx.strokeStyle = `rgb(${gr},${gg},${gb})`;
+      ctx.setLineDash([5, 5]);
+      ctx.beginPath(); ctx.moveTo(13, py); ctx.lineTo(1379, py); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = `rgb(${gr},${gg},${gb})`;
+      ctx.beginPath(); ctx.roundRect(1417, py - 13, 56, 26, 2); ctx.fill();
+      ctx.fillStyle = hot > 0.5 && !(two && hot2 > 0.5) ? "#05140c" : "rgba(255,255,255,0.9)";
+      ctx.textAlign = "center";
+      ctx.fillText(fmtPrice(last.c), 1445, py + 0.5);
+    }
+    ctx.restore();
+  },
+};
+
 export const GENERATOR_NAMES = Object.keys(GENERATORS);

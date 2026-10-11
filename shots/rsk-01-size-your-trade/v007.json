@@ -1,0 +1,5428 @@
+{
+  "name": "RSK-01 → RSK-02 · Size your trade / Know what moves",
+  "note": "Selections fitted to their rows: FOMC box sits inside the event row (no longer spills over the sidebar), POSITION SIZE box inside the Order preview card. Otherwise as v006.",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 9.4,
+  "background": "#F4F9EE",
+  "layers": [
+    {
+      "id": "cur2-ripple",
+      "name": "Click ripple",
+      "type": "ellipse",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 1263,
+        "y": 60,
+        "width": 0,
+        "height": 0,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.5,
+        "opacity": 0
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 7.0667,
+            "v": 8,
+            "ease": "appleOut"
+          },
+          {
+            "t": 7.4667,
+            "v": 76
+          }
+        ],
+        "height": [
+          {
+            "t": 7.0667,
+            "v": 8,
+            "ease": "appleOut"
+          },
+          {
+            "t": 7.4667,
+            "v": 76
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.0333,
+            "v": 0
+          },
+          {
+            "t": 7.0667,
+            "v": 0.9,
+            "ease": "quadOut"
+          },
+          {
+            "t": 7.4667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "cur2",
+      "name": "Hand cursor",
+      "type": "image",
+      "label": "#e6d3a3",
+      "props": {
+        "src": "hand-cursor.png",
+        "width": 160,
+        "anchorX": 0.32,
+        "anchorY": 0.16,
+        "x": 1463,
+        "y": 320,
+        "opacity": 0,
+        "shadowColor": "rgba(0,0,0,0.30)",
+        "shadowBlur": 24,
+        "shadowY": 12
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 6.5333,
+            "v": 1463,
+            "ease": "appleOut"
+          },
+          {
+            "t": 7,
+            "v": 1263
+          },
+          {
+            "t": 7.2,
+            "v": 1263,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.4667,
+            "v": 1313
+          }
+        ],
+        "y": [
+          {
+            "t": 6.5333,
+            "v": 320,
+            "ease": "appleOut"
+          },
+          {
+            "t": 7,
+            "v": 60
+          },
+          {
+            "t": 7.2,
+            "v": 60,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.4667,
+            "v": 124
+          }
+        ],
+        "rotation": [
+          {
+            "t": 6.5333,
+            "v": 10,
+            "ease": "appleOut"
+          },
+          {
+            "t": 7.0667,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.5333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.7,
+            "v": 1
+          },
+          {
+            "t": 7.2,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.4667,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 6.9667,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.0667,
+            "v": 0.88,
+            "ease": "appleOut"
+          },
+          {
+            "t": 7.4,
+            "v": 0.95
+          }
+        ],
+        "shadowY": [
+          {
+            "t": 6.9667,
+            "v": 12,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.0667,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 7.4,
+            "v": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "cur1-ripple",
+      "name": "Click ripple",
+      "type": "ellipse",
+      "label": "#D9F9B9",
+      "props": {
+        "x": 552,
+        "y": 925,
+        "width": 0,
+        "height": 0,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.5,
+        "opacity": 0
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 3,
+            "v": 8,
+            "ease": "appleOut"
+          },
+          {
+            "t": 3.4,
+            "v": 76
+          }
+        ],
+        "height": [
+          {
+            "t": 3,
+            "v": 8,
+            "ease": "appleOut"
+          },
+          {
+            "t": 3.4,
+            "v": 76
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.9667,
+            "v": 0
+          },
+          {
+            "t": 3,
+            "v": 0.9,
+            "ease": "quadOut"
+          },
+          {
+            "t": 3.4,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "cur1",
+      "name": "Hand cursor",
+      "type": "image",
+      "label": "#e6d3a3",
+      "props": {
+        "src": "hand-cursor.png",
+        "width": 160,
+        "anchorX": 0.32,
+        "anchorY": 0.16,
+        "x": 752,
+        "y": 1185,
+        "opacity": 0,
+        "shadowColor": "rgba(0,0,0,0.30)",
+        "shadowBlur": 24,
+        "shadowY": 12
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.4667,
+            "v": 752,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.9333,
+            "v": 552
+          },
+          {
+            "t": 3.1333,
+            "v": 552,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.4,
+            "v": 602
+          }
+        ],
+        "y": [
+          {
+            "t": 2.4667,
+            "v": 1185,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.9333,
+            "v": 925
+          },
+          {
+            "t": 3.1333,
+            "v": 925,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.4,
+            "v": 989
+          }
+        ],
+        "rotation": [
+          {
+            "t": 2.4667,
+            "v": 10,
+            "ease": "appleOut"
+          },
+          {
+            "t": 3,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.4667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.6333,
+            "v": 1
+          },
+          {
+            "t": 3.1333,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.4,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 2.9,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3,
+            "v": 0.88,
+            "ease": "appleOut"
+          },
+          {
+            "t": 3.3333,
+            "v": 0.95
+          }
+        ],
+        "shadowY": [
+          {
+            "t": 2.9,
+            "v": 12,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 3.3333,
+            "v": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "h2-l1",
+      "name": "Erkenne, was",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Erkenne, was",
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.4667,
+            "v": 12,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.9333,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.4667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.7333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.4667,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.8,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "h2-kurs",
+      "name": "den Kurs",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "den Kurs",
+        "x": 0,
+        "y": 108
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.5667,
+            "v": 120,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.0333,
+            "v": 108
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.5667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.8333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.5667,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.9,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "h2-open",
+      "name": "{",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "{",
+        "x": 405,
+        "y": 108
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 5.6667,
+            "v": 582,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6,
+            "v": 405
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.6667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.8333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "h2-close",
+      "name": "}.",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "}.",
+        "x": 809,
+        "y": 108
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 5.6667,
+            "v": 632,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6,
+            "v": 809
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.6667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.8333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "h2-word",
+      "name": "bewegt",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0.5,
+        "anchorY": 0,
+        "text": "bewegt",
+        "x": 626,
+        "y": 108
+      },
+      "keyframes": {
+        "letterSpacing": [
+          {
+            "t": 5.7333,
+            "v": 6,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.1333,
+            "v": -1.92
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.7333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.7333,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.0667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "head2",
+      "name": "Headline · RSK-02",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 118,
+        "y": 309
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 7.1333,
+            "v": 309,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.4,
+            "v": 299
+          }
+        ],
+        "opacity": [
+          {
+            "t": 7.1333,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.4,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 7.1333,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.4,
+            "v": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "hdr2-market",
+      "name": "Market · BTCUSDT",
+      "type": "image",
+      "label": "#ff6479",
+      "parent": "hdr2",
+      "props": {
+        "src": "market.png",
+        "width": 502.6,
+        "x": 0,
+        "y": 10.3,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "hdr2-clock",
+      "name": "Clock",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "hdr2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 36.4,
+        "letterSpacing": -0.364,
+        "lineHeight": 1.29,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "14:36:02",
+        "x": 561.58,
+        "y": 14.5
+      },
+      "keyframes": {
+        "text": [
+          {
+            "t": 0,
+            "v": "14:36:02",
+            "ease": "hold"
+          },
+          {
+            "t": 1,
+            "v": "14:36:03",
+            "ease": "hold"
+          },
+          {
+            "t": 2,
+            "v": "14:36:04",
+            "ease": "hold"
+          },
+          {
+            "t": 3,
+            "v": "14:36:05",
+            "ease": "hold"
+          },
+          {
+            "t": 4,
+            "v": "14:36:06",
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": "14:36:07",
+            "ease": "hold"
+          },
+          {
+            "t": 6,
+            "v": "14:36:08",
+            "ease": "hold"
+          },
+          {
+            "t": 7,
+            "v": "14:36:09",
+            "ease": "hold"
+          },
+          {
+            "t": 8,
+            "v": "14:36:10",
+            "ease": "hold"
+          },
+          {
+            "t": 9,
+            "v": "14:36:11",
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hdr2-chip",
+      "name": "Chip · Live",
+      "type": "image",
+      "label": "#ff6479",
+      "parent": "hdr2",
+      "props": {
+        "src": "chip-live.png",
+        "width": 161.42,
+        "x": 738.58,
+        "y": 0.24,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "hdr2",
+      "name": "Header",
+      "type": "null",
+      "label": "#ff6479",
+      "props": {
+        "x": 118,
+        "y": 561
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.8667,
+            "v": 571,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.3333,
+            "v": 561
+          },
+          {
+            "t": 7.1333,
+            "v": 561,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.4,
+            "v": 551
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.1333,
+            "v": 1
+          },
+          {
+            "t": 7.1333,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.4,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.8667,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.2,
+            "v": 0
+          },
+          {
+            "t": 7.1333,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.4,
+            "v": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1-stimm",
+      "name": "Stimm",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Stimm",
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0.2,
+            "v": 12,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.2,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.4667,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0.2,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.5333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1-l2",
+      "name": "auf dein Kapital ab",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "auf dein Kapital ab",
+        "x": 0,
+        "y": 108
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0.3,
+            "v": 120,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.7667,
+            "v": 108
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.3,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.5667,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0.3,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.6333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1-open",
+      "name": "{",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "{",
+        "x": 310,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.3667,
+            "v": 454.5,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.7,
+            "v": 310
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.3667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.5333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1-close",
+      "name": "}",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "}",
+        "x": 649,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.3667,
+            "v": 504.5,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.7,
+            "v": 649
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.3667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.5333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1-word",
+      "name": "Risiko",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0.5,
+        "anchorY": 0,
+        "text": "Risiko",
+        "x": 498.5,
+        "y": 0
+      },
+      "keyframes": {
+        "letterSpacing": [
+          {
+            "t": 0.4333,
+            "v": 6,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.8333,
+            "v": -1.92
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.4333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.7,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0.4333,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.7667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "head1",
+      "name": "Headline · RSK-01",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 933,
+        "y": 309
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 3.0667,
+            "v": 309,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.3333,
+            "v": 299
+          }
+        ],
+        "opacity": [
+          {
+            "t": 3.0667,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.3333,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 3.0667,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.3333,
+            "v": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "hdr1-market",
+      "name": "Market · BTCUSDT",
+      "type": "image",
+      "label": "#ff6479",
+      "parent": "hdr1",
+      "props": {
+        "src": "market.png",
+        "width": 502.6,
+        "x": 0,
+        "y": 10.3,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "hdr1-clock",
+      "name": "Clock",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "hdr1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 36.4,
+        "letterSpacing": -0.364,
+        "lineHeight": 1.29,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "14:36:02",
+        "x": 561.58,
+        "y": 14.5
+      },
+      "keyframes": {
+        "text": [
+          {
+            "t": 0,
+            "v": "14:36:02",
+            "ease": "hold"
+          },
+          {
+            "t": 1,
+            "v": "14:36:03",
+            "ease": "hold"
+          },
+          {
+            "t": 2,
+            "v": "14:36:04",
+            "ease": "hold"
+          },
+          {
+            "t": 3,
+            "v": "14:36:05",
+            "ease": "hold"
+          },
+          {
+            "t": 4,
+            "v": "14:36:06",
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": "14:36:07",
+            "ease": "hold"
+          },
+          {
+            "t": 6,
+            "v": "14:36:08",
+            "ease": "hold"
+          },
+          {
+            "t": 7,
+            "v": "14:36:09",
+            "ease": "hold"
+          },
+          {
+            "t": 8,
+            "v": "14:36:10",
+            "ease": "hold"
+          },
+          {
+            "t": 9,
+            "v": "14:36:11",
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hdr1-chip",
+      "name": "Chip · Live",
+      "type": "image",
+      "label": "#ff6479",
+      "parent": "hdr1",
+      "props": {
+        "src": "chip-live.png",
+        "width": 161.42,
+        "x": 738.58,
+        "y": 0.24,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "hdr1",
+      "name": "Header",
+      "type": "null",
+      "label": "#ff6479",
+      "props": {
+        "x": 933,
+        "y": 561
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0.6,
+            "v": 571,
+            "ease": "appleOut"
+          },
+          {
+            "t": 1.0667,
+            "v": 561
+          },
+          {
+            "t": 3.0667,
+            "v": 561,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.3333,
+            "v": 551
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.6,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.8667,
+            "v": 1
+          },
+          {
+            "t": 3.0667,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.3333,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 0.6,
+            "v": 4,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.9333,
+            "v": 0
+          },
+          {
+            "t": 3.0667,
+            "v": 0,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.3333,
+            "v": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-tl",
+      "name": "Handle tl",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 129.2,
+        "y": 1181.3,
+        "width": 16,
+        "height": 16,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 6.2,
+            "v": 0.6,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.4667,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.3,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-bl",
+      "name": "Handle bl",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 129.2,
+        "y": 1272.7,
+        "width": 16,
+        "height": 16,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 6.2,
+            "v": 0.6,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.4667,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.3,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-tr",
+      "name": "Handle tr",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 721.2,
+        "y": 1181.3,
+        "width": 16,
+        "height": 16,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 6.2,
+            "v": 129.2,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.5333,
+            "v": 721.2
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.3,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-br",
+      "name": "Handle br",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 721.2,
+        "y": 1272.7,
+        "width": 16,
+        "height": 16,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 6.2,
+            "v": 129.2,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.5333,
+            "v": 721.2
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.3,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-box",
+      "name": "Selection",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 129.2,
+        "y": 1181.3,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 592,
+        "height": 91.4,
+        "fill": "rgba(217,249,185,0.12)",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.5333,
+            "v": 592
+          }
+        ],
+        "opacity": [
+          {
+            "t": 6.2,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 6.3,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2",
+      "name": "Selection · FOMC",
+      "type": "null",
+      "label": "#D9F9B9",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 7.1333,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 7.3333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "tog-knob",
+      "name": "Toggle · knob",
+      "type": "ellipse",
+      "label": "#D9F9B9",
+      "parent": "win2",
+      "props": {
+        "x": 173.75,
+        "y": 725.6,
+        "width": 25,
+        "height": 25,
+        "fill": "rgba(255,255,255,0.55)"
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 7.1,
+            "v": 173.75,
+            "ease": "appleOut"
+          },
+          {
+            "t": 7.3667,
+            "v": 202.5
+          }
+        ],
+        "fill": [
+          {
+            "t": 7.1,
+            "v": "rgba(255,255,255,0.55)",
+            "ease": "appleOut"
+          },
+          {
+            "t": 7.3,
+            "v": "#D9F9B9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tog-pill",
+      "name": "Toggle · track",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win2",
+      "props": {
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "x": 188.1,
+        "y": 725.6,
+        "width": 66.25,
+        "height": 36.25,
+        "radius": 18.125,
+        "fill": "rgba(255,255,255,0.06)",
+        "stroke": "rgba(255,255,255,0.22)",
+        "strokeWidth": 2.5
+      },
+      "keyframes": {
+        "stroke": [
+          {
+            "t": 7.1,
+            "v": "rgba(255,255,255,0.22)",
+            "ease": "appleOut"
+          },
+          {
+            "t": 7.3,
+            "v": "#D9F9B9"
+          }
+        ],
+        "fill": [
+          {
+            "t": 7.1,
+            "v": "rgba(255,255,255,0.06)",
+            "ease": "appleOut"
+          },
+          {
+            "t": 7.3,
+            "v": "rgba(217,249,185,0.10)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tog-patch",
+      "name": "Toggle · patch",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 150,
+        "y": 702,
+        "width": 77,
+        "height": 48,
+        "fill": "#0F0F12"
+      }
+    },
+    {
+      "id": "cal-row0-img",
+      "name": "Row 1",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row0",
+      "matte": "cal-row0-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row0-mask",
+      "name": "Row 1 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row0",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 968,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row0",
+      "name": "Calendar row 1",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.2667,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.6667,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.2667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-row1-img",
+      "name": "Row 2",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row1",
+      "matte": "cal-row1-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row1-mask",
+      "name": "Row 2 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 1071.62,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row1",
+      "name": "Calendar row 2",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.3,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.7,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.3,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.5667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-row2-img",
+      "name": "Row 3",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row2",
+      "matte": "cal-row2-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row2-mask",
+      "name": "Row 3 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 1175.24,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row2",
+      "name": "Calendar row 3",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.3333,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.7333,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.3333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.6,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-row3-img",
+      "name": "Row 4",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row3",
+      "matte": "cal-row3-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row3-mask",
+      "name": "Row 4 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row3",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 1278.8600000000001,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row3",
+      "name": "Calendar row 4",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.3667,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.7667,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.3667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.6333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-row4-img",
+      "name": "Row 5",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row4",
+      "matte": "cal-row4-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row4-mask",
+      "name": "Row 5 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row4",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 1382.48,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row4",
+      "name": "Calendar row 5",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.4,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.8,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.4,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.6667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-row5-img",
+      "name": "Row 6",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row5",
+      "matte": "cal-row5-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row5-mask",
+      "name": "Row 6 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row5",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 1486.1,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row5",
+      "name": "Calendar row 6",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.4333,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.8333,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.4333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.7,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-row6-img",
+      "name": "Row 7",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row6",
+      "matte": "cal-row6-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row6-mask",
+      "name": "Row 7 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row6",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 1589.72,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row6",
+      "name": "Calendar row 7",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.4667,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.8667,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.4667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.7333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-row7-img",
+      "name": "Row 8",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row7",
+      "matte": "cal-row7-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row7-mask",
+      "name": "Row 8 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row7",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 1693.3400000000001,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row7",
+      "name": "Calendar row 8",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.5,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.9,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.5,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.7667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-row8-img",
+      "name": "Row 9",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row8",
+      "matte": "cal-row8-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row8-mask",
+      "name": "Row 9 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row8",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 1796.96,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row8",
+      "name": "Calendar row 9",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.5333,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.9333,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.5333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.8,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-row9-img",
+      "name": "Row 10",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "cal-row9",
+      "matte": "cal-row9-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-row9-mask",
+      "name": "Row 10 mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "cal-row9",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 1900.58,
+        "width": 623.5799999999999,
+        "height": 103.62,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-row9",
+      "name": "Calendar row 10",
+      "type": "null",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5.5667,
+            "v": 16,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.9667,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.5667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 5.8333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cal-top",
+      "name": "Calendar · top",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "matte": "cal-top-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-top-mask",
+      "name": "Calendar · top mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "width": 744.8,
+        "height": 968,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-side",
+      "name": "Calendar · sidebar",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "win2",
+      "matte": "cal-side-mask",
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "cal-side-mask",
+      "name": "Calendar · sidebar mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 968,
+        "width": 121.22,
+        "height": 1527.46,
+        "fill": "#fff"
+      }
+    },
+    {
+      "id": "cal-rows-bg",
+      "name": "Calendar · rows bg",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 121.22,
+        "y": 968,
+        "width": 623.5799999999999,
+        "height": 1527.46,
+        "fill": "#0F0F12"
+      }
+    },
+    {
+      "id": "w2-shell",
+      "name": "Window",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "width": 744.8,
+        "height": 1797.4,
+        "radius": 22.8,
+        "fill": "#020203",
+        "stroke": "rgba(10,26,29,0.12)",
+        "strokeWidth": 1.9,
+        "shadowColor": "rgba(10,26,29,0.08)",
+        "shadowBlur": 60.8,
+        "shadowY": 30.4
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 7.2,
+            "v": 1797.4,
+            "ease": "appleInOut"
+          },
+          {
+            "t": 8,
+            "v": 2495.46
+          }
+        ]
+      }
+    },
+    {
+      "id": "w2-farshadow",
+      "name": "Window · far shadow",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "width": 744.8,
+        "height": 1797.4,
+        "radius": 22.8,
+        "fill": "#020203",
+        "shadowColor": "rgba(10,26,29,0.08)",
+        "shadowBlur": 152,
+        "shadowY": 76
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 7.2,
+            "v": 1797.4,
+            "ease": "appleInOut"
+          },
+          {
+            "t": 8,
+            "v": 2495.46
+          }
+        ]
+      }
+    },
+    {
+      "id": "win2",
+      "name": "Side menu · Calendar",
+      "type": "null",
+      "label": "#e6d3a3",
+      "parent": "plat2",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "scale": 0.4785,
+        "isolate": "yes"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.2,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-mk-us",
+      "name": "Marker · US 06:05",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app2",
+      "matte": "p2-mk-us-mask",
+      "props": {
+        "src": "marker-us.png",
+        "width": 25,
+        "x": 662,
+        "y": 211,
+        "anchorX": 0,
+        "anchorY": 0,
+        "blend": "screen"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 8.1333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 8.2667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-mk-us-mask",
+      "name": "Marker us mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "app2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 658,
+        "y": 211,
+        "width": 33,
+        "height": 0,
+        "fill": "#fff"
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 8.1333,
+            "v": 18,
+            "ease": "appleOut"
+          },
+          {
+            "t": 8.6,
+            "v": 452
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-mk-eu",
+      "name": "Marker · EU 06:10",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app2",
+      "matte": "p2-mk-eu-mask",
+      "props": {
+        "src": "marker-eu.png",
+        "width": 25,
+        "x": 895,
+        "y": 211,
+        "anchorX": 0,
+        "anchorY": 0,
+        "blend": "screen"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 8.2667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 8.4,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-mk-eu-mask",
+      "name": "Marker eu mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "app2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 891,
+        "y": 211,
+        "width": 33,
+        "height": 0,
+        "fill": "#fff"
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 8.2667,
+            "v": 18,
+            "ease": "appleOut"
+          },
+          {
+            "t": 8.7333,
+            "v": 452
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-mk-uk",
+      "name": "Marker · UK 06:25",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app2",
+      "matte": "p2-mk-uk-mask",
+      "props": {
+        "src": "marker-uk.png",
+        "width": 25,
+        "x": 1592,
+        "y": 211,
+        "anchorX": 0,
+        "anchorY": 0,
+        "blend": "screen"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 8.4,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 8.5333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-mk-uk-mask",
+      "name": "Marker uk mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "app2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 1588,
+        "y": 211,
+        "width": 33,
+        "height": 0,
+        "fill": "#fff"
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 8.4,
+            "v": 18,
+            "ease": "appleOut"
+          },
+          {
+            "t": 8.8667,
+            "v": 452
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2-ln-entry",
+      "name": "ENTRY line",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app2",
+      "props": {
+        "src": "line-entry.png",
+        "width": 1397,
+        "x": 439,
+        "y": 404,
+        "anchorX": 0,
+        "anchorY": 0,
+        "blend": "screen"
+      }
+    },
+    {
+      "id": "p2-ln-stop",
+      "name": "STOP line",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app2",
+      "props": {
+        "src": "line-stop.png",
+        "width": 1397,
+        "x": 439,
+        "y": 473,
+        "anchorX": 0,
+        "anchorY": 0,
+        "blend": "screen"
+      }
+    },
+    {
+      "id": "p2-menu",
+      "name": "Platform · tabs",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app2",
+      "props": {
+        "src": "plat-menu.png",
+        "width": 1560,
+        "x": 360,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "p2-asset",
+      "name": "Platform · asset bar",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app2",
+      "props": {
+        "src": "plat-asset.png",
+        "width": 1560,
+        "x": 360,
+        "y": 60,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "p2-chart",
+      "name": "Platform · chart",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app2",
+      "props": {
+        "src": "plat-chart.png",
+        "width": 1560,
+        "x": 360,
+        "y": 119,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "p2-journal",
+      "name": "Platform · journal",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app2",
+      "props": {
+        "src": "plat-journal.png",
+        "width": 1560,
+        "x": 360,
+        "y": 763,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "p2-card",
+      "name": "Platform · card",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "app2",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1202,
+        "radius": 24,
+        "fill": "#020203",
+        "shadowColor": "rgba(10,26,29,0.16)",
+        "shadowBlur": 120,
+        "shadowY": 50
+      }
+    },
+    {
+      "id": "app2",
+      "name": "Platform · calendar",
+      "type": "null",
+      "label": "#e6d3a3",
+      "parent": "plat2",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "isolate": "yes"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 7.3333,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 7.7333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "plat2",
+      "name": "Platform rig · beat 2",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 1075,
+        "y": -667,
+        "scale": 2.09
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0,
+            "v": 1075
+          },
+          {
+            "t": 7.2,
+            "v": 1075
+          },
+          {
+            "t": 7.2167,
+            "v": 1074.6757
+          },
+          {
+            "t": 7.2333,
+            "v": 1073.6564
+          },
+          {
+            "t": 7.25,
+            "v": 1071.8623
+          },
+          {
+            "t": 7.2667,
+            "v": 1069.1984
+          },
+          {
+            "t": 7.2833,
+            "v": 1065.5499
+          },
+          {
+            "t": 7.3,
+            "v": 1060.7769
+          },
+          {
+            "t": 7.3167,
+            "v": 1054.7066
+          },
+          {
+            "t": 7.3333,
+            "v": 1047.1229
+          },
+          {
+            "t": 7.35,
+            "v": 1037.7514
+          },
+          {
+            "t": 7.3667,
+            "v": 1026.2383
+          },
+          {
+            "t": 7.3833,
+            "v": 1012.1192
+          },
+          {
+            "t": 7.4,
+            "v": 994.7741
+          },
+          {
+            "t": 7.4167,
+            "v": 973.3619
+          },
+          {
+            "t": 7.4333,
+            "v": 946.7314
+          },
+          {
+            "t": 7.45,
+            "v": 913.3256
+          },
+          {
+            "t": 7.4667,
+            "v": 871.1813
+          },
+          {
+            "t": 7.4833,
+            "v": 818.3999
+          },
+          {
+            "t": 7.5,
+            "v": 754.8654
+          },
+          {
+            "t": 7.5167,
+            "v": 684.8507
+          },
+          {
+            "t": 7.5333,
+            "v": 616.1431
+          },
+          {
+            "t": 7.55,
+            "v": 554.5773
+          },
+          {
+            "t": 7.5667,
+            "v": 501.7666
+          },
+          {
+            "t": 7.5833,
+            "v": 456.9843
+          },
+          {
+            "t": 7.6,
+            "v": 418.9059
+          },
+          {
+            "t": 7.6167,
+            "v": 386.2912
+          },
+          {
+            "t": 7.6333,
+            "v": 358.1355
+          },
+          {
+            "t": 7.65,
+            "v": 333.6565
+          },
+          {
+            "t": 7.6667,
+            "v": 312.2487
+          },
+          {
+            "t": 7.6833,
+            "v": 293.4397
+          },
+          {
+            "t": 7.7,
+            "v": 276.8565
+          },
+          {
+            "t": 7.7167,
+            "v": 262.201
+          },
+          {
+            "t": 7.7333,
+            "v": 249.2314
+          },
+          {
+            "t": 7.75,
+            "v": 237.7492
+          },
+          {
+            "t": 7.7667,
+            "v": 227.5899
+          },
+          {
+            "t": 7.7833,
+            "v": 218.6151
+          },
+          {
+            "t": 7.8,
+            "v": 210.7077
+          },
+          {
+            "t": 7.8167,
+            "v": 203.7678
+          },
+          {
+            "t": 7.8333,
+            "v": 197.7089
+          },
+          {
+            "t": 7.85,
+            "v": 192.4564
+          },
+          {
+            "t": 7.8667,
+            "v": 187.9446
+          },
+          {
+            "t": 7.8833,
+            "v": 184.1164
+          },
+          {
+            "t": 7.9,
+            "v": 180.9206
+          },
+          {
+            "t": 7.9167,
+            "v": 178.3121
+          },
+          {
+            "t": 7.9333,
+            "v": 176.2506
+          },
+          {
+            "t": 7.95,
+            "v": 174.6997
+          },
+          {
+            "t": 7.9667,
+            "v": 173.6268
+          },
+          {
+            "t": 7.9833,
+            "v": 173.0025
+          },
+          {
+            "t": 8,
+            "v": 172.8
+          },
+          {
+            "t": 9.4,
+            "v": 172.8
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": -667
+          },
+          {
+            "t": 7.2,
+            "v": -667
+          },
+          {
+            "t": 7.2167,
+            "v": -666.5332
+          },
+          {
+            "t": 7.2333,
+            "v": -665.0677
+          },
+          {
+            "t": 7.25,
+            "v": -662.4946
+          },
+          {
+            "t": 7.2667,
+            "v": -658.6893
+          },
+          {
+            "t": 7.2833,
+            "v": -653.5065
+          },
+          {
+            "t": 7.3,
+            "v": -646.7765
+          },
+          {
+            "t": 7.3167,
+            "v": -638.2982
+          },
+          {
+            "t": 7.3333,
+            "v": -627.8316
+          },
+          {
+            "t": 7.35,
+            "v": -615.0861
+          },
+          {
+            "t": 7.3667,
+            "v": -599.7059
+          },
+          {
+            "t": 7.3833,
+            "v": -581.2503
+          },
+          {
+            "t": 7.4,
+            "v": -559.1678
+          },
+          {
+            "t": 7.4167,
+            "v": -532.7653
+          },
+          {
+            "t": 7.4333,
+            "v": -501.182
+          },
+          {
+            "t": 7.45,
+            "v": -463.4053
+          },
+          {
+            "t": 7.4667,
+            "v": -418.4518
+          },
+          {
+            "t": 7.4833,
+            "v": -366.0266
+          },
+          {
+            "t": 7.5,
+            "v": -308.0393
+          },
+          {
+            "t": 7.5167,
+            "v": -249.8655
+          },
+          {
+            "t": 7.5333,
+            "v": -197.9243
+          },
+          {
+            "t": 7.55,
+            "v": -155.2287
+          },
+          {
+            "t": 7.5667,
+            "v": -121.2171
+          },
+          {
+            "t": 7.5833,
+            "v": -94.1098
+          },
+          {
+            "t": 7.6,
+            "v": -72.226
+          },
+          {
+            "t": 7.6167,
+            "v": -54.2852
+          },
+          {
+            "t": 7.6333,
+            "v": -39.3642
+          },
+          {
+            "t": 7.65,
+            "v": -26.8011
+          },
+          {
+            "t": 7.6667,
+            "v": -16.1155
+          },
+          {
+            "t": 7.6833,
+            "v": -6.9518
+          },
+          {
+            "t": 7.7,
+            "v": 0.9575
+          },
+          {
+            "t": 7.7167,
+            "v": 7.818
+          },
+          {
+            "t": 7.7333,
+            "v": 13.7902
+          },
+          {
+            "t": 7.75,
+            "v": 19.001
+          },
+          {
+            "t": 7.7667,
+            "v": 23.5527
+          },
+          {
+            "t": 7.7833,
+            "v": 27.5283
+          },
+          {
+            "t": 7.8,
+            "v": 30.9963
+          },
+          {
+            "t": 7.8167,
+            "v": 34.0135
+          },
+          {
+            "t": 7.8333,
+            "v": 36.6274
+          },
+          {
+            "t": 7.85,
+            "v": 38.8784
+          },
+          {
+            "t": 7.8667,
+            "v": 40.8009
+          },
+          {
+            "t": 7.8833,
+            "v": 42.4241
+          },
+          {
+            "t": 7.9,
+            "v": 43.7736
+          },
+          {
+            "t": 7.9167,
+            "v": 44.8713
+          },
+          {
+            "t": 7.9333,
+            "v": 45.7365
+          },
+          {
+            "t": 7.95,
+            "v": 46.386
+          },
+          {
+            "t": 7.9667,
+            "v": 46.8346
+          },
+          {
+            "t": 7.9833,
+            "v": 47.0954
+          },
+          {
+            "t": 8,
+            "v": 47.18
+          },
+          {
+            "t": 9.4,
+            "v": 47.18
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 2.09
+          },
+          {
+            "t": 7.2,
+            "v": 2.09
+          },
+          {
+            "t": 7.2167,
+            "v": 2.0892
+          },
+          {
+            "t": 7.2333,
+            "v": 2.0866
+          },
+          {
+            "t": 7.25,
+            "v": 2.0822
+          },
+          {
+            "t": 7.2667,
+            "v": 2.0755
+          },
+          {
+            "t": 7.2833,
+            "v": 2.0665
+          },
+          {
+            "t": 7.3,
+            "v": 2.0548
+          },
+          {
+            "t": 7.3167,
+            "v": 2.04
+          },
+          {
+            "t": 7.3333,
+            "v": 2.0218
+          },
+          {
+            "t": 7.35,
+            "v": 1.9996
+          },
+          {
+            "t": 7.3667,
+            "v": 1.9727
+          },
+          {
+            "t": 7.3833,
+            "v": 1.9405
+          },
+          {
+            "t": 7.4,
+            "v": 1.9019
+          },
+          {
+            "t": 7.4167,
+            "v": 1.8558
+          },
+          {
+            "t": 7.4333,
+            "v": 1.8005
+          },
+          {
+            "t": 7.45,
+            "v": 1.7343
+          },
+          {
+            "t": 7.4667,
+            "v": 1.6553
+          },
+          {
+            "t": 7.4833,
+            "v": 1.563
+          },
+          {
+            "t": 7.5,
+            "v": 1.4605
+          },
+          {
+            "t": 7.5167,
+            "v": 1.3573
+          },
+          {
+            "t": 7.5333,
+            "v": 1.2647
+          },
+          {
+            "t": 7.55,
+            "v": 1.1883
+          },
+          {
+            "t": 7.5667,
+            "v": 1.1271
+          },
+          {
+            "t": 7.5833,
+            "v": 1.0782
+          },
+          {
+            "t": 7.6,
+            "v": 1.0386
+          },
+          {
+            "t": 7.6167,
+            "v": 1.0061
+          },
+          {
+            "t": 7.6333,
+            "v": 0.9789
+          },
+          {
+            "t": 7.65,
+            "v": 0.956
+          },
+          {
+            "t": 7.6667,
+            "v": 0.9365
+          },
+          {
+            "t": 7.6833,
+            "v": 0.9197
+          },
+          {
+            "t": 7.7,
+            "v": 0.9052
+          },
+          {
+            "t": 7.7167,
+            "v": 0.8926
+          },
+          {
+            "t": 7.7333,
+            "v": 0.8816
+          },
+          {
+            "t": 7.75,
+            "v": 0.8721
+          },
+          {
+            "t": 7.7667,
+            "v": 0.8637
+          },
+          {
+            "t": 7.7833,
+            "v": 0.8563
+          },
+          {
+            "t": 7.8,
+            "v": 0.8499
+          },
+          {
+            "t": 7.8333,
+            "v": 0.8395
+          },
+          {
+            "t": 7.8667,
+            "v": 0.8318
+          },
+          {
+            "t": 7.9,
+            "v": 0.8263
+          },
+          {
+            "t": 7.9333,
+            "v": 0.8227
+          },
+          {
+            "t": 7.9667,
+            "v": 0.8206
+          },
+          {
+            "t": 8.0167,
+            "v": 0.82
+          },
+          {
+            "t": 9.4,
+            "v": 0.82
+          }
+        ]
+      }
+    },
+    {
+      "id": "dissolve",
+      "name": "Dissolve · paper",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": null,
+      "start": 5.2,
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "fill": "#F4F9EE"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 5.2,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 5.5333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel1-tl",
+      "name": "Handle tl",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 167.74,
+        "y": 1273.4,
+        "width": 13.2,
+        "height": 19.24,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 1.9333,
+            "v": 0.6,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.2,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.9333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.0333,
+            "v": 1
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "sel1-bl",
+      "name": "Handle bl",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 167.74,
+        "y": 1348.9,
+        "width": 13.2,
+        "height": 19.24,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 1.9333,
+            "v": 0.6,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.2,
+            "v": 1
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.9333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.0333,
+            "v": 1
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "sel1-tr",
+      "name": "Handle tr",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 697.52,
+        "y": 1273.4,
+        "width": 13.2,
+        "height": 19.24,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.9333,
+            "v": 167.74,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.2667,
+            "v": 697.52
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.9333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.0333,
+            "v": 1
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "sel1-br",
+      "name": "Handle br",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 697.52,
+        "y": 1348.9,
+        "width": 13.2,
+        "height": 19.24,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 1.9333,
+            "v": 167.74,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.2667,
+            "v": 697.52
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.9333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.0333,
+            "v": 1
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "sel1-box",
+      "name": "Selection",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 167.74,
+        "y": 1273.4,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 529.78,
+        "height": 75.5,
+        "fill": "rgba(217,249,185,0.12)",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 1.9333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.2667,
+            "v": 529.78
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.9333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 2.0333,
+            "v": 1
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "sel1",
+      "name": "Selection · Position size",
+      "type": "null",
+      "label": "#D9F9B9",
+      "parent": "win1",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 3.0667,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 3.2667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "copy-press",
+      "name": "Copy to Order · press",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 155,
+        "y": 1632,
+        "width": 555,
+        "height": 82,
+        "radius": 8.36,
+        "fill": "#ffffff",
+        "opacity": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 2.9667,
+            "v": 0
+          },
+          {
+            "t": 3.0333,
+            "v": 0.32,
+            "ease": "quadOut"
+          },
+          {
+            "t": 3.3333,
+            "v": 0
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "val-size",
+      "name": "Position size",
+      "type": "text",
+      "label": "#ffffff",
+      "parent": "win1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 29.26,
+        "lineHeight": 1.5,
+        "fill": "#ffffff",
+        "anchorY": 0,
+        "text": "{counter} BTC",
+        "counter": 0.2777777777777778,
+        "counterDecimals": 4,
+        "align": "right",
+        "anchorX": 1,
+        "x": 685.52,
+        "y": 1290.61
+      },
+      "keyframes": {
+        "counter": [
+          {
+            "t": 1.2,
+            "v": 0.2778
+          },
+          {
+            "t": 1.2167,
+            "v": 0.2779
+          },
+          {
+            "t": 1.2333,
+            "v": 0.2784
+          },
+          {
+            "t": 1.25,
+            "v": 0.2792
+          },
+          {
+            "t": 1.2667,
+            "v": 0.2804
+          },
+          {
+            "t": 1.2833,
+            "v": 0.2821
+          },
+          {
+            "t": 1.3,
+            "v": 0.2845
+          },
+          {
+            "t": 1.3167,
+            "v": 0.2877
+          },
+          {
+            "t": 1.3333,
+            "v": 0.292
+          },
+          {
+            "t": 1.35,
+            "v": 0.2978
+          },
+          {
+            "t": 1.3667,
+            "v": 0.3057
+          },
+          {
+            "t": 1.3833,
+            "v": 0.3169
+          },
+          {
+            "t": 1.4,
+            "v": 0.3331
+          },
+          {
+            "t": 1.4167,
+            "v": 0.3572
+          },
+          {
+            "t": 1.4333,
+            "v": 0.3913
+          },
+          {
+            "t": 1.45,
+            "v": 0.4326
+          },
+          {
+            "t": 1.4667,
+            "v": 0.4753
+          },
+          {
+            "t": 1.4833,
+            "v": 0.516
+          },
+          {
+            "t": 1.5,
+            "v": 0.5536
+          },
+          {
+            "t": 1.5167,
+            "v": 0.5882
+          },
+          {
+            "t": 1.5333,
+            "v": 0.62
+          },
+          {
+            "t": 1.55,
+            "v": 0.649
+          },
+          {
+            "t": 1.5667,
+            "v": 0.6756
+          },
+          {
+            "t": 1.5833,
+            "v": 0.6997
+          },
+          {
+            "t": 1.6,
+            "v": 0.7215
+          },
+          {
+            "t": 1.6167,
+            "v": 0.7411
+          },
+          {
+            "t": 1.6333,
+            "v": 0.7586
+          },
+          {
+            "t": 1.65,
+            "v": 0.774
+          },
+          {
+            "t": 1.6667,
+            "v": 0.7874
+          },
+          {
+            "t": 1.6833,
+            "v": 0.7989
+          },
+          {
+            "t": 1.7,
+            "v": 0.8086
+          },
+          {
+            "t": 1.7167,
+            "v": 0.8166
+          },
+          {
+            "t": 1.7333,
+            "v": 0.8228
+          },
+          {
+            "t": 1.75,
+            "v": 0.8276
+          },
+          {
+            "t": 1.7667,
+            "v": 0.8308
+          },
+          {
+            "t": 1.7833,
+            "v": 0.8327
+          },
+          {
+            "t": 1.8,
+            "v": 0.8333
+          }
+        ],
+        "fill": [
+          {
+            "t": 1.2,
+            "v": "#ffffff",
+            "ease": "appleOut"
+          },
+          {
+            "t": 1.3333,
+            "v": "#D9F9B9"
+          },
+          {
+            "t": 1.8,
+            "v": "#D9F9B9",
+            "ease": "quadInOut"
+          },
+          {
+            "t": 2.1333,
+            "v": "#ffffff"
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "val-size-patch",
+      "name": "Patch",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 470,
+        "y": 1292.61,
+        "width": 222,
+        "height": 40,
+        "fill": "rgb(27,27,30)"
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "val-margin",
+      "name": "Margin required",
+      "type": "text",
+      "label": "#ffffff",
+      "parent": "win1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 29.26,
+        "lineHeight": 1.5,
+        "fill": "#ffffff",
+        "anchorY": 0,
+        "text": "${counter}",
+        "counter": 1255.5555555555557,
+        "counterDecimals": 0,
+        "counterGrouping": ",",
+        "align": "right",
+        "anchorX": 1,
+        "x": 683.52,
+        "y": 1449.67
+      },
+      "keyframes": {
+        "counter": [
+          {
+            "t": 1.2,
+            "v": 1255.5556
+          },
+          {
+            "t": 1.2167,
+            "v": 1256.1814
+          },
+          {
+            "t": 1.2333,
+            "v": 1258.1858
+          },
+          {
+            "t": 1.25,
+            "v": 1261.8012
+          },
+          {
+            "t": 1.2667,
+            "v": 1267.3344
+          },
+          {
+            "t": 1.2833,
+            "v": 1275.1988
+          },
+          {
+            "t": 1.3,
+            "v": 1285.9655
+          },
+          {
+            "t": 1.3167,
+            "v": 1300.4471
+          },
+          {
+            "t": 1.3333,
+            "v": 1319.8405
+          },
+          {
+            "t": 1.35,
+            "v": 1345.9822
+          },
+          {
+            "t": 1.3667,
+            "v": 1381.8193
+          },
+          {
+            "t": 1.3833,
+            "v": 1432.2858
+          },
+          {
+            "t": 1.4,
+            "v": 1505.7384
+          },
+          {
+            "t": 1.4167,
+            "v": 1614.7156
+          },
+          {
+            "t": 1.4333,
+            "v": 1768.667
+          },
+          {
+            "t": 1.45,
+            "v": 1955.4867
+          },
+          {
+            "t": 1.4667,
+            "v": 2148.5508
+          },
+          {
+            "t": 1.4833,
+            "v": 2332.2488
+          },
+          {
+            "t": 1.5,
+            "v": 2502.3649
+          },
+          {
+            "t": 1.5167,
+            "v": 2658.7777
+          },
+          {
+            "t": 1.5333,
+            "v": 2802.2703
+          },
+          {
+            "t": 1.55,
+            "v": 2933.6593
+          },
+          {
+            "t": 1.5667,
+            "v": 3053.6242
+          },
+          {
+            "t": 1.5833,
+            "v": 3162.7103
+          },
+          {
+            "t": 1.6,
+            "v": 3261.3675
+          },
+          {
+            "t": 1.6167,
+            "v": 3349.9859
+          },
+          {
+            "t": 1.6333,
+            "v": 3428.9251
+          },
+          {
+            "t": 1.65,
+            "v": 3498.5334
+          },
+          {
+            "t": 1.6667,
+            "v": 3559.1608
+          },
+          {
+            "t": 1.6833,
+            "v": 3611.1666
+          },
+          {
+            "t": 1.7,
+            "v": 3654.9248
+          },
+          {
+            "t": 1.7167,
+            "v": 3690.8183
+          },
+          {
+            "t": 1.7333,
+            "v": 3719.25
+          },
+          {
+            "t": 1.75,
+            "v": 3740.6302
+          },
+          {
+            "t": 1.7667,
+            "v": 3755.3773
+          },
+          {
+            "t": 1.7833,
+            "v": 3763.9149
+          },
+          {
+            "t": 1.8,
+            "v": 3766.6667
+          }
+        ],
+        "fill": [
+          {
+            "t": 1.2,
+            "v": "#ffffff",
+            "ease": "appleOut"
+          },
+          {
+            "t": 1.3333,
+            "v": "#D9F9B9"
+          },
+          {
+            "t": 1.8,
+            "v": "#D9F9B9",
+            "ease": "quadInOut"
+          },
+          {
+            "t": 2.1333,
+            "v": "#ffffff"
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "val-margin-patch",
+      "name": "Patch",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 540,
+        "y": 1451.67,
+        "width": 152,
+        "height": 40,
+        "fill": "rgb(27,27,30)"
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "val-sl",
+      "name": "Stop loss",
+      "type": "text",
+      "label": "#ffffff",
+      "parent": "win1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 29.26,
+        "lineHeight": 1.3,
+        "fill": "#ffffff",
+        "anchorY": 0,
+        "opacity": 0.9,
+        "text": "{counter}",
+        "counter": 85520,
+        "counterDecimals": 2,
+        "align": "left",
+        "anchorX": 0,
+        "x": 451.44,
+        "y": 964.51
+      },
+      "keyframes": {
+        "counter": [
+          {
+            "t": 1.2,
+            "v": 85520
+          },
+          {
+            "t": 1.2167,
+            "v": 85520.1794
+          },
+          {
+            "t": 1.2333,
+            "v": 85520.7526
+          },
+          {
+            "t": 1.25,
+            "v": 85521.7819
+          },
+          {
+            "t": 1.2667,
+            "v": 85523.3459
+          },
+          {
+            "t": 1.2833,
+            "v": 85525.5455
+          },
+          {
+            "t": 1.3,
+            "v": 85528.5131
+          },
+          {
+            "t": 1.3167,
+            "v": 85532.4272
+          },
+          {
+            "t": 1.3333,
+            "v": 85537.5344
+          },
+          {
+            "t": 1.35,
+            "v": 85544.1857
+          },
+          {
+            "t": 1.3667,
+            "v": 85552.895
+          },
+          {
+            "t": 1.3833,
+            "v": 85564.4205
+          },
+          {
+            "t": 1.4,
+            "v": 85579.815
+          },
+          {
+            "t": 1.4167,
+            "v": 85600.0745
+          },
+          {
+            "t": 1.4333,
+            "v": 85624.4403
+          },
+          {
+            "t": 1.45,
+            "v": 85648.8555
+          },
+          {
+            "t": 1.4667,
+            "v": 85669.6256
+          },
+          {
+            "t": 1.4833,
+            "v": 85686.1956
+          },
+          {
+            "t": 1.5,
+            "v": 85699.3709
+          },
+          {
+            "t": 1.5167,
+            "v": 85709.9971
+          },
+          {
+            "t": 1.5333,
+            "v": 85718.7022
+          },
+          {
+            "t": 1.55,
+            "v": 85725.9262
+          },
+          {
+            "t": 1.5667,
+            "v": 85731.9792
+          },
+          {
+            "t": 1.5833,
+            "v": 85737.0846
+          },
+          {
+            "t": 1.6,
+            "v": 85741.4078
+          },
+          {
+            "t": 1.6167,
+            "v": 85745.0741
+          },
+          {
+            "t": 1.6333,
+            "v": 85748.1803
+          },
+          {
+            "t": 1.65,
+            "v": 85750.803
+          },
+          {
+            "t": 1.6667,
+            "v": 85753.0038
+          },
+          {
+            "t": 1.6833,
+            "v": 85754.8327
+          },
+          {
+            "t": 1.7,
+            "v": 85756.3312
+          },
+          {
+            "t": 1.7167,
+            "v": 85757.5339
+          },
+          {
+            "t": 1.7333,
+            "v": 85758.4701
+          },
+          {
+            "t": 1.75,
+            "v": 85759.1647
+          },
+          {
+            "t": 1.7667,
+            "v": 85759.6393
+          },
+          {
+            "t": 1.7833,
+            "v": 85759.9123
+          },
+          {
+            "t": 1.8,
+            "v": 85760
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "val-sl-patch",
+      "name": "Patch",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 447.44,
+        "y": 962.51,
+        "width": 160,
+        "height": 42,
+        "fill": "rgb(27,27,30)"
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "sl-ring",
+      "name": "Stop loss · active",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 426.36,
+        "y": 939.2,
+        "width": 284.24,
+        "height": 83.6,
+        "radius": 8.36,
+        "fill": "rgba(0,0,0,0)",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.5,
+        "opacity": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 1.0667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 1.2,
+            "v": 1
+          },
+          {
+            "t": 1.8,
+            "v": 1,
+            "ease": "quadIn"
+          },
+          {
+            "t": 2.0667,
+            "v": 0
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "panel-risk",
+      "name": "Panel · Risk Calculator",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "win1",
+      "matte": "win1-mask",
+      "props": {
+        "src": "panel-risk.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "win1-mask",
+      "name": "Window mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "width": 744.8,
+        "height": 1797.4,
+        "radius": 22.8,
+        "fill": "#ffffff"
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 3.1333,
+            "v": 1797.4,
+            "ease": "appleInOut"
+          },
+          {
+            "t": 3.9333,
+            "v": 2495.46
+          }
+        ]
+      }
+    },
+    {
+      "id": "w1-shell",
+      "name": "Window",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "width": 744.8,
+        "height": 1797.4,
+        "radius": 22.8,
+        "fill": "#020203",
+        "stroke": "rgba(10,26,29,0.12)",
+        "strokeWidth": 1.9,
+        "shadowColor": "rgba(10,26,29,0.08)",
+        "shadowBlur": 60.8,
+        "shadowY": 30.4
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 3.1333,
+            "v": 1797.4,
+            "ease": "appleInOut"
+          },
+          {
+            "t": 3.9333,
+            "v": 2495.46
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "w1-farshadow",
+      "name": "Window · far shadow",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "win1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "width": 744.8,
+        "height": 1797.4,
+        "radius": 22.8,
+        "fill": "#020203",
+        "shadowColor": "rgba(10,26,29,0.08)",
+        "shadowBlur": 152,
+        "shadowY": 76
+      },
+      "keyframes": {
+        "height": [
+          {
+            "t": 3.1333,
+            "v": 1797.4,
+            "ease": "appleInOut"
+          },
+          {
+            "t": 3.9333,
+            "v": 2495.46
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "win1",
+      "name": "Side menu · Risk",
+      "type": "null",
+      "label": "#e6d3a3",
+      "parent": "plat1",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "scale": 0.4785,
+        "isolate": "yes"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.2667,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0,
+            "v": 6,
+            "ease": "appleOut"
+          },
+          {
+            "t": 0.4,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "p1-ln-entry",
+      "name": "ENTRY line",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app1",
+      "matte": "p1-ln-entry-mask",
+      "props": {
+        "src": "line-entry.png",
+        "width": 1397,
+        "x": 439,
+        "y": 404,
+        "anchorX": 0,
+        "anchorY": 0,
+        "blend": "screen"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 4.1333,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 4.2333,
+            "v": 1
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "p1-ln-entry-mask",
+      "name": "ENTRY line mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "app1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 439,
+        "y": 402,
+        "width": 0,
+        "height": 26,
+        "fill": "#fff"
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 4.1333,
+            "v": 60,
+            "ease": "appleOut"
+          },
+          {
+            "t": 4.6667,
+            "v": 1397
+          }
+        ]
+      }
+    },
+    {
+      "id": "p1-ln-stop",
+      "name": "STOP line",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app1",
+      "matte": "p1-ln-stop-mask",
+      "props": {
+        "src": "line-stop.png",
+        "width": 1397,
+        "x": 439,
+        "y": 473,
+        "anchorX": 0,
+        "anchorY": 0,
+        "blend": "screen"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 4.2667,
+            "v": 0,
+            "ease": "appleOut"
+          },
+          {
+            "t": 4.3667,
+            "v": 1
+          }
+        ]
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "p1-ln-stop-mask",
+      "name": "STOP line mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "app1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 439,
+        "y": 471,
+        "width": 0,
+        "height": 26,
+        "fill": "#fff"
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 4.2667,
+            "v": 60,
+            "ease": "appleOut"
+          },
+          {
+            "t": 4.8,
+            "v": 1397
+          }
+        ]
+      }
+    },
+    {
+      "id": "p1-menu",
+      "name": "Platform · tabs",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app1",
+      "props": {
+        "src": "plat-menu.png",
+        "width": 1560,
+        "x": 360,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "p1-asset",
+      "name": "Platform · asset bar",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app1",
+      "props": {
+        "src": "plat-asset.png",
+        "width": 1560,
+        "x": 360,
+        "y": 60,
+        "anchorX": 0,
+        "anchorY": 0
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "p1-chart",
+      "name": "Platform · chart",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app1",
+      "props": {
+        "src": "plat-chart.png",
+        "width": 1560,
+        "x": 360,
+        "y": 119,
+        "anchorX": 0,
+        "anchorY": 0
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "p1-journal",
+      "name": "Platform · journal",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "app1",
+      "props": {
+        "src": "plat-journal.png",
+        "width": 1560,
+        "x": 360,
+        "y": 763,
+        "anchorX": 0,
+        "anchorY": 0
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "p1-card",
+      "name": "Platform · card",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "app1",
+      "props": {
+        "anchorX": 0,
+        "anchorY": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1202,
+        "radius": 24,
+        "fill": "#020203",
+        "shadowColor": "rgba(10,26,29,0.16)",
+        "shadowBlur": 120,
+        "shadowY": 50
+      },
+      "end": 5.5333
+    },
+    {
+      "id": "app1",
+      "name": "Platform · risk",
+      "type": "null",
+      "label": "#e6d3a3",
+      "parent": "plat1",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "isolate": "yes"
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 3.2667,
+            "v": 0,
+            "ease": "quadInOut"
+          },
+          {
+            "t": 3.6667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "plat1",
+      "name": "Platform rig · beat 1",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 118,
+        "y": -750,
+        "scale": 2.09
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0,
+            "v": 118
+          },
+          {
+            "t": 3.1333,
+            "v": 118
+          },
+          {
+            "t": 3.15,
+            "v": 118.0734
+          },
+          {
+            "t": 3.1667,
+            "v": 118.3039
+          },
+          {
+            "t": 3.1833,
+            "v": 118.7079
+          },
+          {
+            "t": 3.2,
+            "v": 119.3038
+          },
+          {
+            "t": 3.2167,
+            "v": 120.1125
+          },
+          {
+            "t": 3.2333,
+            "v": 121.1577
+          },
+          {
+            "t": 3.25,
+            "v": 122.4663
+          },
+          {
+            "t": 3.2667,
+            "v": 124.069
+          },
+          {
+            "t": 3.2833,
+            "v": 126.0013
+          },
+          {
+            "t": 3.3,
+            "v": 128.304
+          },
+          {
+            "t": 3.3167,
+            "v": 131.0241
+          },
+          {
+            "t": 3.3333,
+            "v": 134.2148
+          },
+          {
+            "t": 3.35,
+            "v": 137.9341
+          },
+          {
+            "t": 3.3667,
+            "v": 142.239
+          },
+          {
+            "t": 3.3833,
+            "v": 147.1678
+          },
+          {
+            "t": 3.4,
+            "v": 152.6939
+          },
+          {
+            "t": 3.4167,
+            "v": 158.6232
+          },
+          {
+            "t": 3.4333,
+            "v": 164.4509
+          },
+          {
+            "t": 3.45,
+            "v": 169.4074
+          },
+          {
+            "t": 3.4667,
+            "v": 172.9544
+          },
+          {
+            "t": 3.4833,
+            "v": 175.1485
+          },
+          {
+            "t": 3.5,
+            "v": 176.3621
+          },
+          {
+            "t": 3.5167,
+            "v": 176.9476
+          },
+          {
+            "t": 3.5333,
+            "v": 177.1473
+          },
+          {
+            "t": 3.55,
+            "v": 177.1128
+          },
+          {
+            "t": 3.5667,
+            "v": 176.9379
+          },
+          {
+            "t": 3.6,
+            "v": 176.3795
+          },
+          {
+            "t": 3.6833,
+            "v": 174.8002
+          },
+          {
+            "t": 3.7333,
+            "v": 174.0347
+          },
+          {
+            "t": 3.7833,
+            "v": 173.4633
+          },
+          {
+            "t": 3.8333,
+            "v": 173.08
+          },
+          {
+            "t": 3.8833,
+            "v": 172.8662
+          },
+          {
+            "t": 3.95,
+            "v": 172.8
+          },
+          {
+            "t": 9.4,
+            "v": 172.8
+          }
+        ],
+        "y": [
+          {
+            "t": 0,
+            "v": -590
+          },
+          {
+            "t": 0.0167,
+            "v": -599.3492
+          },
+          {
+            "t": 0.0333,
+            "v": -609.5077
+          },
+          {
+            "t": 0.05,
+            "v": -620.6869
+          },
+          {
+            "t": 0.0667,
+            "v": -633.1713
+          },
+          {
+            "t": 0.0833,
+            "v": -647.291
+          },
+          {
+            "t": 0.1,
+            "v": -663.184
+          },
+          {
+            "t": 0.1167,
+            "v": -679.9236
+          },
+          {
+            "t": 0.1333,
+            "v": -694.9112
+          },
+          {
+            "t": 0.15,
+            "v": -706.3515
+          },
+          {
+            "t": 0.1667,
+            "v": -714.661
+          },
+          {
+            "t": 0.1833,
+            "v": -720.8193
+          },
+          {
+            "t": 0.2,
+            "v": -725.5447
+          },
+          {
+            "t": 0.2167,
+            "v": -729.2854
+          },
+          {
+            "t": 0.2333,
+            "v": -732.3217
+          },
+          {
+            "t": 0.25,
+            "v": -734.8345
+          },
+          {
+            "t": 0.2667,
+            "v": -736.9456
+          },
+          {
+            "t": 0.2833,
+            "v": -738.7405
+          },
+          {
+            "t": 0.3,
+            "v": -740.2807
+          },
+          {
+            "t": 0.3167,
+            "v": -741.6121
+          },
+          {
+            "t": 0.3333,
+            "v": -742.7695
+          },
+          {
+            "t": 0.35,
+            "v": -743.78
+          },
+          {
+            "t": 0.3667,
+            "v": -744.6651
+          },
+          {
+            "t": 0.3833,
+            "v": -745.4419
+          },
+          {
+            "t": 0.4,
+            "v": -746.1245
+          },
+          {
+            "t": 0.4167,
+            "v": -746.7245
+          },
+          {
+            "t": 0.4333,
+            "v": -747.2516
+          },
+          {
+            "t": 0.4667,
+            "v": -748.1182
+          },
+          {
+            "t": 0.5,
+            "v": -748.7758
+          },
+          {
+            "t": 0.5333,
+            "v": -749.2628
+          },
+          {
+            "t": 0.5667,
+            "v": -749.6084
+          },
+          {
+            "t": 0.6167,
+            "v": -749.9096
+          },
+          {
+            "t": 0.6667,
+            "v": -750
+          },
+          {
+            "t": 3.1333,
+            "v": -750
+          },
+          {
+            "t": 3.15,
+            "v": -749.4988
+          },
+          {
+            "t": 3.1667,
+            "v": -747.9249
+          },
+          {
+            "t": 3.1833,
+            "v": -745.1611
+          },
+          {
+            "t": 3.2,
+            "v": -741.073
+          },
+          {
+            "t": 3.2167,
+            "v": -735.5037
+          },
+          {
+            "t": 3.2333,
+            "v": -728.269
+          },
+          {
+            "t": 3.25,
+            "v": -719.1508
+          },
+          {
+            "t": 3.2667,
+            "v": -707.8875
+          },
+          {
+            "t": 3.2833,
+            "v": -694.1616
+          },
+          {
+            "t": 3.3,
+            "v": -677.5832
+          },
+          {
+            "t": 3.3167,
+            "v": -657.6672
+          },
+          {
+            "t": 3.3333,
+            "v": -633.8036
+          },
+          {
+            "t": 3.35,
+            "v": -605.2214
+          },
+          {
+            "t": 3.3667,
+            "v": -570.9551
+          },
+          {
+            "t": 3.3833,
+            "v": -529.8537
+          },
+          {
+            "t": 3.4,
+            "v": -480.7657
+          },
+          {
+            "t": 3.4167,
+            "v": -423.2486
+          },
+          {
+            "t": 3.4333,
+            "v": -359.2456
+          },
+          {
+            "t": 3.45,
+            "v": -294.5696
+          },
+          {
+            "t": 3.4667,
+            "v": -236.3618
+          },
+          {
+            "t": 3.4833,
+            "v": -188.1364
+          },
+          {
+            "t": 3.5,
+            "v": -149.4392
+          },
+          {
+            "t": 3.5167,
+            "v": -118.3972
+          },
+          {
+            "t": 3.5333,
+            "v": -93.1936
+          },
+          {
+            "t": 3.55,
+            "v": -72.4271
+          },
+          {
+            "t": 3.5667,
+            "v": -55.0793
+          },
+          {
+            "t": 3.5833,
+            "v": -40.4155
+          },
+          {
+            "t": 3.6,
+            "v": -27.8993
+          },
+          {
+            "t": 3.6167,
+            "v": -17.1324
+          },
+          {
+            "t": 3.6333,
+            "v": -7.8132
+          },
+          {
+            "t": 3.65,
+            "v": 0.2904
+          },
+          {
+            "t": 3.6667,
+            "v": 7.3604
+          },
+          {
+            "t": 3.6833,
+            "v": 13.5415
+          },
+          {
+            "t": 3.7,
+            "v": 18.9503
+          },
+          {
+            "t": 3.7167,
+            "v": 23.6822
+          },
+          {
+            "t": 3.7333,
+            "v": 27.8157
+          },
+          {
+            "t": 3.75,
+            "v": 31.4163
+          },
+          {
+            "t": 3.7667,
+            "v": 34.5392
+          },
+          {
+            "t": 3.7833,
+            "v": 37.2312
+          },
+          {
+            "t": 3.8,
+            "v": 39.5321
+          },
+          {
+            "t": 3.8167,
+            "v": 41.4763
+          },
+          {
+            "t": 3.8333,
+            "v": 43.0936
+          },
+          {
+            "t": 3.85,
+            "v": 44.4098
+          },
+          {
+            "t": 3.8667,
+            "v": 45.4477
+          },
+          {
+            "t": 3.8833,
+            "v": 46.227
+          },
+          {
+            "t": 3.9,
+            "v": 46.7654
+          },
+          {
+            "t": 3.9167,
+            "v": 47.0785
+          },
+          {
+            "t": 3.9333,
+            "v": 47.18
+          },
+          {
+            "t": 9.4,
+            "v": 47.18
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 2.09
+          },
+          {
+            "t": 3.1333,
+            "v": 2.09
+          },
+          {
+            "t": 3.15,
+            "v": 2.0892
+          },
+          {
+            "t": 3.1667,
+            "v": 2.0866
+          },
+          {
+            "t": 3.1833,
+            "v": 2.0822
+          },
+          {
+            "t": 3.2,
+            "v": 2.0755
+          },
+          {
+            "t": 3.2167,
+            "v": 2.0665
+          },
+          {
+            "t": 3.2333,
+            "v": 2.0548
+          },
+          {
+            "t": 3.25,
+            "v": 2.04
+          },
+          {
+            "t": 3.2667,
+            "v": 2.0218
+          },
+          {
+            "t": 3.2833,
+            "v": 1.9996
+          },
+          {
+            "t": 3.3,
+            "v": 1.9727
+          },
+          {
+            "t": 3.3167,
+            "v": 1.9405
+          },
+          {
+            "t": 3.3333,
+            "v": 1.9019
+          },
+          {
+            "t": 3.35,
+            "v": 1.8558
+          },
+          {
+            "t": 3.3667,
+            "v": 1.8005
+          },
+          {
+            "t": 3.3833,
+            "v": 1.7343
+          },
+          {
+            "t": 3.4,
+            "v": 1.6553
+          },
+          {
+            "t": 3.4167,
+            "v": 1.563
+          },
+          {
+            "t": 3.45,
+            "v": 1.3573
+          },
+          {
+            "t": 3.4667,
+            "v": 1.2647
+          },
+          {
+            "t": 3.4833,
+            "v": 1.1883
+          },
+          {
+            "t": 3.5,
+            "v": 1.1271
+          },
+          {
+            "t": 3.5167,
+            "v": 1.0782
+          },
+          {
+            "t": 3.5333,
+            "v": 1.0386
+          },
+          {
+            "t": 3.55,
+            "v": 1.0061
+          },
+          {
+            "t": 3.5667,
+            "v": 0.9789
+          },
+          {
+            "t": 3.5833,
+            "v": 0.956
+          },
+          {
+            "t": 3.6,
+            "v": 0.9365
+          },
+          {
+            "t": 3.6167,
+            "v": 0.9197
+          },
+          {
+            "t": 3.6333,
+            "v": 0.9052
+          },
+          {
+            "t": 3.65,
+            "v": 0.8926
+          },
+          {
+            "t": 3.6667,
+            "v": 0.8816
+          },
+          {
+            "t": 3.6833,
+            "v": 0.8721
+          },
+          {
+            "t": 3.7,
+            "v": 0.8637
+          },
+          {
+            "t": 3.7167,
+            "v": 0.8563
+          },
+          {
+            "t": 3.7333,
+            "v": 0.8499
+          },
+          {
+            "t": 3.7667,
+            "v": 0.8395
+          },
+          {
+            "t": 3.8,
+            "v": 0.8318
+          },
+          {
+            "t": 3.8333,
+            "v": 0.8263
+          },
+          {
+            "t": 3.8667,
+            "v": 0.8227
+          },
+          {
+            "t": 3.9,
+            "v": 0.8206
+          },
+          {
+            "t": 3.95,
+            "v": 0.82
+          },
+          {
+            "t": 9.4,
+            "v": 0.82
+          }
+        ]
+      }
+    }
+  ]
+}

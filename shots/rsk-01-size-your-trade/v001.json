@@ -1,0 +1,1351 @@
+{
+  "name": "RSK-01 → RSK-02 · Size your trade / Know what moves",
+  "note": "First pass from Figma Section 11: window rises and travels to the Order preview, headline builds (VOL-01 style), selection dragged over Position size; then the window glides right, swaps to the Economic Calendar and scrolls to the events, header crosses left, second headline builds, selection over FOMC.",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 6.6667,
+  "background": "#F4F9EE",
+  "layers": [
+    {
+      "id": "h2-l1",
+      "name": "Erkenne, was",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Erkenne, was",
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 4.8667,
+            "v": 46,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.5333,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 4.8667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.2,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 4.8667,
+            "v": 14,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.4,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "h2-kurs",
+      "name": "den Kurs",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "den Kurs",
+        "x": 0,
+        "y": 108
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 5,
+            "v": 154,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.6667,
+            "v": 108
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.3333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5,
+            "v": 14,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.5333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "h2-open",
+      "name": "{",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "{",
+        "x": 405,
+        "y": 108
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 5.1333,
+            "v": 582,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.8,
+            "v": 405
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.1333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.3333,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 5.1333,
+            "v": 0.6,
+            "ease": "backOut"
+          },
+          {
+            "t": 5.6,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "h2-close",
+      "name": "}.",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "}.",
+        "x": 809,
+        "y": 108
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 5.1333,
+            "v": 632,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.8,
+            "v": 809
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.1333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.3333,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 5.1333,
+            "v": 0.6,
+            "ease": "backOut"
+          },
+          {
+            "t": 5.6,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "h2-word",
+      "name": "bewegt",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head2",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0.5,
+        "anchorY": 0,
+        "text": "bewegt",
+        "x": 626,
+        "y": 108
+      },
+      "keyframes": {
+        "letterSpacing": [
+          {
+            "t": 5.2667,
+            "v": 22,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.9333,
+            "v": -1.92
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.2667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 5.6,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 5.2667,
+            "v": 16,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.8,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 5.2667,
+            "v": 0.94,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.9333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "head2",
+      "name": "Headline · RSK-02",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 118,
+        "y": 309
+      }
+    },
+    {
+      "id": "h1-stimm",
+      "name": "Stimm",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "Stimm",
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0.2667,
+            "v": 46,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 0.9333,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.2667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.6,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0.2667,
+            "v": 14,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 0.8,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1-l2",
+      "name": "auf dein Kapital ab",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "auf dein Kapital ab",
+        "x": 0,
+        "y": 108
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0.4,
+            "v": 154,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.0667,
+            "v": 108
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.4,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.7333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0.4,
+            "v": 14,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 0.9333,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1-open",
+      "name": "{",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "{",
+        "x": 310,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.4667,
+            "v": 454.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.1333,
+            "v": 310
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.4667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.4667,
+            "v": 0.6,
+            "ease": "backOut"
+          },
+          {
+            "t": 0.9333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1-close",
+      "name": "}",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "}",
+        "x": 649,
+        "y": 0
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 0.4667,
+            "v": 504.5,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.1333,
+            "v": 649
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.4667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.6667,
+            "v": 1
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.4667,
+            "v": 0.6,
+            "ease": "backOut"
+          },
+          {
+            "t": 0.9333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1-word",
+      "name": "Risiko",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "head1",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "letterSpacing": -1.92,
+        "lineHeight": 1.08,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0.5,
+        "anchorY": 0,
+        "text": "Risiko",
+        "x": 498.5,
+        "y": 0
+      },
+      "keyframes": {
+        "letterSpacing": [
+          {
+            "t": 0.6,
+            "v": 22,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.2667,
+            "v": -1.92
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0.6,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 0.9333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 0.6,
+            "v": 16,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.1333,
+            "v": 0
+          }
+        ],
+        "scale": [
+          {
+            "t": 0.6,
+            "v": 0.94,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.2667,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "head1",
+      "name": "Headline · RSK-01",
+      "type": "null",
+      "label": "#c5b9ee",
+      "props": {
+        "x": 933,
+        "y": 309
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 4,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.6,
+            "v": 0
+          }
+        ],
+        "blur": [
+          {
+            "t": 4,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.6,
+            "v": 24
+          }
+        ],
+        "scale": [
+          {
+            "t": 4,
+            "v": 1,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 4.6,
+            "v": 1.04
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-tl",
+      "name": "Handle tl",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 20.6,
+        "y": 1196.01,
+        "width": 16,
+        "height": 16,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "backOut"
+          },
+          {
+            "t": 6.2,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-bl",
+      "name": "Handle bl",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 20.6,
+        "y": 1258.01,
+        "width": 16,
+        "height": 16,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "backOut"
+          },
+          {
+            "t": 6.2,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-tr",
+      "name": "Handle tr",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 724.2,
+        "y": 1196.01,
+        "width": 16,
+        "height": 16,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 5.8667,
+            "v": 20.6,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.4,
+            "v": 724.2
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-br",
+      "name": "Handle br",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 724.2,
+        "y": 1258.01,
+        "width": 16,
+        "height": 16,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 5.8667,
+            "v": 20.6,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.4,
+            "v": 724.2
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2-box",
+      "name": "Selection",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel2",
+      "props": {
+        "x": 20.6,
+        "y": 1196.01,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 703.6,
+        "height": 62,
+        "fill": "rgba(217,249,185,0.12)",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 3
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 6.4,
+            "v": 703.6
+          }
+        ],
+        "opacity": [
+          {
+            "t": 5.8667,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 6,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel2",
+      "name": "Selection · FOMC",
+      "type": "null",
+      "label": "#D9F9B9",
+      "parent": "window",
+      "props": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "sel1-tl",
+      "name": "Handle tl",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 141.59,
+        "y": 1268.62,
+        "width": 13.2,
+        "height": 19.24,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 2.8,
+            "v": 0,
+            "ease": "backOut"
+          },
+          {
+            "t": 3.1333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel1-bl",
+      "name": "Handle bl",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 141.59,
+        "y": 1350.3799999999999,
+        "width": 13.2,
+        "height": 19.24,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 2.8,
+            "v": 0,
+            "ease": "backOut"
+          },
+          {
+            "t": 3.1333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel1-tr",
+      "name": "Handle tr",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 722,
+        "y": 1268.62,
+        "width": 13.2,
+        "height": 19.24,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.8,
+            "v": 141.59,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.4,
+            "v": 722
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.8,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel1-br",
+      "name": "Handle br",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 722,
+        "y": 1350.3799999999999,
+        "width": 13.2,
+        "height": 19.24,
+        "fill": "#ffffff",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "x": [
+          {
+            "t": 2.8,
+            "v": 141.59,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.4,
+            "v": 722
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.8,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel1-box",
+      "name": "Selection",
+      "type": "rect",
+      "label": "#D9F9B9",
+      "parent": "sel1",
+      "props": {
+        "x": 141.59,
+        "y": 1268.62,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 580.41,
+        "height": 81.76,
+        "fill": "rgba(217,249,185,0.12)",
+        "stroke": "#D9F9B9",
+        "strokeWidth": 2.475
+      },
+      "keyframes": {
+        "width": [
+          {
+            "t": 2.8,
+            "v": 0,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 3.4,
+            "v": 580.41
+          }
+        ],
+        "opacity": [
+          {
+            "t": 2.8,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 2.9333,
+            "v": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sel1",
+      "name": "Selection · Position size",
+      "type": "null",
+      "label": "#D9F9B9",
+      "parent": "window",
+      "props": {
+        "x": 0,
+        "y": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 4,
+            "v": 1,
+            "ease": "easeOut"
+          },
+          {
+            "t": 4.2667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "panel-calendar",
+      "name": "Panel · Economic Calendar",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "window",
+      "matte": "win-mask",
+      "start": 4.3333,
+      "props": {
+        "src": "panel-calendar.png",
+        "width": 744.04,
+        "x": 0,
+        "y": -560,
+        "anchorX": 0,
+        "anchorY": 0
+      },
+      "keyframes": {
+        "opacity": [
+          {
+            "t": 4.3333,
+            "v": 0,
+            "ease": "sineInOut"
+          },
+          {
+            "t": 4.8667,
+            "v": 1
+          }
+        ],
+        "y": [
+          {
+            "t": 4.2667,
+            "v": -560,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.6667,
+            "v": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "panel-risk",
+      "name": "Panel · Risk Calculator",
+      "type": "image",
+      "label": "#9fdcc6",
+      "parent": "window",
+      "matte": "win-mask",
+      "end": 4.8667,
+      "props": {
+        "src": "panel-risk.png",
+        "width": 744.04,
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "win-mask",
+      "name": "Window mask",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "window",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 744.8,
+        "height": 1797.4,
+        "radius": 22.8,
+        "fill": "#ffffff"
+      }
+    },
+    {
+      "id": "win-shell",
+      "name": "Window",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "window",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 744.8,
+        "height": 1797.4,
+        "radius": 22.8,
+        "fill": "#020203",
+        "stroke": "rgba(10,26,29,0.12)",
+        "strokeWidth": 1.9,
+        "shadowColor": "rgba(10,26,29,0.08)",
+        "shadowBlur": 60.8,
+        "shadowY": 30.4
+      }
+    },
+    {
+      "id": "win-shadow",
+      "name": "Window · far shadow",
+      "type": "rect",
+      "label": "#e6d3a3",
+      "parent": "window",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "anchorX": 0,
+        "anchorY": 0,
+        "width": 744.8,
+        "height": 1797.4,
+        "radius": 22.8,
+        "fill": "#020203",
+        "shadowColor": "rgba(10,26,29,0.08)",
+        "shadowBlur": 152,
+        "shadowY": 76
+      }
+    },
+    {
+      "id": "window",
+      "name": "Window",
+      "type": "null",
+      "label": "#e6d3a3",
+      "props": {
+        "x": 118,
+        "y": -750,
+        "isolate": "yes",
+        "motionBlur": 0.8
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 0,
+            "v": 1080,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 2.4,
+            "v": -750
+          },
+          {
+            "t": 4.0667,
+            "v": -750,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.4,
+            "v": -667
+          }
+        ],
+        "x": [
+          {
+            "t": 4.0667,
+            "v": 118,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.4,
+            "v": 1075
+          }
+        ]
+      }
+    },
+    {
+      "id": "hdr-market",
+      "name": "Market · BTCUSDT",
+      "type": "image",
+      "label": "#ff6479",
+      "parent": "header",
+      "props": {
+        "src": "market.png",
+        "width": 502.6,
+        "x": 0,
+        "y": 10.3,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "hdr-clock",
+      "name": "Clock",
+      "type": "text",
+      "label": "#c5b9ee",
+      "parent": "header",
+      "props": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 36.4,
+        "letterSpacing": -0.364,
+        "lineHeight": 1.29,
+        "align": "left",
+        "fill": "#0a1a1d",
+        "anchorX": 0,
+        "anchorY": 0,
+        "text": "14:36:02",
+        "x": 561.58,
+        "y": 14.5
+      },
+      "keyframes": {
+        "text": [
+          {
+            "t": 0,
+            "v": "14:36:02",
+            "ease": "hold"
+          },
+          {
+            "t": 1,
+            "v": "14:36:03",
+            "ease": "hold"
+          },
+          {
+            "t": 2,
+            "v": "14:36:04",
+            "ease": "hold"
+          },
+          {
+            "t": 3,
+            "v": "14:36:05",
+            "ease": "hold"
+          },
+          {
+            "t": 4,
+            "v": "14:36:06",
+            "ease": "hold"
+          },
+          {
+            "t": 5,
+            "v": "14:36:07",
+            "ease": "hold"
+          },
+          {
+            "t": 6,
+            "v": "14:36:08",
+            "ease": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hdr-chip",
+      "name": "Chip · Live",
+      "type": "image",
+      "label": "#ff6479",
+      "parent": "header",
+      "props": {
+        "src": "chip-live.png",
+        "width": 161.42,
+        "x": 738.58,
+        "y": 0.24,
+        "anchorX": 0,
+        "anchorY": 0
+      }
+    },
+    {
+      "id": "header",
+      "name": "Header",
+      "type": "null",
+      "label": "#ff6479",
+      "props": {
+        "x": 933,
+        "y": 561
+      },
+      "keyframes": {
+        "y": [
+          {
+            "t": 1.1333,
+            "v": 591,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.8,
+            "v": 561
+          }
+        ],
+        "opacity": [
+          {
+            "t": 1.1333,
+            "v": 0,
+            "ease": "easeOut"
+          },
+          {
+            "t": 1.5333,
+            "v": 1
+          }
+        ],
+        "blur": [
+          {
+            "t": 1.1333,
+            "v": 10,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 1.6667,
+            "v": 0
+          }
+        ],
+        "x": [
+          {
+            "t": 4.1333,
+            "v": 933,
+            "ease": "figmaSlow"
+          },
+          {
+            "t": 5.4,
+            "v": 118
+          }
+        ]
+      }
+    }
+  ]
+}

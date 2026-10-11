@@ -3,5 +3,6 @@ node_modules
 .next-preview
 next-env.d.ts
 *.tsbuildinfo
-exports
+/exports
 .DS_Store
+.trash

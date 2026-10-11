@@ -3,6 +3,7 @@
 import { Close, Download, Export } from "@carbon/icons-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { bitrateFor, exportMp4, QUALITY, type QualityKey } from "@/lib/export";
+import { exportFileName } from "@/lib/filename";
 import type { Shot } from "@/lib/types";
 
 const PREFS_KEY = "motion-studio:export";
@@ -72,7 +73,8 @@ export function ExportDialog({
   const s0 = range === "all" ? 0 : start, s1 = range === "all" ? shot.duration : end;
   const bitrate = bitrateFor({ width: size.w, height: size.h, fps, quality });
   const estimate = (bitrate * Math.max(0, s1 - s0)) / 8;
-  const fileName = `${shotId}_v${String(version).padStart(3, "0")}${dirty ? "-edit" : ""}_${size.h}p${fps}_${quality}.mp4`;
+  // Named after the scene (re-exporting the same scene replaces its file).
+  const fileName = exportFileName(shot.name, shotId, dirty ? " (edit)" : "");
 
   const run = async () => {
     setError(null);

@@ -2,86 +2,17 @@
 // edit don't look duplicated. Same grid, camera whip + hold, backdrop, colors, chroma key
 // and wipe-out as TRD-02 v003 — only which cell does what changes.
 //
-// The pattern is resampled from the measured reference itself, so the feel is identical:
-// cells are grouped into blocks (mostly 2 half-cells wide, sometimes 2 rows tall, paired
-// on a different phase than the reference), and each block copies the behaviour of a
-// random "donor" cell from the same or a neighbouring column of the reference — its open
-// time, whether it stays light (dots, never colors) or never opens (a hole), its open →
-// color delay, and (from a donor in the same row band) its clear time. Columns that sit
-// on screen during the hold always open and color, like the reference.
+// The pattern is resampled from the measured reference (scripts/lib/cell-variant.mjs),
+// so the feel is identical — new blocks, front, light cells and clear order.
 //
 //   node --no-warnings scripts/trd-02b-pixel-variant.mjs [seed]  →  shots/trd-02b-pixel-transition/v001.json
 import fs from "node:fs";
 import { FPS, K, comp, snap, cells, camKeys, cellLayer, grid, IN, OUT } from "./lib/reference-transition.mjs";
+import { resampleCells } from "./lib/cell-variant.mjs";
 
 const ID = "trd-02b-pixel-transition";
 const SEED = Number(process.argv[2] ?? 11);
-let s = SEED * 9301 + 49297;
-const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
-const pick = (arr) => arr[Math.floor(rnd() * arr.length)];
-
-const R = cells.rows, Cn = cells.open[0].length;
-const at = (g, r, c) => g[r]?.[c] ?? null;
-// Columns on screen while the camera holds (all open + color in the reference).
-const HOLD_FROM = 31;
-const band = (r) => (r <= 2 ? 0 : 1); // the reference clears in two row bands on the left
-
-function donor(r, c, { solid }) {
-  const pool = [];
-  for (let dc = -1; dc <= 1; dc++) for (let rr = 0; rr < R; rr++) {
-    const cc = c + dc;
-    if (cc < 0 || cc >= Cn) continue;
-    const o = at(cells.open, rr, cc), col = at(cells.color, rr, cc);
-    if (solid && (o == null || col == null)) continue;
-    pool.push({ o, col, r: rr, c: cc });
-  }
-  return pick(pool);
-}
-function clearDonor(r, c) {
-  const pool = [];
-  for (let dc = -1; dc <= 1; dc++) for (let rr = 0; rr < R; rr++) {
-    const cc = c + dc, cl = at(cells.clear, rr, cc);
-    if (cc >= 0 && cc < Cn && cl != null && band(rr) === band(r)) pool.push(cl);
-  }
-  return pool.length ? pick(pool) : null;
-}
-
-const open = [...Array(R)].map(() => Array(Cn).fill(null));
-const color = [...Array(R)].map(() => Array(Cn).fill(null));
-const clear = [...Array(R)].map(() => Array(Cn).fill(null));
-const done = [...Array(R)].map(() => Array(Cn).fill(false));
-for (let r = 0; r < R; r++) {
-  // Pair half-cells on the opposite phase to the reference (odd starts), with some singles.
-  for (let c = 0; c < Cn; c++) {
-    if (done[r][c]) continue;
-    const firstOpen = Math.min(...[...Array(R).keys()].map((rr) => at(cells.open, rr, c) ?? Infinity));
-    if (firstOpen === Infinity && c < HOLD_FROM) { done[r][c] = true; continue; } // reference never opens this column
-    const w = c % 2 === 1 && c + 1 < Cn && rnd() < 0.8 ? 2 : 1;
-    const h = r + 1 < R && rnd() < 0.3 ? 2 : 1;
-    const solid = c >= HOLD_FROM - 1;
-    const d = donor(r, c, { solid });
-    const cl = d.o == null ? null : clearDonor(r, c);
-    for (let dr = 0; dr < h; dr++) for (let dc = 0; dc < w; dc++) {
-      const rr = r + dr, cc = c + dc;
-      if (rr >= R || cc >= Cn || done[rr][cc]) continue;
-      done[rr][cc] = true;
-      open[rr][cc] = d.o;
-      color[rr][cc] = d.col;
-      clear[rr][cc] = cl;
-    }
-  }
-}
-
-// Checks: on-screen hold columns fully open + color; how different from the reference.
-let holes = 0, same = 0, total = 0;
-for (let r = 0; r < R; r++) for (let c = 0; c < Cn; c++) {
-  if (c >= HOLD_FROM && (open[r][c] == null || color[r][c] == null)) holes++;
-  if (at(cells.open, r, c) != null || open[r][c] != null) {
-    total++;
-    if (at(cells.open, r, c) === open[r][c] && at(cells.color, r, c) === color[r][c]) same++;
-  }
-}
-if (holes) throw new Error(`${holes} hold-area cells don't reach color`);
+const { open, color, clear, same, total } = resampleCells(SEED);
 
 const BD_PAD = 800;
 const withSchedule = (layer) => Object.assign(layer, { props: { ...layer.props, open: grid(open), color: grid(color), clear: grid(clear) } });
@@ -108,7 +39,7 @@ const layers = [
 
 const lastClear = Math.max(...clear.flat().filter((v) => v != null), ...cells.clear.flat().filter((v) => v != null));
 const scene = {
-  name: "TRD-02b · Pixel transition B (key fill, blue)",
+  name: "Light -> Green -> Light v2", // named by the user in the editor
   note: `Same as TRD-02 v003 (grid, camera whip + hold, backdrop, chroma blue, wipe-out) with a new cell pattern resampled from the reference (seed ${SEED}): new blocks, front, light cells and clear order — ${Math.round((100 * same) / total)}% of cells match TRD-02.`,
   width: 1920, height: 1080, fps: FPS, duration: snap(lastClear + 5 / FPS), background: "#0047BB",
   layers,

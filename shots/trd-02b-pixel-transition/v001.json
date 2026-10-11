@@ -1,5 +1,5 @@
 {
-  "name": "TRD-02b · Pixel transition B (key fill, blue)",
+  "name": "Light -> Green -> Light v2",
   "note": "Same as TRD-02 v003 (grid, camera whip + hold, backdrop, chroma blue, wipe-out) with a new cell pattern resampled from the reference (seed 11): new blocks, front, light cells and clear order — 26% of cells match TRD-02.",
   "width": 1920,
   "height": 1080,

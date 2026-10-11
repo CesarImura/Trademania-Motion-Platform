@@ -1,8 +1,10 @@
-// "Light -> Green -> Light v3 / v4" · TRD-02 (key fill on chroma blue: light cells with
-// dots → lime Trademania backdrop → wipe-out), with the Light -> Blue -> Light concept:
+// "Light -> Green -> Light v3 / v4" · TRD-02 (light cells with dots → lime Trademania
+// backdrop → wipe-out), with the Light -> Blue -> Light concept:
 // an organic, clustered front instead of a line, and ~2× longer light/dotted trails —
 // on the way in (open → green) and out (green → light → blue, via settle times).
 // Same grid, camera whip, hold and outgoing move as TRD-02 (scripts/lib/organic-cells.mjs).
+// v003: no white — chroma blue outside (key), and the trail stage is the backdrop with
+// halftone dots (no paper): blue → green + dots → green → green + dots → blue.
 //
 //   node --no-warnings scripts/trd-02-light-green-light-organic.mjs <seed> <id> <name>   (writes the next vNNN)
 //   v3: 31 trd-02c-light-green-light-v3 "Light -> Green -> Light v3"
@@ -15,9 +17,6 @@ const SEED = Number(process.argv[2] ?? 31);
 const ID = process.argv[3] ?? "trd-02c-light-green-light-v3";
 const NAME = process.argv[4] ?? "Light -> Green -> Light v3";
 const COLS = 60, ROWS = 7;
-// Light cells are hard-edged (v002): TRD-02's 150px light→green feather turned the ~2× longer
-// trail into a white fog over the green.
-const FEATHER = 0;
 // Never overwrite: write the next version, keeping the entry's current name (renames in the editor).
 const dirUrl = `shots/${ID}`;
 const versions = fs.existsSync(dirUrl) ? fs.readdirSync(dirUrl).filter((f) => /^v\d{3}\.json$/.test(f)).sort() : [];
@@ -46,11 +45,12 @@ const cellsLayer = (id, name, output, extra = {}) => ({
 const BD_PAD = 800; // as TRD-02: the backdrop slides in at 0.25× the camera (parallax)
 const scene = {
   name: KEEP_NAME ?? NAME,
-  note: `${FEATHER === 0 ? "Hard-edged light cells (no white fog). " : ""}Like Light -> Green -> Light v1 (TRD-02: key fill on blue, light cells + dots, lime backdrop, camera whip + hold + wipe-out) with an organic, clustered front and ~2× longer trails in and out (green → light → blue). Seed ${SEED}.`,
+  note: `No white: chroma blue (key) → green + dots → lime backdrop → green + dots → chroma blue. Organic, clustered front, ~2× longer trails in and out, hard-edged cells; camera whip + hold + outgoing move as TRD-02. Seed ${SEED}.`,
   width: 1920, height: 1080, fps: FPS, duration: end, background: "#0047BB",
   layers: [
-    cellsLayer("light", "Cells · light end (paper + dots)", "overlay", {
-      paper: "#F4F9EE", dotColor: "rgba(10,26,29,0.42)", dotPitch: 18.27, dotSize: 4.8, feather: FEATHER,
+    // Trail stage: halftone dots only (transparent paper) over the backdrop, hard-edged.
+    cellsLayer("dots", "Cells · trail (dots over the backdrop)", "overlay", {
+      paper: "rgba(0,0,0,0)", dotColor: "rgba(10,26,29,0.42)", dotPitch: 18.27, dotSize: 4.8, feather: 0,
     }),
     {
       id: "backdrop", name: "Backdrop (Trademania, 0.25× parallax)", type: "generator", matte: "cells",
@@ -66,6 +66,7 @@ const scene = {
         ringShift: [{ t: 0, v: -0.03, ease: "linear" }, { t: comp(OUT.t1), v: 0.06 }],
       },
     },
+    // Cells are "open" (show the backdrop) from their open time until they settle.
     cellsLayer("cells", "Cells · mask (matte)", "mask"),
   ],
 };

@@ -936,6 +936,20 @@ export const GENERATORS: Record<string, Generator> = {
       lx.putImageData(img, 0, 0);
       // Feather at low resolution, then stretch over the cells as an alpha mask.
       const f = Math.max(0, get.num("feather")), q = 8;
+      if (f === 0) {
+        // Hard cells (e.g. keying on chroma): stretch the per-cell map unsmoothed, aligned
+        // to the cell edges, so no light leaks onto neighbouring cells.
+        g.globalCompositeOperation = "destination-in";
+        g.imageSmoothingEnabled = false;
+        g.drawImage(schedLevel, 0, 0, lw, lh, lc0 * cw, lr0 * chh, lw * cw, lh * chh);
+        g.imageSmoothingEnabled = true;
+        g.globalCompositeOperation = "source-over";
+        ctx.save();
+        ctx.globalAlpha = base;
+        ctx.drawImage(schedBuf, 0, 0, dw, dh, bx0, by0, dw / s, dh / s);
+        ctx.restore();
+        return;
+      }
       const sw = Math.max(1, Math.ceil((lw * cw * s) / q)), sh = Math.max(1, Math.ceil((lh * chh * s) / q));
       schedSoft ??= document.createElement("canvas");
       schedSoft.width = sw;

@@ -820,14 +820,17 @@ export const GENERATORS: Record<string, Generator> = {
     ],
     draw(ctx, w, h, t, get) {
       const open = schedGrid(get.str("open")), color = schedGrid(get.str("color")), clear = schedGrid(get.str("clear"));
+      // Optional settle times: on the way out a cell turns light (paper + dots) at its clear
+      // time and only goes away at its settle time — a trail out as well as in.
+      const settle = schedGrid(get.str("settle"));
       const rows = open.length, cols = rows ? Math.max(...open.map((r) => r.length)) : 0;
       if (!rows || !cols) return;
       const cw = Math.max(1, get.num("cellW")), chh = Math.max(1, get.num("cellH"));
       const tt = t - get.num("timeOffset");
       const at = (g: number[][], r: number, c: number) => g[Math.min(g.length - 1, Math.max(0, r))]?.[c] ?? NaN;
       const isOpen = (r: number, c: number) => {
-        const o = at(open, r, c), cl = at(clear, r, c);
-        return o === o && tt >= o && !(cl === cl && tt >= cl);
+        const o = at(open, r, c), cl = at(clear, r, c), st = at(settle, r, c), gone = st === st ? st : cl;
+        return o === o && tt >= o && !(gone === gone && tt >= gone);
       };
       // Only the cells on screen (the layer is wide and slides with the camera).
       const m = ctx.getTransform(), inv = m.inverse(), cv = ctx.canvas;
@@ -862,7 +865,6 @@ export const GENERATORS: Record<string, Generator> = {
         // their dots; cells that never open stay plain paper. With clear times the page
         // comes back: from a cell's clear time it's paper + dots again, and plain paper
         // from its settle time (light → color → light).
-        const settle = schedGrid(get.str("settle"));
         const paperPath = new Path2D(), dotted: [number, number][] = [];
         for (let r = r0; r < r1; r++)
           for (let c = c0; c < c1; c++) {
@@ -939,7 +941,9 @@ export const GENERATORS: Record<string, Generator> = {
         for (let i = 0; i < lw; i++) {
           const r = Math.min(rows - 1, Math.max(0, lr0 + j)), c = Math.min(cols - 1, Math.max(0, lc0 + i));
           const col = at(color, r, c), o = at(open, r, c);
-          const light = col !== col ? 1 : o === o && tt >= o && tt < col ? 1 : 0;
+          const cl = at(clear, r, c), st = at(settle, r, c);
+          const leaving = cl === cl && st === st && tt >= cl && tt < st;
+          const light = col !== col || leaving ? 1 : o === o && tt >= o && tt < col ? 1 : 0;
           img.data[(j * lw + i) * 4 + 3] = light * 255;
         }
       lx.putImageData(img, 0, 0);

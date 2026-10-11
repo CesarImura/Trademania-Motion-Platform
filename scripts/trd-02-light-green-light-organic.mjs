@@ -4,7 +4,7 @@
 // on the way in (open → green) and out (green → light → blue, via settle times).
 // Same grid, camera whip, hold and outgoing move as TRD-02 (scripts/lib/organic-cells.mjs).
 //
-//   node --no-warnings scripts/trd-02-light-green-light-organic.mjs <seed> <id> <name>
+//   node --no-warnings scripts/trd-02-light-green-light-organic.mjs <seed> <id> <name>   (writes the next vNNN)
 //   v3: 31 trd-02c-light-green-light-v3 "Light -> Green -> Light v3"
 //   v4: 53 trd-02d-light-green-light-v4 "Light -> Green -> Light v4"
 import fs from "node:fs";
@@ -15,6 +15,15 @@ const SEED = Number(process.argv[2] ?? 31);
 const ID = process.argv[3] ?? "trd-02c-light-green-light-v3";
 const NAME = process.argv[4] ?? "Light -> Green -> Light v3";
 const COLS = 60, ROWS = 7;
+// Light cells are hard-edged (v002): TRD-02's 150px light→green feather turned the ~2× longer
+// trail into a white fog over the green.
+const FEATHER = 0;
+// Never overwrite: write the next version, keeping the entry's current name (renames in the editor).
+const dirUrl = `shots/${ID}`;
+const versions = fs.existsSync(dirUrl) ? fs.readdirSync(dirUrl).filter((f) => /^v\d{3}\.json$/.test(f)).sort() : [];
+const latest = versions.at(-1);
+const VERSION = `v${String(versions.length ? +latest.slice(1, 4) + 1 : 1).padStart(3, "0")}`;
+const KEEP_NAME = latest ? JSON.parse(fs.readFileSync(`${dirUrl}/${latest}`, "utf8")).name : null;
 const { open, color, clear, settle, IN_END, OUT0, fieldX, xKeys } = organicSchedule({ seed: SEED, cols: COLS, rows: ROWS, holdExtra: 0 });
 
 // ---- checks: the hold is fully green ----
@@ -36,12 +45,12 @@ const cellsLayer = (id, name, output, extra = {}) => ({
 
 const BD_PAD = 800; // as TRD-02: the backdrop slides in at 0.25× the camera (parallax)
 const scene = {
-  name: NAME,
-  note: `Like Light -> Green -> Light v1 (TRD-02: key fill on blue, light cells + dots, lime backdrop, camera whip + hold + wipe-out) with an organic, clustered front and ~2× longer trails in and out (green → light → blue). Seed ${SEED}.`,
+  name: KEEP_NAME ?? NAME,
+  note: `${FEATHER === 0 ? "Hard-edged light cells (no white fog). " : ""}Like Light -> Green -> Light v1 (TRD-02: key fill on blue, light cells + dots, lime backdrop, camera whip + hold + wipe-out) with an organic, clustered front and ~2× longer trails in and out (green → light → blue). Seed ${SEED}.`,
   width: 1920, height: 1080, fps: FPS, duration: end, background: "#0047BB",
   layers: [
     cellsLayer("light", "Cells · light end (paper + dots)", "overlay", {
-      paper: "#F4F9EE", dotColor: "rgba(10,26,29,0.42)", dotPitch: 18.27, dotSize: 4.8, feather: 150,
+      paper: "#F4F9EE", dotColor: "rgba(10,26,29,0.42)", dotPitch: 18.27, dotSize: 4.8, feather: FEATHER,
     }),
     {
       id: "backdrop", name: "Backdrop (Trademania, 0.25× parallax)", type: "generator", matte: "cells",
@@ -61,5 +70,5 @@ const scene = {
   ],
 };
 fs.mkdirSync(`shots/${ID}`, { recursive: true });
-fs.writeFileSync(`shots/${ID}/v001.json`, JSON.stringify(scene, (k, v) => (k === "t" || k === "duration" ? Math.round(v * 1e4) / 1e4 : v), 2) + "\n");
-console.log(`wrote shots/${ID}/v001.json · ${end}s · hold ${IN_END.toFixed(2)}–${OUT0.toFixed(2)}s · seed ${SEED}`);
+fs.writeFileSync(`shots/${ID}/${VERSION}.json`, JSON.stringify(scene, (k, v) => (k === "t" || k === "duration" ? Math.round(v * 1e4) / 1e4 : v), 2) + "\n");
+console.log(`wrote shots/${ID}/${VERSION}.json · ${end}s · hold ${IN_END.toFixed(2)}–${OUT0.toFixed(2)}s · seed ${SEED}`);

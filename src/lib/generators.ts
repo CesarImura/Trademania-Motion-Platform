@@ -803,6 +803,7 @@ export const GENERATORS: Record<string, Generator> = {
       { key: "open", label: "Open times", kind: "text", default: "", group: "Content" },
       { key: "color", label: "Full-color times", kind: "text", default: "", group: "Content" },
       { key: "clear", label: "Clear times", kind: "text", default: "", group: "Content" },
+      { key: "settle", label: "Settle times (paper: dots gone)", kind: "text", default: "", group: "Content" },
       { key: "output", label: "Output", kind: "enum", default: "mask", options: ["mask", "overlay", "paper"], group: "Content" },
       p("cellW", "Cell width", 91.37, { min: 1 }),
       p("cellH", "Cell height", 182.74, { min: 1 }),
@@ -858,11 +859,19 @@ export const GENERATORS: Record<string, Generator> = {
       if (out === "paper") {
         // Inverse: an opaque light page. Open cells show dots (the light end), and pop off
         // (transparent) once they reach their color time. Cells with no color time keep
-        // their dots; cells that never open stay plain paper.
+        // their dots; cells that never open stay plain paper. With clear times the page
+        // comes back: from a cell's clear time it's paper + dots again, and plain paper
+        // from its settle time (light → color → light).
+        const settle = schedGrid(get.str("settle"));
         const paperPath = new Path2D(), dotted: [number, number][] = [];
         for (let r = r0; r < r1; r++)
           for (let c = c0; c < c1; c++) {
-            const o = at(open, r, c), col = at(color, r, c);
+            const o = at(open, r, c), col = at(color, r, c), cl = at(clear, r, c), st = at(settle, r, c);
+            if (cl === cl && tt >= cl) {
+              paperPath.rect(c * cw - 0.5, r * chh - 0.5, cw + 1, chh + 1);
+              if (!(st === st && tt >= st)) dotted.push([r, c]);
+              continue;
+            }
             const opened = o === o && tt >= o;
             if (opened && col === col && tt >= col) continue;
             paperPath.rect(c * cw - 0.5, r * chh - 0.5, cw + 1, chh + 1);
